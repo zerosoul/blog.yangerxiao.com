@@ -5,7 +5,7 @@ module.exports = {
   siteTitle: '杨二小的个人博客', // Navigation and Site Title
   siteTitleAlt: 'Minimal Blog - Gatsby Starter', // Alternative Site title for SEO
   siteUrl: 'https://blog.yangerxiao.com', // Domain of your site. No trailing slash!
-  siteLanguage: 'cn-zh', // Language Tag on <html> element
+  siteLanguage: 'zh', // Language Tag on <html> element
   siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
   siteBanner: '/social/banner.jpg',
   siteDescription: 'Minimal Blog with big typography',

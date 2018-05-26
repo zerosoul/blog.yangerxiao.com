@@ -47,9 +47,7 @@ const Archives = props => {
   return (
     <Wrapper>
       <Helmet title={`归档 | ${config.siteTitle}`} />
-      <Header>
-        <Link to="/">{config.siteName}</Link>
-      </Header>
+      <Header />
       <Content>
         <SectionTitle>
           <Link to="/archives">归档</Link>

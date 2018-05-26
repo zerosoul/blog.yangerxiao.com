@@ -38,9 +38,7 @@ const Category = props => {
   return (
     <Wrapper>
       <Helmet title={`分类 | ${config.siteTitle}`} />
-      <Header>
-        <Link to="/">{config.siteTitle}</Link>
-      </Header>
+      <Header />
       <Content>
         <SectionTitle>分类</SectionTitle>
         {group.map(category => (

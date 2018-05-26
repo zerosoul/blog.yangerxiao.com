@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
     }
 
     node.frontmatter.title = title;
-    console.log(node.frontmatter.keyword);
+    // console.log(node.frontmatter.keyword);
 
     createNodeField({ node, name: 'slug', value: slug });
   }

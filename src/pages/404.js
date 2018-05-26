@@ -15,9 +15,7 @@ const Content = styled.div``;
 const NotFound = () => (
   <Wrapper>
     <Helmet title={`404页面 | ${config.siteTitle}`} />
-    <Header>
-      <Link to="/">{config.siteName}</Link>
-    </Header>
+    <Header />
     <Content>
       <h1>404页面</h1>
       <p>哎呀，您访问的页面不在服务区。</p>

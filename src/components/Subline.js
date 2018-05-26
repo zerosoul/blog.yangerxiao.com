@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { media } from '../utils/media';
 
 const Line = styled.div`
   font-size: ${props => props.theme.fontSmall};
+  @media ${media.phone} {
+    font-size: 0.5rem;
+  }
   color: ${props => props.theme.light};
   ${props => props.sectionTitle && 'margin-top: -3rem'};
   ${props => props.sectionTitle && 'margin-bottom: 4rem'};
@@ -19,8 +23,7 @@ const Line = styled.div`
       &:after {
         content: '#';
         position: absolute;
-        left: -0.4rem;
-        font-size: 0.7rem;
+        left: -0.34rem;
       }
     }
   }

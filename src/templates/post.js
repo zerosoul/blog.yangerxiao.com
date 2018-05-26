@@ -24,7 +24,7 @@ const Content = styled.article`
     padding: 3rem 3rem;
   }
   @media ${media.phone} {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.3rem;
   }
 `;
 
@@ -39,20 +39,32 @@ const PostContent = styled.div`
 const Post = props => {
   const { slug } = props.pathContext;
   const postNode = props.data.markdownRemark;
-  const post = postNode.frontmatter;
+  const { title, date, tags, category, timeToRead } = postNode.frontmatter;
 
   return (
     <Wrapper>
       <SEO postPath={slug} postNode={postNode} postSEO />
-      <Helmet title={`${post.title} | ${config.siteTitle}`} />
-      <Header>
-        <Link to="/">{config.siteName}</Link>
-      </Header>
+      <Helmet title={`${title} | ${config.siteTitle}`} />
+      <Header />
       <Content>
-        <Title>{post.title}</Title>
+        <Title>{title}</Title>
         <Subline>
-          {post.date} &mdash; {postNode.timeToRead} Min Read &mdash; In{' '}
-          <Link to={`/categories/${kebabCase(post.category)}`}>{post.category}</Link>
+          {date && <span>发布：{date} </span>}
+          {timeToRead && <span>阅读：{timeToRead}min </span>}
+          {category && (
+            <span>
+              分类：<Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
+            </span>
+          )}
+          {tags && (
+            <span>
+              标签：{tags.map(tag => (
+                <Link className="tag" to={`/tags/${kebabCase(tag)}`}>
+                  {tag}
+                </Link>
+              ))}
+            </span>
+          )}
         </Subline>
         <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
       </Content>
@@ -71,6 +83,7 @@ export const postQuery = graphql`
         title
         date
         category
+        tags
       }
       timeToRead
     }

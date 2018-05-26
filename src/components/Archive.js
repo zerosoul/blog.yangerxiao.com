@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import { pad } from '../utils/fun';
 
 const Item = styled.li`
   list-style: none;
@@ -20,7 +21,7 @@ const Item = styled.li`
 const Archive = ({ path, title, date }) => (
   <Item className="archive">
     <time className="date" dateTime={date}>
-      {`${new Date(date).getMonth() + 1}-${new Date(date).getDate()}`}
+      {`${pad(new Date(date).getMonth() + 1)}-${pad(new Date(date).getDate())}`}
     </time>
     <Link className="title" to={path}>
       <span>{title}</span>

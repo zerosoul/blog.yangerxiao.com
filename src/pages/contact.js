@@ -43,9 +43,7 @@ const Content = styled.div`
 const Contact = () => (
   <Wrapper>
     <Helmet title={`联系我 | ${config.siteTitle}`} />
-    <Header>
-      <Link to="/">{config.siteName}</Link>
-    </Header>
+    <Header />
     <Content>
       <h1>联系我</h1>
       <p>也许，我们能成为朋友。</p>

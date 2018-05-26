@@ -23,7 +23,7 @@ const Content = styled.div`
     padding: 3rem 3rem;
   }
   @media ${media.phone} {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.3rem;
   }
 `;
 
@@ -35,9 +35,7 @@ const Tag = props => {
   return (
     <Wrapper>
       <Helmet title={`${tag} | ${config.siteTitle}`} />
-      <Header>
-        <Link to="/">{config.siteName}</Link>
-      </Header>
+      <Header />
       <Content>
         <SectionTitle>
           <Link to="/tags">标签</Link> > {tag}

@@ -42,9 +42,7 @@ const Tags = props => {
   return (
     <Wrapper>
       <Helmet title={`标签 | ${config.siteTitle}`} />
-      <Header>
-        <Link to="/">{config.siteName}</Link>
-      </Header>
+      <Header />
       <Content>
         <SectionTitle>标签</SectionTitle>
         {group.map(tag => (

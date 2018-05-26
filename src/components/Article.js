@@ -34,9 +34,8 @@ const Excerpt = styled.p`
   margin-bottom: 1rem;
 `;
 
-const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
-  const firstChar = title.charAt(0);
-
+const Article = ({ title, date, excerpt, slug, timeToRead, category, tags }) => {
+  const firstChar = title.charAt(1);
   return (
     <Post>
       <Title>
@@ -44,9 +43,22 @@ const Article = ({ title, date, excerpt, slug, timeToRead, category }) => {
         <Link to={slug}>{title}</Link>
       </Title>
       <Subline>
-        {date} &mdash; 阅读时长：{timeToRead}min &mdash; 分类：<Link to={`/categories/${kebabCase(category)}`}>
-          {category}
-        </Link>
+        {date && <span>发布：{date} </span>}
+        {timeToRead && <span>阅读：{timeToRead}min </span>}
+        {category && (
+          <span>
+            分类：<Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
+          </span>
+        )}
+        {tags && (
+          <span>
+            标签：{tags.map(tag => (
+              <Link className="tag" to={`/tags/${kebabCase(tag)}`}>
+                {tag}
+              </Link>
+            ))}
+          </span>
+        )}
       </Subline>
       <Excerpt>{excerpt}</Excerpt>
     </Post>

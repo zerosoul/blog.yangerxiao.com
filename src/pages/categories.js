@@ -37,7 +37,7 @@ const Category = props => {
 
   return (
     <Wrapper>
-      <Helmet title={`Categories | ${config.siteTitle}`} />
+      <Helmet title={`分类 | ${config.siteTitle}`} />
       <Header>
         <Link to="/">{config.siteTitle}</Link>
       </Header>

@@ -62,7 +62,7 @@ const Tag = props => {
 export default Tag;
 
 /* eslint no-undef: off */
-export const postQuery = graphql`
+export const tagQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }

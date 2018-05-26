@@ -18,8 +18,8 @@ const Content = styled.div`
   background-color: ${props => props.theme.bg};
   z-index: 9000;
   margin-top: -3rem;
-  word-break:keep-all;
-  line-height:3;
+  word-break: keep-all;
+  line-height: 3;
   @media ${media.tablet} {
     padding: 3rem 3rem;
   }
@@ -29,11 +29,11 @@ const Content = styled.div`
 `;
 
 const Tag = styled.span`
-  padding:.2rem .4rem;
-  border:1px solid #333;
-  border-radius:.2rem;
-  margin-right:.4rem;
-  margin-top:.5rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #333;
+  border-radius: 0.2rem;
+  margin-right: 0.4rem;
+  margin-top: 0.5rem;
 `;
 
 const Tags = props => {
@@ -41,17 +41,17 @@ const Tags = props => {
 
   return (
     <Wrapper>
-      <Helmet title={`Tags | ${config.siteTitle}`} />
+      <Helmet title={`标签 | ${config.siteTitle}`} />
       <Header>
         <Link to="/">{config.siteName}</Link>
       </Header>
       <Content>
         <SectionTitle>标签</SectionTitle>
-        {group.map(category => (
+        {group.map(tag => (
           <Tag>
-            <Link to={`/tags/${kebabCase(category.fieldValue)}`}>{category.fieldValue} ({
-              category.totalCount
-            })</Link>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
           </Tag>
         ))}
       </Content>
@@ -62,7 +62,7 @@ const Tags = props => {
 export default Tags;
 
 /* eslint no-undef: off */
-export const postQuery = graphql`
+export const tagsQuery = graphql`
   query TagsPage {
     allMarkdownRemark {
       group(field: frontmatter___tags) {

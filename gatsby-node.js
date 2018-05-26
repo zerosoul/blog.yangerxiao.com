@@ -5,18 +5,18 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   let slug;
   if (node.internal.type === 'MarkdownRemark') {
+    const fileName = node.fileAbsolutePath.split('/').pop();
+    const title = fileName.substring(0, fileName.length - 3);
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
     ) {
       slug = `/${_.kebabCase(node.frontmatter.slug)}`;
     }
-    if (
-      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
-    }
+
+    node.frontmatter.title = title;
+    console.log(node.frontmatter.keyword);
+
     createNodeField({ node, name: 'slug', value: slug });
   }
 };
@@ -28,6 +28,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const postPage = path.resolve('src/templates/post.js');
     const categoryPage = path.resolve('src/templates/category.js');
     const tagPage = path.resolve('src/templates/tag.js');
+    // const archivePage = path.resolve('src/templates/archives.js');
     resolve(
       graphql(`
         {
@@ -88,6 +89,26 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           });
         });
+        // archives
+        // let archivePosts = [];
+
+        // _.each(posts, edge => {
+        //   if (_.get(edge, 'node.frontmatter.category')) {
+        //     categories = categories.concat(edge.node.frontmatter.category);
+        //   }
+        // });
+
+        // const archivePosts = posts;
+        // const totalCount = posts.length;
+
+        // createPage({
+        //   path: '/archives',
+        //   component: archivePage,
+        //   // context: {
+        //   //   archivePosts,
+        //   //   totalCount,
+        //   // },
+        // });
         // tags
         let tags = [];
 
@@ -99,7 +120,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         tags = _.uniq(tags);
 
-        console.log(tags);
+        // console.log(tags);
         tags.forEach(tag => {
           createPage({
             path: `/tags/${_.kebabCase(tag)}`,

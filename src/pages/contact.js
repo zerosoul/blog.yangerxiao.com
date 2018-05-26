@@ -24,18 +24,17 @@ const Content = styled.div`
   @media ${media.phone} {
     padding: 2rem 1.5rem;
   }
-  .contact{
-    display:flex;
-    font-size:.9rem;
+  .contact {
+    display: flex;
+    font-size: 0.9rem;
     @media ${media.phone} {
-      flex-direction:column;
+      flex-direction: column;
     }
-    .item{
-      flex:1;
-      dt{
+    .item {
+      flex: 1;
+      dt {
       }
-      dd{
-
+      dd {
       }
     }
   }
@@ -43,7 +42,7 @@ const Content = styled.div`
 
 const Contact = () => (
   <Wrapper>
-    <Helmet title={`Contact | ${config.siteTitle}`} />
+    <Helmet title={`联系我 | ${config.siteTitle}`} />
     <Header>
       <Link to="/">{config.siteName}</Link>
     </Header>
@@ -57,7 +56,9 @@ const Contact = () => (
         </div>
         <div className="item wx">
           <dt>微信：</dt>
-          <dd><img src="weixin.jpg" alt="微信二维码" /></dd>
+          <dd>
+            <img src="weixin.jpg" alt="微信二维码" />
+          </dd>
         </div>
       </div>
     </Content>

@@ -14,6 +14,7 @@ const Line = styled.div`
     padding: 0.2rem 0.3rem;
     border: 1px solid #eee;
     margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
     border-radius: 0.2rem;
     .tags {
       margin-left: 0.5rem;

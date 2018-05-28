@@ -1,6 +1,5 @@
 ---
 slug: "build-personal-site-with-hexo-and-github-pages"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2015-11-05 17:31:37"
 category: "技术"
 tags:

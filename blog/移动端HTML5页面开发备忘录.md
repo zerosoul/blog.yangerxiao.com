@@ -1,6 +1,6 @@
 ---
 slug: "html5 memo"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2016/11/15/h5-memo/html5.jpg"
 date: "2016-11-15 17:31:37"
 category: "技术"
 tags:
@@ -8,7 +8,7 @@ tags:
     - 备忘
     - 前端
 ---
-![html5](html5.jpg)  
+![html5](https://zerosoul.github.io/2016/11/15/h5-memo/html5.jpg)  
 把平时开发工作中遇到的一些问题写下来，权当备忘录。
 
 # [](#有关Meta "有关Meta")有关Meta

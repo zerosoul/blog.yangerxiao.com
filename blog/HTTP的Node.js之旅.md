@@ -1,6 +1,6 @@
 ---
 slug: "Anatomy-of-an-HTTP-Transaction"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2016/04/29/Anatomy-of-an-HTTP-Transaction/http.jpg"
 date: "2016-04-29 17:31:37"
 category: "它山之石"
 tags:

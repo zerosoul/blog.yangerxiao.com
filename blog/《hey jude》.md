@@ -1,6 +1,6 @@
 ---
 slug: "hey jude"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "http://7xo6wq.com1.z0.glb.clouddn.com/static/images/hey_jude.jpg"
 date: "2012-7-28 21:31:37"
 category: "随笔"
 tags:

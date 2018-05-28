@@ -21,16 +21,20 @@ const Tag = props => {
         <Link to="/tags">标签</Link> | {tag}
       </SectionTitle>
       <Subline sectionTitle>{subline}</Subline>
-      {edges.map(post => (
-        <Article
-          title={post.node.frontmatter.title}
-          date={new Date(post.node.frontmatter.date.replace(/-/g, '/'))}
-          excerpt={post.node.excerpt}
-          slug={post.node.fields.slug}
-          tags={post.node.frontmatter.tags}
-          key={post.node.fields.slug}
-        />
-      ))}
+      {edges.map(post => {
+        const { title, cover, date, tags } = post.node.frontmatter;
+        return (
+          <Article
+            title={title}
+            date={date.replace(/-/g, '/')}
+            excerpt={post.node.excerpt}
+            slug={post.node.fields.slug}
+            tags={tags}
+            cover={cover}
+            key={post.node.fields.slug}
+          />
+        );
+      })}
     </Wrapper>
   );
 };
@@ -51,12 +55,12 @@ export const tagQuery = graphql`
             title
             date
             tags
+            cover
           }
           fields {
             slug
           }
-          excerpt(pruneLength: 200)
-          timeToRead
+          excerpt(pruneLength: 150)
         }
       }
     }

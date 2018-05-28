@@ -1,6 +1,6 @@
 ---
 slug: "another-email-hiding-technique"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2016/01/23/another-email-hiding-technique/spambot.jpg"
 date: "2016-01-23 17:31:37"
 category: "技术"
 tags:

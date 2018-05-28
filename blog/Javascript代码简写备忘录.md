@@ -1,6 +1,5 @@
 ---
 slug: "shorthand-javascript-coding"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2014-10-17 17:31:37"
 category: "技术"
 tags:

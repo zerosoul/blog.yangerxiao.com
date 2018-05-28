@@ -1,6 +1,6 @@
 ---
 slug: "everything-about-promise"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2016/05/26/everything-about-promise/promise.jpg"
 date: "2016-05-26  17:31:37"
 category: "它山之石"
 tags:

@@ -1,6 +1,5 @@
 ---
 slug: "building-my-first-ios-app-with-react-native-part-one"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2016-06-5 17:31:37"
 category: "它山之石"
 tags:

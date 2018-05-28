@@ -1,6 +1,6 @@
 ---
 slug: "explore-object-assign"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2016/03/25/explore-object-assign/obj.jpg"
 date: "2016-03-25 17:31:37"
 category: "技术"
 tags:

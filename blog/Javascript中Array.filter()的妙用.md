@@ -1,6 +1,5 @@
 ---
 slug: "array-filter-trick"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2016-11-29 17:31:37"
 category: "技术"
 tags:

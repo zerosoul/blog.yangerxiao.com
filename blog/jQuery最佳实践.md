@@ -1,6 +1,5 @@
 ---
 slug: "jquery-best-practice"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2016-03-6 17:31:37"
 category: "技术"
 tags:
@@ -9,7 +8,7 @@ tags:
     - jQuery
     - 最佳实践
 ---
-![jquery](jquery.jpg)
+![jquery](https://zerosoul.github.io/2016/03/06/jquery-best-practice/jquery.jpg)
 
 [](#前言 "前言")前言
 ==============

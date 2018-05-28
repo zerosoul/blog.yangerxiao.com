@@ -21,16 +21,20 @@ const Category = props => {
         <Link to="/categories">分类</Link> | {category}
       </SectionTitle>
       <Subline sectionTitle>{sublineStr}</Subline>
-      {edges.map(post => (
-        <Article
-          title={post.node.frontmatter.title}
-          date={post.node.frontmatter.date.replace(/-/g, '/')}
-          excerpt={post.node.excerpt}
-          slug={post.node.fields.slug}
-          category={post.node.frontmatter.category}
-          key={post.node.fields.slug}
-        />
-      ))}
+      {edges.map(post => {
+        const { title, cover, date, category: cate } = post.node.frontmatter;
+        return (
+          <Article
+            title={title}
+            date={date.replace(/-/g, '/')}
+            excerpt={post.node.excerpt}
+            slug={post.node.fields.slug}
+            category={cate}
+            cover={cover}
+            key={post.node.fields.slug}
+          />
+        );
+      })}
     </Wrapper>
   );
 };
@@ -51,12 +55,12 @@ export const categoryQuery = graphql`
             title
             date
             category
+            cover
           }
           fields {
             slug
           }
-          excerpt(pruneLength: 200)
-          timeToRead
+          excerpt(pruneLength: 150)
         }
       }
     }

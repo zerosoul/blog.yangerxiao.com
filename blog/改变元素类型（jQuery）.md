@@ -1,6 +1,5 @@
 ---
 slug: "change-element-type-using-jquery"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2015-8-8 17:31:37"
 category: "技术"
 tags:

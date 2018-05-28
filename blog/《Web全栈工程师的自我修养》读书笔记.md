@@ -1,6 +1,6 @@
 ---
 slug: "about-full-stack-engineer"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2016/06/18/about-full-stack-engineer/fullstack.jpg"
 date: "2016-6-18 17:31:37"
 category: "读书笔记"
 tags:

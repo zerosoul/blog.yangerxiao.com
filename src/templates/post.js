@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import { getYMD } from '../utils/fun';
+import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
 // import '../utils/prismjs-theme.css';
@@ -23,10 +24,49 @@ const PostContent = styled.div`
   h2 {
     font-size: 1.2rem;
   }
+  p img {
+    transform: scale(1.14);
+  }
+  @media ${media.desktop} {
+    p img {
+      transform: scale(1);
+    }
+  }
 `;
-
+const ArticleNav = styled.div`
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding-top: 0.8rem;
+  align-items: center;
+  > a {
+    flex: 1;
+    position: relative;
+    color: #888;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -0.5rem;
+      width: 0;
+      height: 0;
+      border-top: 0.5rem solid transparent;
+      border-bottom: 0.5rem solid transparent;
+    }
+    &.prev::after {
+      left: -1rem;
+      border-right: 0.5rem solid #999;
+    }
+    &.next {
+      text-align: right;
+      &::after {
+        right: -1rem;
+        border-left: 0.5rem solid #999;
+      }
+    }
+  }
+`;
 const Post = props => {
-  const { slug } = props.pathContext;
+  const { slug, prev, next } = props.pathContext;
   const postNode = props.data.markdownRemark;
   const { title, date, tags, category } = postNode.frontmatter;
 
@@ -55,6 +95,10 @@ const Post = props => {
         )}
       </Subline>
       <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
+      <ArticleNav>
+        {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
+        {next && <Link to={next.fields.slug} className="next">{`${next.frontmatter.title}`}</Link>}
+      </ArticleNav>
     </Wrapper>
   );
 };
@@ -72,7 +116,6 @@ export const postQuery = graphql`
         category
         tags
       }
-      timeToRead
     }
   }
 `;

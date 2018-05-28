@@ -1,6 +1,5 @@
 ---
 slug: "JavaScript-Event-Delegation"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2014-5-12 17:31:37"
 category: "技术"
 tags:

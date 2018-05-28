@@ -20,11 +20,17 @@ const typography = new Typography({
     a: {
       textDecoration: 'none',
       color: '#333',
-      '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
+      // '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
       '-webkit-tap-highlight-color': 'transparent',
     },
     h2: {
       color: lighten(0.1, '#333'),
+    },
+    blockquote: {
+      background: '#f9f9f9',
+      borderLeft: '.4rem solid #ccc',
+      margin: '1rem 0.4rem',
+      padding: '0.5rem .6rem',
     },
   }),
 });

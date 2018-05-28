@@ -1,6 +1,5 @@
 ---
 slug: "amd-commonjs-and-umd"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2014-8-22 17:31:37"
 category: "技术"
 tags:
@@ -23,7 +22,7 @@ AMD获得前端开发者的青睐，大概很大程度上是由于[RequireJS](ht
 ``` js
 //文件名: bar.js
 
-define(\['jquery'\], function ($) {
+define(['jquery'], function ($) {
 
     function myFunc(){};
 
@@ -39,7 +38,7 @@ define(\['jquery'\], function ($) {
 ``` js
 //文件名: bar.js
 
-define(\['jquery', 'underscore'\], function ($, _) {
+define(['jquery', 'underscore'], function ($, _) {
 
     function a(){};//私有函数
 
@@ -130,7 +129,7 @@ CommonJS和AMD适用场景不太一样，一般CommonJS是同步加载，AMD是�
 
         // AMD
 
-        define(\['jquery'\], factory);
+        define(['jquery'], factory);
 
     } else if (typeof exports === 'object') {
 
@@ -165,7 +164,7 @@ CommonJS和AMD适用场景不太一样，一般CommonJS是同步加载，AMD是�
 
         // AMD
 
-        define(\['jquery', 'underscore'\], factory);
+        define(['jquery', 'underscore'], factory);
 
     } else if (typeof exports === 'object') {
 

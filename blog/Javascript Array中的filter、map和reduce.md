@@ -1,6 +1,6 @@
 ---
 slug: "array-filter-map-reduce-in-js"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-1.png"
 date: "2016-12-06 17:31:37"
 category: "它山之石"
 tags:

@@ -1,6 +1,5 @@
 ---
 slug: "git push big file problem"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2017-11-9 20:32:58"
 category: "技术"
 tags:

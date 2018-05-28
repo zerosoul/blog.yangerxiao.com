@@ -1,6 +1,5 @@
 ---
 slug: "Improve-Your-Workflow-With-BrowserSync-2-0"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2016-01-14 17:31:37"
 category: "技术"
 tags:

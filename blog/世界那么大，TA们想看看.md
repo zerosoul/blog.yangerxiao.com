@@ -1,6 +1,6 @@
 ---
 slug: "take-parents-to-beijing"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "/images/parents.jpg"
 date: "2016-06-17 17:31:37"
 category: "技术"
 tags:

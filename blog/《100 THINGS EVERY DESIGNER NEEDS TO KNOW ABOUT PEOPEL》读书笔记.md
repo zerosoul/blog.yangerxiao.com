@@ -1,6 +1,6 @@
 ---
 slug: "100-things-every-designer-needs-to-know-about-people"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2014/06/05/100-things-every-designer-needs-to-know-about-people/designer.jpg"
 date: "2014-06-5 17:31:37"
 category: "读书笔记"
 tags:

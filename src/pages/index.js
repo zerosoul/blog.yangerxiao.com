@@ -18,6 +18,7 @@ const IndexPage = props => {
           slug={post.node.fields.slug}
           category={post.node.frontmatter.category}
           tags={post.node.frontmatter.tags}
+          cover={post.node.frontmatter.cover}
           key={post.node.fields.slug}
         />
       ))}
@@ -41,6 +42,7 @@ export const IndexQuery = graphql`
             date
             category
             tags
+            cover
           }
           excerpt(pruneLength: 200)
           timeToRead

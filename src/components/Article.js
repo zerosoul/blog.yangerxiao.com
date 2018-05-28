@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
+import Link, { navigateTo } from 'gatsby-link';
 import kebabCase from 'lodash/kebabCase';
 import { getYMD } from '../utils/fun';
 import { ellipsis } from 'polished';
@@ -30,12 +30,16 @@ const Initiale = styled.span`
   opacity: 0.08;
   user-select: none;
 `;
-
-const Excerpt = styled.p`
-  margin: 0.4rem 0;
+const Container = styled.div`
+  margin-top: 0.6rem;
+  cursor: pointer;
 `;
+const Cover = styled.img`
+  margin-bottom: 0;
+`;
+const Excerpt = styled.p``;
 
-const Article = ({ title, date, excerpt, slug, category, tags }) => {
+const Article = ({ title, date, excerpt, slug, category, tags, cover }) => {
   const firstChar = title.charAt(1) || title.charAt(0);
   return (
     <Post>
@@ -64,7 +68,10 @@ const Article = ({ title, date, excerpt, slug, category, tags }) => {
           </span>
         )}
       </Subline>
-      <Excerpt>{excerpt}</Excerpt>
+      <Container onClick={() => navigateTo(slug)}>
+        {cover && <Cover src={cover} alt={title} />}
+        <Excerpt>{excerpt}</Excerpt>
+      </Container>
     </Post>
   );
 };

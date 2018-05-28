@@ -1,6 +1,5 @@
 ---
 slug: "convert-query-params-to-json"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2014-7-29 17:31:37"
 category: "技术"
 tags:

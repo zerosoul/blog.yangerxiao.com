@@ -1,6 +1,6 @@
 ---
 slug: "explore-json"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2015/06/18/explore-json/json.png"
 date: "2015-06-18 17:31:37"
 category: "技术"
 tags:

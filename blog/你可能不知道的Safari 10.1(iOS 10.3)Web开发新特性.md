@@ -1,6 +1,6 @@
 ---
 slug: "new-web-features-in-safari-10-1"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2017/03/31/new-web-features-in-safari-10-1/qiaobusi.jpg"
 date: "2017-03-31 17:31:37"
 category: "它山之石"
 tags:

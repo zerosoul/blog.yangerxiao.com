@@ -1,6 +1,6 @@
 ---
 slug: "reading-power-sleep"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+cover: "https://zerosoul.github.io/2015/10/23/reading-power-sleep/baby.jpg"
 date: "2015-10-23 17:31:37"
 category: "读书笔记"
 tags:

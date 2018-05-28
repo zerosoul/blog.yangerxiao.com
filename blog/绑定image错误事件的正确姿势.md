@@ -1,6 +1,5 @@
 ---
 slug: "using-image-error-event-correctly"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "2014-11-25 17:31:37"
 category: "技术"
 tags:

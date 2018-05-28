@@ -24,9 +24,8 @@ const Tag = props => {
       {edges.map(post => (
         <Article
           title={post.node.frontmatter.title}
-          date={new Date(post.node.frontmatter.date)}
+          date={new Date(post.node.frontmatter.date.replace(/-/g, '/'))}
           excerpt={post.node.excerpt}
-          timeToRead={post.node.timeToRead}
           slug={post.node.fields.slug}
           tags={post.node.frontmatter.tags}
           key={post.node.fields.slug}

@@ -24,9 +24,8 @@ const Category = props => {
       {edges.map(post => (
         <Article
           title={post.node.frontmatter.title}
-          date={new Date(post.node.frontmatter.date)}
+          date={post.node.frontmatter.date.replace(/-/g, '/')}
           excerpt={post.node.excerpt}
-          timeToRead={post.node.timeToRead}
           slug={post.node.fields.slug}
           category={post.node.frontmatter.category}
           key={post.node.fields.slug}

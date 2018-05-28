@@ -11,8 +11,9 @@ import config from '../../config/SiteConfig';
 const ContactBlock = styled.div`
   display: flex;
   font-size: 1rem;
-  @media ${media.phone} {
-    flex-direction: column;
+  flex-direction: column;
+  @media ${media.desktop} {
+    flex-direction: row;
   }
   .item {
     flex: 1;

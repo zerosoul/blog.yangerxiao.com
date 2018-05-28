@@ -22,13 +22,13 @@ const Title = styled.h2`
 
 const Initiale = styled.span`
   position: absolute;
-  left: 0;
-  top: 0;
-  font- weight: 700;
-  font- size: 2rem;
-  transform: translate(-50 %, -50 %);
+  left: 0.1rem;
+  top: 0.2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
   opacity: 0.08;
-  user- select: none;
+  user-select: none;
 `;
 
 const Excerpt = styled.p`
@@ -49,7 +49,7 @@ const Article = ({ title, date, excerpt, slug, category, tags }) => {
         {date && <span>发布：{getYMD(date)} </span>}
         {category && (
           <span>
-            分类：<Link to={`/ categories / ${kebabCase(category)} `}>{category}</Link>
+            分类：<Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
           </span>
         )}
         {tags && (

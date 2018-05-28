@@ -6,7 +6,6 @@ import Button from './Button';
 
 const Wrapper = styled.header`
   margin: 0 auto;
-
   padding: 0 0.5rem;
 `;
 const Hero = styled.div`

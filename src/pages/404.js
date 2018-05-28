@@ -6,11 +6,15 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Header from '../components/Header';
-import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
 
-const Content = styled.div``;
+const Content = styled.div`
+  box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  background-color: ${props => props.theme.bg};
+`;
 
 const NotFound = () => (
   <Wrapper>

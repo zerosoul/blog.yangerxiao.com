@@ -28,7 +28,7 @@ const PostContent = styled.div`
 const Post = props => {
   const { slug } = props.pathContext;
   const postNode = props.data.markdownRemark;
-  const { title, date, tags, category, timeToRead } = postNode.frontmatter;
+  const { title, date, tags, category } = postNode.frontmatter;
 
   return (
     <Wrapper>

@@ -1,11 +1,11 @@
 import Typography from 'typography';
-import oceanBeachTheme from 'typography-theme-ocean-beach';
+// import oceanBeachTheme from 'typography-theme-ocean-beach';
 import { lighten } from 'polished';
 
 const config = require('../../config/SiteConfig');
 
-oceanBeachTheme.headerFontFamily = config.fontFamily;
-oceanBeachTheme.bodyFontFamily = config.fontFamily;
+// oceanBeachTheme.headerFontFamily = config.fontFamily;
+// oceanBeachTheme.bodyFontFamily = config.fontFamily;
 
 const typography = new Typography({
   baseFontSize: '18px',

@@ -25,7 +25,7 @@ const PostContent = styled.div`
     font-size: 1.2rem;
   }
   p img {
-    margin: 0.4rem;
+    margin: 0.4rem auto;
     transform: scale(1.14);
   }
   @media ${media.desktop} {

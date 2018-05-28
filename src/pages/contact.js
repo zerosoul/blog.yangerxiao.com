@@ -3,7 +3,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 import Wrapper from '../components/Wrapper';
+import SectionTitle from '../components/SectionTitle';
+import Subline from '../components/Subline';
 import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
@@ -23,8 +26,10 @@ const ContactBlock = styled.div`
 const Contact = () => (
   <Wrapper>
     <Helmet title={`联系我 | ${config.siteTitle}`} />
-    <h1>联系我</h1>
-    <p>也许，我们能成为朋友。</p>
+    <SectionTitle>
+      <Link to="/contact">联系我</Link>
+    </SectionTitle>
+    <Subline sectionTitle>也许，我们能成为朋友。</Subline>
     <ContactBlock>
       <div className="item email">
         <dt>邮箱：</dt>

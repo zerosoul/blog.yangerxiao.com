@@ -16,7 +16,6 @@ const ArchiveList = styled.div`
 `;
 const Container = styled.div`
   @media ${media.desktop} {
-    max-width: 70%;
     margin: 0 auto;
   }
 `;
@@ -51,7 +50,7 @@ const Archives = props => {
               key={node.fields.slug}
               path={node.fields.slug}
               title={node.frontmatter.title}
-              date={node.frontmatter.date.substr(5)}
+              date={node.frontmatter.date}
             />
           ));
           return (

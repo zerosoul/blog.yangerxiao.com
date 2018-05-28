@@ -36,7 +36,7 @@ const Navs = styled.div`
   margin-bottom: 1rem;
   max-width: 90%;
   @media ${media.tablet} {
-    max-width: 50%;
+    max-width: 55%;
   }
   @media ${media.desktop} {
     max-width: 30%;

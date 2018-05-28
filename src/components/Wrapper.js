@@ -12,11 +12,13 @@ const Content = styled.div`
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   padding: 2rem 1rem;
-  @media ${media.desktop} {
-    padding: 3rem 5rem;
-  }
+  margin: 0 auto;
   @media ${media.tablet} {
-    padding: 2.5rem 4rem;
+    padding: 2.6rem;
+  }
+  @media ${media.desktop} {
+    padding: 3rem 6rem;
+    max-width: 70%;
   }
   background-color: ${props => props.theme.bg};
 `;

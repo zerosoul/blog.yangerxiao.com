@@ -22,15 +22,19 @@ const Item = styled.li`
   }
 `;
 
-const Archive = ({ path, title, date }) => (
-  <Item className="archive">
-    <time className="date" dateTime={date}>
-      {`${pad(new Date(date).getMonth() + 1)}-${pad(new Date(date).getDate())}`}
-    </time>
-    <Link className="title" to={path}>
-      {title}
-    </Link>
-  </Item>
-);
+const Archive = ({ path, title, date }) => {
+  const dateObj = new Date(date.replace(/-/g, '/'));
+  const dateStr = `${pad(dateObj.getMonth() + 1)}-${pad(dateObj.getDate())}`;
+  return (
+    <Item className="archive">
+      <time className="date" dateTime={date}>
+        {dateStr}
+      </time>
+      <Link className="title" to={path}>
+        {title}
+      </Link>
+    </Item>
+  );
+};
 
 export default Archive;

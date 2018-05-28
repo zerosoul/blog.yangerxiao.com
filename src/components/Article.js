@@ -54,11 +54,14 @@ const Article = ({ title, date, excerpt, slug, category, tags }) => {
         )}
         {tags && (
           <span>
-            标签：{tags.map(tag => (
-              <Link className="tag" to={`/ tags / ${kebabCase(tag)} `}>
-                {tag}
-              </Link>
-            ))}
+            标签：
+            <span className="tags">
+              {tags.map(tag => (
+                <Link className="tag" to={`/ tags / ${kebabCase(tag)} `}>
+                  {tag}
+                </Link>
+              ))}
+            </span>
           </span>
         )}
       </Subline>

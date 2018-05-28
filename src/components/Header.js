@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 import { lighten } from 'polished';
 import Button from './Button';
+import { media } from '../utils/media';
 
 const Wrapper = styled.header`
   margin: 0 auto;
@@ -34,6 +35,12 @@ const Navs = styled.div`
   margin: 0 auto;
   margin-bottom: 1rem;
   max-width: 80%;
+  @media ${media.desktop} {
+    max-width: 30%;
+  }
+  @media ${media.tablet} {
+    max-width: 50%;
+  }
   a {
     flex: 1;
     text-align: center;

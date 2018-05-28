@@ -5,28 +5,21 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
-import Header from '../components/Header';
 import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
 
-const Content = styled.div`
-  box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  padding: 2rem 1rem;
-  background-color: ${props => props.theme.bg};
-  .contact {
-    display: flex;
-    font-size: 0.9rem;
-    @media ${media.phone} {
-      flex-direction: column;
+const ContactBlock = styled.div`
+  display: flex;
+  font-size: 1rem;
+  @media ${media.phone} {
+    flex-direction: column;
+  }
+  .item {
+    flex: 1;
+    dt {
     }
-    .item {
-      flex: 1;
-      dt {
-      }
-      dd {
-      }
+    dd {
     }
   }
 `;
@@ -34,23 +27,20 @@ const Content = styled.div`
 const Contact = () => (
   <Wrapper>
     <Helmet title={`联系我 | ${config.siteTitle}`} />
-    <Header />
-    <Content>
-      <h1>联系我</h1>
-      <p>也许，我们能成为朋友。</p>
-      <div className="contact">
-        <div className="item email">
-          <dt>邮箱：</dt>
-          <dd>yanggc888#163.com</dd>
-        </div>
-        <div className="item wx">
-          <dt>微信：</dt>
-          <dd>
-            <img src="/images/site/wx.jpg" alt="微信二维码" />
-          </dd>
-        </div>
+    <h1>联系我</h1>
+    <p>也许，我们能成为朋友。</p>
+    <ContactBlock>
+      <div className="item email">
+        <dt>邮箱：</dt>
+        <dd>yanggc888#163.com</dd>
       </div>
-    </Content>
+      <div className="item wx">
+        <dt>微信：</dt>
+        <dd>
+          <img src="/images/site/wx.jpg" alt="微信二维码" />
+        </dd>
+      </div>
+    </ContactBlock>
   </Wrapper>
 );
 

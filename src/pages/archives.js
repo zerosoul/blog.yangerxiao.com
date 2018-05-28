@@ -3,18 +3,13 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
-import Header from '../components/Header';
 import Subline from '../components/Subline';
 import Archive from '../components/Archive';
 import SectionTitle from '../components/SectionTitle';
 
 import config from '../../config/SiteConfig';
 
-const Content = styled.div`
-  box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  padding: 2rem 1rem;
-  background-color: ${props => props.theme.bg};
+const ArchiveList = styled.div`
   .archives-list {
     margin-left: 0;
   }
@@ -24,7 +19,7 @@ const Archives = props => {
   // console.log(props);
 
   const { edges, totalCount } = props.data.allMarkdownRemark;
-  const subline = `（共${totalCount}篇）`;
+  const sublineStr = `（共${totalCount}篇）`;
   const archives = {};
 
   edges.forEach(({ node }) => {
@@ -39,30 +34,27 @@ const Archives = props => {
   return (
     <Wrapper>
       <Helmet title={`归档 | ${config.siteTitle}`} />
-      <Header />
-      <Content>
-        <SectionTitle>
-          <Link to="/archives">归档</Link>
-        </SectionTitle>
-        <Subline sectionTitle>{subline}</Subline>
-        {Object.keys(archives).map(date => {
-          const year = date.substr(4);
-          const archiveEle = archives[date].map(node => (
-            <Archive
-              key={node.fields.slug}
-              path={node.fields.slug}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date.substr(5)}
-            />
-          ));
-          return (
-            <div className="archives-item" key={year}>
-              <h2 className="archive-year">{year}</h2>
-              <ul className="archives-list">{archiveEle}</ul>
-            </div>
-          );
-        })}
-      </Content>
+      <SectionTitle>
+        <Link to="/archives">归档</Link>
+      </SectionTitle>
+      <Subline sectionTitle>{sublineStr}</Subline>
+      {Object.keys(archives).map(date => {
+        const year = date.substr(4);
+        const archiveEle = archives[date].map(node => (
+          <Archive
+            key={node.fields.slug}
+            path={node.fields.slug}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date.substr(5)}
+          />
+        ));
+        return (
+          <ArchiveList className="archives-item" key={year}>
+            <h2 className="archive-year">{year}</h2>
+            <ul className="archives-list">{archiveEle}</ul>
+          </ArchiveList>
+        );
+      })}
     </Wrapper>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { lighten } from 'polished';
 
 const Wrapper = styled.span`
   margin-right: 0.4rem;

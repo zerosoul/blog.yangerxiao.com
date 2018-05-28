@@ -37,7 +37,8 @@
   "main": "n/a",
   "scripts": {
     "clean": "rimraf public .cache *.log .DS_Store",
-    "build": "npm i && npm run clean && gatsby build",
+    "build": "npm run clean && gatsby build",
+    "rebuild": "npm i && npm run build",
     "dev": "gatsby develop -o",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },

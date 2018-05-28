@@ -110,31 +110,7 @@ tags:
 -----------------------------
 
 在`PIW`类里面，第一件事情便是加个构造函数`constructor`，在此初始化两个State：`wallsJSON`和`isLoading`。`wallsJSON`用于存储从第三方接口获取的json数组数据，`isLoading`是个布尔变量，用于标识数据是否加载完毕。  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
+``` javascript
 class PIW extends Component{
 
 /***/
@@ -158,61 +134,31 @@ class PIW extends Component{
 ...
 
 }
-
+``` 
 **注：方便起见，涉及的代码改动，我用`/***/`隔离标识出，下同。** 既然有存放数据的变量了，就得有给之赋值的函数，好吧，在`constructor`下面加一个占位函数`fetchWallsJSON`:  
-
-1
-
-2
-
-3
+``` javascript
 
 fetchWallsJSON() {
 
     console.log(‘壁纸数据从这里加载...’);
 
 }
-
+```
 从业务逻辑来讲，组件一旦加载完毕，就应该触发该函数。那么，该`componentDidMount`上场了，它是React Native组件的生命周期函数之一，在首次渲染（`render`）成功后会触发。想要更系统地理解组件的生命周期，请移步[这里](https://facebook.github.io/react/docs/component-specs.html)。注意，既然我们用的ES6的类语法，就可以省略`getInitialState`了，取而代之的是在`constructor`中给`this.state`赋值。  
 
-1
-
-2
-
-3
+``` javascript
 
 componentDidMount() {
 
     this.fetchWallsJSON();
 
 }
-
+```
 `fetchWallsJSON`里会打印信息，我们应该从哪儿看到呢？首先，让模拟器获取焦点，使用`CMD + D`组合键调出调试菜单，选择**Debug in Chrome**，好吧，顺便把**Enable live reload**也打开吧，妈妈再也不用担心每次都要手动重启APP了。将会在Chrome里打开一个新标签，按照上面的说明调出**console**的界面。啊哈！  
 ![console data loaded tip](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/console.png)  
 坑占好了，下面，可以开始考虑引入真实数据了。访问URL：[unsplash.it/list](http://unsplash.it/list) ，你将会看到铺满全屏的数据，接下来我们就基于这些数据做文章啦~~~  
 首先，替换掉`console`:  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
+``` javascript
 
 fetchWallsJSON() {
 
@@ -235,7 +181,7 @@ fetchWallsJSON() {
     /***/
 
   }
-
+```
 **注：用到了`fetch`函数，不熟悉的同学请参考[这里](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)**  
 保存然后刷新，几秒过后，啊哈！  
 ![console real data](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/consolerealdata.png)
@@ -246,21 +192,7 @@ fetchWallsJSON() {
 ===================================
 
 首先，把`PIW`类里`render`代码全部删除，新增以下代码：  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
+``` javascript
 render() {
 
     var {isLoading} = this.state;
@@ -274,54 +206,9 @@ render() {
       return this.renderResults();
 
   }
-
+```
 里面新增了两个函数，我们来实现它：
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
-21
-
-22
-
-23
+``` javascript
 
 renderLoadingScreen() {
 
@@ -364,31 +251,9 @@ renderLoadingScreen() {
     );
 
   }
-
+```
 根据`isLoading`的不同状态，渲染不同的界面。但是请注意，我们好像忘了什么。啊哈，`isLoading`并没有改变状态，应该在哪儿将其状态变过来呢？`fetchWallsJSON`！  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
+``` javascript
 ...
 
 fetch(url)
@@ -410,27 +275,10 @@ fetch(url)
 .catch( error => console.log(‘获取数据有误：‘ + error) );
 
 ...
-
+```
 有关`setState`的详细说明请移步[这里](https://facebook.github.io/react/docs/component-api.html)，一句话描述其作用就是用于触发UI更新。  
 另外，我们在`renderLoadingScreen`调用了一个新组件`ActivityIndicatorIOS`，因此，需要在头部引入之：  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
+``` javascript
 
 import {
 
@@ -449,31 +297,10 @@ import {
   /***/
 
 } from 'react-native';
-
+```
 在看到最终效果前，还有一件事情：注意到`<View>`标签内有个`styles.loadingContainer`没有？没错，这是用来定义`View`的样式的，目前可以这样理解：React内的样式全部用行内样式来定义的。而样式则通过`var styles = StyleSheet.create({…`来创建，只需要在相应的组件里加以引用即可：  
 创建`loadingContainer`:  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
+``` javascript
 
 var styles = StyleSheet.create({
 
@@ -496,28 +323,15 @@ var styles = StyleSheet.create({
 /***/
 
 });
-
+```
 引用`loadingContainer`:  
 
-1
+``` jsx
 
 <View style={styles.loadingContainer}/>
-
+```
 当然，也可以这样使用：  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
+``` jsx
 
 <View style={{
 
@@ -532,7 +346,7 @@ var styles = StyleSheet.create({
     backgroundColor: '#000'
 
   }} />
-
+```
 不过这样做代码的可读性和可维护性较差，尤其在有很多组件的时候，容易乱套，所以并不是一个好的实践。另外，注意到没，React Native严重依赖`flexbox`布局元素，所以，学好`flexbox`这个知识点就很有必要。
 
 保存这些改动，你将会在模拟器中看到以下加载页面：  
@@ -547,10 +361,9 @@ var styles = StyleSheet.create({
 
 首先，我们在`index.ios.js`的`class`声明前定义一个常量，用于决定要随机选取的壁纸数量。  
 
-1
-
+``` javascript
 const NUM_WALLPAPERS = 5;
-
+```
 然后创建一个用户生成随机数的模块，这个模块内有两个函数：
 
 -   `uniqueRandomNumbers`：该函数有三个参数，第一个决定了将要返回的随机数数量，后面两个定义随机数选取的范围。比如调用`uniqueRandomNumbers(5,10,20)`将获得包含5个随机数的数组，他们的范围在10到20之间。
@@ -559,38 +372,7 @@ const NUM_WALLPAPERS = 5;
 当然，我们完全可以将这两个函数合并为一个，但遵循[**单一职责原则**](https://en.wikipedia.org/wiki/Single_responsibility_principle)应该是编码的最佳实践：一个函数只做一件事并将其做好。相信我，遵循好的编程原则能让以后的日子好过一些。
 
 好了，思路表述完了，开始编码。首先，在根目录下新建一个js文件`RandManager.js`，以下是代码：
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
+``` javascript
 
 module.exports = {
 
@@ -619,49 +401,10 @@ module.exports = {
     }
 
 };
+```
 
 在`index.ios.js`中引用`RandManager`模块：`var RandManager = require('./RandManager.js');`，然后我们就可以在`fetchWallsJSON`中调用啦：  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
+``` javascript
 fetchWallsJSON() {
 
   var url = 'http://unsplash.it/list';
@@ -699,6 +442,7 @@ fetchWallsJSON() {
     .catch( error => console.log('获取数据有误：' + error) );
 
 }
+```
 
 上面代码应该不用过多解释了，使用`uniqueRandomNumbers`生成5个随机数作为`jsonData`的索引值，进而获取5个随机壁纸数据并存入`wallsJSON`，哦对了，别忘了更新`isLoading`。
 
@@ -804,39 +548,7 @@ renderResults() {
 不出意外的话，界面将变成下面这样：  
 ![swiper with name data](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/swiperwithdata.png)  
 下面，根据[Swiper组件的文档](https://github.com/leecade/react-native-swiper)，我们来微调一下样式：  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
+``` jsx
 <Swiper
 
 /***/
@@ -868,6 +580,7 @@ onMomentumScrollEnd={this.onMomentumScrollEnd}
   })}
 
 </Swiper>
+```
 
 -   微调了下底部分页小圆点，更大更黑了（卧槽，我在说什么…）
 -   禁用了循环，这样，一旦浏览到最后一页，然后就没有然后了。

@@ -39,13 +39,7 @@ email me: foo@bar.baz
 
 ``` html
 
-<object type="application/x-shockwave-flash" data="media/flash/articles/email.swf"
-
-    codebase="http://fpdownload.macromedia.com
-
-    /pub/shockwave/cabs/flash/swflash.cab
-
-    #version=6,0,0,0">
+<object type="application/x-shockwave-flash" data="media/flash/articles/email.swf" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0">
 
     <param name="movie" value="media/email.swf">
 

@@ -36,7 +36,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "clean": "rimraf public .cache *.log .DS_Store",
+    "clean": "rm -rf public .cache *.log .DS_Store",
     "build": "npm run clean && gatsby build",
     "rebuild": "npm i && npm run build",
     "dev": "gatsby develop -o",

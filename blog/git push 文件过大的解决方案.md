@@ -14,7 +14,7 @@ tags:
 
 git初始化新项目时，往往文件比较多，比较大，初次PUSH到远程仓库，会抛出如下错误：
 
-```shell
+``` shell
 $ git push
 Counting objects: 893, done.
 Delta compression using up to 4 threads.
@@ -28,7 +28,7 @@ fatal: The remote end hung up unexpectedly
 
 
 
-注意，最后一条信息：```fatal: The remote end hung up unexpectedly```，表示推送失败，出现了错误。
+注意，最后一条信息：`fatal: The remote end hung up unexpectedly`，表示推送失败，出现了错误。
 
 ## 原因
 

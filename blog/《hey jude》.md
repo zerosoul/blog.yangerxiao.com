@@ -8,6 +8,9 @@ tags:
     - 音乐
     - Beatles
 ---
+
+![](http://7xo6wq.com1.z0.glb.clouddn.com/static/images/hey_jude.jpg)
+
 [](#（一） "（一）")（一）
 =================
 
@@ -76,5 +79,3 @@ tags:
 > Better better better better better better, Oh.  
 > 更美好~~~  
 > Na na na, na na na na, na na na
-
-![](http://7xo6wq.com1.z0.glb.clouddn.com/static/images/hey_jude.jpg)

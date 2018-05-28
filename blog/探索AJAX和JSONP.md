@@ -68,7 +68,7 @@ alert('我来自远程文件');
 
     <title>JSONP测试页面</title>
 
-    <script type="text/javascript" src="http://remote.server.com/remote.js"></script>
+    <script src="http://remote.server.com/remote.js"></script>
 
 </head>
 
@@ -90,7 +90,7 @@ alert('我来自远程文件');
 
     <title>JSONP测试页面</title>
 
-    <script type="text/javascript">
+    <script>
 
     var localHandler = function(data){
 
@@ -100,7 +100,7 @@ alert('我来自远程文件');
 
     </script>
 
-    <script type="text/javascript" src="http://remote.server.com/remote.js"></script>
+    <script src="http://remote.server.com/remote.js"></script>
 
 </head>
 
@@ -129,7 +129,7 @@ localHandler({"result":"我是远程js带来的数据"});
 
     <title>JSONP测试页面</title>
 
-    <script type="text/javascript">
+    <script>
 
     // 得到航班信息查询结果后的回调函数
 
@@ -192,9 +192,9 @@ flightHandler({
 
     <title>JSONP测试页面</title>
 
-    <script type="text/javascript" src=jquery.min.js"></script>
+    <script src=jquery.min.js"></script>
 
-      <script type="text/javascript">
+      <script>
 
         $(function(){ 
 

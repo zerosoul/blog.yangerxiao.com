@@ -8,7 +8,7 @@ tags:
     - ES6
     - 前端
 ---
-![extend obj](obj.jpg)
+![extend obj](http://zerosoul.github.io/2016/03/25/explore-object-assign/obj.jpg)
 
 [](#起因 "起因")起因
 ==============
@@ -31,37 +31,18 @@ tags:
 ### [](#拷贝对象 "拷贝对象")拷贝对象
 
 只需要传入的第一个参数是空对象即可：  
-
-1
-
-2
-
-3
+``` js
 
 var obj = { foo: 1 };
 
 var copy = Object.assign({}, obj);
 
 console.log(copy); // { foo: 1 }
-
+```
 ### [](#合并对象 "合并对象")合并对象
 
 注意第一个传参将会被改变，所以如果不想改变第一个有值参数，可以传入一个空对象：  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
+``` js
 var o1 = { a: 1 };
 
 var o2 = { b: 2 };
@@ -73,35 +54,12 @@ var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
 
 console.log(o1);  // { a: 1, b: 2, c: 3 }, 注意第一个参数，即o1有了变化。
-
+```
 [](#注意事项 "注意事项")注意事项
 --------------------
 
 -   在`Object.assign()`中，原型属性和非可枚举属性不会被拷贝。（[两种属性的解释](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)）
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
+``` js
 
 var obj = Object.create({ foo: 1 }, { // foo是obj原型链上的属性
 
@@ -124,22 +82,9 @@ var obj = Object.create({ foo: 1 }, { // foo是obj原型链上的属性
 var copy = Object.assign({}, obj);
 
 console.log(copy); // { baz: 3 }，只拷贝了baz属性
-
+```
 -   元类型会被转化为对象
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
+``` js
 
 var v1 = 'abc';
 
@@ -152,34 +97,9 @@ var obj = Object.assign({}, v1, null, v2, undefined, v3);
 //元类型里面的字符串被转化为字符数组，null和undefined被忽略
 
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
-
+```
 -   异常会抛出，但是已经执行的代码会生效
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
+``` js
 
 var target = Object.defineProperty({}, 'foo', {
 
@@ -202,59 +122,12 @@ console.log(target.foo);  // 1, 异常就是在这儿发生的，所以还是1
 console.log(target.foo3); // undefined
 
 console.log(target.baz);  // undefined
-
+```
 [](#pollyfill "pollyfill")pollyfill
 ===================================
 
 上面是对`Object.assign()`概念层面的探索，由于要考虑旧版本浏览器兼容性问题，需要写一个**pollyfill**，其实这才是重头戏。不过，只有理解了`Object.assign()`都干了些什么，才有可能写出来：
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
-21
-
-22
-
-23
-
-24
+``` js
 
 (function () {
 
@@ -303,7 +176,7 @@ console.log(target.baz);  // undefined
 }
 
 })();
-
+```
 [](#结束 "结束")结束
 ==============
 

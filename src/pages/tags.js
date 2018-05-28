@@ -31,7 +31,8 @@ const Tag = styled.a`
     position: absolute;
     right: -0.5rem;
     top: -0.5rem;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
+    font-weight: 700;
     width: 0.8rem;
     height: 0.8rem;
     line-height: 0.8rem;

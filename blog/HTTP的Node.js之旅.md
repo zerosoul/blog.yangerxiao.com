@@ -9,7 +9,7 @@ tags:
     - nodejs
     - javascript
 ---
-![http](http://zerosoul.github.io/2016/04/29/Anatomy-of-an-HTTP-Transaction/http.jpg)
+![http](https://zerosoul.github.io/2016/04/29/Anatomy-of-an-HTTP-Transaction/http.jpg)
 
 [](#前言 "前言")前言
 ==============

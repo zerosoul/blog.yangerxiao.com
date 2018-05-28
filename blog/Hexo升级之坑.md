@@ -7,7 +7,7 @@ tags:
     - hexo
     - 备忘
 ---
-![crazy](http://zerosoul.github.io/2016/06/15/upgrade-hexo-to-3-2/crazy.jpg)
+![crazy](https://zerosoul.github.io/2016/06/15/upgrade-hexo-to-3-2/crazy.jpg)
 
 [](#动机 "动机")动机
 ==============

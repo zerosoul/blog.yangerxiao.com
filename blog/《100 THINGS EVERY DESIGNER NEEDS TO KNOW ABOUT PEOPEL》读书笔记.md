@@ -7,7 +7,7 @@ tags:
     - 心理学
     - 设计
 ---
-![designer](http://zerosoul.github.io/2014/06/05/100-things-every-designer-needs-to-know-about-people/designer.jpg)
+![designer](https://zerosoul.github.io/2014/06/05/100-things-every-designer-needs-to-know-about-people/designer.jpg)
 
 # [](#How-people-see "How people see")How people see
 

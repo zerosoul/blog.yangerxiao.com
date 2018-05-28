@@ -8,7 +8,7 @@ tags:
     - ES6
     - 前端
 ---
-![extend obj](http://zerosoul.github.io/2016/03/25/explore-object-assign/obj.jpg)
+![extend obj](https://zerosoul.github.io/2016/03/25/explore-object-assign/obj.jpg)
 
 [](#起因 "起因")起因
 ==============

@@ -9,7 +9,7 @@ tags:
     - javascript
     - promise
 ---
-![javascript promise](http://zerosoul.github.io/2016/05/26/everything-about-promise/promise.jpg)
+![javascript promise](https://zerosoul.github.io/2016/05/26/everything-about-promise/promise.jpg)
 
 [](#引子 "引子")引子
 ==============

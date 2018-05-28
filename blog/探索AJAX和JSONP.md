@@ -20,7 +20,7 @@ JSON和JSONP虽然只有一个字母的差别，但其实他们根本不是一�
 [](#什么是JSON "什么是JSON")什么是JSON
 =============================
 
-有关JSON的概念，曾经写过一篇文章专述，请[移步这里](http://zerosoul.github.io/2015/06/18/explore-json/)。
+有关JSON的概念，曾经写过一篇文章专述，请[移步这里](https://zerosoul.github.io/2015/06/18/explore-json/)。
 
 概括下其优点：
 

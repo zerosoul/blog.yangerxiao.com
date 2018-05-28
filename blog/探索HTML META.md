@@ -16,7 +16,7 @@ tags:
 在过去，`<meta>`为搜索引擎所用，根据其提供的**标题**、**描述**和**关键字**来建立网页索引。如果人人都遵守规则地使用它，将带来巨大的好处：信息检索准确。然而，后来一些网站开始滥用`<meta>`，向里面添加了许多流行词，以期望能从搜索引擎带来更多的流量。魔高一尺，道高一丈，Google在2009年已经宣布不再使用**描述**和**关键字**来建立索引。
 
 虽然**描述**对搜索引擎的排行没有影响，但它还是会出现在搜索结果中。这意味着用户在点进去之前，会先读一读这个网页的描述，从这个角度来看，我们还是得写好描述，不是给机器人看到，是给用户看。  
-![description](http://zerosoul.github.io/2014/03/18/explore-html-meta/desc.png)
+![description](https://zerosoul.github.io/2014/03/18/explore-html-meta/desc.png)
 
 # [](#lt-meta-gt-的多种用途 "<meta>的多种用途")`<meta>`的多种用途
 
@@ -33,8 +33,8 @@ tags:
 <meta charset="UTF-8">
 <!-- 声明页面的编码 -->
 
-<meta http-equiv="refresh" content="5;url=http://zerosoul.github.io/">
-<!-- 5秒后页面跳转到http://zerosoul.github.io/ -->
+<meta http-equiv="refresh" content="5;url=https://zerosoul.github.io/">
+<!-- 5秒后页面跳转到https://zerosoul.github.io/ -->
 ``` 
 
 # [](#一些过时的用法 "一些过时的用法")一些过时的用法

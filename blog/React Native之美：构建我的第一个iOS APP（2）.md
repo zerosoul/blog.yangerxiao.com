@@ -8,15 +8,15 @@ tags:
     - react
     - 翻译
 ---
-![React Native](http://zerosoul.github.io/2016/06/07/building-my-first-ios-app-with-react-native-part-two/rn.png)
+![React Native](https://zerosoul.github.io/2016/06/07/building-my-first-ios-app-with-react-native-part-two/rn.png)
 
 [](#再续前缘 "再续前缘")再续前缘
 ====================
 
-[第一篇文章](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/)，我们从零开始，一步一步走到最后，构建了一个似乎并没有卵用的APP。但是，我们做了大量的基础工作，不就是为了在接下来的继续更轻松自信些嘛！  
-![wtf](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/zdw.jpg)  
+[第一篇文章](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/)，我们从零开始，一步一步走到最后，构建了一个似乎并没有卵用的APP。但是，我们做了大量的基础工作，不就是为了在接下来的继续更轻松自信些嘛！  
+![wtf](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/zdw.jpg)  
 其实，第一篇的信息量还是很大的，里面的每一个链接都是通往一个新知的大门，如果你觉得掌握得差不多了，那就开始新的旅（Che）程（Dan）吧！  
-![你懂的](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/haha.png)  
+![你懂的](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/haha.png)  
 第二篇文章也是分五小节叙述，每一节完成一个小功能，最终召唤出还算有点卵用的APP。
 
 [](#1-召唤出壁纸和作者 "1.召唤出壁纸和作者")1.召唤出壁纸和作者
@@ -117,7 +117,7 @@ import {
 
 </Swiper>
 ```
-**注：此处`NetworkImage`的`uri`特性用到了ES6的模板字符串特性，懵逼的同学去[上一篇文章](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/#先谈谈需求)找链接复习一下哈。**
+**注：此处`NetworkImage`的`uri`特性用到了ES6的模板字符串特性，懵逼的同学去[上一篇文章](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/#先谈谈需求)找链接复习一下哈。**
 
 再加个样式：  
 
@@ -136,18 +136,18 @@ wallpaperImage: {
 }
 ``` 
 保存然后刷新模拟器，不出意外的话…你将看到一堆报错的页面。  
-![成龙](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/long.jpg)  
+![成龙](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/long.jpg)  
 别慌，我们来研究下刚刚加的代码，注意到`indicator={Progress.Circle}`没有？在`react-native-progress`文档里有提到（别告诉我你没看[文档](https://github.com/oblador/react-native-progress)(╯‵□′)╯︵┻━┻），`Progress.Circle`需要**ReactART**：使用React来画矢量图的类库。我们不需要下载任何新东西，只需要通过Xcode将其引入到项目中。  
 很简单，只是有点繁琐：
 
 1.  移步 `node_modules/react-native/Libraries/ART/`  
-    ![art目录](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/dir.png)
+    ![art目录](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/dir.png)
 2.  将*ART.xcodeproj*拖拽到Xcode的*PIW/Libraries*下  
-    ![libs](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/libs.png)
+    ![libs](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/libs.png)
 3.  定位到*Build Phases*，友情提示：它与*General*,*Capabilities*等同级。  
-    ![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/buildphase.png)
+    ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/buildphase.png)
 4.  将*ART.xcodeproj/Products*下的*libART.a*拖拽到*Build Phases*下的*Link Binary With Libraries*条目下：  
-    ![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/linklib.png)
+    ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/linklib.png)
 
 就这么简单，全是些拖拖拽拽的活儿。
 
@@ -179,7 +179,7 @@ wallpaperImage: {
 </NetworkImage>
 ``` 
 修改后进度提示应该长这样：  
-![indicator](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/indicator.png)
+![indicator](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/indicator.png)
 
 接下来，把图片的作者名字加上，我们要做尊重知识版权的好公民：  
 
@@ -247,10 +247,10 @@ label_author_name:{
   }
 ```
 来来来，我们瞅瞅加了作者后的效果：  
-![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/withauthor.png)
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/withauthor.png)
 
 有木有瞬间感觉像那么回事儿了！  
-![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/dese.png)
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/dese.png)
 
 走到这儿，这一节算完事儿了，为了能下载壁纸，我们将在下一节做一些更加有技术含量的事儿。
 
@@ -352,7 +352,7 @@ handlePanResponderEnd(){
   }
 ``` 
 保存代码，壁纸一旦加载完毕，点击一下，应该会看到如下打印信息：  
-![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/touched.png)
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/touched.png)
 
 OK，基于这些认知，我们可以开始捕捉双击操作了。判断是否为双击操作的关键是需要知道上一操作的信息：触摸发生的**坐标**和**时间戳**。在构造函数新增对象`prevTouchInfo`用于保存触摸信息：  
 
@@ -435,7 +435,7 @@ isDoubleTap(currentTouchTimeStamp, {x0, y0}) {
     
 
 `distance`是用来计算两个坐标之间的直线距离，还记得中学的几何公式吗？  
-![distance](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/distance.png)
+![distance](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/distance.png)
 
 `handlePanResponderGrant`最后一步是更新`prevTouchInfo`。
 
@@ -474,7 +474,7 @@ onMomentumScrollEnd(e, state, context) {
 this.onMomentumScrollEnd = this.onMomentumScrollEnd.bind(this);
 
 好了，我们开始为`saveCurrentWallpaperToCameraRoll`填坑了。为了能访问相册，需要先引入`Camera Roll`类库，还记得开头是怎么引入`ReactART`的吗？没错，照做一遍就可以：`node_modules/react-native/Libraries/CameraRoll`  
-![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/cameraroll.png)
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/cameraroll.png)
 
 然后就可以导入了：  
 
@@ -543,7 +543,7 @@ saveCurrentWallpaperToCameraRoll() {
 以上代码都能做到自解释，不懂的地方移步：[CameraRoll](https://facebook.github.io/react-native/docs/cameraroll.html)和[AlertIOS](https://facebook.github.io/react-native/docs/alertios.html)，你懂的。
 
 好啦，保存代码，去模拟器体验一下保存壁纸功能：（首次保存需要手动同意获取访问相册的权限）  
-![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/saved.png)  
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/saved.png)  
 完美！额，等等，从双击到壁纸保存成功，好像有那么几秒的等待时间，用户可能会认为双击不成功，然后再双击一次，这不是我们的期望，下一节专门解决这个问题！
 
 [](#4-创建一个等待组件：Waiting-js "4.创建一个等待组件：Waiting.js")4.创建一个等待组件：Waiting.js
@@ -768,7 +768,7 @@ saveCurrentWallpaperToCameraRoll() {
         index={this.currentWallIndex}>
 ```
 这样，就保证了每次重新渲染，都从保存的那张开始。  
-![saving](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/saving.png)  
+![saving](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/saving.png)  
 好了，写到这里，我们基本完工一个核心功能完备的小应用：
 
 -   能加载随机精美壁纸
@@ -778,7 +778,7 @@ saveCurrentWallpaperToCameraRoll() {
 如果对随机的五张壁纸无感，想换一批，怎么破？当然，我们可以放置一个按钮，点击便能更新随机的壁纸数据，可是…能不能做得酷一些呢？比如只需要摇一摇手机，便更新了一批壁纸！
 
 年轻人，下一节我们做这件酷酷的事儿…  
-![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/maomi.jpg)
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/maomi.jpg)
 
 [](#5-摇一摇动作（Shake）和真机测试 "5.摇一摇动作（Shake）和真机测试")5.摇一摇动作（Shake）和真机测试
 =================================================================
@@ -838,18 +838,18 @@ initialize() {
 真机测试意味着我们将脱离开发环境，像平时通过AppStore安装APP那样把我们的APP放到手机内。按照[官方文档](https://facebook.github.io/react-native/docs/running-on-device-ios.html#using-offline-bundle)来做，其实很简单：
 
 1.  找到`Xcode/PIW/PIW/AppDeletegate.m`，做以下操作：  
-    ![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/uncomment.png)
+    ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/uncomment.png)
     
 2.  `Product → Scheme → Edit Scheme`或者直接快捷键：`CMD + Shift + ,`，划入的窗口中将`Build Configuration`从`debug`改为`Release`:  
-    ![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/schema.png)  
+    ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/schema.png)  
     这样做的目的是为了防止摇一摇弹出调试菜单。
     
 3.  转向`Build Setting`，禁掉`Dead Code Stripping`，别问我这是为啥，我也不清楚，可能这就是人生，年轻人。  
-    ![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/deadcode.png)
+    ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/deadcode.png)
     
 
 联接你的iPhone到Mac上，选择真机运行：  
-![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/runmyphone.png)
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/runmyphone.png)
 
 好啦，万事俱备，只欠一个点击。首次打包和安装会持续较长时间，请耐心等候。安装过程中甭管蹦出什么，选择**相信**就行。注意，如果想恢复到开发环境，把上面的步骤1和步骤2撤销就可以了。
 
@@ -860,7 +860,7 @@ initialize() {
 1.  下载[图标文件](http://7xo6wq.com1.z0.glb.clouddn.com/SplashWallIcons.zip)。当然，你也可以自己按照[苹果图标规定](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html)来设计一套
 2.  调转到Xcode`PIW/PIW/Images.xcassets`，选择AppIcon
 3.  将图标文件按照规格拖拽到对应的框内，一个萝卜一个坑，so easy!  
-    ![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/icons.png)
+    ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/icons.png)
 
 再次打包和运行，这次那个巨丑无比的图标应该不见了。
 
@@ -888,7 +888,7 @@ initialize() {
 以上是我能想到的一些功能点和优化点，如果我们能一步一步走到现在，相信这些好玩的特性也不会那么难实现。或许，我还会写个番外篇，讲一讲如何继续迭代**PIW**。
 
 通过这个简单的APP，我们接触到了许多知识点，但React Native的学习远不止这些，一些高级话题我们还没涉猎，比如`Flux/Redux`。但万变不离阅读官方文档，加之实例练习，边学边总结，是我的节奏。Hey，man，你的节奏找到了吗？好了，我累了，打烊了…  
-![姚明](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/tired.jpg)  
+![姚明](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/tired.jpg)  
 哦对了，最新代码放在了[Github上](https://github.com/zerosoul/PIW)，欢迎指正。
 
 [](#参考链接 "参考链接")参考链接

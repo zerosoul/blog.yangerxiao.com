@@ -17,7 +17,7 @@ tags:
 [](#译文 "译文")译文
 ==============
 
-![array top image](http://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-1.png)
+![array top image](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-1.png)
 
 最近，一直在为一个客户做一个视觉化数据的项目，从服务端API拉取数据回来然后转换出视觉效果，自然少不了大量的数据操作，为此我一再使用Javascript中的Array 三个API：`filter`、`map`和`reduce`。
 
@@ -26,19 +26,19 @@ tags:
 [](#Map "Map")Map
 -----------------
 
-![array-map](http://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-map.png)  
+![array-map](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-map.png)  
 你想将一个数组中的每一项做个转换，结果生成了一个新数组，并且新数组的长度和原数组一致。
 
 [](#Filter "Filter")Filter
 --------------------------
 
-![array-filter](http://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-filter.png)  
+![array-filter](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-filter.png)  
 你想将一个数组做一个过滤，按照某规则提取出一些特定的项来。结果也生成了一个新数组，但新数组的长度小于或等于原数组。
 
 [](#Reduce "Reduce")Reduce
 --------------------------
 
-![array-reduce](http://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-reduce.png)  
+![array-reduce](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-reduce.png)  
 你想通过遍历一个数组的每一项来计算出一个新东西，最后生成的结果可以是任何类型的变量：一个新数组，一个新对象，一个新布尔值…
 
 `filter`、`map`和`reduce`共同点就是并不会对原数组做任何改动，结果都是生成一个新变量。让我们来看一些例子：
@@ -290,7 +290,7 @@ function assemble(combiner, transformer) {
 ``` 
 这样，我们可以在调用reduce的时候，将`assemble`当做第一个参数传入，第二个参数是用来初次调用时的初始数据。接下来的例子便是我们提供一个仅仅有名字（name）和派别（team）的变形金刚，通过reduce中的`assemble`我们来组合成一个强大的变形金刚吧！
 
-![transforming](http://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/transform.gif)
+![transforming](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/transform.gif)
 
 ``` javascript
 var devastator = constructicons.reduce(assemble, {

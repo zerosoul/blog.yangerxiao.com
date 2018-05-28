@@ -7,7 +7,7 @@ tags:
     - 前端
     - 全栈
 ---
-![full stack engineer](http://zerosoul.github.io/2016/06/18/about-full-stack-engineer/fullstack.jpg)  
+![full stack engineer](https://zerosoul.github.io/2016/06/18/about-full-stack-engineer/fullstack.jpg)  
 全栈工程师现在是个很热的话题，如何定义全栈工程师？在著名的问答网站Quora上有人提出了这个问题，其中一个获得了高票的回答是：
 
 > 全栈工程师是指，一个能处理数据库、服务器、系统工程和客户端的所有工作的工程师。根据项目的不同，客户需要的可能是移动栈、Web栈，或者原生应用栈
@@ -48,7 +48,7 @@ tags:
     -   如果没有配置好版本管理系统就开始工作，就会浪费更多时间去找回丢失的代码
     -   如果偷懒硬编码一些变量在代码中，后续会花费更多时间过去调试
 -   时间四象限：  
-    ![four blocks](http://zerosoul.github.io/2016/06/18/about-full-stack-engineer/time.jpg)
+    ![four blocks](https://zerosoul.github.io/2016/06/18/about-full-stack-engineer/time.jpg)
 -   拿工作时长来拼，这是体力劳动时代打工者的心态在作祟。
 -   程序员大致分两种：科学家和工程师。科学家关注技术是否优越，而工程师关注产品是否完美。
 -   懒惰的终极原因就是你想逃避这件事。

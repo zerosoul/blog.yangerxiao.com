@@ -8,7 +8,7 @@ tags:
     - react
     - 翻译
 ---
-![React Native](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/rn.png)
+![React Native](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/rn.png)
 
 [](#写在前面的话 "写在前面的话")写在前面的话
 ==========================
@@ -28,7 +28,7 @@ tags:
 > Fast-forward a couple of months, and I’m confident enough to say I may never write an iOS app in Objective-C or Swift again.（快进几个月，我有足够的信心说：再也不会用Objective-C或者Swift来写iOS app了！）
 
 一切的遇见都不是偶然的。看来，官方语言也有不少坑，那为啥不选择`React Native`呢，更何况自己是前端工（Ban）程（Zhuan）师（De）。好吧，我承认绕了个不必要的圈子，但走一些弯路能看到更多的风景，不是吗？  
-![姚明](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/ym.png)  
+![姚明](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/ym.png)  
 好的，下面先了解下需求。（难道不应该是先说一下`React Native`么 (╯‵□′)╯︵┻━┻）
 
 [](#先谈谈需求 "先谈谈需求")先谈谈需求
@@ -69,28 +69,28 @@ tags:
 如果你觉得我说的不够详细，请移步[React Native的官方安装文档](https://facebook.github.io/react-native/docs/getting-started.html#content)
 
 在你电脑找块风水宝地，用于初始化项目目录。在该文件夹下执行命令：`react-native init PIW`。  
-![init](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/init.png)  
+![init](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/init.png)  
 （`PIW`是`Pick Image as Wallpaper`的缩写，不要在意这个细节，我为了装X起的。另，鉴于网络因素，等待时间应该较长，此时可以去小个便，或者逗逗你的宠物。）
 
 `init`后的项目目录：
 
-![项目目录](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/dir.png)
+![项目目录](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/dir.png)
 
 很显然，`index.android.js`和`index.ios.js`分别是安卓和苹果应用的入口执行文件，由于我们构建的是iOS APP，所以接下来只跟`index.ios.js`打交道。接下来，移步`ios`文件夹，并双击打开`PIW.xcodeproj`。（Xcode的工程文件）  
-![第一眼看到的xcode项目页面](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/xcode.png)  
+![第一眼看到的xcode项目页面](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/xcode.png)  
 注意有个警告：`No matching provisioning profiles found.`。得想办法修复它。先改个名字，**Bundle Identifier**：`com.zerosoul.me.tutorial.PIW`怎么样？有木有感觉很高大上！只要遵循[Reverse DNS Convention](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)，请随意。然后选择**Team**，没有则按照指示新建一个。最后，点击**Fix Issue**。
 
 **Deployment Info**一栏需要改动些默认设置，让app不能横屏，并且隐藏顶部的状态栏，下图红框已标出：  
-![deployment info](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/deployinfo.png)
+![deployment info](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/deployinfo.png)
 
 好了，可以点击左上角的**Run**，看一看模拟器的效果了。中途应该会蹦出一个终端弹窗，不要慌，正常现象。  
-![terminal popup](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/popup.png)
+![terminal popup](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/popup.png)
 
 一旦Xcode构建完，在模拟器里你会看到这一幕：  
 ![welcome to React Native](welcome.jpg)
 
 **注：此处有坑，如果你用真机模拟，会出现这么一幕：**  
-![大红的懵逼](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/localhost.png)  
+![大红的懵逼](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/localhost.png)  
 大红的懵逼！不过别慌，官方文档有对应的解决方法，移步[这里](https://facebook.github.io/react-native/docs/running-on-device-ios.html)可以找到解决方式。
 
 [](#2-从第三方获取壁纸数据 "2. 从第三方获取壁纸数据")2\. 从第三方获取壁纸数据
@@ -155,7 +155,7 @@ componentDidMount() {
 }
 ```
 `fetchWallsJSON`里会打印信息，我们应该从哪儿看到呢？首先，让模拟器获取焦点，使用`CMD + D`组合键调出调试菜单，选择**Debug in Chrome**，好吧，顺便把**Enable live reload**也打开吧，妈妈再也不用担心每次都要手动重启APP了。将会在Chrome里打开一个新标签，按照上面的说明调出**console**的界面。啊哈！  
-![console data loaded tip](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/console.png)  
+![console data loaded tip](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/console.png)  
 坑占好了，下面，可以开始考虑引入真实数据了。访问URL：[unsplash.it/list](http://unsplash.it/list) ，你将会看到铺满全屏的数据，接下来我们就基于这些数据做文章啦~~~  
 首先，替换掉`console`:  
 ``` javascript
@@ -184,7 +184,7 @@ fetchWallsJSON() {
 ```
 **注：用到了`fetch`函数，不熟悉的同学请参考[这里](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)**  
 保存然后刷新，几秒过后，啊哈！  
-![console real data](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/consolerealdata.png)
+![console real data](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/consolerealdata.png)
 
 太好了，我们已经能从第三方拿到数据了！在打印出数据前会有点延迟，这很正常，因为从请求到响应回数据会有个等待时间，此处应有**加载提示**。
 
@@ -350,9 +350,9 @@ var styles = StyleSheet.create({
 不过这样做代码的可读性和可维护性较差，尤其在有很多组件的时候，容易乱套，所以并不是一个好的实践。另外，注意到没，React Native严重依赖`flexbox`布局元素，所以，学好`flexbox`这个知识点就很有必要。
 
 保存这些改动，你将会在模拟器中看到以下加载页面：  
-![loading screen](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/loading.png)  
+![loading screen](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/loading.png)  
 过个几秒钟，将会转为：  
-![data loaded](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/loaded.png)
+![data loaded](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/loaded.png)
 
 [](#4-筛选出随机的壁纸 "4. 筛选出随机的壁纸")4\. 筛选出随机的壁纸
 =========================================
@@ -489,9 +489,9 @@ renderResults() {
 以上代码有个地方值得注意：React Native通过循环数组或集合渲染子元素时，需要给每个元素制定一个唯一的`key`，这也是为啥`<Text key={index}>`这样写的原因。
 
 保存代码，模拟器刷新后，我们看到了五个不同的id：  
-![random id](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/randid.png)  
+![random id](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/randid.png)  
 当然，可以将`id`改为`author`，这样，我们看到的是五个不同的名字：  
-![random name](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/randname.png)
+![random name](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/randname.png)
 
 非常好，我们现在已经可以自如地操控数据了。
 
@@ -546,7 +546,7 @@ renderResults() {
 }
 ```
 不出意外的话，界面将变成下面这样：  
-![swiper with name data](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/swiperwithdata.png)  
+![swiper with name data](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/swiperwithdata.png)  
 下面，根据[Swiper组件的文档](https://github.com/leecade/react-native-swiper)，我们来微调一下样式：  
 ``` jsx
 <Swiper
@@ -609,7 +609,7 @@ onMomentumScrollEnd={this.onMomentumScrollEnd}
 -   增加预览功能
 -   创建更多的自定义组件  
     哦对了，最终代码在[这儿](https://github.com/zerosoul/PIW)。年轻人，我们下一回合见…  
-    ![](http://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/dengyan.png)
+    ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/dengyan.png)
 
 [](#参考链接 "参考链接")参考链接
 ====================

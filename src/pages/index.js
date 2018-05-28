@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styled from 'styled-components';
 import Article from '../components/Article';
 import Wrapper from '../components/Wrapper';
 import SectionTitle from '../components/SectionTitle';

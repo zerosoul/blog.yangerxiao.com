@@ -71,11 +71,11 @@ tags:
 1.  Github上进入 zerosoul.github.io
 2.  创建并提交CNAME文件，里面只有一行内容，就是域名：`zerosoul.github.io`
 3.  去Godaddy网站管理域名页面  
-    ![godaddy setting](http://zerosoul.github.io/2015/11/05/build-personal-site-with-hexo-and-github-pages/godaddy_setting.jpg)
+    ![godaddy setting](https://zerosoul.github.io/2015/11/05/build-personal-site-with-hexo-and-github-pages/godaddy_setting.jpg)
 4.  增加一条 A 记录:host=`@`，Points to=`192.30.252.153`
 5.  增加一条 CNAME 记录:host=`www`，Points to=`zerosoul.github.io`
 6.  最后，一定要记得保存更改！  
-    ![godaddy saving](http://zerosoul.github.io/2015/11/05/build-personal-site-with-hexo-and-github-pages/godaddy_saving.jpg)
+    ![godaddy saving](https://zerosoul.github.io/2015/11/05/build-personal-site-with-hexo-and-github-pages/godaddy_saving.jpg)
 7.  静待更改生效，大概一两个小时。
 
 [](#两个小时后… "两个小时后…")两个小时后…

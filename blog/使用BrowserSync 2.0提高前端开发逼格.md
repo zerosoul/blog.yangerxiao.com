@@ -43,7 +43,7 @@ Web开发，尤其是前端开发，经常要做的就是不停地“试错”�
 
 可以使用类似谷歌的 [Dev Tools](https://developer.chrome.com/devtools) 来远程调试页面。
 
-![](http://zerosoul.github.io/2016/01/14/Improve-Your-Workflow-With-BrowserSync-2-0/browsersync2-weinre.png)
+![](https://zerosoul.github.io/2016/01/14/Improve-Your-Workflow-With-BrowserSync-2-0/browsersync2-weinre.png)
 
 [](#模拟网速-Simulate-slower-connections "模拟网速(Simulate slower connections)")模拟网速(Simulate slower connections)
 ----------------------------------------------------
@@ -60,7 +60,7 @@ Dev Tools 里面已有这个功能，相当实用的一个功能，有些开发�
 
 如果不习惯命令行控制方式，可以使用基于网页的UI管理。
 
-![](http://zerosoul.github.io/2016/01/14/Improve-Your-Workflow-With-BrowserSync-2-0/browsersync2-gui.png)
+![](https://zerosoul.github.io/2016/01/14/Improve-Your-Workflow-With-BrowserSync-2-0/browsersync2-gui.png)
 
 [](#兼容构建工具-Build-tool-compatibility "兼容构建工具(Build-tool compatibility)")兼容构建工具(Build-tool compatibility)
 -------------------------------------------------

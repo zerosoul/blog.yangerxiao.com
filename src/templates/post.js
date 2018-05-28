@@ -17,6 +17,12 @@ const Title = styled.h2`
 
 const PostContent = styled.div`
   margin-top: 2rem;
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
 `;
 
 const Post = props => {
@@ -30,20 +36,21 @@ const Post = props => {
       <Helmet title={`${title} | ${config.siteTitle}`} />
       <Title>{title}</Title>
       <Subline>
-        {date && <span>发布：{getYMD(new Date(date))} </span>}
-        {timeToRead && <span>阅读：{timeToRead}min </span>}
+        {date && <span>{getYMD(new Date(date))} </span>}
         {category && (
           <span>
-            分类：<Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
+            <Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
           </span>
         )}
         {tags && (
           <span>
-            标签：{tags.map(tag => (
-              <Link className="tag" to={`/tags/${kebabCase(tag)}`}>
-                {tag}
-              </Link>
-            ))}
+            <span className="tags">
+              {tags.map(tag => (
+                <Link key={`${kebabCase(tag)}`} className="tag" to={`/tags/${kebabCase(tag)}`}>
+                  {tag}
+                </Link>
+              ))}
+            </span>
           </span>
         )}
       </Subline>

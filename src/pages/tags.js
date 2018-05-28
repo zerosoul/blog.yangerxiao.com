@@ -50,7 +50,11 @@ const Tags = props => {
       <SectionTitle>标签</SectionTitle>
       <TagList>
         {group.map(tag => (
-          <Tag href={`/tags/${kebabCase(tag.fieldValue)}`} data-count={tag.totalCount}>
+          <Tag
+            key={`${kebabCase(tag.fieldValue)}`}
+            href={`/tags/${kebabCase(tag.fieldValue)}`}
+            data-count={tag.totalCount}
+          >
             {tag.fieldValue}
           </Tag>
         ))}

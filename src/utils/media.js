@@ -10,7 +10,6 @@ const sizes = {
   desktop: '900px',
   desktopWide: '1200px',
 };
-
 export const media = {
   phone: `(min-width: ${sizes.phone})`,
   phoneMini: `(min-width: ${sizes.phoneMini})`,

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import { media } from '../utils/media';
@@ -17,10 +16,6 @@ const ContactBlock = styled.div`
   }
   .item {
     flex: 1;
-    dt {
-    }
-    dd {
-    }
   }
 `;
 

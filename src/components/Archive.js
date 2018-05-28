@@ -28,7 +28,7 @@ const Archive = ({ path, title, date }) => (
       {`${pad(new Date(date).getMonth() + 1)}-${pad(new Date(date).getDate())}`}
     </time>
     <Link className="title" to={path}>
-      <span>{title}</span>
+      {title}
     </Link>
   </Item>
 );

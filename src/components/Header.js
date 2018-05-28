@@ -34,13 +34,14 @@ const Navs = styled.div`
   align-items: space-between;
   margin: 0 auto;
   margin-bottom: 1rem;
-  max-width: 80%;
-  @media ${media.desktop} {
-    max-width: 30%;
-  }
+  max-width: 90%;
   @media ${media.tablet} {
     max-width: 50%;
   }
+  @media ${media.desktop} {
+    max-width: 30%;
+  }
+
   a {
     flex: 1;
     text-align: center;

@@ -46,18 +46,17 @@ const Article = ({ title, date, excerpt, slug, category, tags }) => {
         </Link>
       </Title>
       <Subline>
-        {date && <span>发布：{getYMD(date)} </span>}
+        {date && <span>{getYMD(date)} </span>}
         {category && (
           <span>
-            分类：<Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
+            <Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
           </span>
         )}
         {tags && (
           <span>
-            标签：
             <span className="tags">
               {tags.map(tag => (
-                <Link className="tag" to={`/ tags / ${kebabCase(tag)} `}>
+                <Link key={`${kebabCase(tag)}`} className="tag" to={`/tags/${kebabCase(tag)}`}>
                   {tag}
                 </Link>
               ))}

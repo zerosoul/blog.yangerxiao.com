@@ -28,8 +28,7 @@
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "styled-components": "^3.2.1",
-    "typography": "^0.16.17",
-    "typography-theme-ocean-beach": "^0.15.11"
+    "typography": "^0.16.17"
   },
   "keywords": [
     "gatsby"
@@ -38,7 +37,7 @@
   "main": "n/a",
   "scripts": {
     "clean": "rimraf public .cache *.log .DS_Store",
-    "build": "gatsby build",
+    "build": "npm i && npm run clean && gatsby build",
     "dev": "gatsby develop -o",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },

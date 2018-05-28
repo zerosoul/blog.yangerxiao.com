@@ -1,6 +1,6 @@
 import Typography from 'typography';
 import oceanBeachTheme from 'typography-theme-ocean-beach';
-import { ellipsis, lighten } from 'polished';
+import { lighten } from 'polished';
 
 const config = require('../../config/SiteConfig');
 

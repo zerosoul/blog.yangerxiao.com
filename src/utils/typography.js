@@ -1,15 +1,30 @@
 import Typography from 'typography';
+import oceanBeachTheme from 'typography-theme-ocean-beach';
+import { ellipsis, lighten } from 'polished';
 
 const config = require('../../config/SiteConfig');
 
+oceanBeachTheme.headerFontFamily = config.fontFamily;
+oceanBeachTheme.bodyFontFamily = config.fontFamily;
+
 const typography = new Typography({
-  title: 'Minimal',
-  baseFontSize: config.baseFontSize,
-  baseLineHeight: 1.66,
-  scaleRatio: 3.157,
-  headerFontFamily: [config.headerFontFamily, 'sans-serif'],
-  bodyFontFamily: [config.bodyFontFamily, 'sans-serif'],
-  headerWeight: 700
+  baseFontSize: '18px',
+  baseLineHeight: 1.6,
+  scaleRatio: 2,
+  headerColor: '#333',
+  bodyColor: 'hsl(0,0%,0%,0.6)',
+  blockMarginBottom: 1,
+  headerFontFamily: config.fontFamily,
+  bodyFontFamily: config.fontFamily,
+  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    a: {
+      textDecoration: 'none',
+      color: '#333',
+    },
+    h2: {
+      color: lighten(0.1, '#333'),
+    },
+  }),
 });
 
 // Hot reload typography in development.

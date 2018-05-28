@@ -8,20 +8,12 @@ module.exports = {
     siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-              rel: 'nofollow noopener noreferrer',
-            },
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-autolink-headers',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -33,6 +25,15 @@ module.exports = {
               wrapperStyle: 'border:1px solid #333',
             },
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-autolink-headers',
         ],
       },
     },
@@ -45,12 +46,12 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography.js',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-typography',
+    //   options: {
+    //     pathToConfigModule: 'src/utils/typography.js',
+    //   },
+    // },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     {

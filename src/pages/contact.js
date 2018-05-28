@@ -11,19 +11,10 @@ import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
 
 const Content = styled.div`
-  grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
   background-color: ${props => props.theme.bg};
-  z-index: 9000;
-  margin-top: -3rem;
-  @media ${media.tablet} {
-    padding: 3rem 3rem;
-  }
-  @media ${media.phone} {
-    padding: 2rem 1.5rem;
-  }
   .contact {
     display: flex;
     font-size: 0.9rem;
@@ -55,7 +46,7 @@ const Contact = () => (
         <div className="item wx">
           <dt>微信：</dt>
           <dd>
-            <img src="weixin.jpg" alt="微信二维码" />
+            <img src="/images/site/wx.jpg" alt="微信二维码" />
           </dd>
         </div>
       </div>

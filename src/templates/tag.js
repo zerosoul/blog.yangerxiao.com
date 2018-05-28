@@ -12,25 +12,16 @@ import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
 
 const Content = styled.div`
-  grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
   background-color: ${props => props.theme.bg};
-  z-index: 9000;
-  margin-top: -3rem;
-  @media ${media.tablet} {
-    padding: 3rem 3rem;
-  }
-  @media ${media.phone} {
-    padding: 2rem 0.3rem;
-  }
 `;
 
 const Tag = props => {
   const { tag } = props.pathContext;
   const { edges, totalCount } = props.data.allMarkdownRemark;
-  const subline = `共${totalCount}篇`;
+  const subline = `（共${totalCount}篇）`;
 
   return (
     <Wrapper>
@@ -38,13 +29,13 @@ const Tag = props => {
       <Header />
       <Content>
         <SectionTitle>
-          <Link to="/tags">标签</Link> > {tag}
+          <Link to="/tags">标签</Link> | {tag}
         </SectionTitle>
         <Subline sectionTitle>{subline}</Subline>
         {edges.map(post => (
           <Article
             title={post.node.frontmatter.title}
-            date={new Date(post.node.frontmatter.date).toLocaleString()}
+            date={new Date(post.node.frontmatter.date)}
             excerpt={post.node.excerpt}
             timeToRead={post.node.timeToRead}
             slug={post.node.fields.slug}

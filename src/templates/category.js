@@ -7,30 +7,20 @@ import Header from '../components/Header';
 import Subline from '../components/Subline';
 import Article from '../components/Article';
 import SectionTitle from '../components/SectionTitle';
-import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
 
 const Content = styled.div`
-  grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
   background-color: ${props => props.theme.bg};
-  z-index: 9000;
-  margin-top: -3rem;
-  @media ${media.tablet} {
-    padding: 3rem 3rem;
-  }
-  @media ${media.phone} {
-    padding: 2rem 1.5rem;
-  }
 `;
 
 const Category = props => {
   const { category } = props.pathContext;
   const { edges, totalCount } = props.data.allMarkdownRemark;
-  const subline = `共${totalCount}篇`;
+  const sublineStr = `（共${totalCount}篇）`;
 
   return (
     <Wrapper>
@@ -38,13 +28,13 @@ const Category = props => {
       <Header />
       <Content>
         <SectionTitle>
-          <Link to="/categories">分类</Link> > {category}
+          <Link to="/categories">分类</Link> | {category}
         </SectionTitle>
-        <Subline sectionTitle>{subline}</Subline>
+        <Subline sectionTitle>{sublineStr}</Subline>
         {edges.map(post => (
           <Article
             title={post.node.frontmatter.title}
-            date={new Date(post.node.frontmatter.date).toLocaleString()}
+            date={new Date(post.node.frontmatter.date)}
             excerpt={post.node.excerpt}
             timeToRead={post.node.timeToRead}
             slug={post.node.fields.slug}

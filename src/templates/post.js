@@ -7,33 +7,24 @@ import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
 import Header from '../components/Header';
 import Subline from '../components/Subline';
-import { media } from '../utils/media';
+import { getYMD } from '../utils/fun';
 
 import config from '../../config/SiteConfig';
-import '../utils/prismjs-theme.css';
+// import '../utils/prismjs-theme.css';
 
 const Content = styled.article`
-  grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  padding: 2rem 4rem;
+  border-radius: 0.8rem;
+  padding: 2rem 1rem;
   background-color: ${props => props.theme.bg};
-  z-index: 9000;
-  margin-top: -3rem;
-  @media ${media.tablet} {
-    padding: 3rem 3rem;
-  }
-  @media ${media.phone} {
-    padding: 2rem 0.3rem;
-  }
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   margin-bottom: 1rem;
 `;
 
 const PostContent = styled.div`
-  margin-top: 4rem;
+  margin-top: 2rem;
 `;
 
 const Post = props => {
@@ -49,7 +40,7 @@ const Post = props => {
       <Content>
         <Title>{title}</Title>
         <Subline>
-          {date && <span>发布：{date} </span>}
+          {date && <span>发布：{getYMD(new Date(date))} </span>}
           {timeToRead && <span>阅读：{timeToRead}min </span>}
           {category && (
             <span>

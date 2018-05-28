@@ -22,11 +22,14 @@
     "gatsby-remark-prismjs": "^1.2.17",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.36",
+    "gatsby-transformer-sharp": "^1.6.24",
     "polished": "^1.9.2",
     "prop-types": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.2.1"
+    "styled-components": "^3.2.1",
+    "typography": "^0.16.17",
+    "typography-theme-ocean-beach": "^0.15.11"
   },
   "keywords": [
     "gatsby"

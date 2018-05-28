@@ -15,11 +15,11 @@ module.exports = {
   ogSiteName: 'Tristan Yang', // Facebook Site Name
 
   // Manifest and Progress color
+  // themeColor: '#3498DB',
   themeColor: '#3498DB',
   backgroundColor: '#2b2e3c',
 
   // Settings for typography.js
-  headerFontFamily: 'Microsoft Yahei, Helvetica',
-  bodyFontFamily: 'Microsoft Yahei, Helvetica',
+  fontFamily: ['Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'sans-serif'],
   baseFontSize: '18px',
 };

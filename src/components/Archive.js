@@ -2,19 +2,23 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { pad } from '../utils/fun';
+import { ellipsis } from 'polished';
 
 const Item = styled.li`
   list-style: none;
   display: flex;
+  line-height: 1.6rem;
   .date {
-    flex: 1;
+    flex: 2;
+    font-size: 0.6rem;
     color: #999;
     margin-right: 0.5rem;
     text-align: right;
   }
   .title {
-    flex: 11;
+    flex: 10;
     text-align: left;
+    ${ellipsis()};
   }
 `;
 

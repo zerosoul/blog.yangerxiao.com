@@ -6,34 +6,47 @@ import kebabCase from 'lodash/kebabCase';
 import Wrapper from '../components/Wrapper';
 import Header from '../components/Header';
 import SectionTitle from '../components/SectionTitle';
-import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
 
 const Content = styled.div`
-  grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
   background-color: ${props => props.theme.bg};
-  z-index: 9000;
-  margin-top: -3rem;
-  word-break: keep-all;
-  line-height: 3;
-  @media ${media.tablet} {
-    padding: 3rem 3rem;
-  }
-  @media ${media.phone} {
-    padding: 2rem 1.5rem;
+  line-height: 2;
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
   }
 `;
 
-const Tag = styled.span`
+const Tag = styled.a`
+  flex: 1;
+  position: relative;
   padding: 0.2rem 0.4rem;
-  border: 1px solid #333;
+  border: 1px solid #ddd;
   border-radius: 0.2rem;
-  margin-right: 0.4rem;
-  margin-top: 0.5rem;
+  margin-right: 0.6rem;
+  margin-top: 0.6rem;
+  white-space: nowrap;
+  text-align: center;
+  :after {
+    content: attr(data-count);
+    box-sizing: content-box;
+    color: #fff;
+    background: #222;
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+    font-size: 0.4rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 1rem;
+  }
 `;
 
 const Tags = props => {
@@ -45,13 +58,13 @@ const Tags = props => {
       <Header />
       <Content>
         <SectionTitle>标签</SectionTitle>
-        {group.map(tag => (
-          <Tag>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </Tag>
-        ))}
+        <div className="tags">
+          {group.map(tag => (
+            <Tag href={`/tags/${kebabCase(tag.fieldValue)}`} data-count={tag.totalCount}>
+              {tag.fieldValue}
+            </Tag>
+          ))}
+        </div>
       </Content>
     </Wrapper>
   );

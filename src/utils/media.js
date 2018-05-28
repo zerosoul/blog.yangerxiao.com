@@ -11,12 +11,12 @@ const sizes = {
   desktopWide: '1200px',
 };
 export const media = {
-  phone: `(min-width: ${sizes.phone})`,
+  phone: `(min-width: ${sizes.phoneMini})`,
   phoneMini: `(min-width: ${sizes.phoneMini})`,
   phoneSmall: `(min-width: ${sizes.phoneSmall})`,
   phoneWide: `(min-width: ${sizes.phoneWide})`,
   phablet: `(min-width: ${sizes.phablet})`,
-  tablet: `(min-width: ${sizes.tablet})`,
+  tablet: `(min-width: ${sizes.tabletSmall})`,
   tabletSmall: `(min-width: ${sizes.tabletSmall})`,
   tabletWide: `(min-width: ${sizes.tabletWide})`,
   desktop: `(min-width: ${sizes.desktop})`,

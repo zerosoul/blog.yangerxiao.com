@@ -8,7 +8,7 @@ tags:
     - 备忘
     - 前端
 ---
-![json](json.png)
+![json](http://zerosoul.github.io/2015/06/18/explore-json/json.png)
 
 [](#概述 "概述")概述
 ==============
@@ -33,21 +33,21 @@ JSON具有以下这些形式：
 
 -   数组是值（value）的有序集合。一个数组以“\[”（左中括号）开始，“\]”（右中括号）结束。值之间使用“,”（逗号）分隔。
 
-![array](array.gif)
+![array](http://zerosoul.github.io/2015/06/18/explore-json/array.gif)
 
 -   值（value）可以是双引号括起来的字符串（string）、数值(number)、true、false、 null、对象（object）或者数组（array）。这些结构可以嵌套。
 
-![value](value.gif)
+![value](http://zerosoul.github.io/2015/06/18/explore-json/value.gif)
 
 -   字符串（string）是由双引号包围的任意数量Unicode字符的集合，使用反斜线转义。一个字符（character）即一个单独的字符串（character string）。
 
 字符串（string）与C或者Java的字符串非常相似。
 
-![string](string.gif)
+![string](http://zerosoul.github.io/2015/06/18/explore-json/string.gif)
 
 -   数值（number）也与C或者Java的数值非常相似。除去未曾使用的八进制与十六进制格式。除去一些编码细节。
 
-![number](number.gif)
+![number](http://zerosoul.github.io/2015/06/18/explore-json/number.gif)
 
 *注意：空白可以加入到任何符号之间。*
 

@@ -10,7 +10,7 @@ import { getYMD } from '../utils/fun';
 import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
-// import '../utils/prismjs-theme.css';
+import '../utils/prismjs-theme.css';
 
 const Title = styled.h2`
   margin-bottom: 1rem;
@@ -25,6 +25,7 @@ const PostContent = styled.div`
     font-size: 1.2rem;
   }
   p img {
+    margin: 0.4rem;
     transform: scale(1.14);
   }
   @media ${media.desktop} {

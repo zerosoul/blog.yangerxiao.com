@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import theme from '../../config/Theme';
 
-require('../utils/prismjs-theme.css');
+// require('../utils/prismjs-theme.css');
 
 const TemplateWrapper = props => {
   const { children } = props;

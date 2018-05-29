@@ -20,6 +20,7 @@ tags:
 ==============
 
 世界那么大 TA们想看看
+<iframe src="https://player.vimeo.com/video/146186682?loop=1&color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe>
 
 *注：微信下视频加载不出来，请移步浏览器*
 

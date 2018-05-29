@@ -29,9 +29,9 @@ const Categories = props => {
       <Cates>
         {group.map(category => (
           <Title key={`${kebabCase(category.fieldValue)}`}>
-            <Link to={`/categories/${kebabCase(category.fieldValue)}`}>{category.fieldValue}</Link> ({
-              category.totalCount
-            })
+            <Link to={`/categories/${kebabCase(category.fieldValue)}`}>
+              {category.fieldValue}({category.totalCount})
+            </Link>
           </Title>
         ))}
       </Cates>

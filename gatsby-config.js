@@ -6,6 +6,8 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
+    title: `杨二小个人博客`,
+    description: `记录生活，见证成长。`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -34,6 +36,7 @@ module.exports = {
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-autolink-headers',
+          `gatsby-remark-responsive-iframe`,
         ],
       },
     },
@@ -54,6 +57,57 @@ module.exports = {
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map(edge =>
+                Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                })
+              ),
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] }
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: '/rss.xml',
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

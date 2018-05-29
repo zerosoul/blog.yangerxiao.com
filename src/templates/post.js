@@ -25,26 +25,40 @@ const PostContent = styled.div`
     font-size: 1.2rem;
   }
   p img {
-    margin: 0.8rem auto;
+    margin: 0 auto;
+    padding: 1.6rem 0;
     transform: scale(1.14);
+  }
+  @media ${media.phoneWide} {
+    p img {
+      padding: 1.7rem 0;
+      transform: scale(1.1);
+    }
   }
   @media ${media.desktop} {
     p img {
+      padding: 0;
       transform: scale(1);
     }
   }
 `;
 const ArticleNav = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
   border-top: 1px solid #ddd;
   padding-top: 0.8rem;
-  align-items: center;
+  @media ${media.desktop} {
+    align-items: center;
+    flex-direction: row;
+  }
   > a {
     flex: 1;
     position: relative;
-    color: #888;
+    color: #999;
+    padding: 0.5rem 0;
     &:active {
-      background: #000;
+      background: #ddd;
     }
     &::after {
       content: '';

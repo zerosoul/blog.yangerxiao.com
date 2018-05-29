@@ -19,10 +19,9 @@ tags:
 
 1.  先全局升级`hexo-cli`：
     
-    1
-    
+    ``` bash
     npm i hexo-cli -g
-    
+    ```
     通过`hexo version`查看下版本：
     
     ``` shell
@@ -66,10 +65,9 @@ tags:
 7.  接下来，`hexo g`一下，发现有报错，看了下报错信息和我使用[`hexo-qiniu-sync`](https://github.com/gyk001/hexo-qiniu-sync)插件有关，于是把七牛插件给装上：`npm install hexo-qiniu-sync --save`。注意，别忘了更新`_config.yml`对应的配置，这个可以从原来的地方拷贝过来。
 8.  另外，我还用到了两个插件`hexo-generator-sitemap`，`hexo-generator-feed`，一行代码搞定：
     
-    1
-    
+    ``` bash
     npm i hexo-generator-sitemap hexo-generator-feed --save
-    
+    ```
 9.  下面到了最坑的地方了，平时使用`hexo-browsersync`来边写边看效果，所以升级后自然也得想着它。装上这个插件在我的环境下会导致大部分页面白板，动画效果也没有了。查看了下生成的页面代码，底部有乱码。估计是我的node版本太高导致的，使用nvm降到5，问题依旧。然后去插件[Github地址](https://github.com/hexojs/hexo-browsersync)逛逛有没有遇到类似问题的同学，很遗憾，就四个提问题的，和我遇到的问题无关。转变思路，看看是不是版本依赖问题，`hexo-browsersync`最重要的依赖便是`browsersync`，将其升级到最新版本：修改该模块的`package.json`对应的`browsersync`版本号为`*`，然后`npm update --save`。接下来，试试问题有没有解决，果然！不出所料！这样做并没有什么卵用…o(╯□╰)o。  
     纠结到最后，还是暂时去掉了这一功能：`npm uninstall hexo-browsersync --save`。以后会看一下里面源码，看看到底哪儿的问题。而现在，我需要的就是一个可以写文章和发布的Hexo，虽然用起来不是很便捷，但这已足够了。
     

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import Wrapper from '../components/Wrapper';
 import SectionTitle from '../components/SectionTitle';
+import Subline from '../components/Subline';
 
 import config from '../../config/SiteConfig';
 
@@ -43,11 +44,16 @@ const Tag = styled.a`
 
 const Tags = props => {
   const { group } = props.data.allMarkdownRemark;
-
+  // let sumCount = 0;
+  // group.map(tag => {
+  //   sumCount += tag.totalCount;
+  // });
+  const sublineStr = `（共${group.length}个）`;
   return (
     <Wrapper>
       <Helmet title={`标签 | ${config.siteTitle}`} />
       <SectionTitle>标签</SectionTitle>
+      <Subline sectionTitle>{sublineStr}</Subline>
       <TagList>
         {group.map(tag => (
           <Tag

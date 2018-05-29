@@ -18,6 +18,9 @@ const Title = styled.h2`
 
 const PostContent = styled.div`
   margin-top: 2rem;
+  a {
+    text-decoration: underline;
+  }
   h1 {
     font-size: 1.6rem;
   }
@@ -25,6 +28,7 @@ const PostContent = styled.div`
     font-size: 1.2rem;
   }
   p img {
+    display: block;
     margin: 0 auto;
     padding: 1.6rem 0;
     transform: scale(1.14);

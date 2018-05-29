@@ -48,6 +48,14 @@ const Tags = props => {
   // group.map(tag => {
   //   sumCount += tag.totalCount;
   // });
+  group.sort((a, b) => {
+    if (a.totalCount > b.totalCount) {
+      return -1;
+    } else if (a.totalCount < b.totalCount) {
+      return 1;
+    }
+    return 0;
+  });
   const sublineStr = `（共${group.length}个）`;
   return (
     <Wrapper>

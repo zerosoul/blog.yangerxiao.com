@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import Wrapper from '../components/Wrapper';
 import SectionTitle from '../components/SectionTitle';
+import Subline from '../components/Subline';
 import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
 
@@ -15,17 +16,25 @@ const Title = styled.h3`
 `;
 const Cates = styled.div`
   @media ${media.desktop} {
-    max-width: 45%;
+    max-width: 50%;
     margin: 0 auto;
   }
 `;
 const Categories = props => {
   const { group } = props.data.allMarkdownRemark;
-
+  group.sort((a, b) => {
+    if (a.totalCount > b.totalCount) {
+      return -1;
+    } else if (a.totalCount < b.totalCount) {
+      return 1;
+    }
+    return 0;
+  });
   return (
     <Wrapper>
       <Helmet title={`分类 | ${config.siteTitle}`} />
       <SectionTitle>分类</SectionTitle>
+      <Subline sectionTitle>{`(共${group.length}个)`}</Subline>
       <Cates>
         {group.map(category => (
           <Title key={`${kebabCase(category.fieldValue)}`}>

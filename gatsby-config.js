@@ -10,7 +10,6 @@ module.exports = {
     description: `记录生活，见证成长。`,
   },
   plugins: [
-    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {

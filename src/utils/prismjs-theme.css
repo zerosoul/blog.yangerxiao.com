@@ -5,7 +5,7 @@ http://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clik
  * Based (more or less) on the Twilight theme originally of Textmate fame.
  * @author Remy Bach
  */
-code[class*="language-"],
+code[class*="language-"], code,
 pre[class*="language-"] {
     color: white;
     background: none;
@@ -27,8 +27,13 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"],
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*="language-"], code {
     background: hsl(0, 0%, 8%); /* #141414 */
+}
+
+code {
+    padding: .1rem .4rem;
+    margin: 0 .2rem;
 }
 
 /* Code blocks */

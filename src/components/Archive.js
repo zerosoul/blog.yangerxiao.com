@@ -23,7 +23,7 @@ const Item = styled.li`
 `;
 
 const Archive = ({ path, title, date }) => {
-  const dateObj = new Date(date.replace(/-/g, '/'));
+  const dateObj = new Date(date);
   const dateStr = `${pad(dateObj.getMonth() + 1)}-${pad(dateObj.getDate())}`;
   return (
     <Item className="archive">

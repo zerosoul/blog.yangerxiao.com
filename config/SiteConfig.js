@@ -16,8 +16,8 @@ module.exports = {
 
   // Manifest and Progress color
   // themeColor: '#3498DB',
-  themeColor: '#3498DB',
-  backgroundColor: '#2b2e3c',
+  themeColor: '#090a0b',
+  backgroundColor: '#060809',
 
   // Settings for typography.js
   fontFamily: ['Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'sans-serif'],

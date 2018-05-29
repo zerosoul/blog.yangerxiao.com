@@ -1,7 +1,7 @@
 ---
 slug: "reading-power-sleep"
 cover: "https://zerosoul.github.io/2015/10/23/reading-power-sleep/baby.jpg"
-date: "2015-10-23 17:31:37"
+date: "2012-10-23 17:31:37"
 category: "阅读笔记"
 tags:
     - 睡眠

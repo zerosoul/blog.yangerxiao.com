@@ -16,6 +16,8 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
 
     node.frontmatter.title = title;
     // console.log(node.frontmatter.keyword);
+    const newDate = new Date(node.frontmatter.date.replace(/-/g, '/')).toISOString();
+    node.frontmatter.date = newDate;
 
     createNodeField({ node, name: 'slug', value: slug });
   }

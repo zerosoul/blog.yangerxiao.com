@@ -21,7 +21,13 @@ module.exports = {
               rel: 'nofollow noopener noreferrer',
             },
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              inlineCodeMarker: '>',
+            },
+          },
+
           'gatsby-remark-autolink-headers',
           `gatsby-remark-responsive-iframe`,
         ],

@@ -26,7 +26,7 @@ const Category = props => {
         return (
           <Article
             title={title}
-            date={date.replace(/-/g, '/')}
+            date={date}
             excerpt={post.node.excerpt}
             slug={post.node.fields.slug}
             category={cate}

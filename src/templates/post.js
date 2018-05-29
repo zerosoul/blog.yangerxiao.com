@@ -94,7 +94,7 @@ const Post = props => {
       <Helmet title={`${title} | ${config.siteTitle}`} />
       <Title>{title}</Title>
       <Subline>
-        {date && <span>{getYMD(new Date(date.replace(/-/g, '/')))} </span>}
+        {date && <span>{getYMD(new Date(date))} </span>}
         {category && (
           <span>
             <Link to={`/categories/${kebabCase(category)}`}>{category}</Link>

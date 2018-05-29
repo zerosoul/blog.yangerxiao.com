@@ -1,7 +1,7 @@
 ---
 slug: "about-full-stack-engineer"
 cover: "https://zerosoul.github.io/2016/06/18/about-full-stack-engineer/fullstack.jpg"
-date: "2016-6-18 17:31:37"
+date: "2015-10-18 17:31:37"
 category: "阅读笔记"
 tags:
     - 前端

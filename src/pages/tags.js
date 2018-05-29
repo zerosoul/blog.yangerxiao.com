@@ -14,9 +14,8 @@ const TagList = styled.div`
 `;
 
 const Tag = styled.a`
-  flex: 1;
   position: relative;
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem;
   border: 1px solid #ddd;
   border-radius: 0.2rem;
   margin-right: 0.6rem;

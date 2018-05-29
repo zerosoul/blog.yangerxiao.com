@@ -13,7 +13,7 @@ const IndexPage = props => {
       {postEdges.map(post => (
         <Article
           title={post.node.frontmatter.title}
-          date={post.node.frontmatter.date.replace(/-/g, '/')}
+          date={post.node.frontmatter.date}
           excerpt={post.node.excerpt}
           slug={post.node.fields.slug}
           category={post.node.frontmatter.category}

@@ -6,6 +6,7 @@ tags:
     - 运维
     - linux
     - shell
+    - 备忘
 ---
 ![ssh](/images/ssh.png)
 

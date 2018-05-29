@@ -27,7 +27,7 @@ const Archives = props => {
   const archives = {};
 
   edges.forEach(({ node }) => {
-    const year = new Date(node.frontmatter.date.replace(/-/g, '/')).getFullYear();
+    const year = new Date(node.frontmatter.date).getFullYear();
     if (!archives[`year${year}`]) {
       archives[`year${year}`] = [];
     }

@@ -17,6 +17,7 @@ const Hero = styled.div`
   padding-top: 2rem;
   .site {
     text-align: center;
+    margin-bottom: 1rem;
     .title {
       padding: 0.6rem 2rem;
       background: #222;
@@ -33,7 +34,7 @@ const Navs = styled.div`
   display: flex;
   align-items: space-between;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   max-width: 90%;
   @media ${media.tablet} {
     max-width: 55%;

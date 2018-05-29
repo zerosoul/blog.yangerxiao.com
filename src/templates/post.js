@@ -25,7 +25,7 @@ const PostContent = styled.div`
     font-size: 1.2rem;
   }
   p img {
-    margin: 0.4rem auto;
+    margin: 0.8rem auto;
     transform: scale(1.14);
   }
   @media ${media.desktop} {
@@ -43,6 +43,9 @@ const ArticleNav = styled.div`
     flex: 1;
     position: relative;
     color: #888;
+    &:active {
+      background: #000;
+    }
     &::after {
       content: '';
       position: absolute;

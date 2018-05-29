@@ -34,8 +34,19 @@ const Container = styled.div`
   margin-top: 0.6rem;
   cursor: pointer;
 `;
-const Cover = styled.img`
-  margin-bottom: 0;
+const Cover = styled.div`
+  margin-bottom: 0.5rem;
+  width: 100%;
+  max-height: 18rem;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  img {
+    margin-bottom: 0;
+    width: 100%;
+  }
 `;
 const Excerpt = styled.p``;
 
@@ -69,7 +80,11 @@ const Article = ({ title, date, excerpt, slug, category, tags, cover }) => {
         )}
       </Subline>
       <Container onClick={() => navigateTo(slug)}>
-        {cover && <Cover src={cover} alt={title} />}
+        {cover && (
+          <Cover>
+            <img src={cover} alt={title} />
+          </Cover>
+        )}
         <Excerpt>{excerpt}</Excerpt>
       </Container>
     </Post>

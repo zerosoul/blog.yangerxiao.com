@@ -33,7 +33,7 @@ const Archives = props => {
     }
     archives[`year${year}`].push(node);
   });
-  console.log(archives);
+  console.table(archives);
 
   return (
     <Wrapper>

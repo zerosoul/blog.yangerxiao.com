@@ -10,10 +10,34 @@ module.exports = {
     description: `记录生活，见证成长。`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `imgs`,
+        path: `${__dirname}/static/images/`,
+      },
+    },
+
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+              showCaptions: true,
+            },
+          },
           {
             resolve: 'gatsby-remark-external-links',
             options: {
@@ -35,13 +59,7 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'post',
-        path: `${__dirname}/blog`,
-      },
-    },
+
     {
       resolve: 'gatsby-plugin-typography',
       options: {

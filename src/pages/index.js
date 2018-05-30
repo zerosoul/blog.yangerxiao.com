@@ -10,18 +10,21 @@ const IndexPage = props => {
   return (
     <Wrapper>
       <SectionTitle>最新文章</SectionTitle>
-      {postEdges.map(post => (
-        <Article
-          title={post.node.frontmatter.title}
-          date={post.node.frontmatter.date}
-          excerpt={post.node.excerpt}
-          slug={post.node.fields.slug}
-          category={post.node.frontmatter.category}
-          tags={post.node.frontmatter.tags}
-          cover={post.node.frontmatter.cover}
-          key={post.node.fields.slug}
-        />
-      ))}
+      {postEdges.map(post => {
+        const { title, date, category, cover, tags } = post.node.frontmatter;
+        return (
+          <Article
+            title={title}
+            date={date}
+            excerpt={post.node.excerpt}
+            slug={post.node.fields.slug}
+            category={category}
+            tags={tags}
+            cover={cover}
+            key={post.node.fields.slug}
+          />
+        );
+      })}
     </Wrapper>
   );
 };
@@ -44,8 +47,7 @@ export const IndexQuery = graphql`
             tags
             cover
           }
-          excerpt(pruneLength: 200)
-          timeToRead
+          excerpt(pruneLength: 150)
         }
       }
     }

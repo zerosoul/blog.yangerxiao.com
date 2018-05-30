@@ -8,6 +8,7 @@ import Wrapper from '../components/Wrapper';
 import SectionTitle from '../components/SectionTitle';
 import Subline from '../components/Subline';
 import { media } from '../utils/media';
+import Img from 'gatsby-image';
 
 import config from '../../config/SiteConfig';
 
@@ -23,7 +24,7 @@ const ContactBlock = styled.div`
   }
 `;
 
-const Contact = () => (
+const Contact = ({ data }) => (
   <Wrapper>
     <Helmet title={`联系我 | ${config.siteTitle}`} />
     <SectionTitle>
@@ -38,7 +39,7 @@ const Contact = () => (
       <div className="item wx">
         <dt>微信：</dt>
         <dd>
-          <img src="/images/site/wx.jpg" alt="微信二维码" />
+          <Img sizes={data.wxImage.sizes} />
         </dd>
       </div>
     </ContactBlock>
@@ -46,3 +47,13 @@ const Contact = () => (
 );
 
 export default Contact;
+
+export const pageQuery = graphql`
+  query WxImageQuery {
+    wxImage: imageSharp(id: { regex: "/wx/" }) {
+      sizes(maxWidth: 700) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;

@@ -82,7 +82,7 @@ const Article = ({ title, date, excerpt, slug, category, tags, cover }) => {
       <Container onClick={() => navigateTo(slug)}>
         {cover && (
           <Cover>
-            <img src={cover} alt={title} />
+            <img src={cover} alt={title} title={title} />
           </Cover>
         )}
         <Excerpt>{excerpt}</Excerpt>

@@ -39,7 +39,7 @@ const Contact = ({ data }) => (
       <div className="item wx">
         <dt>微信：</dt>
         <dd>
-          <Img sizes={data.wxImage.sizes} />
+          <Img sizes={data.wxImage.sizes} alt="微信二维码" />
         </dd>
       </div>
     </ContactBlock>

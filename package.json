@@ -38,7 +38,7 @@
     "clean": "rm -rf public .cache *.log .DS_Store",
     "build": "gatsby build",
     "rebuild": "npm i && npm run build",
-    "dev": "gatsby develop -o",
+    "dev": "gatsby develop",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+      slug = `/posts/${_.kebabCase(node.frontmatter.slug)}`;
     }
 
     node.frontmatter.title = title;
@@ -62,7 +62,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           const next = index === posts.length - 1 ? false : posts[index + 1].node;
 
           createPage({
-            path: edge.node.fields.slug,
+            path: `${edge.node.fields.slug}`,
             component: postPage,
             context: {
               slug: edge.node.fields.slug,

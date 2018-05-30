@@ -71,8 +71,8 @@ const Header = props => (
       <Link to="/tags">
         <Button>标签</Button>
       </Link>
-      <Link to="/contact">
-        <Button>联系</Button>
+      <Link to="/about">
+        <Button>关于</Button>
       </Link>
     </Navs>
     {props.children}

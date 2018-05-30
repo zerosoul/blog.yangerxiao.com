@@ -13,7 +13,7 @@ tags:
 
 git初始化新项目时，往往文件比较多，比较大，初次PUSH到远程仓库，会抛出如下错误：
 
-``` shell
+``` bash
 $ git push
 Counting objects: 893, done.
 Delta compression using up to 4 threads.

@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import '../utils/slick.css';
 import '../utils/slick.theme.css';
 
-const ImgWraper = styled.div`
-  height: 8rem;
-`;
+const ImgWraper = styled.div``;
 const settings = {
   infinite: true,
   fade: true,

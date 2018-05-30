@@ -51,7 +51,7 @@ export default Contact;
 export const pageQuery = graphql`
   query WxImageQuery {
     wxImage: imageSharp(id: { regex: "/wx/" }) {
-      sizes(maxWidth: 700) {
+      sizes(maxWidth: 400) {
         ...GatsbyImageSharpSizes
       }
     }

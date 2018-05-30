@@ -14,7 +14,7 @@ import config from '../../config/SiteConfig';
 
 const Container = styled.div`
   @media ${media.desktop} {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
   }
 `;
@@ -34,11 +34,13 @@ const Content = styled.p`
   @media ${media.desktop} {
     flex-direction: row;
   }
-  dt {
-    flex: 2;
-  }
+  // justify-content: flex-start;
+  // flex-wrap: wrap;
   dd {
     flex: 10;
+  }
+  a {
+    text-decoration: underline;
   }
 `;
 const About = ({ data }) => (
@@ -53,9 +55,22 @@ const About = ({ data }) => (
       <Header>基本信息</Header>
       <Content>89年/金牛座/山东/本科/软件工程专业</Content>
       <Header>技术栈</Header>
-      <Content>语言：Javascript/HTML5/PHP</Content>
-      <Content>平台/框架/类库：Node.js/Laravel/React/jQuery</Content>
-      <Content>工具：Sublime/Chrome/Bash/git/Fiddler</Content>
+      <Content>
+        <dt>语言：</dt>
+        <dd>Javascript(ES6)/HTML5/PHP/C#</dd>
+      </Content>
+      <Content>
+        <dt>平台/框架/类库：</dt>
+        <dd>Node.js/React/jQuery</dd>
+      </Content>
+      <Content>
+        <dt>工具：</dt>
+        <dd>VS Code/Sublime/Chrome/Bash/git/Docker</dd>
+      </Content>
+      <Content>
+        <dt>操作系统：</dt>
+        <dd>Mac OS/Windows/Linux</dd>
+      </Content>
 
       <Header>人生史记</Header>
       <Content>有尿床史，幼儿园，不治自愈</Content>

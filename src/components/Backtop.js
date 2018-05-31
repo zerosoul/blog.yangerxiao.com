@@ -37,6 +37,10 @@ const Circle = styled.div`
     }
   }
 `;
+const Global =
+  (typeof self === 'object' && self.self === self && self) ||
+  (typeof global === 'object' && global.global === global && global) ||
+  {};
 export default class Backtop extends Component {
   static propTypes = {
     offset: PropTypes.number,
@@ -52,15 +56,15 @@ export default class Backtop extends Component {
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
-  componentWillMount = () => {
-    window.addEventListener('scroll', this.handleScroll);
+  componentDidMount = () => {
+    Global.addEventListener('scroll', this.handleScroll);
   };
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.handleScroll);
+  componentUnmount = () => {
+    Global.removeEventListener('scroll', this.handleScroll);
   };
   handleScroll = () => {
     const doc = document.documentElement;
-    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    const top = (Global.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     const v = top > this.props.offset;
     this.setState({
       isVisiable: v,
@@ -68,10 +72,10 @@ export default class Backtop extends Component {
   };
   scrollUp = () => {
     const doc = document.documentElement;
-    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    const top = (Global.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
     if (top > 0) {
-      window.scrollTo(0, top - 100);
+      Global.scrollTo(0, top - 100);
       setTimeout(this.scrollUp, 10);
     }
   };

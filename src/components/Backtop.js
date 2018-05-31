@@ -51,7 +51,7 @@ export default class Backtop extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisiable: false,
+      isVisible: false,
     };
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
@@ -67,7 +67,7 @@ export default class Backtop extends Component {
     const top = (Global.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     const v = top > this.props.offset;
     this.setState({
-      isVisiable: v,
+      isVisible: v,
     });
   };
   scrollUp = () => {
@@ -81,9 +81,11 @@ export default class Backtop extends Component {
   };
   render() {
     return (
-      <Circle visiable={this.state.isVisiable} onClick={this.scrollUp}>
-        <div className="wrapper" />
-      </Circle>
+      <div style={{ display: this.state.isVisible ? 'block' : 'none' }}>
+        <Circle onClick={this.scrollUp}>
+          <div className="wrapper" />
+        </Circle>
+      </div>
     );
   }
 }

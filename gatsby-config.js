@@ -14,6 +14,7 @@ module.exports = {
     description: `记录生活，见证成长。`,
   },
   plugins: [
+    `gatsby-plugin-react-next`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {

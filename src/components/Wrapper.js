@@ -7,6 +7,7 @@ import { media } from '../utils/media';
 const Grid = styled.div`
   margin: 0 auto;
   padding: 0;
+  min-height: 60vh;
 `;
 
 const Content = styled.div`
@@ -15,6 +16,7 @@ const Content = styled.div`
   padding: 2rem 1rem;
   overflow: hidden;
   margin: 0 auto;
+
   @media ${media.tablet} {
     padding: 2.6rem;
   }

@@ -23,6 +23,10 @@ const typography = new Typography({
       // '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
       '-webkit-tap-highlight-color': 'transparent',
     },
+    'a:active': {
+      transform: 'scale(1.2)',
+      transition: 'transform 1s',
+    },
     h2: {
       color: lighten(0.1, '#333'),
     },

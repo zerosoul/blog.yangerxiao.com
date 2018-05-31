@@ -125,6 +125,7 @@ const About = ({ data }) => (
 );
 
 export default About;
+/* eslint no-undef: off */
 export const query = graphql`
   query ProfileImagesQuery {
     allImageSharp(filter: { id: { regex: "/about_slides/" } }) {

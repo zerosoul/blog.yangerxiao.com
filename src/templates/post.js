@@ -6,6 +6,7 @@ import kebabCase from 'lodash/kebabCase';
 import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
+import TOC from '../components/TOC';
 import { getYMD } from '../utils/fun';
 import { media } from '../utils/media';
 
@@ -90,6 +91,7 @@ const ArticleNav = styled.div`
 const Post = props => {
   const { slug, prev, next } = props.pathContext;
   const postNode = props.data.markdownRemark;
+  const toc = props.data.markdownRemark.tableOfContents;
   const { title, date, tags, category } = postNode.frontmatter;
 
   return (
@@ -116,6 +118,9 @@ const Post = props => {
           </span>
         )}
       </Subline>
+      <TOC>
+        <div dangerouslySetInnerHTML={{ __html: toc }} />
+      </TOC>
       <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
       <ArticleNav>
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
@@ -138,6 +143,7 @@ export const postQuery = graphql`
         category
         tags
       }
+      tableOfContents
     }
   }
 `;

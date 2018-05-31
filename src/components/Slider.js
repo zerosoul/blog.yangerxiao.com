@@ -6,7 +6,7 @@ import '../utils/slick.theme.css';
 
 const ImgWraper = styled.div``;
 const settings = {
-  infinite: false,
+  infinite: true,
   cssEase: 'ease-in',
   speed: 500,
   autoplay: true,
@@ -16,9 +16,8 @@ const settings = {
   dots: true,
   arrows: false,
   mobileFirst: true,
-
 };
 
-const Slider = ({ imgs }) => <Slick {...settings}>{imgs.map(img => <ImgWraper>{img}</ImgWraper>)}</Slick>;
+const Slider = ({ imgs }) => <Slick {...settings}> {imgs.map(img => <ImgWraper>{img}</ImgWraper>)}</Slick>;
 
 export default Slider;

@@ -10,13 +10,11 @@ tags:
 ---
 ![jquery](https://zerosoul.github.io/2016/03/06/jquery-best-practice/jquery.jpg)
 
-[](#前言 "前言")前言
-==============
+#前言
 
 使用[jQuery](http://jquery.com/)已经有两年，其[API](https://api.jquery.com/)用起来非常的爽，甚至都成为了事实上的标准，以至于好多前端小白把jQuery等同于Javascript。虽然jQuery的普及度很高，但遵循最佳实践来写jQuery代码的却寥寥无几，下面就自己在工作的积累来写一些jQuery的最佳实践（也有从网络上搜集的）。
 
-[](#加载jQuery "加载jQuery")加载jQuery
-================================
+#加载jQuery
 
 -   使用CDN加载，[去掉`http:`或者`https:`](http://www.paulirish.com/2010/the-protocol-relative-url/)，同时做好本地fallback。
     
@@ -34,8 +32,7 @@ tags:
     -   不要使用[jquery-last.js CDN](http://blog.jquery.com/2014/07/03/dont-use-jquery-latest-js/)
 -   检测浏览器特性，请用[Modernizr](http://modernizr.com/)
 
-[](#变量 "变量")变量
-==============
+#变量
 
 -   所有的jQuery对象命名最好加个`$`前缀加以区分
 -   缓存通过选择符获取的jQuery对象，以待复用：
@@ -46,8 +43,7 @@ tags:
         $myDiv.click(function(){...});
     ```
 
-[](#DOM操作 "DOM操作")DOM操作
-=======================
+#DOM操作
 
 -   对于一些较为复杂的DOM操作，可以先`.detach()`，原因[参考此处](http://learn.jquery.com/performance/detach-elements-before-work-with-them/)
     ``` javascript
@@ -79,8 +75,7 @@ tags:
                 .show();
             
     ``` 
-[](#选择器 "选择器")选择器
-=================
+#选择器
 
 -   尽可能使用ID选择器，因为jQuery源码中调用的是`document.getElementById()`
 -   当使用类选择器时，没必要再附加元素标签了
@@ -137,8 +132,7 @@ tags:
         $('#inner'); // GOOD,  document.getElementById()搞定一切
     ```  
 
-[](#事件 "事件")事件
-==============
+#事件
 
 -   每个页面有且仅有一个DOMReady事件，便于调试。
 -   尽量不要使用匿名函数来用作事件处理，因为不利于调试，测试，维护和复用。
@@ -168,8 +162,7 @@ tags:
     $("#list").on("click", "a", myClickHandler); //GOOD, 只给父元素list绑定了click事件.
     ``` 
 
-[](#Ajax "Ajax")Ajax
-====================
+#Ajax
 
 -   熟习`$.ajax()`，尽量不要用`.get()`,`.getJson()`这样的简洁方式。
 
@@ -219,21 +212,18 @@ tags:
 
     ```     
 
-[](#动画效果 "动画效果")动画效果
-====================
+#动画效果
 
 -   不要滥用动画效果，或者干脆不用，直到PM有切实需求。
 -   如果用动画，优先使用像`show/hide`和`slideUp/slideDown`这样的简单API
 
-[](#插件 "插件")插件
-==============
+#插件
 
 -   优先考虑有良好文档，有测试用例，有社区支持的插件
 -   使用插件前不要忘记检测与你正在使用的jQuery版本是否冲突
 -   任何可复用的组件都应该插件化，这里有个[插件模板](https://john-dugan.com/jquery-plugin-boilerplate-explained/)。
 
-[](#其他 "其他")其他
-==============
+#其他
 
 -   使用对象字面量设置特性
     ``` javascript
@@ -263,8 +253,7 @@ tags:
         $("#mydiv").addClass("error"); // GOOD
     ``` 
 
-[](#优秀资源 "优秀资源")优秀资源
-====================
+#优秀资源
 
 -   [jQuery API Docs](http://api.jquery.com/)
 -   [jQuery Learn](http://learn.jquery.com/)

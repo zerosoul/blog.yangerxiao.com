@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { media } from '../utils/media';
 
 const Toc = styled.div`
   position: fixed;
   right: 0.5rem;
   bottom: 0.5rem;
-
+  @media ${media.desktop} {
+    right: 15%;
+  }
   z-index: 999;
 
   display: flex;
@@ -64,9 +67,14 @@ const Toc = styled.div`
     display: ${props => (props.fold ? 'none' : 'block')};
     ul {
       list-style: none;
+      margin: 0.4rem 0;
       li {
         padding: 0;
         margin: 0.4rem 0;
+      }
+      ul {
+        font-size: 0.8rem;
+        margin-left: 0.4rem;
       }
     }
   }

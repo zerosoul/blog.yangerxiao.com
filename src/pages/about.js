@@ -34,10 +34,10 @@ const Content = styled.p`
   @media ${media.desktop} {
     flex-direction: row;
   }
-  // justify-content: flex-start;
-  // flex-wrap: wrap;
   dd {
     flex: 10;
+    white-space: nowrap;
+    overflow: scroll;
   }
   a {
     text-decoration: underline;
@@ -93,14 +93,18 @@ const About = ({ data }) => (
         <Link to="/posts/lift-part-one">有搭车史，回家，不期而遇</Link>
       </Content>
       <Content>
-        <Link to="https://book.douban.com/people/yanggc/collect">有阅读史，至今，不求甚解</Link>
+        <a href="https://book.douban.com/people/yanggc/collect" target="_blank" rel="noopener noreferrer">
+          有阅读史，至今，不求甚解
+        </a>
       </Content>
       <Content>
         <Link to="/posts/about-running">有跑步史，至今，不屈不挠</Link>
       </Content>
       <Content>有摄影史，至今，不甚了了</Content>
       <Content>
-        <Link to="https://movie.douban.com/people/yanggc/collect">有观影史，至今，不胜枚举</Link>
+        <a href="https://movie.douban.com/people/yanggc/collect" target="_blank" rel="noopener noreferrer">
+          有观影史，至今，不胜枚举
+        </a>
       </Content>
       <Content>有闷骚史，至今，不学无术</Content>
       <Content>有编码史，至今，不甘雌伏</Content>

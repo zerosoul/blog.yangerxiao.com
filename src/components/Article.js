@@ -64,7 +64,7 @@ const Article = ({ title, date, excerpt, slug, category, tags, cover }) => {
         {date && <span>{getYMD(date)} </span>}
         {category && (
           <span>
-            <Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
+            <Link to={`/cates/${kebabCase(category)}`}>{category}</Link>
           </span>
         )}
         {tags && (

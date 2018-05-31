@@ -103,7 +103,7 @@ const Post = props => {
         {date && <span>{getYMD(new Date(date))} </span>}
         {category && (
           <span>
-            <Link to={`/categories/${kebabCase(category)}`}>{category}</Link>
+            <Link to={`/cates/${kebabCase(category)}`}>{category}</Link>
           </span>
         )}
         {tags && (

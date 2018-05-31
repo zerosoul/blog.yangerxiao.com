@@ -23,9 +23,9 @@ const typography = new Typography({
       // '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
       '-webkit-tap-highlight-color': 'transparent',
     },
-    'a:active': {
+    'a:active,a:hover,a:focus': {
       transform: 'scale(1.2)',
-      transition: 'transform 1s',
+      transition: 'transform .5s',
     },
     h2: {
       color: lighten(0.1, '#333'),

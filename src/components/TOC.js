@@ -5,9 +5,9 @@ import { media } from '../utils/media';
 const Toc = styled.div`
   position: fixed;
   right: 0.5rem;
-  bottom: 0.5rem;
+  bottom: 3.2rem;
   @media ${media.desktop} {
-    right: 15%;
+    right: 16%;
   }
   z-index: 999;
 
@@ -25,6 +25,7 @@ const Toc = styled.div`
     justify-content: center;
     border-radius: 0.5rem;
     position: relative;
+    cursor: pointer;
     &:focus {
       outline: none;
     }

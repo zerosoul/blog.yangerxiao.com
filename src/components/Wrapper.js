@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
+import Backtop from './Backtop';
 import { media } from '../utils/media';
 
 const Grid = styled.div`
@@ -28,6 +29,7 @@ const Wrapper = props => (
   <Grid>
     <Header />
     <Content>{props.children}</Content>
+    <Backtop />
   </Grid>
 );
 

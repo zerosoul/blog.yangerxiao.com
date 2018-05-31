@@ -8,8 +8,7 @@ tags:
     - nodejs
     - 前端
 ---
-[](#准备工作 "准备工作")准备工作
-====================
+#准备工作
 
 [](#Github "Github")[Github](http://github.com)
 -----------------------------------------------
@@ -19,8 +18,7 @@ tags:
 3.  将之命名为*yourGithubName.github.io*(注意替换yourGithubName)
 4.  关键步骤已经完成，其他选项随意啦。点击新建后，别忘了把*SSH*的地址copy一份，后面有用到
 
-[](#Hexo "Hexo")[Hexo](http://hexo.io)
---------------------------------------
+#[Hexo](http://hexo.io)
 
 1.  打开终端
 2.  Hexo依赖 Node 环境，如果没有先安装 Node & npm，参考[官网](http://nodejs.org)
@@ -28,8 +26,7 @@ tags:
     `npm install -g hexo`
 4.  齐活，Hexo准备完毕
 
-[](#开始使用Hexo撸Github需要的东西 "开始使用Hexo撸Github需要的东西")开始使用Hexo撸Github需要的东西
-====================================================================
+#使用Hexo撸Github需要的东西
 
 1.  进入到你想放置github pages repository的目录
 2.  在此创建Hexo Project  
@@ -40,8 +37,7 @@ tags:
     `npm install & hexo g & hexo s`
 5.  目测现在就可以通过访问localhost:4000来瞅瞅网站啥样了
 
-[](#部署到Github上 "部署到Github上")部署到Github上
-======================================
+#部署到Github上
 
 1.  首先，停掉Hexo `Control + C`
 2.  打开根目录的_config.yml，设置Github地址  
@@ -52,8 +48,7 @@ tags:
     `hexo d`
 5.  打开浏览器，访问 *yourGithubName.github.io*
 
-[](#写作 "写作")写作
-==============
+#写作
 
 1.  使用Markdown写作，完事后保存到source/_posts/
 2.  重新生成静态文件  
@@ -62,8 +57,7 @@ tags:
 4.  木问题的话，更新至Github  
     `hexo d`
 
-[](#绑定自己的域名 "绑定自己的域名")绑定自己的域名
-=============================
+#绑定自己的域名
 
 > 我通过淘宝代理[Godaddy](https://www.godaddy.com/)购买了 [zerosoul.github.io](http://zerosou.us) 域名，就拿这个举例如何绑定吧
 
@@ -77,13 +71,11 @@ tags:
     ![godaddy saving](https://zerosoul.github.io/2015/11/05/build-personal-site-with-hexo-and-github-pages/godaddy_saving.jpg)
 7.  静待更改生效，大概一两个小时。
 
-[](#两个小时后… "两个小时后…")两个小时后…
-==========================
+#两个小时后…
 
 **装X成功！**
 
-[](#相关链接 "相关链接")相关链接
-====================
+#相关链接
 
 [hexo doc](https://hexo.io/docs/)  
 [github pages basic](https://help.github.com/categories/github-pages-basics/)  

@@ -6,15 +6,13 @@ tags:
     - amd
     - javascript
 ---
-[](#概述 "概述")概述
-==============
+#概述
 
 这些年，Javascript组件越来越丰富，作为前端开发者，只需要阅读下使用文档，便可引入到自己的项目中，相当便利。但是随着引入的组件越来越多，事情往往就不那么美好了，其中最突出的问题便是全局变量的纷杂容易导致冲突。
 
 W3C提出的模块规范，AMD和CommonJS应运而生：下面就来探索下这两个规范。
 
-[](#AMD：Asynchronous-Module-Definition "AMD：Asynchronous Module Definition")AMD：Asynchronous Module Definition
-==============================================================================================================
+#AMD：Asynchronous Module Definition
 
 AMD获得前端开发者的青睐，大概很大程度上是由于[RequireJS](http://requirejs.org/)的流行。
 
@@ -65,8 +63,7 @@ define(['jquery', 'underscore'], function ($, _) {
 
 最后，还需谨记不要在`define`之外使用`$`、`_`变量，别问我为什么o(╯□╰)o。
 
-[](#CommonJS "CommonJS")CommonJS
-================================
+#CommonJS
 
 如果你了解Nodejs，应该对CommonJS不陌生。不过真正在前端开发中流行开来，[Browserify](http://browserify.org/)功不可没。
 
@@ -115,8 +112,7 @@ module.exports = {
 
 };
 ```
-[](#UMD-Universal-Module-Definition "UMD: Universal Module Definition")UMD: Universal Module Definition
-=======================================================================================================
+#UMD: Universal Module Definition
 
 CommonJS和AMD适用场景不太一样，一般CommonJS是同步加载，AMD是异步加载，但是它们流行程度是一样的。有没有一种通用的模块规范来铲平两者的差异？程序员的智慧是无穷的，UMD应运而生。
 
@@ -155,49 +151,29 @@ CommonJS和AMD适用场景不太一样，一般CommonJS是同步加载，AMD是�
 
 }));
 ```
-复杂点的：  
+复杂点的： 
+
 ``` js
-
 (function (root, factory) {
-
     if (typeof define === 'function' && define.amd) {
-
         // AMD
-
         define(['jquery', 'underscore'], factory);
-
     } else if (typeof exports === 'object') {
-
         // Node, CommonJS-like
-
         module.exports = factory(require('jquery'), require('underscore'));
-
     } else {
-
         // 浏览器(root 就是 window)
-
         root.returnExports = factory(root.jQuery, root._);
-
     }
-
 }(this, function ($, _) {
-
     function a(){};//私有函数
-
     function b(){};//公有函数
-
     function c(){};//公有函数
-
     //暴露的成员
-
     return {
-
         b: b,
-
         c: c
-
     }
-
 }));
 ```
 UMD虽然丑，但更实用啊，所以很多开源类库或组件都用这种方案。

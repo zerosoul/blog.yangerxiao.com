@@ -6,11 +6,11 @@ tags:
     - 前端
     - javascript
 ---
-# [](#引子 "引子")引子
+#引子
 
 事件代理也算是Javascript中的热点话题，它可以给节点的某个父节点增加监听行为，从而避免了在每个节点都做监听。父节点分析冒泡过来的事件，并找到是来自于哪个节点。概念很简单，但是到底是怎么个过程，还是有些迷糊。下面，通过例子来探索下。
 
-# [](#实例探索 "实例探索")实例探索
+#实例探索
 
 比如说，有一个父元素:`ul`，下面有几个子元素：
 ``` javascript
@@ -63,6 +63,6 @@ document.getElementById("myDiv").addEventListener("click",function(e) {
 
 注：通过[Element.matches API](https://davidwalsh.name/element-matches-selector)，我们能够过滤出想要的元素。
 
-# [](#最后说两句 "最后说两句")最后说两句
+#最后说两句
 
 当然，在大多数业务场景下，我们常用的是类库来写JS代码，比如：[jQuery](http://jquery.com/)。但是基本上每个类库都有事件代理自己的实现，甚至做了许多高级扩展，使用起来非常方便，比如：[jQuery的`on`](http://api.jquery.com/on/)。

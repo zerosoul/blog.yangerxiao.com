@@ -14,4 +14,5 @@ tags:
 - 一劳永逸，直接修改`php.ini`：打开`php.ini`，查找`date.timezone`，去掉注释，**=**后面加上中国时区`Asia/Shanghai`(或者`PRC`)，重启http服务（nginx或者Apache）。
 - 如果不想修改`php.ini`，则在关于时间的初始化的语句的上面加上`date_default_timezone_set('PRC')`;
 
-参考：[PHP支持的时区列表](http://php.net/manual/en/timezones.php)
+参考：
+- [PHP支持的时区列表](http://php.net/manual/en/timezones.php)

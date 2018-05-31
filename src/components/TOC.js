@@ -65,6 +65,8 @@ const Toc = styled.div`
     background: #eee;
     border-radius: 0.5rem;
     display: ${props => (props.fold ? 'none' : 'block')};
+    max-height: 70vh;
+    overflow: scroll;
     ul {
       list-style: none;
       margin: 0.4rem 0;

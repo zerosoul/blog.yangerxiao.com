@@ -9,13 +9,11 @@ tags:
     - javascript
     - array
 ---
-[](#写在前面的话 "写在前面的话")写在前面的话
-==========================
+#写在前面的话
 
 前几天[写了篇文章](/array-filter-trick)科普了下Javascript中`Array.filter()`的妙用，后来无意间发现了[一篇好文章](http://atendesigngroup.com/blog/array-map-filter-and-reduce-js)，一次性科普了三个API：`filter`、`map`和`reduce`，生动形象，尤其是配图，显然是用了心思。下面是译文：
 
-[](#译文 "译文")译文
-==============
+#译文
 
 ![array top image](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-1.png)
 
@@ -23,28 +21,24 @@ tags:
 
 [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[Filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)和[Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)常常被用于对一个数组做一些操作，进而转换成某个新的东西（数据类型不一定还是数组哦~）。下面是我对这三个API的直观认识：
 
-[](#Map "Map")Map
------------------
+#Map
 
 ![array-map](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-map.png)  
 你想将一个数组中的每一项做个转换，结果生成了一个新数组，并且新数组的长度和原数组一致。
 
-[](#Filter "Filter")Filter
---------------------------
+#Filter
 
 ![array-filter](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-filter.png)  
 你想将一个数组做一个过滤，按照某规则提取出一些特定的项来。结果也生成了一个新数组，但新数组的长度小于或等于原数组。
 
-[](#Reduce "Reduce")Reduce
---------------------------
+#Reduce
 
 ![array-reduce](https://zerosoul.github.io/2016/12/06/array-filter-map-reduce-in-js/array-reduce.png)  
 你想通过遍历一个数组的每一项来计算出一个新东西，最后生成的结果可以是任何类型的变量：一个新数组，一个新对象，一个新布尔值…
 
 `filter`、`map`和`reduce`共同点就是并不会对原数组做任何改动，结果都是生成一个新变量。让我们来看一些例子：
 
-[](#Array-map "Array.map()")Array.map()
----------------------------------------
+#Array.map()
 
 现在我们有一个对象列表，其中每个对象代表的是一种变形金刚（译注：看来这位歪果仁是个变形金刚粉丝）：  
 ``` javascript
@@ -139,8 +133,7 @@ robotsInDisguise = transformers.map(transformer => transformer.form);
 ``` 
 ES2015的箭头函数和`Array.map()`搭配使用简直不能更爽了！
 
-[](#Array-filter "Array.filter()")Array.filter()
-------------------------------------------------
+#Array.filter()
 
 语法：  
 
@@ -188,8 +181,7 @@ autobots ==  [
 
 */
 ``` 
-[](#Array-reduce "Array.reduce()")Array.reduce()
-------------------------------------------------
+#Array.reduce()
 
 `Array.reduce()`是通过遍历每个数组元素对其做运算，因此，也是三个API之间最富有技巧的，其使用语法也略显复杂：  
 

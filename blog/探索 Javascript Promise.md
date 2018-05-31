@@ -11,8 +11,7 @@ tags:
 ---
 ![javascript promise](https://zerosoul.github.io/2016/05/26/everything-about-promise/promise.jpg)
 
-[](#引子 "引子")引子
-==============
+#引子
 
 先看一段代码：  
 
@@ -39,8 +38,7 @@ promise背后的思想是：
 
 promise亦是如此。当一个函数返回一个promise，它其实是在说：嘿！我向你承诺，一旦完事，我将带着结果去找你！
 
-[](#举例 "举例")举例
-==============
+#举例
 
 好啦，理论和术语的东西讲多了让人烦，下面我们来例证上面说的一堆话。
 
@@ -84,8 +82,7 @@ fetch('/some/endpoint').then(function (result) {
 
 值得一提的是，一旦promise的状态转为完成或被拒，其值将不再改变。
 
-[](#使用catch-错误处理 "使用catch()错误处理")使用`catch()`错误处理
-================================================
+#使用`catch()`错误处理
 
 [Promises/A+ 规范](https://promisesaplus.com/) 提供了一种语法糖来处理promise的错误。
 
@@ -211,8 +208,7 @@ lookupPrice(123)
 -   如果商品123不存在，代码直接进入`catch`，打印“Either item 123 OR 456 does not exist”
 -   由于在`then`之后链式调用了`catch`，在此之前任何promise转到了被拒状态，都将进入`catch`。所以，如果商品456也不存在，也会在屏幕上看到“Either item 123 OR 456 does not exist”。
 
-[](#使用new-Promise-创建promise "使用new Promise()创建promise")使用`new Promise()`创建promise
-=================================================================================
+# 使用`new Promise()`创建promise
 
 目前为止，我们通过`fetch`API来了解了promise，通过`then`来使用promise的结果。多数情况下，我们会用到各式各样的类库来使用promise。然而，有时还是需要自己创建promise，自主决定什么情况下转入完成，什么情况下转入被拒。
 
@@ -251,8 +247,7 @@ generateRandomNumber().then(function(result) {
 
 })
 ``` 
-[](#链式调用：一次只完成一个任务 "链式调用：一次只完成一个任务")链式调用：一次只完成一个任务
-==================================================
+#链式调用：一次只完成一个任务
 
 链式调用多个`then`，可以做到进一步处理返回值，并且顺序化执行其它异步任务。
 
@@ -318,8 +313,7 @@ function loadProfile (userName) {
 -   一旦promise转为**完成**状态，它的值将被当做参数自动传入下一个`then`方法中。
 -   如果认证失败，将立即进入`catch`，并略过`.then(loadProfile)`。
 
-[](#Promise-all-：一次搞定！ "Promise.all()：一次搞定！")Promise.all()：一次搞定！
-================================================================
+# Promise.all()：一次搞定！
 
 如果我们不关心异步操作的执行顺序，换句话说，假如我们想在获取用户信息的同时，把最近发表的文章也获取了，该怎么办？
 
@@ -348,16 +342,14 @@ Promise.all(\[
 
 })
 ``` 
-[](#就这些了！我保证！（I-Promise） "就这些了！我保证！（I Promise）")就这些了！我保证！（I Promise）
-====================================================================
+#就这些了！我保证！（I Promise）
 
 一旦开始在代码中实践Promise，你会发现一切都变得相当简单。因此我建议你打开Chrome/Firefox的开发者工具，走一遍这篇文章里的例子。
 
 需要指出的是，有一个Promise的API我还没有提及:`Promise.race()`。它和`Promise.all()`类似，传入一个promise数组，并实例化一个promise，但不同之处在于传入的promise有任何一个转为完成，实例化的promise便进入完成，任何一个promise转为被拒，便进入被拒。个人认为，这并不十分实用，但我认为有一些特定业务场景会用得上它，你可以在[这儿](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)熟悉下这个API，祝好运！
 
-[](#参考链接 "参考链接")参考链接
-====================
+#参考链接
 
-[JavaScript Promises: Plain and Simple](https://coligo.io/javascript-promises-plain-simple/)
+- [JavaScript Promises: Plain and Simple](https://coligo.io/javascript-promises-plain-simple/)
 
-[MDN:Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [MDN:Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

@@ -10,13 +10,11 @@ tags:
 ---
 ![json](https://zerosoul.github.io/2015/06/18/explore-json/json.png)
 
-[](#概述 "概述")概述
-==============
+#概述
 
 JSON(JavaScript Object Notation) 是一种轻量级数据交换格式。 易于阅读和编写，也易于机器解析和生成。 它基于[JavaScript Programming Language](http://www.crockford.com/javascript), [Standard ECMA-262 3rd Edition - December 1999](http://www.ecma-international.org/publications/files/ecma-st/ECMA-262.pdf)的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。 这些特性使JSON成为理想的数据交换语言。
 
-[](#标准 "标准")标准
-==============
+#标准
 
 JSON建构于两种结构：
 
@@ -51,7 +49,6 @@ JSON具有以下这些形式：
 
 *注意：空白可以加入到任何符号之间。*
 
-[](#参考链接 "参考链接")参考链接
-====================
+#参考链接
 
 -   [JSON官网](http://www.json.org/)

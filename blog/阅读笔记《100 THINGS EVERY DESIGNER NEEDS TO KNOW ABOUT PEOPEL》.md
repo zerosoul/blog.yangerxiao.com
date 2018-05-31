@@ -9,9 +9,9 @@ tags:
 ---
 ![designer](https://zerosoul.github.io/2014/06/05/100-things-every-designer-needs-to-know-about-people/designer.jpg)
 
-# [](#How-people-see "How people see")How people see
+#How people see
 
-## [](#What-you-see-isn’t-what-your-brain-gets "What you see isn’t what your brain gets")What you see isn’t what your brain gets
+##What you see isn’t what your brain gets
 
 > What you think people are going to see on your webpage may not be what they do see.It might depend on their background knowledge,familiarity with what they are looking at,and expectations.
 > 
@@ -19,7 +19,7 @@ tags:
 
 - - -
 
-## [](#Periphral-vision-is-used-more-than-central-vision-to-get-the-gist-of-what-you-see "Periphral vision is used more than central vision to get the gist of what you see.")*Periphral vision* is used more than central vision to *get the gist of* what you see.
+##*Periphral vision* is used more than central vision to *get the gist of* what you see.
 
 > If you want users to concentrate on a certain part of the screen,don’t put animation or blinking elements in their peripheral vision
 
@@ -27,7 +27,7 @@ tags:
 
 - - -
 
-## [](#People-identify-objects-by-recognizing-patterns "People identify objects by recognizing patterns")People identify objects by recognizing patterns
+##People identify objects by recognizing patterns
 
 > Use pattens as much as possible since people will automatically be looking for them.Use grouping and white space to create patterns.
 
@@ -35,7 +35,7 @@ tags:
 
 - - -
 
-## [](#There’s-a-special-part-of-the-brain-just-for-recognizing-faces "There’s a special part of the brain just for recognizing faces")There’s a special part of the brain just for recognizing faces
+##There’s a special part of the brain just for recognizing faces
 
 > People recognize and react to faces on Web pages faster than anything else on the page(at least by those who are not autistic).
 
@@ -43,7 +43,7 @@ tags:
 
 - - -
 
-## [](#People-imagine-objects-tilted-and-at-a-sight-angle-above "People imagine objects tilted and at a sight angle above.")People imagine objects tilted and at a sight angle above.
+##People imagine objects tilted and at a sight angle above.
 
 > People recoginze a drawing or object faster and remember it better if it’s shown in the canonical perspective.
 
@@ -51,13 +51,13 @@ tags:
 
 - - -
 
-## [](#People-scan-screens-based-on-past-experience-and-expectations "People scan screens based on past experience and expectations.")People scan screens based on past experience and expectations.
+##People scan screens based on past experience and expectations.
 
 > Put the most important information(or things you want to people focus on)in the top third of the screen or in the middle.
 
 - - -
 
-## [](#People-see-cues-that-tell-them-what-to-do-with-an-object "People see cues that tell them what to do with an object.")People see *cues* that tell them what to do with an object.
+##People see *cues* that tell them what to do with an object.
 
 > If you want people to take action on an object,thether in real life or on a computer screen,you need to make sure that they can easily *perceive*,figure out,and interpret what the object is and what they can and should do with it.
 > 
@@ -69,7 +69,7 @@ tags:
 
 - - -
 
-## [](#People-can-miss-changes-in-their-visual-fields "People can miss changes in their visual fields.")People can miss changes in their visual fields.
+##People can miss changes in their visual fields.
 
 > If you are paying attention to one thing, and you don’t expect changes to appear,then you can easily miss changes.
 > 
@@ -79,15 +79,15 @@ tags:
 
 - - -
 
-## [](#People-believe-that-things-that-are-close-together-belong-together "People believe that things that are close together belong together.")People believe that things that are close together belong together.
+##People believe that things that are close together belong together.
 
 > Sometimes changing the spacing is sufficient,and you will be reducing the visual noise of the page.
 
-## [](#Red-and-blue-together-are-hard-on-the-eyes "Red and blue together are hard on the eyes.")Red and blue together are hard on the eyes.
+##Red and blue together are hard on the eyes.
 
 `recess:休息，凹处` `recessed:嵌壁式的` `chromstereopsis:彩色的立体视觉`
 
-## [](#9-men-and-4-women-are-color-blind "9% men and 4% women are color-blind.")9% men and 4% women are color-blind.
+##9% men and 4% women are color-blind.
 
 > Avoid red,green and blue(around them).
 
@@ -95,21 +95,21 @@ tags:
 
 [Check before your color taste](http://www.vischeck.com)
 
-## [](#The-meaning-of-colors-vary-by-culture "The meaning of colors vary by culture.")The meaning of colors vary by culture.
+##The meaning of colors vary by culture.
 
 `agitate:摇动` `agitated:激动的（不安）` `soothing：抚慰的，使人安心的`
 
 [Data visualization](http://informationisbeautiful.net)
 
-# [](#how-people-read "how people read")how people read
+#how people read
 
-## [](#It’s-myth-that-captal-letters-are-inerently-hard-to-read "It’s myth that captal letters are inerently hard to read.")It’s myth that captal letters are inerently hard to read.
+##It’s myth that captal letters are inerently hard to read.
 
 `saccade and fixation:眼睛飞快地扫视和定影`
 
 - - -
 
-## [](#Reading-and-comprehending-are-two-different-things "Reading and comprehending are two different things.")Reading and comprehending are two different things.
+##Reading and comprehending are two different things.
 
 > Reading is all about anticipating the next word.
 > 
@@ -121,25 +121,25 @@ tags:
 
 - - -
 
-## [](#Pattern-recogniting-helps-people-identify-letters-in-different-fonts "Pattern recogniting helps people identify letters in different fonts.")Pattern recogniting helps people identify letters in different fonts.
+##Pattern recogniting helps people identify letters in different fonts.
 
 > Unusual or overly decorative fonts can interfere with pattern recognition and slow down reading.
 
 - - -
 
-## [](#Font-size-matters "Font size matters.")Font size matters.
+##Font size matters.
 
 > Large x-heights can make a font look larger.
 
 - - -
 
-## [](#Reading-a-computer-screen-is-hrader-than-reading-paper "Reading a computer screen is hrader than reading paper.")Reading a computer screen is hrader than reading paper.
+##Reading a computer screen is hrader than reading paper.
 
 > Black text on a white background is easiest to read.
 
 - - -
 
-## [](#People-read-faster-with-a-longer-line-length-but-they-perfer-a-shorter-line-length "People read faster with a longer line length,but they perfer a shorter line length.")People read faster with a longer line length,but they perfer a shorter line length.
+##People read faster with a longer line length,but they perfer a shorter line length.
 
 > Use a longer line length(100 characters per line) if reading is an issue,vesvus.
 
@@ -147,9 +147,9 @@ tags:
 
 - - -
 
-# [](#how-people-remember "how people remember")how people remember
+#how people remember
 
-## [](#Short-term-memory-is-limited "Short-term memory is limited.")Short-term memory is limited.
+## memory is limited.")Short-term memory is limited.
 
 > Stress impairs working memory.
 > 
@@ -157,13 +157,13 @@ tags:
 
 - - -
 
-## [](#People-remember-only-four-items-at-once "People remember only four items at once.")People remember only four items at once.
+##People remember only four items at once.
 
 > magic number:4
 
 - - -
 
-## [](#People-have-to-use-information-to-make-it-stick "People have to use information to make it stick.")People have to use information to make it stick.
+##People have to use information to make it stick.
 
 > How do people move things from working memory into long-term memory?There are basically two ways:repeat it a lot,or connect it to sth they already know.
 > 
@@ -173,7 +173,7 @@ tags:
 
 - - -
 
-## [](#It’s-easier-to-recognize-information-than-recall-it "It’s easier to recognize information than recall it.")It’s easier to recognize information than recall it.
+##It’s easier to recognize information than recall it.
 
 > Recognition makes use of context and context helps you remember.
 
@@ -181,7 +181,7 @@ tags:
 
 - - -
 
-## [](#Memory-takes-a-lot-of-mental-resources "Memory takes a lot of mental resources.")Memory takes a lot of mental resources.
+##Memory takes a lot of mental resources.
 
 `Recency Effect:近因效应` `Suffix Effect:附加效应`
 
@@ -189,7 +189,7 @@ tags:
 
 - - -
 
-## [](#People-reconstruct-memory-each-time-they-remember-them "People reconstruct memory each time they remember them.")People reconstruct memory each time they remember them.
+##People reconstruct memory each time they remember them.
 
 `aloof:冷淡的` `testimonies:见证，证据` `grain of salt:有保留的`
 
@@ -197,7 +197,7 @@ tags:
 
 - - -
 
-## [](#It’s-a-good-thing-that-people-forget "It’s a good thing that people forget.")It’s a good thing that people forget.
+##It’s a good thing that people forget.
 
 > Design with forgetting in mind.If some information is really important,don’t rely on people to remember it.Provide it for them in your design,or have a way for them to easily look it up.
 
@@ -205,15 +205,15 @@ tags:
 
 - - -
 
-## [](#The-most-vivid-memories-are-wrong "The most vivid memories are wrong.")The most vivid memories are wrong.
+##The most vivid memories are wrong.
 
 `traumatic:创伤的，使人不快的` `flashbulb memory`
 
 > If you know that someone had a dramatic or traumatic experience,you need to understand two things:1.They will be convinced that what they remember is true and 2.It’s not exactly true!
 
-# [](#how-people-think "how people think")how people think
+#how people think
 
-## [](#People-process-information-better-in-bite-sized-chunks "People process information better in bite-sized chunks.")People process information better in bite-sized chunks.
+##People process information better in bite-sized chunks.
 
 `Progressive Disclosure` `《Don't make me think》`
 
@@ -221,7 +221,7 @@ tags:
 
 - - -
 
-## [](#Some-types-of-mental-processing-are-more-challenging-than-others "Some types of mental processing are more challenging than others.")Some types of mental processing are more challenging than others.
+##Some types of mental processing are more challenging than others.
 
 > All “loads” are not equal:cognitive,visual,motor.
 > 
@@ -229,7 +229,7 @@ tags:
 
 - - -
 
-## [](#Minds-wander-30-of-the-time "Minds wander 30% of the time.")Minds wander 30% of the time.
+## wander 30% of the time.")Minds wander 30% of the time.
 
 > mind wander != daydream
 > 
@@ -237,7 +237,7 @@ tags:
 
 - - -
 
-## [](#The-more-uncertain-people-are-the-more-they-defend-thier-ideas "The more uncertain people are, the more they defend thier ideas.")The more uncertain people are, the more they defend thier ideas.
+##The more uncertain people are, the more they defend thier ideas.
 
 `Cognitive dissonance:认知不一致` `tenable: 站得住脚的`
 
@@ -245,11 +245,11 @@ tags:
 
 - - -
 
-## [](#People-create-mental-models "People create mental models.")People create mental models.
+##People create mental models.
 
 - - -
 
-## [](#People-interact-with-conceptual-models "People interact with conceptual models.")People interact with conceptual models.
+##People interact with conceptual models.
 
 > One of the best purposes of training on a new pruduct is to adjust the audiences mental model to fit to the conceptual model of the product.
 > 
@@ -259,25 +259,25 @@ tags:
 
 - - -
 
-## [](#People-process-information-best-in-story-form "People process information best in story form.")People process information best in story form.
+## People process information best in story form.
 
 `rivet:固定` `causation：原因，因果关系`
 
 - - -
 
-## [](#People-learn-best-from-examples "People learn best from examples.")People learn best from examples.
+## People learn best from examples.
 
 > Don’t just tell people what to do ,show them.
 
 - - -
 
-## [](#People-are-driven-to-create-categories "People are driven to create categories.")People are driven to create categories.
+##People are driven to create categories.
 
 > People like to put things into categories.
 
 - - -
 
-## [](#Time-is-relative "Time is relative.")Time is relative.
+##Time is relative.
 
 > The more mental processing you do,the more time you think has elapsed.
 > 
@@ -285,7 +285,7 @@ tags:
 
 - - -
 
-## [](#There-are-four-ways-to-be-creative "There are four ways to be creative.")There are four ways to be creative.
+##There are four ways to be creative.
 
 Cognitive
 
@@ -323,7 +323,7 @@ Artists Musicians
 
 - - -
 
-## [](#People-can-be-in-a-flow-state "People can be in a flow state.")People can be in a flow state.
+##People can be in a flow state.
 
 `engross:全神贯注`
 
@@ -335,6 +335,6 @@ Artists Musicians
 
 - - -
 
-## [](#Culture-affect-how-people-think "Culture affect how people think")Culture affect how people think
+##Culture affect how people think
 
 > Be careful of overgeneralizing.

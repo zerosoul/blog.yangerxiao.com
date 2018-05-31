@@ -8,11 +8,11 @@ tags:
     - nodejs
     - 前端
 ---
-# [](#引子 "引子")引子
+#引子
 
 工作中经常需要获取浏览器地址栏URL的参数，常用的套路便是将这些参数转化为键值对，方法有许多，我喜欢简单明了，所以尝试自己总结下。
 
-# [](#过程 "过程")过程
+#过程
 
 首先，获取参数字符串
 ``` javascript
@@ -45,7 +45,7 @@ pairs.forEach(function(pair) {
 ``` javascript
 JSON.parse(JSON.stringify(result));
 ``` 
-# [](#最终代码 "最终代码")最终代码
+#最终代码
 ``` javascript
 
 function QueryStringToJSON() {            

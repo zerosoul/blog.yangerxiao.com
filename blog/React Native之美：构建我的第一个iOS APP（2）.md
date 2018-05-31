@@ -9,8 +9,7 @@ tags:
 ---
 ![React Native](https://zerosoul.github.io/2016/06/07/building-my-first-ios-app-with-react-native-part-two/rn.png)
 
-[](#再续前缘 "再续前缘")再续前缘
-====================
+#再续前缘
 
 [第一篇文章](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/)，我们从零开始，一步一步走到最后，构建了一个似乎并没有卵用的APP。但是，我们做了大量的基础工作，不就是为了在接下来的继续更轻松自信些嘛！  
 ![wtf](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/zdw.jpg)  
@@ -18,8 +17,7 @@ tags:
 ![你懂的](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/haha.png)  
 第二篇文章也是分五小节叙述，每一节完成一个小功能，最终召唤出还算有点卵用的APP。
 
-[](#1-召唤出壁纸和作者 "1.召唤出壁纸和作者")1.召唤出壁纸和作者
-======================================
+#1.召唤出壁纸和作者
 
 首先，我们先研究下数据，下面是从[Unsplash](https://unsplash.it/list)获取的一个数据实例：
 
@@ -253,8 +251,7 @@ label_author_name:{
 
 走到这儿，这一节算完事儿了，为了能下载壁纸，我们将在下一节做一些更加有技术含量的事儿。
 
-[](#2-捕捉双击操作-Double-Taps "2. 捕捉双击操作(Double-Taps)")2\. 捕捉双击操作(Double-Taps)
-=========================================================================
+#2. 捕捉双击操作(Double-Taps)
 
 这一节我们要用到的是PanResponder，这个API能做一些很酷的事情，比如捕捉双击操作。
 
@@ -440,8 +437,7 @@ isDoubleTap(currentTouchTimeStamp, {x0, y0}) {
 
 保存代码，等壁纸加载完毕，双击屏幕，如果不出意外的话，控制台里会输出:**双击操作**。
 
-[](#3-将壁纸保存到本地相册 "3.将壁纸保存到本地相册")3.将壁纸保存到本地相册
-============================================
+#3.将壁纸保存到本地相册
 
 现在我们能捕捉到双击的手势了，也就可以开始着手撸保存壁纸的代码了。首先，我们把console代码替换成一个调用的方法，先占坑。  
 
@@ -545,8 +541,7 @@ saveCurrentWallpaperToCameraRoll() {
 ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/saved.png)  
 完美！额，等等，从双击到壁纸保存成功，好像有那么几秒的等待时间，用户可能会认为双击不成功，然后再双击一次，这不是我们的期望，下一节专门解决这个问题！
 
-[](#4-创建一个等待组件：Waiting-js "4.创建一个等待组件：Waiting.js")4.创建一个等待组件：Waiting.js
-=======================================================================
+#4.创建一个等待组件：Waiting.js
 
 如果没记错的话，我们将创建第一个组件：Waiting.js。这个组件用于异步操作的等待时间，比如保存壁纸到相册的操作，就很有必要加一个等待提示，让用户知道APP在做什么。
 
@@ -779,8 +774,7 @@ saveCurrentWallpaperToCameraRoll() {
 年轻人，下一节我们做这件酷酷的事儿…  
 ![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/maomi.jpg)
 
-[](#5-摇一摇动作（Shake）和真机测试 "5.摇一摇动作（Shake）和真机测试")5.摇一摇动作（Shake）和真机测试
-=================================================================
+#5.摇一摇动作（Shake）和真机测试
 
 为了使我们的APP能够捕捉到摇一摇的动作，需要新增一个模块：[react-native-shake-event-ios](https://www.npmjs.com/package/react-native-shake-event-ios)。项目根目录运行：`npm install --save react-native-shake-event-ios`。
 
@@ -865,8 +859,7 @@ initialize() {
 
 卧槽，我们目前是不是可以说正式完成了一个APP版本的迭代？是的，我们做到了！
 
-[](#总结 "总结")总结
-==============
+#总结
 
 又到了总结时间了，这一次我们都做了哪些事情呢：
 
@@ -890,7 +883,5 @@ initialize() {
 ![姚明](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/tired.jpg)  
 哦对了，最新代码放在了[Github上](https://github.com/zerosoul/PIW)，欢迎指正。
 
-[](#参考链接 "参考链接")参考链接
-====================
-
-[The Beauty Of React Native: Building Your First iOS App With JavaScript (Part 2)](https://www.smashingmagazine.com/2016/04/how-to-build-your-first-ios-app-with-javascript/#)
+#原文链接
+- [The Beauty Of React Native: Building Your First iOS App With JavaScript (Part 2)](https://www.smashingmagazine.com/2016/04/how-to-build-your-first-ios-app-with-javascript/#)

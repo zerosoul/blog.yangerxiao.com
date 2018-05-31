@@ -7,15 +7,14 @@ tags:
     - 前端
     - 备忘
 ---
-[](#引子 "引子")引子
-==============
+#引子
 
 浏览网页时有时会遇到图片加载失败的场景，浏览器往往会给出一个非常丑陋的显示效果：  
+
 ![加载失败](https://zerosoul.github.io/2015/05/07/style-broken-image-using-css/img_err.png)  
 为了更好的用户体验，这里可以仅仅通过CSS来优化一下样式。恰巧最近工作上遇到了这样的需求，在此记录下自己是如何解决的。
 
-[](#思路 "思路")思路
-==============
+#思路
 
 需要注意两个偏理论上的知识点：
 
@@ -24,78 +23,46 @@ tags:
 
 运用上面两个特性，我们就能做到当图片加载失败时，对其美化。
 
-[](#代码 "代码")代码
-==============
+#代码
 
 使用下面结构当做例子：  
 
 ``` html
-
 <img src="http://www.somewhere.com/images/broken.jpg" alt="马蛋，图片加载出错了...">
 ```
 图片加载失败，下面的CSS会发挥作用：  
 ``` css
-
 img { 
-
     font-family: 'Helvetica'; 
-
     font-weight: 300; 
-
     line-height: 2; 
-
     text-align: center; //自此以上的css会影响alt的样式
-
     width: 100%; 
-
     height: auto; 
-
     display: block; 
-
     position: relative; 
-
 }
-
 img:before { 
-
         content: "\\f1c5" " " attr(alt);  //content的使用方式请自行谷歌之
-
         font-family: FontAwesome; //注意使用的是font awesome 哦，别忘了引入。
-
         color: rgb(100, 100, 100); 
-
         display: block; 
-
         position: absolute; 
-
         z-index: 2; 
-
         top: 0; 
-
         left: 0; 
-
         width: 100%; 
-
         height: 100%; 
-
         background-color: #fff; 
-
 } 
 
  img:after { 
-
         content: "(url: " attr(src) ")"; 
-
         display: block; 
-
         position: relative; 
-
         color: #00aeef; 
-
         bottom: -10px; 
-
         z-index: 1000;
-
 }
 ```
 

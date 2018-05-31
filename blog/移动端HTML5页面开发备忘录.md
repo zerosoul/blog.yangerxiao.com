@@ -11,9 +11,9 @@ tags:
 ![html5](https://zerosoul.github.io/2016/11/15/h5-memo/html5.jpg)  
 把平时开发工作中遇到的一些问题写下来，权当备忘录。
 
-# [](#有关Meta "有关Meta")有关Meta
+#有关Meta
 
-## [](#基本Meta "基本Meta")基本Meta
+##基本Meta
 ``` html
 
 <!-- 设置缩放 -->
@@ -32,7 +32,7 @@ tags:
 
 <meta name="format-detection" content="telephone=no, email=no" />
 ``` 
-## [](#搜索引擎Meta "搜索引擎Meta")搜索引擎Meta
+##搜索引擎Meta
 
 ``` html
 
@@ -57,7 +57,7 @@ tags:
  -->
 ```
 
-## [](#页面缓存设置Meta "页面缓存设置Meta")页面缓存设置Meta
+##页面缓存设置Meta
 ``` html
 
 <!-- 清除缓存 -->
@@ -68,9 +68,9 @@ tags:
 
 <meta http-equiv="expires" content="0">
 ``` 
-# [](#常见问题 "常见问题")常见问题
+#常见问题
 
-## [](#移动端字体设置 "移动端字体设置")移动端字体设置
+##移动端字体设置
 ``` css
 
 /*中英字体名对照表
@@ -106,7 +106,7 @@ tags:
 body { font-family: Microsoft Yahei,SimSun,Helvetica; }
 ```
 
-## [](#打电话发短信写邮件 "打电话发短信写邮件")打电话发短信写邮件
+##打电话发短信写邮件
 ``` html
 
 // 打电话
@@ -158,7 +158,7 @@ body { font-family: Microsoft Yahei,SimSun,Helvetica; }
 <a href="mailto:haha@wtf.com;384900096@wtf.com?cc=666@wtf.com&bcc=993233461@wtf.com&subject=[邮主题\]&body=我是第一行内容%0A%0Ahttp://www.baidu.com%0A%0A<img src='images/1.jpg' />">快来点我啊，给你发种子。</a>
 ```
 
-## [](#touch事件 "touch事件")touch事件
+##touch事件
 
 事件响应顺序：`ontouchstart` > `ontouchmove` > `ontouchend` > `onclick`
 
@@ -180,7 +180,7 @@ TouchEvent说明：
 -   clientX、clientY在显示区的坐标
 -   target：当前元素
 
-## [](#科普：移动端click事件200-300ms的延时响应 "科普：移动端click事件200-300ms的延时响应")科普：移动端click事件200-300ms的延时响应
+##科普：移动端click事件200-300ms的延时响应
 
 以下是历史原因：
 
@@ -195,7 +195,7 @@ TouchEvent说明：
 -   [fastclick](https://github.com/ftlabs/fastclick)
 -   zepto的[touch模块](https://github.com/madrobby/zepto/blob/master/src/touch.js#files)
 
-## [](#点击元素产生背景或边框问题 "点击元素产生背景或边框问题")点击元素产生背景或边框问题
+##点击元素产生背景或边框问题
 
 ``` css
 
@@ -211,7 +211,7 @@ a,button,input,textarea {
 
 \* { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
-## [](#字体单位font-size选择px还是rem "字体单位font-size选择px还是rem")字体单位font-size选择px还是rem
+##字体单位font-size选择px还是rem
 ``` css
 
  /*如需适配多种移动设备，建议使用rem。以下为参考值：*/
@@ -224,7 +224,7 @@ html { font-size: 62.5%; }   /*10÷16 = 62.5%\*/
 
 body { font-size:12px; font-size:1.2rem; }
 
-## [](#其它一些实用CSS技巧 "其它一些实用CSS技巧")其它一些实用CSS技巧
+##其它一些实用CSS技巧
 ``` css
 
 /*禁止长按链接与图片弹出菜单*/
@@ -260,13 +260,14 @@ input:focus::-webkit-input-placeholder{ color:#999; }
 input::-webkit-input-speech-button {display: none}
 ```
 
-## [](#禁用input在ios下，输入英文首字母的默认大写 "禁用input在ios下，输入英文首字母的默认大写")禁用input在ios下，输入英文首字母的默认大写
+##禁用input在ios下，输入英文首字母的默认大写
 ``` html
 <input autocapitalize="off" autocorrect="off" />
 ``` 
-## [](#屏幕旋转的事件和样式 "屏幕旋转的事件和样式")屏幕旋转的事件和样式
+##屏幕旋转的事件和样式
 
-JS处理：  
+JS处理： 
+
 ``` javascript
 
 function orientInit(){
@@ -305,7 +306,7 @@ CSS处理：
 
 @media all and (orientation:landscape){   }
 ``` 
-## [](#播放视频不全屏 "播放视频不全屏")播放视频不全屏
+##播放视频不全屏
 
 ``` html
 
@@ -325,7 +326,7 @@ webkit-playsinline="true"
 <video x-webkit-airplay="true" webkit-playsinline="true" preload="auto" autoplay src="http://"></video>
 ```
 
-## [](#消除transition闪屏 "消除transition闪屏")消除transition闪屏
+##消除transition闪屏
 
 ``` css
 .css {

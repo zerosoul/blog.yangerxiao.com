@@ -37,6 +37,7 @@ const Container = styled.div`
     padding: 0;
     margin: 0.5rem 0;
     .duty {
+      margin-left: 0.8rem;
       margin-bottom: 0.3rem;
     }
   }

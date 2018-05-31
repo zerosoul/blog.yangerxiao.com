@@ -42,12 +42,12 @@ const Container = styled.div`
   }
 `;
 const Profile = props => {
-  const { blog, email, tel } = props.info;
+  const { name, avator, info: { blog, email, tel } } = props;
   return (
     <Container>
-      <h1 className="name">{props.name}</h1>
+      <h1 className="name">{name}</h1>
       <div className="avator">
-        <Img sizes={props.avator} alt="简历头像" />
+        <Img sizes={avator} alt="简历头像" />
       </div>
       <dl>
         {blog && (

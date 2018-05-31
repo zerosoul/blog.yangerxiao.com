@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import ExpTitle from './ExpTitle';
-import WorkExp from './WorkExp';
-import EduExp from './EduExp';
-import Profile from './Profile';
+import ExpTitle from '../components/resume/ExpTitle';
+import WorkExp from '../components/resume/WorkExp';
+import EduExp from '../components/resume/EduExp';
+import Profile from '../components/resume/Profile';
 
 const Container = styled.div`
   background: url(./images/site/bg.png) repeat;
   padding: 1.6rem 1rem;
 `;
 
-const Index = ({ data }) => {
+const Resume = ({ data }) => {
   const { avator } = data;
   const profile = {
     name: '杨国春',
@@ -52,7 +52,7 @@ const Index = ({ data }) => {
     </Container>
   );
 };
-export default Index;
+export default Resume;
 /* eslint no-undef: off */
 export const query = graphql`
   query AvatorQuery {

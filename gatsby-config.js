@@ -3,6 +3,7 @@ const FeedSetting = require('./config/feed-setting');
 const ManifestSetting = require('./config/manifest-setting');
 const FaviconSetting = require('./config/favicon-setting');
 const MarkdownSetting = require('./config/markdown-setting');
+const GASetting = require('./config/ga-setting');
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
@@ -46,6 +47,7 @@ module.exports = {
     FeedSetting,
     ManifestSetting,
     FaviconSetting,
+    GASetting,
     'gatsby-plugin-offline',
     `gatsby-plugin-react-next`,
   ],

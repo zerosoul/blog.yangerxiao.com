@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import TOC from '../components/TOC';
+import Navs from '../components/Navs';
 import { getYMD } from '../utils/fun';
 import { media } from '../utils/media';
 
@@ -126,6 +127,7 @@ const Post = props => {
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
         {next && <Link to={next.fields.slug} className="next">{`${next.frontmatter.title}`}</Link>}
       </ArticleNav>
+      <Navs isBottom />
     </Wrapper>
   );
 };

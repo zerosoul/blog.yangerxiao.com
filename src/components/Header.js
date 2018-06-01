@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 import { lighten } from 'polished';
 import Button from './Button';
+import Navs from './Navs';
 import { media } from '../utils/media';
 
 const Wrapper = styled.header`
@@ -30,24 +31,6 @@ const Hero = styled.div`
     margin-bottom: 0.4rem;
   }
 `;
-const Navs = styled.div`
-  display: flex;
-  align-items: space-between;
-  margin: 0 auto;
-  margin-bottom: 1.5rem;
-  max-width: 90%;
-  @media ${media.tablet} {
-    max-width: 55%;
-  }
-  @media ${media.desktop} {
-    max-width: 30%;
-  }
-
-  a {
-    flex: 1;
-    text-align: center;
-  }
-`;
 
 const Header = props => (
   <Wrapper>
@@ -58,23 +41,10 @@ const Header = props => (
         </Link>
       </h1>
       <div className="slogan">
-        <span>Machine repeats,Human creates</span>
+        <span>Machine repeats, Human creates</span>
       </div>
     </Hero>
-    <Navs>
-      <Link to="/categories">
-        <Button>分类</Button>
-      </Link>
-      <Link to="/archives">
-        <Button>归档</Button>
-      </Link>
-      <Link to="/tags">
-        <Button>标签</Button>
-      </Link>
-      <Link to="/about">
-        <Button>关于</Button>
-      </Link>
-    </Navs>
+    <Navs />
     {props.children}
   </Wrapper>
 );

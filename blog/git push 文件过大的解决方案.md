@@ -5,9 +5,9 @@ category: "技术"
 tags:
     - 互联网
     - 技术
+    - git
     - 备忘
 ---
-# git push 文件过大的解决方案
 
 ## 问题起因
 

@@ -92,24 +92,29 @@ export default class TOC extends Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
   onClickHandler() {
-    console.log('hello');
-
     const { fold } = this.state;
     this.setState({
       fold: !fold,
     });
   }
   render() {
+    const hasToc = !!this.props.children.length;
     return (
       <Toc fold={this.state.fold}>
-        <div className="content">{this.props.children}</div>
-        <button className={`btn ${this.state.fold ? 'fold' : 'unfold'}`} onClick={this.onClickHandler}>
-          <span className="line" />
-          <span className="line" />
-          <span className="line" />
-          {/* <span className="unfoldline" />
+        {
+          hasToc && (
+            <React.Fragment>
+              <div className="content">{this.props.children}</div>
+              <button className={`btn ${this.state.fold ? 'fold' : 'unfold'}`} onClick={this.onClickHandler}>
+                <span className="line" />
+                <span className="line" />
+                <span className="line" />
+                {/* <span className="unfoldline" />
           <span className="unfoldline" /> */}
-        </button>
+              </button>
+            </React.Fragment>
+          )
+        }
       </Toc>
     );
   }

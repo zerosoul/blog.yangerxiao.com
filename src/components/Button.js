@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.span`
+const Wrapper = styled.div`
   margin-right: 0.4rem;
   margin-bottom: 0.2rem;
   border-radius: 0.8rem;
@@ -10,8 +10,9 @@ const Wrapper = styled.span`
   background: #333;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  &:hover {
-    transform: translateY(-2px);
+  &:hover,&:active,&:focus {
+    transform: 'scale(1.2)',
+    transition: 'transform .5s',
   }
 `;
 

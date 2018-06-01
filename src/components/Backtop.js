@@ -12,7 +12,6 @@ const Circle = styled.div`
   border-radius: 0.5rem;
   background: #ddd;
   cursor: pointer;
-  display: ${props => (props.visiable ? 'block' : 'none')};
   @media ${media.desktop} {
     right: 16%;
   }
@@ -59,7 +58,7 @@ export default class Backtop extends Component {
   componentDidMount = () => {
     Global.addEventListener('scroll', this.handleScroll);
   };
-  componentUnmount = () => {
+  componentWillUnmount = () => {
     Global.removeEventListener('scroll', this.handleScroll);
   };
   handleScroll = () => {
@@ -81,11 +80,9 @@ export default class Backtop extends Component {
   };
   render() {
     return (
-      <div style={{ display: this.state.isVisible ? 'block' : 'none' }}>
-        <Circle onClick={this.scrollUp}>
-          <div className="wrapper" />
-        </Circle>
-      </div>
+      <Circle style={{ display: this.state.isVisible ? 'block' : 'none' }} onClick={this.scrollUp}>
+        <div className="wrapper" />
+      </Circle>
     );
   }
 }

@@ -27,7 +27,7 @@ const Header = styled.h2`
   border-bottom: 1px solid #ddd;
 `;
 
-const Content = styled.p`
+const Content = styled.div`
   margin: 0.4rem auto;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,9 @@ const About = ({ data }) => (
         <Link to="/about">关于我</Link>
       </SectionTitle>
       <Subline sectionTitle>也许，我们能成为朋友。</Subline>
-      <Slider imgs={data.allImageSharp.edges.map(img => <Img sizes={img.node.sizes} alt="关于我" />)} />
+      <Slider
+        imgs={data.allImageSharp.edges.map(img => <Img sizes={img.node.sizes} key={img.node.sizes} alt="关于我" />)}
+      />
       <Header>基本信息</Header>
       <Content>89年/金牛座/山东/本科/软件工程专业</Content>
       <Header>技术栈</Header>

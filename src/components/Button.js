@@ -10,9 +10,9 @@ const Wrapper = styled.div`
   background: #333;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  &:hover,&:active,&:focus {
-    transform: 'scale(1.2)',
-    transition: 'transform .5s',
+  &:active {
+    transform: scale(1.1);
+    transition: transform 0.5s;
   }
 `;
 

@@ -12,9 +12,9 @@ tags:
 #写在前面的话
 
 严格来说这是一篇译文，但与一般的翻译有所不同，我会修正原文中一些小错误，也会指出没有提及的一些坑，还会基于原文的想法做一些扩展开发。所以，读的时候有些是原作者的话，有些是我的添油加醋，但整体绝对保证流畅。另，基于原文改动较多，也就懒得一一标注出来，或许显得有些不负责，但是…  
-![来打我呀](ldwy.jpg)  
+![来打我呀](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/ldwy.jpg)  
 好了，下面开始进入正题：  
-![装逼](zb.jpg)
+![装逼](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/zb.jpg)
 
 #之前的困惑
 
@@ -51,6 +51,8 @@ tags:
 
 由于涉及的知识点较多，`构建我的第一个iOS app`将分为两篇来完成。每一篇有**五个章节**，每个章节会推进一步，直至完成预期。文章略长，一旦开始，最好以章节为单位来进行。建议先收藏，回家坐在电脑前慢慢品。
 
+##1.First Blood:建一个空React Native项目
+
 首先确认已安装：
 
 -   [XCode 7.0或更高版本](https://developer.apple.com/xcode/)
@@ -79,24 +81,24 @@ tags:
 ![terminal popup](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/popup.png)
 
 一旦Xcode构建完，在模拟器里你会看到这一幕：  
-![welcome to React Native](welcome.jpg)
+![welcome to React Native](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/welcome.jpg)
 
 **注：此处有坑，如果你用真机模拟，会出现这么一幕：**  
 ![大红的懵逼](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/localhost.png)  
 大红的懵逼！不过别慌，官方文档有对应的解决方法，移步[这里](https://facebook.github.io/react-native/docs/running-on-device-ios.html)可以找到解决方式。
 
-#2. 从第三方获取壁纸数据
+##2. 从第三方获取壁纸数据
 
 既然要做壁纸APP，大量适合做手机壁纸的图片从哪里来？还记得前面提到的Unsplash吗？一切的遇见都不是偶然，好心的歪果仁做了一个[Unsplash图片调用接口](https://unsplash.it/)，用于生成一些精美占位图，非常方便！
 
-#有关`ES6`中“类”的解释
+###有关`ES6`中“类”的解释
 
 你可能会注意到，有些React代码会出现`var PIW = React.createClass({ ... })`，有些会是`class PIW extends Component{ ... }`。呵呵，这是个历史遗留问题，用哪种风格是个人选择问题，不存在孰优孰劣，有选择恐惧症的同学可以看看[这篇文章](https://reactjsnews.com/composing-components)。
 
 此处，我选择`Recat.Component`风格，别问我为什么，就这么任性！  
-![任性](renxing.jpg)
+![任性](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/renxing.jpg)
 
-#开始做一些改动
+###开始做一些改动
 
 在`PIW`类里面，第一件事情便是加个构造函数`constructor`，在此初始化两个State：`wallsJSON`和`isLoading`。`wallsJSON`用于存储从第三方接口获取的json数组数据，`isLoading`是个布尔变量，用于标识数据是否加载完毕。  
 ``` javascript
@@ -110,7 +112,7 @@ class PIW extends Component{
 
     this.state = {
 
-      wallsJSON: \[\],
+      wallsJSON: [],
 
       isLoading: true
 
@@ -177,7 +179,7 @@ fetchWallsJSON() {
 
 太好了，我们已经能从第三方拿到数据了！在打印出数据前会有点延迟，这很正常，因为从请求到响应回数据会有个等待时间，此处应有**加载提示**。
 
-#3. 增加加载提示
+##3. 增加加载提示
 
 首先，把`PIW`类里`render`代码全部删除，新增以下代码：  
 ``` javascript
@@ -342,7 +344,7 @@ var styles = StyleSheet.create({
 过个几秒钟，将会转为：  
 ![data loaded](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/loaded.png)
 
-#4. 筛选出随机的壁纸
+##4. 筛选出随机的壁纸
 
 这一章节侧重于Javascript的编码，将创建一个专门的模块用于生成随机数。如果模块的概念感到陌生，请先移步[Node.js的模块文档](https://nodejs.org/api/modules.html#modules_modules)。
 
@@ -365,7 +367,7 @@ module.exports = {
 
     uniqueRandomNumbers(numRandomNumbers, lowerLimit, upperLimit) {
 
-        var uniqueNumbers = \[\];
+        var uniqueNumbers = [];
 
         while( uniqueNumbers.length != numRandomNumbers ) {
 
@@ -406,7 +408,7 @@ fetchWallsJSON() {
 
       var randomIds = RandManager.uniqueRandomNumbers(NUM_WALLPAPERS, 0, jsonData.length);
 
-      var walls = \[\];
+      var walls = [];
 
       randomIds.forEach(randomId => {
 
@@ -418,7 +420,7 @@ fetchWallsJSON() {
 
         isLoading: false,
 
-        wallsJSON: \[\].concat(walls)
+        wallsJSON: [].concat(walls)
 
       });
 
@@ -468,9 +470,6 @@ renderResults() {
     );
 
   }
-
-/***/
-
 }
 ```
 以上代码有个地方值得注意：React Native通过循环数组或集合渲染子元素时，需要给每个元素制定一个唯一的`key`，这也是为啥`<Text key={index}>`这样写的原因。
@@ -482,7 +481,7 @@ renderResults() {
 
 非常好，我们现在已经可以自如地操控数据了。
 
-#5. 新增Swiper组件
+##5. 新增Swiper组件
 
 React Native有强大的社区支持和[丰富的组件库](https://react.parts/native)。这一章节学习如何引入第三方组件。  
 对于我们当前的APP，需要一个可滑动浏览图片的组件，推荐[react-native-swiper](https://github.com/leecade/react-native-swiper)。
@@ -492,79 +491,38 @@ React Native有强大的社区支持和[丰富的组件库](https://react.parts/
 
 ``` js
 renderResults() {
-
   var {wallsJSON, isLoading} = this.state;
-
   if( !isLoading ) {
-
     return (
-
-    /***/
-
       <Swiper>
-
-    /***/
-
         {wallsJSON.map((wallpaper, index) => {
-
           return(
-
             <Text key={index}>
-
               {wallpaper.author}
-
             </Text>
-
           );
-
         })}
-
-    /***/
-
       </Swiper>
-
-    /***/
-
     );
-
   }
-
 }
 ```
 不出意外的话，界面将变成下面这样：  
 ![swiper with name data](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/swiperwithdata.png)  
 下面，根据[Swiper组件的文档](https://github.com/leecade/react-native-swiper)，我们来微调一下样式：  
 ``` jsx
-<Swiper
-
-/***/
-
+<Swiper 
 dot={<View style={{backgroundColor:'rgba(255,255,255,.4)', width: 8, height: 8,borderRadius: 10, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3,}} />}
-
 activeDot={<View style={{backgroundColor: '#fff', width: 13, height: 13, borderRadius: 7, marginLeft: 7, marginRight: 7}} />}
-
 loop={false}
-
-onMomentumScrollEnd={this.onMomentumScrollEnd}
-
-/***/
-
->
-
+onMomentumScrollEnd={this.onMomentumScrollEnd}>
   {wallsJSON.map((wallpaper, index) => {
-
     return(
-
       <Text key={index}>
-
         {wallpaper.author}
-
       </Text>
-
     );
-
   })}
-
 </Swiper>
 ```
 
@@ -573,12 +531,12 @@ onMomentumScrollEnd={this.onMomentumScrollEnd}
 -   新增了每一页滑动完毕后的触发事件：`onMomentumScrollEnd`（这个会在下一篇文章中用到，此处先占个坑）
 
 我们已经把Swiper加上了，好啦，这一节就写到这里，因为…我累了。  
-![](shuaiqi.jpg)
+![](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/shuaiqi.jpg)
 
 #总结
 
 写到这里，我发现文章已经挺长的了。那么…再加个总结吧，都这么长了，应该不介意再长一点吧。  
-![有道理](youdaoli.jpg)
+![有道理](https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/youdaoli.jpg)
 
 -   第一节讲的是如何新建一个空的React Native项目
 -   第二节讲的是如何从第三方API获取原始数据，并建议用ES6新语法来构建程序

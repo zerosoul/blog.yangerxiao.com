@@ -10,7 +10,6 @@ const Toc = styled.div`
     right: 16%;
   }
   z-index: 999;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -26,6 +25,7 @@ const Toc = styled.div`
     border-radius: 0.5rem;
     position: relative;
     cursor: pointer;
+    background: #eee;
     &:focus {
       outline: none;
     }

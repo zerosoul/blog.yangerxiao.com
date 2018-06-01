@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 import { lighten } from 'polished';
-import Button from './Button';
 import Navs from './Navs';
-import { media } from '../utils/media';
 
 const Wrapper = styled.header`
   margin: 0 auto;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 import { media } from '../utils/media';
 import Button from './Button';
-import Link from 'gatsby-link';
 
 const Container = styled.div`
   display: flex;

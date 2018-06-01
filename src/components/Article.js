@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ellipsis } from 'polished';
 import Link, { navigateTo } from 'gatsby-link';
 import kebabCase from 'lodash/kebabCase';
 import { getYMD } from '../utils/fun';
-import { ellipsis } from 'polished';
 
 import Subline from './Subline';
 

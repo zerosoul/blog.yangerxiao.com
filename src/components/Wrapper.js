@@ -34,7 +34,7 @@ const Wrapper = props => (
     <Header />
     <Content>{props.children}</Content>
     <FixContainer>
-      <ReadLater />
+      {/* <ReadLater /> */}
       {props.toc}
       <Backtop />
     </FixContainer>

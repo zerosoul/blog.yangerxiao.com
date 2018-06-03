@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { media } from '../utils/media';
+import { addEventListenerList, removeEventListenerList } from '../utils/fun';
 
 const Toc = styled.div`
-  position: fixed;
-  right: 0.5rem;
-  bottom: 3.2rem;
-  @media ${media.desktop} {
-    right: 16%;
-  }
-  z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  z-index: 999;
+  .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+    z-index: 998;
+    opacity: 0;
+    display: ${props => (props.fold ? 'none' : 'block')};
+  }
   button {
     display: flex;
     flex-direction: column;
@@ -26,6 +31,7 @@ const Toc = styled.div`
     position: relative;
     cursor: pointer;
     background: #eee;
+    z-index: 999;
     &:focus {
       outline: none;
     }
@@ -59,7 +65,7 @@ const Toc = styled.div`
     }
   }
   .content {
-    z-index: 1000;
+    z-index: 999;
     padding: 0.6rem;
     margin-bottom: 0.5rem;
     border: 1px solid #ddd;
@@ -89,20 +95,33 @@ export default class TOC extends Component {
     this.state = {
       fold: true,
     };
-    this.onClickHandler = this.onClickHandler.bind(this);
+    this.contentBlock = React.createRef();
+    this.maskBtn = React.createRef();
   }
-  onClickHandler() {
+  componentDidMount() {
+    const links = this.contentBlock.current.querySelectorAll('a');
+    const maskBtn = this.maskBtn.current;
+    addEventListenerList(links, 'click', evt => {
+      maskBtn.click();
+    });
+  }
+  componentWillUnmount() {
+    const links = this.contentBlock.current.querySelectorAll('a');
+    removeEventListenerList(links, 'click');
+  }
+  onClickHandler = () => {
     const { fold } = this.state;
     this.setState({
       fold: !fold,
     });
-  }
+  };
   render() {
     const { toc } = this.props;
     return (
       <Toc fold={this.state.fold}>
         <React.Fragment>
-          <div className="content" dangerouslySetInnerHTML={{ __html: toc }} />
+          <button className="mask" onClick={this.onClickHandler} ref={this.maskBtn} />
+          <div className="content" dangerouslySetInnerHTML={{ __html: toc }} ref={this.contentBlock} />
           <button className={`btn ${this.state.fold ? 'fold' : 'unfold'}`} onClick={this.onClickHandler}>
             <span className="line" />
             <span className="line" />

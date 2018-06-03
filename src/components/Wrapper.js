@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
 import Backtop from './Backtop';
+import FixContainer from '../components/FixContainer';
+import ReadLater from '../components/ReadLater';
 import { media } from '../utils/media';
 
 const Grid = styled.div`
@@ -31,7 +33,11 @@ const Wrapper = props => (
   <Grid>
     <Header />
     <Content>{props.children}</Content>
-    <Backtop />
+    <FixContainer>
+      <ReadLater />
+      {props.toc}
+      <Backtop />
+    </FixContainer>
   </Grid>
 );
 

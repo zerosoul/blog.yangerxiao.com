@@ -2,19 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { media } from '../utils/media';
+import { Global } from '../utils/fun';
 
 const Circle = styled.div`
-  position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
   width: 2rem;
   height: 2rem;
   border-radius: 0.5rem;
   background: #ddd;
   cursor: pointer;
-  @media ${media.desktop} {
-    right: 16%;
-  }
   .wrapper {
     position: relative;
     &:before,
@@ -36,10 +31,6 @@ const Circle = styled.div`
     }
   }
 `;
-const Global =
-  (typeof self === 'object' && self.self === self && self) ||
-  (typeof global === 'object' && global.global === global && global) ||
-  {};
 export default class Backtop extends Component {
   static propTypes = {
     offset: PropTypes.number,
@@ -80,7 +71,7 @@ export default class Backtop extends Component {
   };
   render() {
     return (
-      <Circle style={{ display: this.state.isVisible ? 'block' : 'none' }} onClick={this.scrollUp}>
+      <Circle style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }} onClick={this.scrollUp}>
         <div className="wrapper" />
       </Circle>
     );

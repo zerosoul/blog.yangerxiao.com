@@ -94,9 +94,9 @@ const Post = props => {
   const postNode = props.data.markdownRemark;
   const toc = props.data.markdownRemark.tableOfContents;
   const { title, date, tags, category } = postNode.frontmatter;
-
+  const tocComponent = (toc && <TOC toc={toc} />) || null;
   return (
-    <Wrapper>
+    <Wrapper toc={tocComponent}>
       <SEO postPath={slug} postNode={postNode} postSEO />
       <Helmet title={`${title} | ${config.siteTitle}`} />
       <Title>{title}</Title>
@@ -119,7 +119,7 @@ const Post = props => {
           </span>
         )}
       </Subline>
-      {toc && <TOC toc={toc} />}
+
       <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
       <ArticleNav>
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}

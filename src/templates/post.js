@@ -119,9 +119,7 @@ const Post = props => {
           </span>
         )}
       </Subline>
-      <TOC>
-        <div dangerouslySetInnerHTML={{ __html: toc }} />
-      </TOC>
+      {toc && <TOC toc={toc} />}
       <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
       <ArticleNav>
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}

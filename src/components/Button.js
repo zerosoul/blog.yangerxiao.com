@@ -16,6 +16,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const Button = props => <Wrapper>{props.children}</Wrapper>;
+const Button = props => <Wrapper className="btn">{props.children}</Wrapper>;
 
 export default Button;

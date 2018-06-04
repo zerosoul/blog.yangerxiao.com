@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 import { media } from '../utils/media';
+import { Global } from '../utils/fun';
 import Button from './Button';
 
 const Container = styled.div`
@@ -23,24 +24,67 @@ const Container = styled.div`
   a {
     flex: 1;
     text-align: center;
+    margin: 0 0.2rem;
+    .btn {
+      margin: 0 auto;
+    }
+    &.curr {
+      .btn {
+        background: #666;
+      }
+
+      position: relative;
+      &:after,
+      &:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      &:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: #666;
+        border-width: 0.6rem;
+        margin-left: -0.6rem;
+      }
+    }
   }
 `;
 
-const Navs = ({ isBottom }) => (
-  <Container isBottom={isBottom}>
-    <Link to="/cates">
-      <Button>分类</Button>
-    </Link>
-    <Link to="/archives">
-      <Button>归档</Button>
-    </Link>
-    <Link to="/tags">
-      <Button>标签</Button>
-    </Link>
-    <Link to="/about">
-      <Button>关于</Button>
-    </Link>
-  </Container>
-);
+const Navs = ({ isBottom }) => {
+  const pathName = Global.location.pathname;
+  const navs = [
+    {
+      to: '/cates',
+      title: '分类',
+    },
+    {
+      to: '/archives',
+      title: '归档',
+    },
+    {
+      to: '/tags',
+      title: '标签',
+    },
+    {
+      to: '/about',
+      title: '关于',
+    },
+  ];
+  return (
+    <Container isBottom={isBottom}>
+      {navs.map(nav => (
+        <Link to={nav.to} key={nav.to} className={nav.to === pathName ? 'curr' : null}>
+          <Button>{nav.title}</Button>
+        </Link>
+      ))}
+    </Container>
+  );
+};
 
 export default Navs;

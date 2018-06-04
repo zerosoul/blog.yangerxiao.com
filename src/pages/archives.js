@@ -23,7 +23,7 @@ const Archives = props => {
   // console.log(props);
 
   const { edges, totalCount } = props.data.allMarkdownRemark;
-  const sublineStr = `（共${totalCount}篇）`;
+  const sublineStr = `共${totalCount}篇`;
   const archives = {};
 
   edges.forEach(({ node }) => {
@@ -38,9 +38,9 @@ const Archives = props => {
   return (
     <Wrapper>
       <Helmet title={`归档 | ${config.siteTitle}`} />
-      <SectionTitle>
+      {/* <SectionTitle>
         <Link to="/archives">归档</Link>
-      </SectionTitle>
+      </SectionTitle> */}
       <Subline sectionTitle>{sublineStr}</Subline>
       <Container>
         {Object.keys(archives).map(date => {

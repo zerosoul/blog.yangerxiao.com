@@ -56,11 +56,11 @@ const Tags = props => {
     }
     return 0;
   });
-  const sublineStr = `（共${group.length}个）`;
+  const sublineStr = `共${group.length}个`;
   return (
     <Wrapper>
       <Helmet title={`标签 | ${config.siteTitle}`} />
-      <SectionTitle>标签</SectionTitle>
+      {/* <SectionTitle>标签</SectionTitle> */}
       <Subline sectionTitle>{sublineStr}</Subline>
       <TagList>
         {group.map(tag => (

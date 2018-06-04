@@ -47,9 +47,9 @@ const About = ({ data }) => (
   <Wrapper>
     <Helmet title={`关于我 | ${config.siteTitle}`} />
     <Container>
-      <SectionTitle>
+      {/* <SectionTitle>
         <Link to="/about">关于我</Link>
-      </SectionTitle>
+      </SectionTitle> */}
       <Subline sectionTitle>也许，我们能成为朋友。</Subline>
       <Slider
         imgs={data.allImageSharp.edges.map(img => <Img sizes={img.node.sizes} key={img.node.sizes} alt="关于我" />)}

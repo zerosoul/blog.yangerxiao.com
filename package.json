@@ -30,6 +30,7 @@
     "gatsby-transformer-sharp": "^1.6.24",
     "polished": "^1.9.2",
     "prop-types": "^15.6.1",
+    "react-color": "^2.14.1",
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.23.1",

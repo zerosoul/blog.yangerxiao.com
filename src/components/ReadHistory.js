@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import styled from 'styled-components';
+import { ellipsis } from 'polished';
 import { Global } from '../utils/fun';
 
 const Container = styled.div`
@@ -19,21 +21,28 @@ const Container = styled.div`
     display: ${props => (props.expand ? 'block' : 'none')};
   }
   button {
-    width: 1.6rem;
-    height: 1.6rem;
-    display: inline-block;
     position: relative;
-    border: 2px solid #000;
     border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #ddd;
+    padding: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #eee;
+    &:focus {
+      outline: none;
+    }
     &:after {
       content: '';
       position: absolute;
-      width: 0.5rem;
-      height: 0.4rem;
-      border-left: 2px solid #000;
-      border-bottom: 2px solid #000;
+      width: 0.6rem;
+      height: 0.7rem;
+      border-left: 2px solid #666;
+      border-bottom: 2px solid #666;
       top: 0.4rem;
-      left: 0.6rem;
+      left: 0.8rem;
     }
   }
   .history {
@@ -52,46 +61,49 @@ const Container = styled.div`
       li {
         padding: 0;
         margin: 0.4rem 0;
-      }
-      ul {
-        font-size: 0.8rem;
-        margin-left: 0.4rem;
+        a {
+          ${ellipsis('14rem')};
+        }
       }
     }
   }
 `;
-export default class ReadLater extends Component {
+export default class ReadHistory extends Component {
   constructor(props) {
     super(props);
-    const url = localStorage.getItem('read.later.url');
+    let histories = JSON.parse(Global.localStorage.getItem('read.histories')) || [];
+    if (props.title) {
+      const { title, url } = props;
+      histories.push({ title, url, ts: new Date().getTime() });
+      histories = _.sortBy(histories, ['ts']);
+      histories = _.uniqBy(histories, 'url');
+      Global.localStorage.setItem('read.histories', JSON.stringify(histories));
+    }
     this.state = {
-      url,
+      histories,
       expand: false,
     };
   }
   onClickHandler = () => {
     // const currUrl = Global.location.href;
     // localStorage.setItem('read.later.url', currUrl);
+    const { expand } = this.state;
     this.setState({
       //   url: currUrl,
-      expand: !this.state.expand,
-    });
-  };
-  onCloseClickHandler = () => {
-    localStorage.removeItem('read.later.url');
-    this.setState({
-      url: null,
+      expand: !expand,
     });
   };
   render() {
     return (
       <Container expand={this.state.expand}>
-        <div className="mask" />
+        <button className="mask" onClick={this.onClickHandler} />
         <div className="history">
           <ul>
-            <li>22</li>
-            <li>33</li>
-            <li>44</li>
+            {this.state.histories.map(history => (
+              <li key={history.url}>
+                <a href={history.url}>{history.title}</a>
+              </li>
+            ))}
           </ul>
         </div>
         <button onClick={this.onClickHandler} />

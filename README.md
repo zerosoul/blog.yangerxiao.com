@@ -7,14 +7,16 @@
 ## Features
 
 - React.js & Gatsby.js
-- 使用Markdown写博文
+- Markdown写作
 - Styled Components 💅
 - 分类
+- 标签
 - 支持Offline
 - PWA
 - Typography.js
 - SEO
     - Sitemap
+    - RSS
     - Schema.org JSONLD(谷歌)
     - OpenGraph Tags（og元标签）
 - 自动化生成各种Favicons

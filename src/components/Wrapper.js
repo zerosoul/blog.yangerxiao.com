@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Header from './Header';
 import Backtop from './Backtop';
 import FixContainer from '../components/FixContainer';
-import ReadLater from '../components/ReadLater';
+import ReadHistory from '../components/ReadHistory';
 import { media } from '../utils/media';
 
 const Grid = styled.div`
@@ -34,7 +34,7 @@ const Wrapper = props => (
     <Header />
     <Content>{props.children}</Content>
     <FixContainer>
-      {/* <ReadLater /> */}
+      {props.title && <ReadHistory title={props.title} url={props.url} />}
       {props.toc}
       <Backtop />
     </FixContainer>

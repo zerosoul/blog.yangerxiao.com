@@ -1,6 +1,5 @@
 import React from 'react';
 import Slick from 'react-slick';
-import styled from 'styled-components';
 import '../utils/slick.css';
 import '../utils/slick.theme.css';
 

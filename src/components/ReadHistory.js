@@ -71,25 +71,33 @@ const Container = styled.div`
 export default class ReadHistory extends Component {
   constructor(props) {
     super(props);
-    let histories = JSON.parse(Global.localStorage.getItem('read.histories')) || [];
-    if (props.title) {
-      const { title, url } = props;
-      histories.push({ title, url, ts: new Date().getTime() });
-      histories = _.sortBy(histories, ['ts']);
-      histories = _.uniqBy(histories, 'url');
-      Global.localStorage.setItem('read.histories', JSON.stringify(histories));
-    }
+
     this.state = {
-      histories,
       expand: false,
     };
+    this.hisList = React.createRef();
+  }
+  componentDidMount() {
+    let histories = Global.JSON.parse(Global.localStorage.getItem('read.histories')) || [];
+    if (this.props.title) {
+      const { title, url } = this.props;
+      histories.push({ title, url, ts: new Date().getTime() });
+      histories = _.sortBy(histories, ['ts']);
+      histories = _.uniqBy(histories, 'url').slice(0, 9);
+      Global.localStorage.setItem('read.histories', Global.JSON.stringify(histories));
+    }
+    const listHtml = histories.map(
+      history =>
+        `<li>
+        <a href=${history.url}>${history.title}</a>
+      </li>`
+    );
+
+    this.hisList.current.innerHTML = listHtml.join('');
   }
   onClickHandler = () => {
-    // const currUrl = Global.location.href;
-    // localStorage.setItem('read.later.url', currUrl);
     const { expand } = this.state;
     this.setState({
-      //   url: currUrl,
       expand: !expand,
     });
   };
@@ -98,13 +106,7 @@ export default class ReadHistory extends Component {
       <Container expand={this.state.expand}>
         <button className="mask" onClick={this.onClickHandler} />
         <div className="history">
-          <ul>
-            {this.state.histories.map(history => (
-              <li key={history.url}>
-                <a href={history.url}>{history.title}</a>
-              </li>
-            ))}
-          </ul>
+          <ul ref={this.hisList} />
         </div>
         <button onClick={this.onClickHandler} />
       </Container>

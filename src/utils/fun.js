@@ -22,4 +22,5 @@ export function removeEventListenerList(list, event) {
 export const Global =
   (typeof self === 'object' && self.self === self && self) ||
   (typeof global === 'object' && global.global === global && global) ||
+  this ||
   {};

@@ -95,20 +95,20 @@ export default class TOC extends Component {
     this.state = {
       fold: true,
     };
-    this.contentBlock = React.createRef();
-    this.maskBtn = React.createRef();
+    // this.contentBlock = React.createRef();
+    // this.maskBtn = React.createRef();
   }
-  componentDidMount() {
-    const links = this.contentBlock.current.querySelectorAll('a');
-    const maskBtn = this.maskBtn.current;
-    addEventListenerList(links, 'click', evt => {
-      maskBtn.click();
-    });
-  }
-  componentWillUnmount() {
-    const links = this.contentBlock.current.querySelectorAll('a');
-    removeEventListenerList(links, 'click');
-  }
+  // componentDidMount() {
+  //   const links = this.contentBlock.current.querySelectorAll('a');
+  //   const maskBtn = this.maskBtn.current;
+  //   addEventListenerList(links, 'click', evt => {
+  //     maskBtn.click();
+  //   });
+  // }
+  // componentWillUnmount() {
+  //   const links = this.contentBlock.current.querySelectorAll('a');
+  //   removeEventListenerList(links, 'click');
+  // }
   onClickHandler = () => {
     const { fold } = this.state;
     this.setState({
@@ -120,8 +120,8 @@ export default class TOC extends Component {
     return (
       <Toc fold={this.state.fold}>
         <React.Fragment>
-          <button className="mask" onClick={this.onClickHandler} ref={this.maskBtn} />
-          <div className="content" dangerouslySetInnerHTML={{ __html: toc }} ref={this.contentBlock} />
+          <button className="mask" onClick={this.onClickHandler} />
+          <div className="content" dangerouslySetInnerHTML={{ __html: toc }} />
           <button className={`btn ${this.state.fold ? 'fold' : 'unfold'}`} onClick={this.onClickHandler}>
             <span className="line" />
             <span className="line" />

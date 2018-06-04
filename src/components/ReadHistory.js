@@ -83,7 +83,7 @@ export default class ReadHistory extends Component {
       const { title, url } = this.props;
       histories.push({ title, url, ts: new Date().getTime() });
       histories = _.sortBy(histories, ['ts']);
-      histories = _.uniqBy(histories, 'url').slice(0, 9);
+      histories = _.uniqBy(histories, 'url').slice(-10);
       Global.localStorage.setItem('read.histories', Global.JSON.stringify(histories));
     }
     const listHtml = histories.map(

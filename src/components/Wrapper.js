@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
 import Backtop from './Backtop';
-import FixContainer from '../components/FixContainer';
-import ReadHistory from '../components/ReadHistory';
+import FixContainer from './FixContainer';
+import ReadHistory from './ReadHistory';
 import { media } from '../utils/media';
 
 const Grid = styled.div`

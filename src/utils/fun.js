@@ -9,12 +9,12 @@ export function getYMD(date = new Date()) {
   return `${Y}-${M}-${D}`;
 }
 export function addEventListenerList(list, event, fn) {
-  for (let i = 0, len = list.length; i < len; i++) {
+  for (let i = 0, len = list.length; i < len; i + 1) {
     list[i].addEventListener(event, fn, false);
   }
 }
 export function removeEventListenerList(list, event) {
-  for (let i = 0, len = list.length; i < len; i++) {
+  for (let i = 0, len = list.length; i < len; i + 1) {
     const fn = list[i].click;
     list[i].removeEventListener(event, fn);
   }

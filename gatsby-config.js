@@ -11,7 +11,7 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
-    title: `杨二小个人博客`,
+    title: `杨二的个人博客`,
     description: `记录生活，见证成长。`,
   },
   plugins: [

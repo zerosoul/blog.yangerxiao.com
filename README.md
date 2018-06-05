@@ -1,6 +1,6 @@
 # Tristan Yang's Blog
 
-[杨二小的博客](https://blog.yangerxiao.com/)
+[杨二的博客](https://blog.yangerxiao.com/)
 
 记录生活，见证成长。
 

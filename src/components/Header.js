@@ -35,7 +35,7 @@ const Header = props => (
     <Hero>
       <h1 className="site">
         <Link to="/" className="title">
-          杨二小
+          杨二
         </Link>
       </h1>
       <div className="slogan">

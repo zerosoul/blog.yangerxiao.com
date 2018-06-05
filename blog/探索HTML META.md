@@ -24,7 +24,7 @@ tags:
 比如：  
 ``` html
 <meta name="description" content="页面的描述"> 
-<meta name="author" content="杨二小">
+<meta name="author" content="杨二">
 <!-- 声明页面的作者 -->
 <meta charset="UTF-8">
 <!-- 声明页面的编码 -->

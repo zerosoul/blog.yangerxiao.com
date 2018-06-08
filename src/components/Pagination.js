@@ -34,7 +34,8 @@ export default class Pagination extends React.PureComponent {
     // const start = index>5;
     // const end = Math.min(index + 2, pageCount);
     // const count = end - start + 1;
-    const pages = Array.from({ length: pageCount - 1 }, (v, k) => k + 2);
+    const offset = Math.min(2, index);
+    const pages = Array.from({ length: pageCount - 1 }, (v, k) => k + offset);
     return (
       <Container>
         {!first && (

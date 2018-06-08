@@ -10,6 +10,7 @@ const Container = styled.div`
   .last {
     border: 1px solid #666;
     padding: 0.2rem 0.4rem;
+    border-radius: 0.4rem;
   }
 `;
 
@@ -66,12 +67,13 @@ const PageContainer = styled.div`
   margin: 0 1rem;
   max-width: 50vw;
   overflow-x: scroll;
-  overflow-y: hidden;
   white-space: nowrap;
   a {
+    display: inline-block;
     margin: 0 0.2rem;
     padding: 0.2rem 0.4rem;
     border: 1px solid #333;
+    border-radius: 0.4rem;
   }
   span {
     padding: 0.4rem;

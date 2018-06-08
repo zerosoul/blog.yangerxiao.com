@@ -1,0 +1,86 @@
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .first,
+  .last {
+    border: 1px solid #666;
+    padding: 0.2rem 0.4rem;
+  }
+`;
+
+export default class Pagination extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.currePage = React.createRef();
+  }
+
+  componentDidMount() {
+    if (this.currePage.current) {
+      this.currePage.current.scrollIntoView();
+    }
+  }
+  render() {
+    const { index, first, last, pageCount, pathPrefix } = this.props;
+    const prefix = pathPrefix === '' ? '' : `/${pathPrefix}`;
+    const firstUrl = `${prefix}`;
+    const lastUrl = `${prefix}/${pageCount}`;
+    // const start = index>5;
+    // const end = Math.min(index + 2, pageCount);
+    // const count = end - start + 1;
+    const pages = Array.from({ length: pageCount - 1 }, (v, k) => k + 2);
+    return (
+      <Container>
+        {!first && (
+          <div className="first">
+            <Link to={firstUrl}>首页</Link>
+          </div>
+        )}
+        <PageContainer>
+          {pages.map(page => (
+            <Pager
+              key={`${page}ye`}
+              domRef={this.currePage}
+              plaintext={page === index}
+              url={`${prefix}/${page}`}
+              text={page}
+            />
+          ))}
+        </PageContainer>
+        {!last && (
+          <div className="last">
+            <Link to={lastUrl}>末页</Link>
+          </div>
+        )}
+      </Container>
+    );
+  }
+}
+
+const PageContainer = styled.div`
+  margin: 0 1rem;
+  max-width: 50vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  a {
+    margin: 0 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #333;
+  }
+  span {
+    padding: 0.4rem;
+    color: #999;
+  }
+`;
+const Pager = props => {
+  if (!props.plaintext) {
+    return <Link to={props.url}>{props.text}</Link>;
+  }
+  return <span ref={props.domRef}>{props.text}</span>;
+};

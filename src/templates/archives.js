@@ -8,6 +8,7 @@ import Archive from '../components/Archive';
 import SectionTitle from '../components/SectionTitle';
 import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
+import Pagination from '../components/Pagination';
 
 const ArchiveList = styled.div`
   .archives-list {
@@ -19,14 +20,16 @@ const Container = styled.div`
     margin: 0 auto;
   }
 `;
-const Archives = props => {
+const Archives = ({ data, pathContext }) => {
   // console.log(props);
+  const { group, index, first, last, pageCount, pathPrefix } = pathContext;
+  const pageProps = { index, first, last, pageCount, pathPrefix };
 
-  const { edges, totalCount } = props.data.allMarkdownRemark;
+  const { totalCount } = data.allMarkdownRemark;
   const sublineStr = `共${totalCount}篇`;
   const archives = {};
 
-  edges.forEach(({ node }) => {
+  group.forEach(({ node }) => {
     const year = new Date(node.frontmatter.date).getFullYear();
     if (!archives[`year${year}`]) {
       archives[`year${year}`] = [];
@@ -60,6 +63,7 @@ const Archives = props => {
             </ArchiveList>
           );
         })}
+        <Pagination {...pageProps} />
       </Container>
     </Wrapper>
   );
@@ -72,17 +76,6 @@ export const archivesQuery = graphql`
   query ArchivesPage {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            slug
-          }
-        }
-      }
     }
   }
 `;

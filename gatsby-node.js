@@ -2,6 +2,7 @@ const _ = require('lodash');
 const createTagPages = require('./gatsby-actions/createTagPages');
 const createCategoryPages = require('./gatsby-actions/createCategoryPages');
 const createPostPages = require('./gatsby-actions/createPostPages');
+const createPaginatedPages = require('gatsby-paginate');
 
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
@@ -34,6 +35,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       graphql(`
         {
           posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+            totalCount
             edges {
               node {
                 fields {
@@ -41,25 +43,51 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 }
                 frontmatter {
                   title
+                  date
                   category
                   tags
+                  cover
                 }
+                excerpt(pruneLength: 150)
               }
             }
           }
         }
       `).then(result => {
-          if (result.errors) {
-            console.log(result.errors);
-            reject(result.errors);
-          }
+        if (result.errors) {
+          console.log(result.errors);
+          reject(result.errors);
+        }
+        createPaginatedPages({
+          edges: result.data.posts.edges,
+          createPage,
+          pageTemplate: 'src/templates/index.js',
+          // pageLength: 5, // This is optional and defaults to 10 if not used
+          pathPrefix: '', // This is optional and defaults to an empty string if not used
+          context: {}, // This is optional and defaults to an empty object if not used
+        });
+        createPaginatedPages({
+          edges: result.data.posts.edges,
+          createPage,
+          pageTemplate: 'src/templates/archives.js',
+          pageLength: 20, // This is optional and defaults to 10 if not used
+          pathPrefix: 'archives', // This is optional and defaults to an empty string if not used
+          context: {}, // This is optional and defaults to an empty object if not used
+        });
+        // createPaginatedPages({
+        //   edges: result.data.posts.edges,
+        //   createPage,
+        //   pageTemplate: 'src/templates/tag.js',
+        //   pathPrefix: 'tags', // This is optional and defaults to an empty string if not used
+        //   context: {}, // This is optional and defaults to an empty object if not used
+        // });
 
-          const posts = result.data.posts.edges;
+        const posts = result.data.posts.edges;
 
-          createPostPages(createPage, posts);
-          createTagPages(createPage, posts);
-          createCategoryPages(createPage, posts);
-        })
+        createPostPages(createPage, posts);
+        createTagPages(createPage, createPaginatedPages, posts);
+        createCategoryPages(createPage, createPaginatedPages, posts);
+      })
     );
   });
 };

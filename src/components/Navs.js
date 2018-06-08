@@ -67,7 +67,7 @@ export default class Navs extends Component {
 
     const links = this.container.current.querySelectorAll('a');
     links.forEach(link => {
-      if (link.pathname === pathName) {
+      if (pathName.indexOf(link.pathname) === 0) {
         link.classList.add('curr');
       }
     });

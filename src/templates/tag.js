@@ -6,13 +6,15 @@ import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Article from '../components/Article';
 import SectionTitle from '../components/SectionTitle';
+import Pagination from '../components/Pagination';
 
 import config from '../../config/SiteConfig';
 
-const Tag = props => {
-  const { tag } = props.pathContext;
-  const { edges, totalCount } = props.data.allMarkdownRemark;
-  const subline = `（共${totalCount}篇）`;
+const Tag = ({ pathContext }) => {
+  const { additionalContext: { tag, total }, group, index, first, last, pageCount, pathPrefix } = pathContext;
+  const pageProps = { index, first, last, pageCount, pathPrefix };
+
+  const subline = `（共${total}篇）`;
 
   return (
     <Wrapper>
@@ -21,48 +23,23 @@ const Tag = props => {
         <Link to="/tags">标签</Link> | {tag}
       </SectionTitle>
       <Subline sectionTitle>{subline}</Subline>
-      {edges.map(post => {
-        const { title, cover, date, tags } = post.node.frontmatter;
+      {group.map(({ node: post }) => {
+        const { title, cover, date, tags } = post.frontmatter;
         return (
           <Article
             title={title}
             date={date}
-            excerpt={post.node.excerpt}
-            slug={post.node.fields.slug}
+            excerpt={post.excerpt}
+            slug={post.fields.slug}
             tags={tags}
             cover={cover}
-            key={post.node.fields.slug}
+            key={post.fields.slug}
           />
         );
       })}
+      <Pagination {...pageProps} />
     </Wrapper>
   );
 };
 
 export default Tag;
-
-/* eslint no-undef: off */
-export const tagQuery = graphql`
-  query TagPage($tag: String) {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-            tags
-            cover
-          }
-          fields {
-            slug
-          }
-          excerpt(pruneLength: 150)
-        }
-      }
-    }
-  }
-`;

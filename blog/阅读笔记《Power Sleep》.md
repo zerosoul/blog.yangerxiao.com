@@ -5,6 +5,7 @@ date: "2012-10-23 17:31:37"
 category: "阅读笔记"
 tags:
     - 睡眠
+    - 阅读
 ---
 ![deep sleep](https://zerosoul.github.io/2015/10/23/reading-power-sleep/baby.jpg)
 

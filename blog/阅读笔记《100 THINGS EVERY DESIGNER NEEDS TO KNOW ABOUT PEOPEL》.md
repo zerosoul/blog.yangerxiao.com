@@ -6,6 +6,7 @@ category: "阅读笔记"
 tags:
     - 心理学
     - 设计
+    - 阅读
 ---
 ![designer](https://zerosoul.github.io/2014/06/05/100-things-every-designer-needs-to-know-about-people/designer.jpg)
 

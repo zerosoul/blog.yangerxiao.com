@@ -6,6 +6,7 @@ category: "阅读笔记"
 tags:
     - 前端
     - 全栈
+    - 阅读
 ---
 ![full stack engineer](https://zerosoul.github.io/2016/06/18/about-full-stack-engineer/fullstack.jpg)  
 全栈工程师现在是个很热的话题，如何定义全栈工程师？在著名的问答网站Quora上有人提出了这个问题，其中一个获得了高票的回答是：

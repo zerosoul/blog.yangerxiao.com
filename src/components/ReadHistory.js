@@ -15,9 +15,6 @@ const Container = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: #333;
-    z-index: 998;
-    opacity: 0;
     display: ${props => (props.expand ? 'block' : 'none')};
   }
   button {
@@ -104,7 +101,7 @@ export default class ReadHistory extends Component {
   render() {
     return (
       <Container expand={this.state.expand}>
-        <button className="mask" onClick={this.onClickHandler} />
+        <div className="mask" onClick={this.onClickHandler} onKeyDown={this.onClickHandler} />
         <div className="history">
           <ul ref={this.hisList} />
         </div>

@@ -17,6 +17,11 @@ const typography = new Typography({
   headerFontFamily: config.fontFamily,
   bodyFontFamily: config.fontFamily,
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    '*': {
+      '-webkit-touch-callout': 'none',
+      '-webkit-text-size-adjust': 'none',
+      '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
+    },
     a: {
       textDecoration: 'none',
       color: '#333',

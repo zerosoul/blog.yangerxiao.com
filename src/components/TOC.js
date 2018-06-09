@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { addEventListenerList, removeEventListenerList } from '../utils/fun';
 
 const Toc = styled.div`
   display: flex;
@@ -13,9 +12,7 @@ const Toc = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: #333;
-    z-index: 998;
-    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
     display: ${props => (props.fold ? 'none' : 'block')};
   }
   button {
@@ -115,13 +112,20 @@ export default class TOC extends Component {
       fold: !fold,
     });
   };
+  handleContentClick = ({ target }) => {
+    if (target.nodeName === 'A') {
+      this.setState({
+        fold: true,
+      });
+    }
+  };
   render() {
     const { toc } = this.props;
     return (
       <Toc fold={this.state.fold}>
         <React.Fragment>
-          <button className="mask" onClick={this.onClickHandler} />
-          <div className="content" dangerouslySetInnerHTML={{ __html: toc }} />
+          <div className="mask" onClick={this.onClickHandler} onKeyDown={this.onClickHandler} />
+          <div className="content" dangerouslySetInnerHTML={{ __html: toc }} onClick={this.handleContentClick} />
           <button className={`btn ${this.state.fold ? 'fold' : 'unfold'}`} onClick={this.onClickHandler}>
             <span className="line" />
             <span className="line" />

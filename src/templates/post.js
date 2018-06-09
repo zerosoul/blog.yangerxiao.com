@@ -96,7 +96,7 @@ const Post = props => {
   const { title, date, tags, category } = postNode.frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
   return (
-    <Wrapper toc={tocComponent} title={title} url={slug}>
+    <Wrapper toc={tocComponent}>
       <SEO postPath={slug} postNode={postNode} postSEO />
       <Helmet title={`${title} | ${config.siteTitle}`} />
       <Title>{title}</Title>

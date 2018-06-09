@@ -23,7 +23,7 @@ export default class Pagination extends React.PureComponent {
 
   componentDidMount() {
     if (this.currePage.current) {
-      this.currePage.current.scrollIntoView();
+      this.currePage.current.scrollIntoView({ block: 'start', inline: 'center' });
     }
   }
   render() {
@@ -31,9 +31,6 @@ export default class Pagination extends React.PureComponent {
     const prefix = pathPrefix === '' ? '' : `/${pathPrefix}`;
     const firstUrl = `${prefix}`;
     const lastUrl = `${prefix}/${pageCount}`;
-    // const start = index>5;
-    // const end = Math.min(index + 2, pageCount);
-    // const count = end - start + 1;
     const offset = Math.min(2, index);
     const pages = Array.from({ length: pageCount - 1 }, (v, k) => k + offset);
     return (

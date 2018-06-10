@@ -22,18 +22,25 @@ const Container = styled.div`
   }
   dl {
     dt {
-      position: relative;
-      &:after {
-        content: '：';
-        position: absolute;
-        right: -0.2rem;
-      }
+      color: #ccc;
+    }
+    dt,
+    dd {
+      display: inline;
+    }
+    dd + dd:before {
+      content: ', ';
+    }
+    dd + dt:before {
+      content: '\000A';
+      white-space: pre;
     }
     dd {
-      color: #999;
+      margin: 0;
+      font-weight: bold;
       a[href^='tel:'] {
         color: #999;
-        &:after {
+        &:before {
           content: '\\260E';
           margin-left: 0.2rem;
         }
@@ -52,7 +59,7 @@ const Profile = props => {
       <dl>
         {blog && (
           <React.Fragment>
-            <dt>博客</dt>
+            <dt>博客：</dt>
             <dd>
               <a href={`${blog}`}>{blog}</a>
             </dd>
@@ -61,13 +68,13 @@ const Profile = props => {
 
         {email && (
           <React.Fragment>
-            <dt>邮箱</dt> <dd>{email}</dd>
+            <dt>邮箱：</dt> <dd>{email}</dd>
           </React.Fragment>
         )}
 
         {tel && (
           <React.Fragment>
-            <dt>电话</dt>
+            <dt>电话：</dt>
             <dd>
               <a href={`tel:${tel}`}>{tel}</a>
             </dd>

@@ -14,6 +14,7 @@ const Toc = styled.div`
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     display: ${props => (props.fold ? 'none' : 'block')};
+    z-index: 998;
   }
   button {
     display: flex;

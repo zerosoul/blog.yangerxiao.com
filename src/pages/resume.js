@@ -4,10 +4,15 @@ import ExpTitle from '../components/resume/ExpTitle';
 import WorkExp from '../components/resume/WorkExp';
 import EduExp from '../components/resume/EduExp';
 import Profile from '../components/resume/Profile';
+import { media } from '../utils/media';
 
 const Container = styled.div`
   background: url(./images/site/bg.png) repeat;
   padding: 1.6rem 1rem;
+  margin: auto;
+  @media ${media.tabletSmall} {
+    max-width: 70%;
+  }
 `;
 
 const Resume = ({ data }) => {

@@ -15,6 +15,7 @@ git初始化新项目时，往往文件比较多，比较大，初次PUSH到远�
 
 ``` bash
 $ git push
+
 Counting objects: 893, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (857/857), done.
@@ -23,6 +24,7 @@ fatal: The remote end hung up unexpectedly
 Writing objects: 100% (893/893), 2.23 MiB | 1.32 MiB/s, done.
 Total 893 (delta 228), reused 0 (delta 0)
 fatal: The remote end hung up unexpectedly
+
 ```
 
 
@@ -33,25 +35,19 @@ fatal: The remote end hung up unexpectedly
 
 原因可能有二：
 
-1. 可能问题出在客户端，也就是本机的git配置上。一般情况下git传输内容的大小有限制（默认1M），可以通过修改```http.postBuffer```的值来突破大小限制。
+1. 可能问题出在客户端，也就是本机的git配置上。一般情况下git传输内容的大小有限制（默认1M），可以通过修改`http.postBuffer`的值来突破大小限制。
 
    参考：
 
-   [http.postBuffer]: https://www.kernel.org/pub/software/scm/git/docs/git-config.html
+[http.postBuffer]: https://www.kernel.org/pub/software/scm/git/docs/git-config.html
 
    ​
 
-2. 问题也可能出在服务器端，也就是远程机器的nginx配置。```client_max_body_size```限制了数据传输的大小。
+2. 问题也可能出在服务器端，也就是远程机器的nginx配置。`client_max_body_size`限制了数据传输的大小。
 
 ## 解决
 
-从客户端着手：
+从客户端着手：`git config --global http.postBuffer 157286400`
 
-- `git config --global http.postBuffer 157286400`
-
-从服务端着手：
-
-​	找到nginx配置文件，新增或修改```client_max_body_size```：
-
-​	```client_max_body_size 1024m;```
+从服务端着手：找到nginx配置文件，新增或修改`client_max_body_size`为`client_max_body_size 1024m`
 

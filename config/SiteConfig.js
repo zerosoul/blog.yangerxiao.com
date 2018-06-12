@@ -20,6 +20,6 @@ module.exports = {
   backgroundColor: '#060809',
 
   // Settings for typography.js
-  fontFamily: ['Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'sans-serif'],
+  fontFamily: ['Microsoft YaHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'sans-serif'],
   baseFontSize: '18px',
 };

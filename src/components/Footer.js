@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const Content = styled.footer`
   padding: 3rem 0;

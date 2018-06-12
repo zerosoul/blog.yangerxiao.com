@@ -1,28 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { media } from '../../utils/media';
 
-const Container = styled.div`
-  position: relative;
-  .name {
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid #999;
-  }
+const Container = styled.section`
   .avator {
-    position: absolute;
-    right: 0.6rem;
-    top: 0.8rem;
-    width: 9rem;
-
-    border: 0.3rem solid #030c4f;
-    transform: rotate(-10deg);
-    img {
-      height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #999;
+    .name {
+      font-size: 2.2rem;
+      @media ${media.tabletWide} {
+        font-size: 3rem;
+        // flex-direction: row;
+      }
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+    .desc {
+      margin-top: 0;
+    }
+    .img {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      // transform: rotate(-10deg);
+      @media ${media.tabletWide} {
+        width: 15rem;
+        height: 15rem;
+      }
     }
   }
+
   dl {
+    margin-top: 1rem;
     dt {
-      color: #ccc;
+      color: #666;
+      font-weight: normal;
     }
     dt,
     dd {
@@ -33,13 +48,20 @@ const Container = styled.div`
     }
     dd + dt:before {
       content: '\000A';
-      white-space: pre;
+      white-space: pre-wrap;
     }
     dd {
       margin: 0;
       font-weight: bold;
+      color: #333;
+      a {
+        text-decoration: underline;
+      }
+      &.blog {
+        padding-left: 0.2rem;
+      }
       a[href^='tel:'] {
-        color: #999;
+        color: #333;
         &:before {
           content: '\\260E';
           margin-left: 0.2rem;
@@ -49,32 +71,39 @@ const Container = styled.div`
   }
 `;
 const Profile = props => {
-  const { name, avator, info: { blog, email, tel } } = props;
+  const { name, avator, info: { basic, blog, email, tel } } = props;
   return (
     <Container>
-      <h1 className="name">{name}</h1>
       <div className="avator">
-        <Img sizes={avator} alt="简历头像" />
+        <Img className="img" sizes={avator} alt="简历头像" />
+        <h1 className="name">{name}</h1>
+        <p className="desc">{basic}</p>
       </div>
       <dl>
+        {/* {basic && (
+          <React.Fragment>
+            <dt>基本:</dt>
+            <dd>{basic}</dd>
+          </React.Fragment>
+        )} */}
         {blog && (
           <React.Fragment>
-            <dt>博客：</dt>
-            <dd>
-              <a href={`${blog}`}>{blog}</a>
+            <dt>博客:</dt>
+            <dd className="blog">
+              <a href={blog}>blog.yangerxiao.com</a>
             </dd>
           </React.Fragment>
         )}
 
         {email && (
           <React.Fragment>
-            <dt>邮箱：</dt> <dd>{email}</dd>
+            <dt>邮箱:</dt> <dd>{email}</dd>
           </React.Fragment>
         )}
 
         {tel && (
           <React.Fragment>
-            <dt>电话：</dt>
+            <dt>电话:</dt>
             <dd>
               <a href={`tel:${tel}`}>{tel}</a>
             </dd>

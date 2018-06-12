@@ -7,17 +7,15 @@ import theme from '../../config/Theme';
 
 // require('../utils/prismjs-theme.css');
 
-const TemplateWrapper = props => {
-  const { children } = props;
-  return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <SEO />
-        {children()}
-        <Footer />
-      </div>
-    </ThemeProvider>
-  );
-};
+const TemplateWrapper = ({ children }) => (
+  // const { icons } = props;
+  <ThemeProvider theme={theme}>
+    <div>
+      <SEO />
+      {children()}
+      <Footer />
+    </div>
+  </ThemeProvider>
+);
 
 export default TemplateWrapper;

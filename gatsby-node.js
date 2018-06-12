@@ -34,7 +34,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     resolve(
       graphql(`
         {
-          posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+          posts: allMarkdownRemark(
+            sort: { fields: [frontmatter___date], order: DESC }
+            filter: { frontmatter: { draft: { ne: true } } }
+          ) {
             totalCount
             edges {
               node {
@@ -72,7 +75,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           pageTemplate: 'src/templates/archives.js',
           pageLength: 20, // This is optional and defaults to 10 if not used
           pathPrefix: 'archives', // This is optional and defaults to an empty string if not used
-          context: {}, // This is optional and defaults to an empty object if not used
+          context: {
+            totalCount: result.data.posts.totalCount,
+          }, // This is optional and defaults to an empty object if not used
         });
         // createPaginatedPages({
         //   edges: result.data.posts.edges,

@@ -20,12 +20,13 @@ const Container = styled.div`
     margin: 0 auto;
   }
 `;
-const Archives = ({ data, pathContext }) => {
-  // console.log(props);
+const Archives = ({ pathContext }) => {
+  console.log(pathContext);
   const { group, index, first, last, pageCount, pathPrefix } = pathContext;
+  const { totalCount } = pathContext.additionalContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };
 
-  const { totalCount } = data.allMarkdownRemark;
+  // const { totalCount } = data.allMarkdownRemark;
   const sublineStr = `共${totalCount}篇`;
   const archives = {};
 
@@ -70,12 +71,3 @@ const Archives = ({ data, pathContext }) => {
 };
 
 export default Archives;
-
-/* eslint no-undef: off */
-export const archivesQuery = graphql`
-  query ArchivesPage {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-    }
-  }
-`;

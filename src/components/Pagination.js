@@ -66,6 +66,7 @@ const PageContainer = styled.div`
   max-width: 50vw;
   overflow-x: scroll;
   white-space: nowrap;
+  height: 100%;
   a {
     display: inline-block;
     margin: 0 0.2rem;

@@ -57,6 +57,9 @@ const Container = styled.section`
     .duty {
       color: #333;
       margin-bottom: 0.2rem;
+      a {
+        text-decoration: underline;
+      }
     }
   }
 `;

@@ -20,7 +20,6 @@ export default class PDFBtn extends Component {
     this.state = {
       generating: false,
     };
-    this.btn = React.createRef();
   }
 
   componentDidMount() {

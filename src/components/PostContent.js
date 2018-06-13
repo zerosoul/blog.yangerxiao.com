@@ -47,8 +47,7 @@ export default class PostContent extends Component {
     //   console.log(postBlock);
     postBlock.addEventListener(
       'copy',
-      evt => {
-        console.log('test', evt);
+      () => {
         if (typeof window.getSelection === 'undefined') return; // IE8 or earlier...
 
         const selection = window.getSelection();

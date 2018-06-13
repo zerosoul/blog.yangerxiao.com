@@ -13,6 +13,11 @@ const Container = styled.div`
     padding: 0.4rem 0.6rem;
     cursor: pointer;
   }
+  @media print {
+    .btn {
+      display: none;
+    }
+  }
 `;
 export default class PdfBtn extends Component {
   constructor(props) {

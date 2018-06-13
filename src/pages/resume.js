@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
-import Img from 'gatsby-image';
+// import Link from 'gatsby-link';
+// import Img from 'gatsby-image';
 import ExpTitle from '../components/resume/ExpTitle';
 import WorkExp from '../components/resume/WorkExp';
-import EduExp from '../components/resume/EduExp';
+// import EduExp from '../components/resume/EduExp';
 import PdfBtn from '../components/resume/PdfBtn';
 import Profile from '../components/resume/Profile';
 import { media } from '../utils/media';
@@ -177,6 +177,7 @@ const Resume = ({ data }) => {
         {jobs.map(job => <WorkExp key={job.title} {...job} />)}
         <ExpTitle title="其它" />
         <ul className="others">
+          <li>英语六级，习惯英语阅读</li>
           <li>可能是骑行里最会写代码的人</li>
           <li>可能是写代码里连续骑行最长的人[1个月2400+km]</li>
         </ul>

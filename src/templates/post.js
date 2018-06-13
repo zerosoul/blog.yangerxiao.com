@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import TOC from '../components/TOC';
+import PostContent from '../components/PostContent';
 import Navs from '../components/Navs';
 import { getYMD } from '../utils/fun';
 import { media } from '../utils/media';
@@ -18,36 +19,6 @@ const Title = styled.h2`
   margin-bottom: 1rem;
 `;
 
-const PostContent = styled.div`
-  margin-top: 2rem;
-  a {
-    text-decoration: underline;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  p img {
-    display: block;
-    margin: 0 auto;
-    padding: 1.6rem 0;
-    transform: scale(1.14);
-  }
-  @media ${media.phoneWide} {
-    p img {
-      padding: 1.7rem 0;
-      transform: scale(1.1);
-    }
-  }
-  @media ${media.desktop} {
-    p img {
-      padding: 0;
-      transform: scale(1);
-    }
-  }
-`;
 const ArticleNav = styled.div`
   display: flex;
   flex-direction: column;
@@ -120,7 +91,7 @@ const Post = props => {
         )}
       </Subline>
 
-      <PostContent dangerouslySetInnerHTML={{ __html: postNode.html }} />
+      <PostContent content={postNode.html} />
       <ArticleNav>
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
         {next && <Link to={next.fields.slug} className="next">{`${next.frontmatter.title}`}</Link>}

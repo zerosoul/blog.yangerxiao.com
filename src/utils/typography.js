@@ -22,6 +22,9 @@ const typography = new Typography({
       '-webkit-text-size-adjust': 'none',
       '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
     },
+    'button:focus,button:avtive': {
+      outline: 'none',
+    },
     a: {
       textDecoration: 'none',
       color: '#333',

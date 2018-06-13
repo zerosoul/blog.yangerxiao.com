@@ -5,33 +5,34 @@ import Img from 'gatsby-image';
 import ExpTitle from '../components/resume/ExpTitle';
 import WorkExp from '../components/resume/WorkExp';
 import EduExp from '../components/resume/EduExp';
+import PDFBtn from '../components/resume/PDFBtn';
 import Profile from '../components/resume/Profile';
 import { media } from '../utils/media';
 
 const Container = styled.div`
   // background: url(./images/site/bg.png) repeat;
   padding: 1.6rem 1rem;
-  margin: auto;
-  border-bottom: 1px solid #999;
+  margin: 1rem auto;
+  border: 1px solid #999;
   @media ${media.tabletSmall} {
-    max-width: 80%;
+    max-width: 90%;
   }
-  @media ${media.tabletWide} {
-    max-width: 70%;
-  }
+  // @media ${media.tabletWide} {
+  //   max-width: 80%;
+  // }
   .skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
     .skill {
-      flex: 1;
+      // flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       margin-right: 0.8rem;
       margin-bottom: 0.5rem;
-      // padding-bottom: 0.2rem;
-      // border: 1px solid #eee;
+      border: 1px solid #eee;
+      padding: 0.5rem;
       h3 {
         margin: 0.2rem 0;
         color: #666;
@@ -75,7 +76,7 @@ const Container = styled.div`
 
 const Resume = ({ data }) => {
   const { avator, douban, github, weibo } = data;
-  console.log(douban);
+  // console.log(douban);
 
   const profile = {
     name: '杨国春',
@@ -91,7 +92,7 @@ const Resume = ({ data }) => {
     {
       company: '自由职业',
       title: '全<del>干</del>栈工程师',
-      period: ['2018.3', '至今'],
+      period: ['2018.3', '2018.6'],
       desc: '个人原因离职回家处理一些事情，期间自己折腾做产品，为了维持收入，也远程做一些兼职，使用React重构了个人博客',
       stack: ['ES6', 'react', 'PHP', 'docker', 'git'],
       duties: [
@@ -127,58 +128,60 @@ const Resume = ({ data }) => {
   };
 
   return (
-    <Container>
-      <Profile {...profile} />
-      <ExpTitle title="技能" />
-      <section className="skills">
-        <div className="skill">
-          <h3>语言</h3>
-          <em>Javascript/ES6</em>
-          <p>HTML/CSS/Scss</p>
-          <p>PHP/Smarty/C#</p>
-          <p>shell/SQL</p>
-        </div>
-        <div className="skill">
-          <h3>框架/类库</h3>
-          <em>react</em>
-          <p>jQuery/zepto</p>
-          <p>Bootstrap/Semantic-UI</p>
-        </div>
-        <div className="skill">
-          <h3>工具</h3>
-          <em>VS CODE</em>
-          <p>SVN/Git</p>
-          <p>Chrome DevTools</p>
-        </div>
-        <div className="skill">
-          <h3>操作系统</h3>
-          <p>Linux/CentOS</p>
-          <em>Mac OS</em>
-          <p>Windows</p>
-        </div>
-        <div className="skill">
-          <h3>工程化</h3>
-          <p>create-react-app</p>
-          <p>webpack/babel</p>
-          <p>Node.js/gulp</p>
-        </div>
-        <div className="skill">
-          <h3>偏爱</h3>
-          <p>Google</p>
-          <p>stackoverflow</p>
-          <p>open source</p>
-        </div>
-      </section>
-      <ExpTitle title="教育经历" />
-      <WorkExp {...edu} />
-      <ExpTitle title="工作经历" />
-      {jobs.map(job => <WorkExp key={job.title} {...job} />)}
-      <ExpTitle title="其它" />
-      <ul className="others">
-        <li>可能是骑行里最会写代码的人</li>
-        <li>可能是写代码里连续骑行最长的人[1个月2400+km]</li>
-      </ul>
-      {/* <div className="social">
+    <React.Fragment>
+      <Container>
+        <Profile {...profile} />
+        <ExpTitle title="技能" />
+        <section className="skills">
+          <div className="skill">
+            <h3>语言</h3>
+            <em>Javascript/ES6</em>
+            <p>HTML/CSS/Scss</p>
+            <p>PHP/Smarty/C#</p>
+            <p>shell/SQL</p>
+          </div>
+          <div className="skill">
+            <h3>框架/类库</h3>
+            <em>react</em>
+            <p>jQuery/zepto</p>
+            <p>Bootstrap/Semantic-UI</p>
+          </div>
+          <div className="skill">
+            <h3>工具</h3>
+            <em>VS CODE</em>
+            <p>SVN/Git</p>
+            <p>Chrome DevTools</p>
+          </div>
+          <div className="skill">
+            <h3>操作系统</h3>
+            <p>Linux/CentOS</p>
+            <em>Mac OS</em>
+            <p>Windows</p>
+          </div>
+          <div className="skill">
+            <h3>工程化</h3>
+            <p>create-react-app</p>
+            <p>webpack/babel</p>
+            <p>Node.js/gulp</p>
+          </div>
+          <div className="skill">
+            <h3>偏爱</h3>
+            <p>Google</p>
+            <p>stackoverflow</p>
+            <p>open source</p>
+          </div>
+        </section>
+        <ExpTitle title="教育经历" />
+        <WorkExp {...edu} />
+        <ExpTitle title="工作经历" />
+        {jobs.map(job => <WorkExp key={job.title} {...job} />)}
+        <ExpTitle title="其它" />
+        <ul className="others">
+          <li>可能是骑行里最会写代码的人</li>
+          <li>可能是写代码里连续骑行最长的人[1个月2400+km]</li>
+        </ul>
+
+        {/* <div className="social">
         <Link className="ico" to="https://www.douban.com/people/yanggc/">
           <Img sizes={douban.sizes} alt="豆瓣" />
         </Link>
@@ -189,7 +192,9 @@ const Resume = ({ data }) => {
           <Img sizes={github.sizes} alt="github" />
         </Link>
       </div> */}
-    </Container>
+      </Container>
+      <PDFBtn />
+    </React.Fragment>
   );
 };
 export default Resume;

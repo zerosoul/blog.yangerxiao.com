@@ -9,6 +9,30 @@ const Container = styled.section`
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #999;
+    .top {
+      position: relative;
+      .img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        // transform: rotate(-10deg);
+        @media ${media.tabletWide} {
+          width: 15rem;
+          height: 15rem;
+        }
+      }
+      .status {
+        position: absolute;
+        right: 0;
+        bottom: 0.1rem;
+        font-size: 0.5rem;
+        background: #333;
+        color: #fff;
+        padding: 0.1rem 0.3rem;
+        border-radius: 1rem;
+        z-index: -1;
+      }
+    }
     .name {
       font-size: 2.2rem;
       @media ${media.tabletWide} {
@@ -20,16 +44,6 @@ const Container = styled.section`
     }
     .desc {
       margin-top: 0;
-    }
-    .img {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 50%;
-      // transform: rotate(-10deg);
-      @media ${media.tabletWide} {
-        width: 15rem;
-        height: 15rem;
-      }
     }
   }
 
@@ -75,7 +89,10 @@ const Profile = props => {
   return (
     <Container>
       <div className="avator">
-        <Img className="img" sizes={avator} alt="简历头像" />
+        <div className="top">
+          <Img className="img" sizes={avator} alt="简历头像" />
+          <span className="status">已离职</span>
+        </div>
         <h1 className="name">{name}</h1>
         <p className="desc">{basic}</p>
       </div>

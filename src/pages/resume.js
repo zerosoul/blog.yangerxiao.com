@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import ExpTitle from '../components/resume/ExpTitle';
 import WorkExp from '../components/resume/WorkExp';
 import EduExp from '../components/resume/EduExp';
-import PDFBtn from '../components/resume/PDFBtn';
+import PdfBtn from '../components/resume/PdfBtn';
 import Profile from '../components/resume/Profile';
 import { media } from '../utils/media';
 
@@ -193,7 +193,7 @@ const Resume = ({ data }) => {
         </Link>
       </div> */}
       </Container>
-      <PDFBtn />
+      <PdfBtn />
     </React.Fragment>
   );
 };

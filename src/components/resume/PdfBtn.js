@@ -14,7 +14,7 @@ const Container = styled.div`
     cursor: pointer;
   }
 `;
-export default class PDFBtn extends Component {
+export default class PdfBtn extends Component {
   constructor(props) {
     super(props);
     this.state = {

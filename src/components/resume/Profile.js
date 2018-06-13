@@ -90,7 +90,9 @@ const Profile = props => {
           <React.Fragment>
             <dt>博客:</dt>
             <dd className="blog">
-              <a href={blog}>blog.yangerxiao.com</a>
+              <a target="_blank" href={blog}>
+                blog.yangerxiao.com
+              </a>
             </dd>
           </React.Fragment>
         )}

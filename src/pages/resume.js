@@ -81,7 +81,7 @@ const Resume = ({ data }) => {
     name: '杨国春',
     avator: avator.sizes,
     info: {
-      basic: ' 男/89年/山东',
+      basic: '男/89年/山东',
       blog: 'https://blog.yangerxiao.com',
       email: 'yanggc888@gmail.com',
       tel: '+86 18201385848',
@@ -148,7 +148,7 @@ const Resume = ({ data }) => {
           <h3>工具</h3>
           <em>VS CODE</em>
           <p>SVN/Git</p>
-          <p>Chrome devtool</p>
+          <p>Chrome DevTools</p>
         </div>
         <div className="skill">
           <h3>操作系统</h3>

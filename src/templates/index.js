@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 import Article from '../components/Article';
 import Wrapper from '../components/Wrapper';
 import Pagination from '../components/Pagination';
 import SectionTitle from '../components/SectionTitle';
 
 const IndexPage = ({ data, pathContext }) => {
-  console.log(pathContext);
+  // console.log(pathContext);
 
   const { group, index, first, last, pageCount, pathPrefix } = pathContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };
@@ -38,26 +38,3 @@ const IndexPage = ({ data, pathContext }) => {
 };
 
 export default IndexPage;
-
-// /* eslint no-undef: off */
-// export const IndexQuery = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             date
-//             category
-//             tags
-//             cover
-//           }
-//           excerpt(pruneLength: 150)
-//         }
-//       }
-//     }
-//   }
-// `;

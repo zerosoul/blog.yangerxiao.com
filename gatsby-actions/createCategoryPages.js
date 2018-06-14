@@ -1,7 +1,4 @@
 const _ = require('lodash');
-const path = require('path');
-
-const catePage = path.resolve('src/templates/category.js');
 
 module.exports = (createPage, createPaginatedPages, posts) => {
   let allCates = [];
@@ -26,19 +23,8 @@ module.exports = (createPage, createPaginatedPages, posts) => {
       edges: catePosts,
       createPage,
       pageTemplate: 'src/templates/category.js',
-      pathPrefix: `cates/${_.kebabCase(cate)}`, // This is optional and defaults to an empty string if not used
-      context: {
-        total: catePosts.length,
-        category: cate,
-      }, // This is optional and defaults to an empty object if not used
+      total: catePosts.length,
+      category: cate,
     });
-
-    // createPage({
-    //   path: `/cates/${_.kebabCase(cate)}`,
-    //   component: catePage,
-    //   context: {
-    //     category: cate,
-    //   },
-    // });
   });
 };

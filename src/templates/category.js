@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Article from '../components/Article';

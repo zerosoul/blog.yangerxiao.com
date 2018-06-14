@@ -1,8 +1,6 @@
 const _ = require('lodash');
 const path = require('path');
 
-const tagPage = path.resolve('src/templates/tag.js');
-
 module.exports = (createPage, createPaginatedPages, posts) => {
   let allTags = [];
 

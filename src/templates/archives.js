@@ -21,7 +21,7 @@ const Container = styled.div`
   }
 `;
 const Archives = ({ pathContext }) => {
-  console.log(pathContext);
+  // console.log(pathContext);
   const { group, index, first, last, pageCount, pathPrefix } = pathContext;
   const { totalCount } = pathContext.additionalContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };

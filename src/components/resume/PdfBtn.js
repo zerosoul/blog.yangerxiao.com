@@ -46,7 +46,11 @@ export default class PdfBtn extends Component {
     return (
       <Container>
         {/* <button onClick={this.handleClick}>{this.state.generating ? '正在生成...' : '获取PDF'}</button> */}
-        <a className="btn" href="https://s.izhaichao.cn/puppeteer/pdf/844c7ca7438c085441261fda8e5304ba.pdf">
+        <a
+          className="btn"
+          download="杨国春的简历.pdf"
+          href="https://s.izhaichao.cn/puppeteer/pdf/844c7ca7438c085441261fda8e5304ba.pdf"
+        >
           获取PDF
         </a>
       </Container>

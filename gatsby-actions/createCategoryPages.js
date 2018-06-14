@@ -23,8 +23,11 @@ module.exports = (createPage, createPaginatedPages, posts) => {
       edges: catePosts,
       createPage,
       pageTemplate: 'src/templates/category.js',
-      total: catePosts.length,
-      category: cate,
+      pathPrefix: `cates/${cate}`,
+      context: {
+        total: catePosts.length,
+        category: cate,
+      },
     });
   });
 };

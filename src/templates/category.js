@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 // import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
@@ -11,6 +11,8 @@ import Pagination from '../components/Pagination';
 import config from '../../config/SiteConfig';
 
 const Category = ({ pathContext }) => {
+  console.log(pathContext);
+
   const { additionalContext: { category, total }, group, index, first, last, pageCount, pathPrefix } = pathContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };
 
@@ -19,9 +21,7 @@ const Category = ({ pathContext }) => {
   return (
     <Wrapper>
       <Helmet title={`${category} | ${config.siteTitle}`} />
-      <SectionTitle>
-        <Link to="/categories">分类</Link> | {category}
-      </SectionTitle>
+      <SectionTitle>{category}</SectionTitle>
       <Subline sectionTitle>{sublineStr}</Subline>
       {group.map(({ node: post }) => {
         const { title, cover, date, category: cate } = post.frontmatter;

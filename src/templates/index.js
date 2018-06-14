@@ -5,7 +5,7 @@ import Wrapper from '../components/Wrapper';
 import Pagination from '../components/Pagination';
 import SectionTitle from '../components/SectionTitle';
 
-const IndexPage = ({ data, pathContext }) => {
+const IndexPage = ({ pathContext }) => {
   // console.log(pathContext);
 
   const { group, index, first, last, pageCount, pathPrefix } = pathContext;

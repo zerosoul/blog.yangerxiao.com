@@ -3,16 +3,16 @@ import Helmet from 'react-helmet';
 import config from '../../config/SiteConfig';
 
 const SEO = props => {
-  const { postNode, postPath, postSEO } = props;
+  const { frontmatter, postPath, postSEO, excerpt } = props;
   let title;
   let description;
   let image;
   let postURL;
   const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
   if (postSEO) {
-    const postMeta = postNode.frontmatter;
+    const postMeta = frontmatter;
     title = postMeta.title; // eslint-disable-line prefer-destructuring
-    description = postNode.excerpt;
+    description = excerpt;
     image = config.siteBanner;
     postURL = config.siteUrl + realPrefix + postPath;
   } else {
@@ -70,7 +70,7 @@ const SEO = props => {
       <meta name="keywords" content="tristan yang, blog, writing, frontend" />
       <meta name="image" content={image} />
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
-      <meta property="og:locale" content="de_DE" />
+      <meta property="og:locale" content="zh_CN" />
       <meta property="og:site_name" content={config.ogSiteName} />
       <meta property="og:url" content={postSEO ? postURL : blogURL} />
       {postSEO ? <meta property="og:type" content="article" /> : null}

@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const createTagPages = require('./gatsby-actions/createTagPages');
 const createCategoryPages = require('./gatsby-actions/createCategoryPages');
+const createArchivePages = require('./gatsby-actions/createArchivePages');
 const createPostPages = require('./gatsby-actions/createPostPages');
 const createPaginatedPages = require('gatsby-paginate');
 
@@ -44,6 +45,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 fields {
                   slug
                 }
+                html
                 frontmatter {
                   title
                   date
@@ -51,6 +53,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   tags
                   cover
                 }
+                tableOfContents
                 excerpt(pruneLength: 150)
               }
             }
@@ -65,31 +68,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           edges: result.data.posts.edges,
           createPage,
           pageTemplate: 'src/templates/index.js',
-          // pageLength: 5, // This is optional and defaults to 10 if not used
-          pathPrefix: '', // This is optional and defaults to an empty string if not used
-          context: {}, // This is optional and defaults to an empty object if not used
         });
-        createPaginatedPages({
-          edges: result.data.posts.edges,
-          createPage,
-          pageTemplate: 'src/templates/archives.js',
-          pageLength: 20, // This is optional and defaults to 10 if not used
-          pathPrefix: 'archives', // This is optional and defaults to an empty string if not used
-          context: {
-            totalCount: result.data.posts.totalCount,
-          }, // This is optional and defaults to an empty object if not used
-        });
-        // createPaginatedPages({
-        //   edges: result.data.posts.edges,
-        //   createPage,
-        //   pageTemplate: 'src/templates/tag.js',
-        //   pathPrefix: 'tags', // This is optional and defaults to an empty string if not used
-        //   context: {}, // This is optional and defaults to an empty object if not used
-        // });
 
         const posts = result.data.posts.edges;
 
         createPostPages(createPage, posts);
+        createArchivePages(createPage, createPaginatedPages, posts);
         createTagPages(createPage, createPaginatedPages, posts);
         createCategoryPages(createPage, createPaginatedPages, posts);
       })

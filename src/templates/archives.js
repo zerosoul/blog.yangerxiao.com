@@ -1,11 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Archive from '../components/Archive';
-import SectionTitle from '../components/SectionTitle';
+// import SectionTitle from '../components/SectionTitle';
 import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
 import Pagination from '../components/Pagination';
@@ -37,14 +37,11 @@ const Archives = ({ pathContext }) => {
     }
     archives[`year${year}`].push(node);
   });
-  console.table(archives);
+  // console.table(archives);
 
   return (
     <Wrapper>
       <Helmet title={`归档 | ${config.siteTitle}`} />
-      {/* <SectionTitle>
-        <Link to="/archives">归档</Link>
-      </SectionTitle> */}
       <Subline sectionTitle>{sublineStr}</Subline>
       <Container>
         {Object.keys(archives).map(date => {

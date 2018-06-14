@@ -61,14 +61,14 @@ const ArticleNav = styled.div`
   }
 `;
 const Post = props => {
-  const { slug, prev, next } = props.pathContext;
-  const postNode = props.data.markdownRemark;
-  const toc = props.data.markdownRemark.tableOfContents;
-  const { title, date, tags, category } = postNode.frontmatter;
+  const { slug, prev, next, html, tableOfContents: toc, frontmatter, excerpt } = props.pathContext;
+  // const postNode = props.data.markdownRemark;
+  // const toc = props.data.markdownRemark.tableOfContents;
+  const { title, date, tags, category } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
   return (
     <Wrapper toc={tocComponent}>
-      <SEO postPath={slug} postNode={postNode} postSEO />
+      <SEO postPath={slug} excerpt={excerpt} frontmatter={frontmatter} postSEO />
       <Helmet title={`${title} | ${config.siteTitle}`} />
       <Title>{title}</Title>
       <Subline>
@@ -91,7 +91,7 @@ const Post = props => {
         )}
       </Subline>
 
-      <PostContent content={postNode.html} />
+      <PostContent content={html} />
       <ArticleNav>
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
         {next && <Link to={next.fields.slug} className="next">{`${next.frontmatter.title}`}</Link>}
@@ -102,19 +102,3 @@ const Post = props => {
 };
 
 export default Post;
-
-/* eslint no-undef: off */
-export const postQuery = graphql`
-  query postBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        date
-        category
-        tags
-      }
-      tableOfContents
-    }
-  }
-`;

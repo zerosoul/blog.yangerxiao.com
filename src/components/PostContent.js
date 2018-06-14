@@ -63,7 +63,7 @@ export default class PostContent extends Component {
         newdiv.appendChild(selection.getRangeAt(0).cloneContents());
 
         // 遇到 pre 标签需要特殊处理一下，否则换行将被清除
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName == 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
           newdiv.innerHTML = `<pre>${newdiv.innerHTML}</pre>`;
         }
 

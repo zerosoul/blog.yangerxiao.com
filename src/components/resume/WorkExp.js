@@ -10,6 +10,26 @@ const Container = styled.section`
   }
   .occupy {
     margin-bottom: 0.6rem;
+    .del {
+      position: relative;
+      display: inline-block;
+    }
+    .del::before,
+    .del::after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 40%;
+    }
+    // .del::before {
+    //   border-bottom: 2px solid red;
+    //   transform: skewY(-40deg);
+    // }
+    .del::after {
+      border-bottom: 4px solid red;
+      transform: skewY(40deg);
+    }
   }
   .period,
   .stack {

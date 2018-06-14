@@ -17,9 +17,9 @@ const Container = styled.div`
   @media ${media.tabletSmall} {
     max-width: 90%;
   }
-  // @media ${media.tabletWide} {
-  //   max-width: 80%;
-  // }
+  @media ${media.desktop} {
+    max-width: 70%;
+  }
   .skills {
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +91,7 @@ const Resume = ({ data }) => {
   const jobs = [
     {
       company: '自由职业',
-      title: '全<del>干</del>栈工程师',
+      title: '全<span class="del">干</span>栈工程师',
       period: ['2018.3', '2018.6'],
       desc: '个人原因离职回家处理一些事情，期间自己折腾做产品，为了维持收入，也远程做一些兼职，使用React重构了个人博客',
       stack: ['ES6', 'react', 'PHP', 'docker', 'git'],

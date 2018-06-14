@@ -15,7 +15,6 @@ const Container = styled.section`
         width: 10rem;
         height: 10rem;
         border-radius: 50%;
-        // transform: rotate(-10deg);
         @media ${media.tabletWide} {
           width: 15rem;
           height: 15rem;
@@ -37,7 +36,6 @@ const Container = styled.section`
       font-size: 2.2rem;
       @media ${media.tabletWide} {
         font-size: 3rem;
-        // flex-direction: row;
       }
       margin-top: 1rem;
       margin-bottom: 0;
@@ -97,12 +95,6 @@ const Profile = props => {
         <p className="desc">{basic}</p>
       </div>
       <dl>
-        {/* {basic && (
-          <React.Fragment>
-            <dt>基本:</dt>
-            <dd>{basic}</dd>
-          </React.Fragment>
-        )} */}
         {blog && (
           <React.Fragment>
             <dt>博客:</dt>
@@ -129,7 +121,6 @@ const Profile = props => {
           </React.Fragment>
         )}
       </dl>
-      {props.children}
     </Container>
   );
 };

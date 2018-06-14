@@ -14,6 +14,7 @@ const Container = styled.div`
   padding: 1.6rem 1rem;
   margin: 1rem auto;
   border: 1px solid #999;
+  max-width: 98%;
   @media ${media.tabletSmall} {
     max-width: 90%;
   }
@@ -23,9 +24,7 @@ const Container = styled.div`
   .skills {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
     .skill {
-      // flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -75,9 +74,7 @@ const Container = styled.div`
 `;
 
 const Resume = ({ data }) => {
-  const { avator, douban, github, weibo } = data;
-  // console.log(douban);
-
+  const { avator } = data;
   const profile = {
     name: '杨国春',
     avator: avator.sizes,
@@ -123,7 +120,6 @@ const Resume = ({ data }) => {
     company: '贵阳学院',
     title: ['本科', '软件工程'].join('/'),
     period: ['2008.9', '2012.9'],
-    // stack: ['C#', 'ASP.NET', '.NET Framework'],
     duties: ['2010全国大学生数学建模国家一等奖', '英语六级', '国家励志奖学金'],
   };
 
@@ -181,18 +177,6 @@ const Resume = ({ data }) => {
           <li>可能是骑行里最会写代码的人</li>
           <li>可能是写代码里连续骑行最长的人[1个月2400+km]</li>
         </ul>
-
-        {/* <div className="social">
-        <Link className="ico" to="https://www.douban.com/people/yanggc/">
-          <Img sizes={douban.sizes} alt="豆瓣" />
-        </Link>
-        <Link className="ico" to="http://weibo.com/yanggc2014 ">
-          <Img sizes={weibo.sizes} alt="微博" />
-        </Link>
-        <Link className="ico" to="https://github.com/zerosoul">
-          <Img sizes={github.sizes} alt="github" />
-        </Link>
-      </div> */}
       </Container>
       <PdfBtn />
     </React.Fragment>

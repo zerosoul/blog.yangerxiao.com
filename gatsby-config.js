@@ -1,9 +1,9 @@
 const config = require('./config/SiteConfig');
-const FeedSetting = require('./config/feed-setting');
-const ManifestSetting = require('./config/manifest-setting');
-const FaviconSetting = require('./config/favicon-setting');
-const MarkdownSetting = require('./config/markdown-setting');
-const GASetting = require('./config/ga-setting');
+const FeedSetting = require('./config/setting-feed');
+const ManifestSetting = require('./config/setting-manifest');
+const FaviconSetting = require('./config/setting-favicon');
+const MarkdownSetting = require('./config/setting-markdown');
+const GASetting = require('./config/setting-ga');
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 

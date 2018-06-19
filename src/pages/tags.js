@@ -38,7 +38,7 @@ const Tag = styled.a`
     line-height: 0.8rem;
     text-align: center;
     padding: 0.2rem;
-    border-radius: 1rem;
+    border-radius: 50%;
   }
 `;
 

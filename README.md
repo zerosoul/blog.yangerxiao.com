@@ -11,6 +11,7 @@
 - Styled Components 💅
 - 分类
 - 标签
+- 分页
 - 支持Offline
 - PWA
 - Typography.js

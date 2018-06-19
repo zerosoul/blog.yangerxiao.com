@@ -1,8 +1,8 @@
 {
   "name": "tristan-yang-blog",
   "description": "Tristan Yang Blog",
-  "version": "1.2.1",
-  "author": "Tristan Yang <yanggc888@163.com>",
+  "version": "1.4.1",
+  "author": "Tristan Yang <yanggc888@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.231",
     "gatsby-image": "^1.0.51",
@@ -39,7 +39,8 @@
     "typography": "^0.16.17"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -64,7 +65,7 @@
   },
   "browserslist": [
     "> 1%",
-    "IE >= 9",
+    "IE >= 10",
     "last 2 versions"
   ]
 }

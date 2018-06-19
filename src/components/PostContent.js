@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { media } from '../utils/media';
 
-const Container = styled.div`
+const Container = styled.article`
   margin-top: 2rem;
   a {
     text-decoration: underline;

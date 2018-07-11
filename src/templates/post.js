@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link } from "gatsby";
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import SEO from '../components/SEO';
@@ -61,7 +61,7 @@ const ArticleNav = styled.div`
   }
 `;
 const Post = props => {
-  const { slug, prev, next, html, tableOfContents: toc, frontmatter, excerpt } = props.pathContext;
+  const { slug, prev, next, html, tableOfContents: toc, frontmatter, excerpt } = props.pageContext;
   // const postNode = props.data.markdownRemark;
   // const toc = props.data.markdownRemark.tableOfContents;
   const { title, date, tags, category } = frontmatter;

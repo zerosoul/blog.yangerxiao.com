@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
+import { Link } from "gatsby";
 import { media } from '../utils/media';
 import { Global } from '../utils/fun';
 import Button from './Button';

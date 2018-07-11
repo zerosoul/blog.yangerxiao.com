@@ -1,14 +1,14 @@
 import React from 'react';
-// import Link from 'gatsby-link';
+// import { Link } from "gatsby";
 import Article from '../components/Article';
 import Wrapper from '../components/Wrapper';
 import Pagination from '../components/Pagination';
 import SectionTitle from '../components/SectionTitle';
 
-const IndexPage = ({ pathContext }) => {
-  // console.log(pathContext);
+const IndexPage = ({ pageContext }) => {
+  // console.log(pageContext);
 
-  const { group, index, first, last, pageCount, pathPrefix } = pathContext;
+  const { group, index, first, last, pageCount, pathPrefix } = pageContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };
 
   // const postEdges = props.data.allMarkdownRemark.edges;

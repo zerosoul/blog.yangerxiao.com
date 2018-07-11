@@ -1,35 +1,15 @@
-const _ = require('lodash');
+const _ = require('lodash')
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
+
 const createTagPages = require('./gatsby-actions/createTagPages');
 const createCategoryPages = require('./gatsby-actions/createCategoryPages');
 const createArchivePages = require('./gatsby-actions/createArchivePages');
 const createPostPages = require('./gatsby-actions/createPostPages');
 const createPaginatedPages = require('gatsby-paginate');
 
-exports.onCreateNode = ({ node, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators;
-  let slug;
-  if (node.internal.type === 'MarkdownRemark') {
-    const fileName = node.fileAbsolutePath.split('/').pop();
-    const title = fileName.substring(0, fileName.length - 3);
-    if (
-      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
-    ) {
-      slug = `/posts/${_.kebabCase(node.frontmatter.slug)}`;
-    }
-
-    node.frontmatter.title = title;
-    // console.log(node.frontmatter.keyword);
-    const newDate = new Date(node.frontmatter.date.replace(/-/g, '/')).toISOString();
-    node.frontmatter.date = newDate;
-
-    createNodeField({ node, name: 'slug', value: slug });
-  }
-};
-
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
-
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
     // const archivePage = path.resolve('src/templates/archives.js');
     resolve(
@@ -60,23 +40,46 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         }
       `).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-        }
-        createPaginatedPages({
-          edges: result.data.posts.edges,
-          createPage,
-          pageTemplate: 'src/templates/index.js',
-        });
+          if (result.errors) {
+            console.log(result.errors);
+            reject(result.errors);
+          }
+          createPaginatedPages({
+            edges: result.data.posts.edges,
+            createPage,
+            pageTemplate: 'src/templates/index.js',
+          });
 
-        const posts = result.data.posts.edges;
+          const posts = result.data.posts.edges;
 
-        createPostPages(createPage, posts);
-        createArchivePages(createPage, createPaginatedPages, posts);
-        createTagPages(createPage, createPaginatedPages, posts);
-        createCategoryPages(createPage, createPaginatedPages, posts);
-      })
+          createPostPages(createPage, posts);
+          createArchivePages(createPage, createPaginatedPages, posts);
+          createTagPages(createPage, createPaginatedPages, posts);
+          createCategoryPages(createPage, createPaginatedPages, posts);
+        })
     );
   });
-};
+
+}
+
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  let slug;
+  if (node.internal.type === 'MarkdownRemark') {
+    const fileName = node.fileAbsolutePath.split('/').pop();
+    const title = fileName.substring(0, fileName.length - 3);
+    if (
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
+    ) {
+      slug = `/posts/${_.kebabCase(node.frontmatter.slug)}`;
+    }
+
+    node.frontmatter.title = title;
+    // console.log(node.frontmatter.keyword);
+    const newDate = new Date(node.frontmatter.date.replace(/-/g, '/')).toISOString();
+    node.frontmatter.date = newDate;
+
+    createNodeField({ node, name: 'slug', value: slug });
+  }
+}

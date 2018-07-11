@@ -9,13 +9,13 @@ module.exports = {
           showCaptions: true,
         },
       },
-      {
-        resolve: 'gatsby-remark-external-links',
-        options: {
-          target: '_blank',
-          rel: 'nofollow noopener noreferrer',
-        },
-      },
+      // {
+      //   resolve: 'gatsby-remark-external-links',
+      //   options: {
+      //     target: '_blank',
+      //     rel: 'nofollow noopener noreferrer',
+      //   },
+      // },
       {
         resolve: 'gatsby-remark-prismjs',
         options: {
@@ -23,7 +23,12 @@ module.exports = {
         },
       },
 
-      'gatsby-remark-autolink-headers',
+      {
+        resolve: `gatsby-remark-autolink-headers`,
+        options: {
+          offsetY: `100`,
+        },
+      },
       `gatsby-remark-responsive-iframe`,
     ],
   },

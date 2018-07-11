@@ -1,10 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { graphql } from "gatsby";
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import Wrapper from '../components/Wrapper';
-import SectionTitle from '../components/SectionTitle';
 import Subline from '../components/Subline';
 
 import config from '../../config/SiteConfig';
@@ -44,10 +43,6 @@ const Tag = styled.a`
 
 const Tags = props => {
   const { group } = props.data.allMarkdownRemark;
-  // let sumCount = 0;
-  // group.map(tag => {
-  //   sumCount += tag.totalCount;
-  // });
   group.sort((a, b) => {
     if (a.totalCount > b.totalCount) {
       return -1;

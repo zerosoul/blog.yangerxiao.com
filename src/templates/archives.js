@@ -1,11 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-// import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Archive from '../components/Archive';
-// import SectionTitle from '../components/SectionTitle';
 import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
 import Pagination from '../components/Pagination';
@@ -20,13 +18,11 @@ const Container = styled.div`
     margin: 0 auto;
   }
 `;
-const Archives = ({ pathContext }) => {
-  // console.log(pathContext);
-  const { group, index, first, last, pageCount, pathPrefix } = pathContext;
-  const { totalCount } = pathContext.additionalContext;
+const Archives = ({ pageContext }) => {
+  const { group, index, first, last, pageCount, pathPrefix } = pageContext;
+  const { totalCount } = pageContext.additionalContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };
 
-  // const { totalCount } = data.allMarkdownRemark;
   const sublineStr = `共${totalCount}篇`;
   const archives = {};
 
@@ -37,7 +33,6 @@ const Archives = ({ pathContext }) => {
     }
     archives[`year${year}`].push(node);
   });
-  // console.table(archives);
 
   return (
     <Wrapper>

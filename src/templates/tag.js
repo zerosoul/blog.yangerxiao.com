@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
-import styled from 'styled-components';
+import { Link } from "gatsby";
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Article from '../components/Article';
@@ -10,8 +9,8 @@ import Pagination from '../components/Pagination';
 
 import config from '../../config/SiteConfig';
 
-const Tag = ({ pathContext }) => {
-  const { additionalContext: { tag, total }, group, index, first, last, pageCount, pathPrefix } = pathContext;
+const Tag = ({ pageContext }) => {
+  const { additionalContext: { tag, total }, group, index, first, last, pageCount, pathPrefix } = pageContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };
 
   const subline = `（共${total}篇）`;
@@ -20,7 +19,7 @@ const Tag = ({ pathContext }) => {
     <Wrapper>
       <Helmet title={`${tag} | ${config.siteTitle}`} />
       <SectionTitle>
-        <Link to="/tags">标签</Link> | {tag}
+        #{tag}
       </SectionTitle>
       <Subline sectionTitle>{subline}</Subline>
       {group.map(({ node: post }) => {

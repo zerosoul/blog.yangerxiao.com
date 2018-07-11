@@ -2,11 +2,10 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link, graphql } from "gatsby";
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Wrapper from '../components/Wrapper';
-import SectionTitle from '../components/SectionTitle';
 import Subline from '../components/Subline';
 import Slider from '../components/Slider';
 import { media } from '../utils/media';
@@ -51,8 +50,9 @@ const About = ({ data }) => (
         <Link to="/about">关于我</Link>
       </SectionTitle> */}
       <Subline sectionTitle>也许，我们能成为朋友。</Subline>
+      {/* {console.log(data)} */}
       <Slider
-        imgs={data.allImageSharp.edges.map(img => <Img sizes={img.node.sizes} key={img.node.sizes} alt="关于我" />)}
+        imgs={data.slideImgs.edges.map(img => <Img fluid={img.node.fluid} key={img.node.fluid.src} alt="关于我" />)}
       />
       <Header>基本信息</Header>
       <Content>89年/金牛座/山东/本科/软件工程</Content>
@@ -95,7 +95,7 @@ const About = ({ data }) => (
         <Link to="/posts/lift-part-one">有搭车史，回家，不期而遇</Link>
       </Content>
       <Content>
-        <a href="https://book.douban.com/people/yanggc/collect" target="_blank" rel="noopener noreferrer">
+        <a href="https://book.douban.com/people/yanggc/collect">
           有阅读史，至今，不求甚解
         </a>
       </Content>
@@ -104,7 +104,7 @@ const About = ({ data }) => (
       </Content>
       <Content>有摄影史，至今，不甚了了</Content>
       <Content>
-        <a href="https://movie.douban.com/people/yanggc/collect" target="_blank" rel="noopener noreferrer">
+        <a href="https://movie.douban.com/people/yanggc/collect">
           有观影史，至今，不胜枚举
         </a>
       </Content>
@@ -119,7 +119,7 @@ const About = ({ data }) => (
       <Content>
         <dt>微信：</dt>
         <dd>
-          <Img sizes={data.wxImage.sizes} alt="微信二维码" />
+          <Img fluid={data.wxImage.fluid} alt="微信二维码" />
         </dd>
       </Content>
     </Container>
@@ -130,18 +130,18 @@ export default About;
 /* eslint no-undef: off */
 export const query = graphql`
   query ProfileImagesQuery {
-    allImageSharp(filter: { id: { regex: "/about_slides/" } }) {
+    slideImgs:allImageSharp(filter: { fluid:{originalName:  { regex: "/about_slide_/" }}}) {
       edges {
         node {
-          sizes {
-            ...GatsbyImageSharpSizes
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
-    wxImage: imageSharp(id: { regex: "/wx/" }) {
-      sizes(maxWidth: 400) {
-        ...GatsbyImageSharpSizes
+    wxImage: imageSharp(fluid: {originalName: { regex: "/wx.jpg/" }}) {
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
       }
     }
   }

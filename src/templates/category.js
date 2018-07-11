@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-// import Link from 'gatsby-link';
+// import { Link } from "gatsby";
 // import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
@@ -10,10 +10,10 @@ import Pagination from '../components/Pagination';
 
 import config from '../../config/SiteConfig';
 
-const Category = ({ pathContext }) => {
-  console.log(pathContext);
+const Category = ({ pageContext }) => {
+  // console.log(pageContext);
 
-  const { additionalContext: { category, total }, group, index, first, last, pageCount, pathPrefix } = pathContext;
+  const { additionalContext: { category, total }, group, index, first, last, pageCount, pathPrefix } = pageContext;
   const pageProps = { index, first, last, pageCount, pathPrefix };
 
   const sublineStr = `（共${total}篇）`;

@@ -30,12 +30,5 @@ module.exports = (createPage, createPaginatedPages, posts) => {
         tag,
       }, // This is optional and defaults to an empty object if not used
     });
-    // createPage({
-    //   path: `/tags/${_.kebabCase(tag)}`,
-    //   component: tagPage,
-    //   context: {
-    //     tag,
-    //   },
-    // });
   });
 };

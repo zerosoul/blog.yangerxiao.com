@@ -66,10 +66,10 @@ export default class PostContent extends Component {
         if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
           newdiv.innerHTML = `<pre>${newdiv.innerHTML}</pre>`;
         }
-
-        newdiv.innerHTML += `<br /><br /><br />作者：杨二 <br />微信：yanggc_2013 <br />链接：<a href='${
-          document.location.href
-        }'>${document.location.href}</a> <br />著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。`;
+        const _url = document.location.href.replace(document.location.hash, "");
+        newdiv.innerHTML += `<br /><br />作者：杨二 <br />微信：yanggc_2013 <br />链接：<a href='${
+          _url
+          }'>${_url}</a> <br />著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。`;
 
         selection.selectAllChildren(newdiv);
         window.setTimeout(() => {

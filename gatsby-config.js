@@ -46,9 +46,8 @@ module.exports = {
     'gatsby-plugin-sitemap',
     FeedSetting,
     ManifestSetting,
-    FaviconSetting,
+    // FaviconSetting,
     GASetting,
     'gatsby-plugin-offline',
-    `gatsby-plugin-react-next`,
   ],
-};
+}

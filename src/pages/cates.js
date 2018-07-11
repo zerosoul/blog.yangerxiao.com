@@ -1,10 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link, graphql } from "gatsby";
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import Wrapper from '../components/Wrapper';
-import SectionTitle from '../components/SectionTitle';
 import Subline from '../components/Subline';
 import { media } from '../utils/media';
 import config from '../../config/SiteConfig';
@@ -33,7 +32,6 @@ const Categories = props => {
   return (
     <Wrapper>
       <Helmet title={`分类 | ${config.siteTitle}`} />
-      {/* <SectionTitle>分类</SectionTitle> */}
       <Subline sectionTitle>{`共${group.length}个`}</Subline>
       <Cates>
         {group.map(category => (

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   margin-right: 0.4rem;
   margin-bottom: 0.2rem;
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
   font-size: 1rem;
   color: white;
   background: #333;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from './Header';
 import Backtop from './Backtop';
 import FixContainer from './FixContainer';
+import Footer from './Footer';
 import ReadHistory from './ReadHistory';
 import { media } from '../utils/media';
 
@@ -24,7 +25,7 @@ const Content = styled.div`
   }
   @media ${media.desktop} {
     padding: 3rem 6rem;
-    max-width: 70%;
+    max-width: 75%;
   }
   background-color: ${props => props.theme.bg};
 `;
@@ -38,6 +39,7 @@ const Wrapper = props => (
       {props.toc}
       <Backtop />
     </FixContainer>
+    <Footer />
   </Grid>
 );
 

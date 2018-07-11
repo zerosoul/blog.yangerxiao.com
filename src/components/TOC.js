@@ -64,6 +64,7 @@ const Toc = styled.div`
   }
   .content {
     z-index: 999;
+    transform:translate3d(0,0,0);
     padding: 0.6rem;
     margin-bottom: 0.5rem;
     border: 1px solid #ddd;

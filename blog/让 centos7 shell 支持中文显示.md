@@ -35,3 +35,7 @@ echo 'export LC_ALL=en_US.UTF-8' >> ~/.bash_profile
 
 最后，不要忘了`source`一下`bash_profile`，让其生效。
 
+# 参考
+
+[How to display Chinese characters correctly on remote Red-Hat machine?](https://unix.stackexchange.com/a/365347)
+

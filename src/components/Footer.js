@@ -18,7 +18,7 @@ const Footer = () => (
   <Content>
     <div>&copy; 2018 by Tristan Yang </div>
     <div className="power">
-      Powered by <a href="http://reactjs.org/">React</a> & <a href="https://www.gatsbyjs.org/">Gatsby.js</a>
+      Powered by <a href="http://reactjs.org/">React.js</a> & <a href="https://www.gatsbyjs.org/">Gatsby.js</a>
     </div>
   </Content>
 );

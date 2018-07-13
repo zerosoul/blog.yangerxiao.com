@@ -70,7 +70,7 @@ const Post = props => {
   const tocComponent = (toc && <TOC toc={toc} />) || null;
   const disqusShortname = "blog-yangerxiao-com";
   const disqusConfig = {
-    url: slug,
+    url: `https://blog.yangerxiao.com/${slug}`,
     identifier: slug,
     title
   };

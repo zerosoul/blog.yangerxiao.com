@@ -55,7 +55,7 @@ const About = ({ data }) => (
         imgs={data.slideImgs.edges.map(img => <Img fluid={img.node.fluid} key={img.node.fluid.src} alt="关于我" />)}
       />
       <Header>基本信息</Header>
-      <Content>89年/金牛座/山东/本科/软件工程</Content>
+      <Content>金牛座/山东/本科/软件工程</Content>
       <Header>技术栈</Header>
       <Content>
         <dt>语言：</dt>

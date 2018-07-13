@@ -1,6 +1,6 @@
 ---
 slug: "javascript symbol"
-date: "2016-11-9 20:32:58"
+date: "2018-1-29 20:32:58"
 category: "技术"
 tags:
     - es6

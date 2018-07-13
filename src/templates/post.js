@@ -62,13 +62,13 @@ const ArticleNav = styled.div`
   }
 `;
 const Post = props => {
-  console.log(props);
+  // console.log(props);
   const { slug, prev, next, html, tableOfContents: toc, frontmatter, excerpt } = props.pageContext;
   // const postNode = props.data.markdownRemark;
   // const toc = props.data.markdownRemark.tableOfContents;
   const { title, date, tags, category } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
-  const disqusShortname = "blog.yangerxiao.com";
+  const disqusShortname = "blog-yangerxiao-com";
   const disqusConfig = {
     url: slug,
     identifier: slug,

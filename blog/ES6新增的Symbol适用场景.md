@@ -7,6 +7,7 @@ tags:
     - javascript
     - 备忘
 ---
+
 # ES6第七种数据类型：Symbol
 
 Javascript已有6种数据类型: **Undefined,Null,布尔值,字符串,数值,对象**。现在ES6新加入一种数据类型：Symbol。
@@ -46,7 +47,7 @@ a[mySymbol] // "Hello!"
 
 # 为什么要使用Symbol?
 
-那么问题来了，究竟为什么要使用Symbol呢？有这样一种场景：我们想区分两个属性，其实我们并不在意，这两个属性值究竟是什么，我们在意的是，这两个属性绝对要区分开来！例如:
+那么问题来了，为什么要使用Symbol呢？有这样一种场景：如果想区分两个属性，其实我们并不在意，这两个属性值究竟是什么，我们在意的是，这两个属性绝对要区分开来！例如:
 ``` js
 var shapeType = { triangle: 'Triangle'};
 function getArea(shape, options) { 

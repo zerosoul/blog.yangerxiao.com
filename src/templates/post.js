@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from "gatsby";
+import { DiscussionEmbed } from "disqus-react";
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import SEO from '../components/SEO';
@@ -61,11 +62,18 @@ const ArticleNav = styled.div`
   }
 `;
 const Post = props => {
+  console.log(props);
   const { slug, prev, next, html, tableOfContents: toc, frontmatter, excerpt } = props.pageContext;
   // const postNode = props.data.markdownRemark;
   // const toc = props.data.markdownRemark.tableOfContents;
   const { title, date, tags, category } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
+  const disqusShortname = "blog.yangerxiao.com";
+  const disqusConfig = {
+    url: slug,
+    identifier: slug,
+    title
+  };
   return (
     <Wrapper toc={tocComponent}>
       <SEO postPath={slug} excerpt={excerpt} frontmatter={frontmatter} postSEO />
@@ -96,6 +104,7 @@ const Post = props => {
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
         {next && <Link to={next.fields.slug} className="next">{`${next.frontmatter.title}`}</Link>}
       </ArticleNav>
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       <Navs isBottom />
     </Wrapper>
   );

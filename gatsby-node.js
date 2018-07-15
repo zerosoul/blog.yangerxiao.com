@@ -11,7 +11,6 @@ const createPaginatedPages = require('gatsby-paginate');
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
-    // const archivePage = path.resolve('src/templates/archives.js');
     resolve(
       graphql(`
         {
@@ -64,8 +63,8 @@ exports.createPages = ({ graphql, actions }) => {
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
-  let slug;
   if (node.internal.type === 'MarkdownRemark') {
+    let slug = "";
     const fileName = node.fileAbsolutePath.split('/').pop();
     const title = fileName.substring(0, fileName.length - 3);
     if (
@@ -76,9 +75,7 @@ exports.onCreateNode = ({ node, actions }) => {
     }
 
     node.frontmatter.title = title;
-    // console.log(node.frontmatter.keyword);
-    const newDate = new Date(node.frontmatter.date.replace(/-/g, '/')).toISOString();
-    node.frontmatter.date = newDate;
+    node.frontmatter.date = new Date(node.frontmatter.date.replace(/-/g, '/')).toISOString();
 
     createNodeField({ node, name: 'slug', value: slug });
   }

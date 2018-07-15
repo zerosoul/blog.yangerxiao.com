@@ -61,12 +61,11 @@ export default class Backtop extends Component {
     });
   };
   scrollUp = () => {
-    const doc = document.documentElement;
-    const top = (Global.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
-    if (top > 0) {
-      Global.scrollTo(0, top - 100);
-      setTimeout(this.scrollUp, 10);
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+      Global.requestAnimationFrame(this.scrollUp);
+      Global.scrollTo(0, c - c / 8);
     }
   };
   render() {

@@ -6,3 +6,4 @@ public
 .cache/
 yarn.lock
 yarn-error.log
+static/*/**.icloud

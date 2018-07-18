@@ -4,6 +4,7 @@ const ManifestSetting = require('./config/setting-manifest');
 const FaviconSetting = require('./config/setting-favicon');
 const MarkdownSetting = require('./config/setting-markdown');
 const GASetting = require('./config/setting-ga');
+const BaiduSetting = require('./config/setting-baidu');
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
@@ -47,6 +48,7 @@ module.exports = {
     FeedSetting,
     ManifestSetting,
     // FaviconSetting,
+    BaiduSetting,
     GASetting,
     'gatsby-plugin-offline',
   ],

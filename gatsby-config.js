@@ -9,6 +9,7 @@ const BaiduSetting = require('./config/setting-baidu');
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
 module.exports = {
+  polyfill: false,
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,

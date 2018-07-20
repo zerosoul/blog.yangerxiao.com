@@ -13,6 +13,7 @@ export default class HTML extends React.Component {
                         content="width=device-width, initial-scale=1, shrink-to-fit=no"
                     />
                     <meta rel="shortcut icon" href="/favicon.ico" />
+                    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
                     {this.props.headComponents}
                 </head>
                 <body {...this.props.bodyAttributes}>
@@ -21,7 +22,7 @@ export default class HTML extends React.Component {
                         key={`body`}
                         id="___gatsby"
                         dangerouslySetInnerHTML={{ __html: this.props.body }}
-                    />
+                    >Loading...</div>
                     {this.props.postBodyComponents}
                 </body>
             </html>

@@ -77,7 +77,7 @@ export default Tags;
 /* eslint no-undef: off */
 export const tagsQuery = graphql`
   query TagsPage {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: {frontmatter: {draft: {ne: true}}}){
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

@@ -7,7 +7,7 @@ const createCategoryPages = require('./gatsby-actions/createCategoryPages');
 const createArchivePages = require('./gatsby-actions/createArchivePages');
 const createPostPages = require('./gatsby-actions/createPostPages');
 const createPaginatedPages = require('gatsby-paginate');
-
+const filterStr = process.env.NODE_ENV === 'production' ? 'filter: { frontmatter: { draft: { ne: true } } }' : '';
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
@@ -16,7 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
         {
           posts: allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
-            filter: { frontmatter: { draft: { ne: true } } }
+            ${filterStr}
           ) {
             totalCount
             edges {

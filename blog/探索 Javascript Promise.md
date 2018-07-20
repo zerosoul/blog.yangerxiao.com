@@ -60,11 +60,11 @@ fetch('/some/endpoint')
 
 fetch('/some/endpoint').then(function (result) {
 
-  console.log('Response from the endpoint ' \+ result)
+  console.log('Response from the endpoint ' + result)
 
 }, function (error){
 
-  console.log('An error occurred: ' \+ error)
+  console.log('An error occurred: ' + error)
 
 })
 ``` 
@@ -93,7 +93,7 @@ lookupPrice(123)
 
   .then(function (price) {
 
-    console.log('The item costs: ' \+ price)
+    console.log('The item costs: ' + price)
 
   })
 
@@ -114,7 +114,7 @@ lookupPrice(123)
 
   .then(function (price) {
 
-    console.log('The item costs: ' \+ price)
+    console.log('The item costs: ' + price)
 
   }, null)
 
@@ -134,7 +134,7 @@ lookupPrice(99999)
 
   .then(function (price) {
 
-    console.log('The item costs: ' \+ price)
+    console.log('The item costs: ' + price)
 
     return price
 
@@ -142,7 +142,7 @@ lookupPrice(99999)
 
   .then(function (price) {
 
-    console.log('Double the price: ' \+ (price * 2))
+    console.log('Double the price: ' + (price * 2))
 
   })
 
@@ -221,7 +221,7 @@ function generateRandomNumber () {
 
   return new Promise(function (resolve, reject) {
 
-    var randomNumber = Math.floor((Math.random() * 10) \+ 1)
+    var randomNumber = Math.floor((Math.random() * 10) + 1)
 
     if (randomNumber <= 5) {
 
@@ -239,11 +239,11 @@ function generateRandomNumber () {
 
 generateRandomNumber().then(function(result) {
 
-  console.log('Success: ' \+ result)
+  console.log('Success: ' + result)
 
 }).catch(function(error) {
 
-  console.log('Error: ' \+ error)
+  console.log('Error: ' + error)
 
 })
 ``` 
@@ -280,7 +280,7 @@ function authStatus (response) {
 
   if (response.status === 200) {
 
-    //用户名将传入下一个\`then\`，即loadProfile
+    //用户名将传入下一个`then`，即loadProfile
 
     return Promise.resolve(response.userName)
 
@@ -296,7 +296,7 @@ function authStatus (response) {
 
 function loadProfile (userName) {
 
-  fetch('/profile/' \+ userName)
+  fetch('/profile/' + userName)
 
     .then(function (response) {
 
@@ -322,21 +322,21 @@ function loadProfile (userName) {
 Promise.all()完成返回的结果是一个数组，其中的值对应参数中的promise数组。下面根据刚刚提到的那个场景，我们使用Promise.all()来实现下：
 ``` javascript
 
-Promise.all(\[
+Promise.all([
 
   fetch('/profile/333'), // 获取用户信息
 
   fetch('/posts/user/333') // 获取用户文章
 
-\])
+])
 
 .then(function (result) {
 
-  // \`result\`是一个长度为2的数组
+  // `result`是一个长度为2的数组
 
-  var profileInfo = result\[0\].profileData
+  var profileInfo = result[0].profileData
 
-  var recentPosts = result\[1\].posts
+  var recentPosts = result[1].posts
 
   //处理数据 BLA BLA ~~~
 

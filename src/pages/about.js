@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { Link, graphql } from "gatsby";
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Comment from '../components/Comment';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Slider from '../components/Slider';
@@ -42,89 +43,97 @@ const Content = styled.div`
     text-decoration: underline;
   }
 `;
-const About = ({ data }) => (
-  <Wrapper>
-    <Helmet title={`关于我 | ${config.siteTitle}`} />
-    <Container>
-      {/* <SectionTitle>
+const About = ({ data }) => {
+  const commentConfig = {
+    url: `https://blog.yangerxiao.com/about`,
+    identifier: `about-me`,
+    title: `关于我`
+  }
+  return (
+    <Wrapper>
+      <Helmet title={`关于我 | ${config.siteTitle}`} />
+      <Container>
+        {/* <SectionTitle>
         <Link to="/about">关于我</Link>
       </SectionTitle> */}
-      <Subline sectionTitle>也许，我们能成为朋友。</Subline>
-      {/* {console.log(data)} */}
-      <Slider
-        imgs={data.slideImgs.edges.map(img => <Img fluid={img.node.fluid} key={img.node.fluid.src} alt="关于我" />)}
-      />
-      <Header>基本信息</Header>
-      <Content>金牛座/山东/本科/软件工程</Content>
-      <Header>技术栈</Header>
-      <Content>
-        <dt>语言：</dt>
-        <dd>Javascript(ES6)/HTML5/PHP/C#</dd>
-      </Content>
-      <Content>
-        <dt>平台/框架/类库：</dt>
-        <dd>Node.js/React/jQuery</dd>
-      </Content>
-      <Content>
-        <dt>工具：</dt>
-        <dd>VS Code/Sublime/Chrome/Bash/git/Docker</dd>
-      </Content>
-      <Content>
-        <dt>操作系统：</dt>
-        <dd>Mac OS/Windows/Linux</dd>
-      </Content>
+        <Subline sectionTitle>也许，我们能成为朋友。</Subline>
+        {/* {console.log(data)} */}
+        <Slider
+          imgs={data.slideImgs.edges.map(img => <Img fluid={img.node.fluid} key={img.node.fluid.src} alt="关于我" />)}
+        />
+        <Header>基本信息</Header>
+        <Content>金牛座/山东/本科/软件工程</Content>
+        <Header>技术栈</Header>
+        <Content>
+          <dt>语言：</dt>
+          <dd>Javascript(ES6)/HTML5/PHP/C#</dd>
+        </Content>
+        <Content>
+          <dt>平台/框架/类库：</dt>
+          <dd>Node.js/React/jQuery</dd>
+        </Content>
+        <Content>
+          <dt>工具：</dt>
+          <dd>VS Code/Sublime/Chrome/Bash/git/Docker</dd>
+        </Content>
+        <Content>
+          <dt>操作系统：</dt>
+          <dd>Mac OS/Windows/Linux</dd>
+        </Content>
 
-      <Header>人生史记</Header>
-      <Content>有尿床史，幼儿园，不治自愈</Content>
-      <Content>
-        <Link to="/posts/memory-about-bookstore">有休学史，小学，不请自回</Link>
-      </Content>
-      <Content>
-        <Link to="/posts/memory-about-bookstore">有学霸史，中学，不攻自破</Link>
-      </Content>
-      <Content>
-        <Link to="/posts/memory-about-bookstore">有平庸史，高中，不愠不火</Link>
-      </Content>
-      <Content>
-        <Link to="/posts/memory-about-bookstore">有沉淀史，大学，不骄不躁</Link>
-      </Content>
-      <Content>
-        <Link to="/posts/graduate-riding-part-one">有骑行史，毕业，不同凡响</Link>
-      </Content>
-      <Content>
-        <Link to="/posts/lift-part-one">有搭车史，回家，不期而遇</Link>
-      </Content>
-      <Content>
-        <a href="https://book.douban.com/people/yanggc/collect">
-          有阅读史，至今，不求甚解
+        <Header>人生史记</Header>
+        <Content>有尿床史，幼儿园，不治自愈</Content>
+        <Content>
+          <Link to="/posts/memory-about-bookstore">有休学史，小学，不请自回</Link>
+        </Content>
+        <Content>
+          <Link to="/posts/memory-about-bookstore">有学霸史，中学，不攻自破</Link>
+        </Content>
+        <Content>
+          <Link to="/posts/memory-about-bookstore">有平庸史，高中，不愠不火</Link>
+        </Content>
+        <Content>
+          <Link to="/posts/memory-about-bookstore">有沉淀史，大学，不骄不躁</Link>
+        </Content>
+        <Content>
+          <Link to="/posts/graduate-riding-part-one">有骑行史，毕业，不同凡响</Link>
+        </Content>
+        <Content>
+          <Link to="/posts/lift-part-one">有搭车史，回家，不期而遇</Link>
+        </Content>
+        <Content>
+          <a href="https://book.douban.com/people/yanggc/collect">
+            有阅读史，至今，不求甚解
         </a>
-      </Content>
-      <Content>
-        <Link to="/posts/about-running">有跑步史，至今，不屈不挠</Link>
-      </Content>
-      <Content>有摄影史，至今，不甚了了</Content>
-      <Content>
-        <a href="https://movie.douban.com/people/yanggc/collect">
-          有观影史，至今，不胜枚举
+        </Content>
+        <Content>
+          <Link to="/posts/about-running">有跑步史，至今，不屈不挠</Link>
+        </Content>
+        <Content>有摄影史，至今，不甚了了</Content>
+        <Content>
+          <a href="https://movie.douban.com/people/yanggc/collect">
+            有观影史，至今，不胜枚举
         </a>
-      </Content>
-      <Content>有闷骚史，至今，不学无术</Content>
-      <Content>有编码史，至今，不甘雌伏</Content>
-      <Content>有上进史，至今，不敢后人</Content>
-      <Header>联系方式</Header>
-      <Content>
-        <dt>邮箱：</dt>
-        <dd>yanggc888#163.com</dd>
-      </Content>
-      <Content>
-        <dt>微信：</dt>
-        <dd>
-          <Img fluid={data.wxImage.fluid} alt="微信二维码" />
-        </dd>
-      </Content>
-    </Container>
-  </Wrapper>
-);
+        </Content>
+        <Content>有闷骚史，至今，不学无术</Content>
+        <Content>有编码史，至今，不甘雌伏</Content>
+        <Content>有上进史，至今，不敢后人</Content>
+        <Header>联系方式</Header>
+        <Content>
+          <dt>邮箱：</dt>
+          <dd>yanggc888#163.com</dd>
+        </Content>
+        <Content>
+          <dt>微信：</dt>
+          <dd>
+            <Img fluid={data.wxImage.fluid} alt="微信二维码" />
+          </dd>
+        </Content>
+        <Comment config={commentConfig} />
+      </Container>
+    </Wrapper>
+  )
+};
 
 export default About;
 /* eslint no-undef: off */

@@ -1,13 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from "gatsby";
-import { DiscussionEmbed } from "disqus-react";
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import TOC from '../components/TOC';
+import Comment from '../components/Comment';
 import PostContent from '../components/PostContent';
 import Navs from '../components/Navs';
 import { getYMD } from '../utils/fun';
@@ -66,7 +66,7 @@ const Post = props => {
   const { slug, prev, next, html, tableOfContents: toc, frontmatter, excerpt } = props.pageContext;
   const { title, date, tags, category } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
-  const disqusShortname = "blog-yangerxiao-com";
+  // const disqusShortname = "blog-yangerxiao-com";
   const disqusConfig = {
     url: `https://blog.yangerxiao.com/${slug}`,
     identifier: slug,
@@ -102,7 +102,7 @@ const Post = props => {
         {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
         {next && <Link to={next.fields.slug} className="next">{`${next.frontmatter.title}`}</Link>}
       </ArticleNav>
-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      <Comment config={disqusConfig} />
       <Navs isBottom />
     </Wrapper>
   );

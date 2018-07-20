@@ -6,13 +6,11 @@ const MarkdownSetting = require('./config/setting-markdown');
 const GASetting = require('./config/setting-ga');
 const BaiduSetting = require('./config/setting-baidu');
 
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
-
 module.exports = {
+  // 禁用 promise polyfill
   polyfill: false,
-  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteUrl: config.siteUrl,
     title: `杨二的个人博客`,
     description: `记录生活，见证成长。`,
   },

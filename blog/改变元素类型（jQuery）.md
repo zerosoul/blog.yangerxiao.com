@@ -13,61 +13,39 @@ tags:
 
 #思路
 
-1.  获取要替换的元素特性集合，暂存到一个变量里。
-2.  构造新的元素，即目标元素，并将暂存的特性赋到该元素中。
-3.  使用[jQuery API:replaceWith](http://api.jquery.com/replaceWith/)，将要替换的元素用新构造的元素替换之。
+1. 获取要替换的元素特性集合，暂存到一个变量里。
+2. 构造新的元素，即目标元素，并将暂存的特性赋到该元素中。
+3. 使用[jQuery API:replaceWith](http://api.jquery.com/replaceWith/)，将要替换的元素用新构造的元素替换之。
 
 #代码实现
 ``` js
 
 //source element:div.from 
-
 var attrs = {};
-
 var $srcEle = $("div.from");
-
 $.each($srcEle[0].attributes, function(idx, attr) {
-
    attrs[attr.nodeName] = attr.nodeValue;
-
 });
-
 var $targetEle = $("<a/>",attrs).append($srcEle.contents());             
-
 $(this).replaceWith(function() {
-
     return $targetEle;
-
 });
 ```
 
 当然，为了更具通用性，可以做成一个插件：
 ``` js
-
 (function($) {
-
     $.fn.changeElementType = function(newType) {
-
         this.each(function() {
-
             var attrs = {};             
-
             $.each(this.attributes, function(idx, attr) {
-
                attrs[attr.nodeName] = attr.nodeValue;
-
             });
-
             $(this).replaceWith(function() {
-
-                return $("<" \+ newType + "/>", attrs).append($(this).contents());
-
+                return $("<" + newType + "/>", attrs).append($(this).contents());
             });
-
     });
-
     };
-
 })(jQuery);
 ```
 #最后说一句

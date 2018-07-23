@@ -1,0 +1,414 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge;chrome"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta rel="shortcut icon" href="/favicon.ico"/><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script><style data-href="/component---src-templates-post-js.9543c128f9a4e8d80ab1.css">code,code[class*=language-],pre[class*=language-]{color:#fff;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;text-shadow:0 -.1em .2em #000;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}:not(pre)>code[class*=language-],code,pre[class*=language-]{background:#141414}code{padding:.1rem .4rem;margin:0 .2rem;white-space:pre-wrap}pre[class*=language-]{-webkit-box-shadow:1px 1px .5em #000 inset;box-shadow:inset 1px 1px .5em #000;margin:.5rem 0;overflow:auto;padding:.4rem}pre[class*=language-]::-moz-selection{background:#27292a}pre[class*=language-]::selection{background:#27292a}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:hsla(0,0%,93%,.15)}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:hsla(0,0%,93%,.15)}:not(pre)>code[class*=language-]{border-radius:.3em;border:.13em solid #545454;-webkit-box-shadow:1px 1px .3em -.1em #000 inset;box-shadow:inset 1px 1px .3em -.1em #000;padding:.15em .2em .05em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#787878}.namespace,.token.punctuation{opacity:.7}.token.boolean,.token.deleted,.token.number,.token.tag{color:#cf694a}.token.builtin,.token.constant,.token.keyword,.token.property,.token.selector,.token.symbol{color:#f9ee9a}.language-css .token.string,.style .token.string,.token.attr-name,.token.attr-value,.token.char,.token.entity,.token.inserted,.token.operator,.token.string,.token.url,.token.variable{color:#919e6b}.token.atrule{color:#7386a5}.token.important,.token.regex{color:#e9c163}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[data-line]{padding:1em 0 1em 3em;position:relative}.language-markup .token.attr-name,.language-markup .token.punctuation,.language-markup .token.tag{color:#ad895c}.token{position:relative;z-index:1}.line-highlight{background:rgba(84,84,84,.25);background:-webkit-gradient(linear,left top,right top,color-stop(70%,rgba(84,84,84,.1)),to(rgba(84,84,84,0)));background:linear-gradient(90deg,rgba(84,84,84,.1) 70%,rgba(84,84,84,0));border-bottom:1px dashed #545454;border-top:1px dashed #545454;left:0;line-height:inherit;margin-top:.75em;padding:inherit 0;pointer-events:none;position:absolute;right:0;white-space:pre;z-index:0}.line-highlight:before,.line-highlight[data-end]:after{background-color:#8794a6;border-radius:999px;-webkit-box-shadow:0 1px #fff;box-shadow:0 1px #fff;color:#f5f2f0;content:attr(data-start);font:700 65%/1.5 sans-serif;left:.6em;min-width:1em;padding:0 .5em;position:absolute;text-align:center;text-shadow:none;top:.4em;vertical-align:.3em}.line-highlight[data-end]:after{bottom:.4em;content:attr(data-end);top:auto}
+
+/*# sourceMappingURL=component---src-templates-post-js.9543c128f9a4e8d80ab1.css.map*/</style><style data-styled-components="ivSXtK ljvFaq gXbiOu fEuJbJ gfQakl dGDpda hEYPJu eWUXqT gXjStS BkEGk PWcgP cnNEXi heeqbv ctQqnq fHxAMN">
+/* sc-component-id: Subline__Line-s1kl5kkq-0 */
+.gXjStS{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;font-size:0.6rem;-webkit-overflow-scrolling:touch;} .gXjStS::-webkit-scrollbar{display:none;} .gXjStS > span{padding:0.2rem 0.3rem;border:1px solid #eee;margin-right:0.2rem;margin-bottom:0.2rem;border-radius:0.2rem;} .gXjStS > span .tags{margin-left:0.5rem;} .gXjStS > span .tags .tag{position:relative;margin-right:0.6rem;} .gXjStS > span .tags .tag:before{content:'#';position:absolute;left:-0.4rem;}
+/* sc-component-id: Button__Wrapper-s1goobno-0 */
+.dGDpda{margin-right:0.4rem;margin-bottom:0.2rem;border-radius:0.6rem;font-size:1rem;color:white;background:#333;padding:0.3rem 0.6rem;cursor:pointer;} .dGDpda:active{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-transition:-webkit-transform 0.5s;-webkit-transition:transform 0.5s;transition:transform 0.5s;}
+/* sc-component-id: Navs__Container-ke6nyr-0 */
+.fEuJbJ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:space-between;-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;margin:0 auto;margin-bottom:1.5rem;margin-top:0;max-width:90%;} @media (min-width:480px){.fEuJbJ{max-width:55%;}} @media (min-width:900px){.fEuJbJ{max-width:30%;}} .fEuJbJ a{-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;margin:0 0.2rem;} .fEuJbJ a .btn{margin:0 auto;} .fEuJbJ a.curr{position:relative;} .fEuJbJ a.curr .btn{background:#666;} .fEuJbJ a.curr:after,.fEuJbJ a.curr:before{top:100%;left:50%;border:solid transparent;content:' ';height:0;width:0;position:absolute;pointer-events:none;} .fEuJbJ a.curr:after{border-color:rgba(136,183,213,0);border-top-color:#666;border-width:0.6rem;margin-left:-0.6rem;}.gfQakl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:space-between;-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;margin:0 auto;margin-bottom:1.5rem;margin-top:2rem;margin-bottom:0;max-width:90%;} @media (min-width:480px){.gfQakl{max-width:80%;}} @media (min-width:900px){.gfQakl{max-width:60%;}} .gfQakl a{-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;margin:0 0.2rem;} .gfQakl a .btn{margin:0 auto;} .gfQakl a.curr{position:relative;} .gfQakl a.curr .btn{background:#666;} .gfQakl a.curr:after,.gfQakl a.curr:before{top:100%;left:50%;border:solid transparent;content:' ';height:0;width:0;position:absolute;pointer-events:none;} .gfQakl a.curr:after{border-color:rgba(136,183,213,0);border-top-color:#666;border-width:0.6rem;margin-left:-0.6rem;}
+/* sc-component-id: Header__Wrapper-s1qmorvh-0 */
+.ljvFaq{margin:0 auto;padding:0 0.5rem;}
+/* sc-component-id: Header__Hero-s1qmorvh-1 */
+.gXbiOu{padding-bottom:1rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:2rem;} .gXbiOu .site{text-align:center;margin-bottom:1rem;} .gXbiOu .site .title{padding:0.6rem 2rem;background:#222;color:#fff;} .gXbiOu .slogan{color:#808080;margin-bottom:0.4rem;}
+/* sc-component-id: Backtop__Circle-s2n6kzp-0 */
+.ctQqnq{width:2rem;height:2rem;border-radius:0.5rem;background:#ddd;cursor:pointer;} .ctQqnq .wrapper{position:relative;} .ctQqnq .wrapper:before,.ctQqnq .wrapper:after{content:'';position:absolute;top:0.9rem;left:0.34rem;width:0.8rem;height:0.14rem;background:#444;} .ctQqnq .wrapper:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);left:0.82rem;} .ctQqnq .wrapper:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}
+/* sc-component-id: FixContainer__Container-s5tcbud-0 */
+.cnNEXi{position:fixed;right:20px;bottom:30px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;} @media (min-width:900px){.cnNEXi{right:16%;}} .cnNEXi > *{margin:0.8rem 0;}
+/* sc-component-id: Footer__Content-qjve7o-0 */
+.fHxAMN{padding:3rem 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} @media print{.fHxAMN .power{display:none;}}
+/* sc-component-id: Wrapper__Grid-a11ln1-0 */
+.ivSXtK{margin:0 auto;padding:0;min-height:60vh;}
+/* sc-component-id: Wrapper__Content-a11ln1-1 */
+.hEYPJu{box-shadow:0 4px 120px rgba(0,0,0,0.1);border-radius:1rem;padding:2rem 1rem;overflow:hidden;margin:0 auto;} @media (min-width:480px){.hEYPJu{padding:2.6rem;}} @media (min-width:900px){.hEYPJu{padding:3rem 6rem;max-width:75%;}}
+/* sc-component-id: TOC__Toc-gywqkf-0 */
+.heeqbv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;z-index:999;} .heeqbv .mask{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:none;z-index:998;} .heeqbv button{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:2rem;height:2rem;border:1px solid #ddd;padding:0.2rem;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-radius:0.5rem;position:relative;cursor:pointer;background:#eee;z-index:999;} .heeqbv button:focus{outline:none;} .heeqbv button .line{background:#333;display:inline-block;width:1rem;height:0.1rem;margin:0.09rem 0;} .heeqbv button.unfold .line{display:none;} .heeqbv button.unfold:before,.heeqbv button.unfold:after{content:'';position:absolute;height:1rem;width:0.1rem;top:50%;right:50%;background:#333;margin-right:-0.05rem;margin-top:-0.5rem;} .heeqbv button.unfold:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);} .heeqbv button.unfold:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);} .heeqbv .content{z-index:999;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);padding:0.6rem;margin-bottom:0.5rem;border:1px solid #ddd;background:#eee;border-radius:0.5rem;display:none;max-height:70vh;overflow:scroll;} .heeqbv .content ul{list-style:none;margin:0.4rem 0;} .heeqbv .content ul li{padding:0;margin:0.4rem 0;} .heeqbv .content ul ul{font-size:0.8rem;margin-left:0.4rem;}
+/* sc-component-id: PostContent__Container-s10cpw6f-0 */
+.BkEGk{margin-top:2rem;} .BkEGk a{-webkit-text-decoration:underline;text-decoration:underline;} .BkEGk h1{font-size:1.6rem;} .BkEGk h2{font-size:1.2rem;} .BkEGk p img{display:block;margin:0 auto;padding:1.6rem 0;-webkit-transform:scale(1.14);-ms-transform:scale(1.14);transform:scale(1.14);} @media (min-width:384px){.BkEGk p img{padding:1.7rem 0;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}} @media (min-width:900px){.BkEGk p img{padding:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}
+/* sc-component-id: post__Title-s293vau-0 */
+.eWUXqT{margin-bottom:1rem;}
+/* sc-component-id: post__ArticleNav-s293vau-1 */
+.PWcgP{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;border-top:1px solid #ddd;padding-top:0.8rem;} @media (min-width:900px){.PWcgP{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}} .PWcgP > a{-webkit-flex:1;-ms-flex:1;flex:1;position:relative;color:#999;padding:0.5rem 0;} .PWcgP > a:active{background:#ddd;} .PWcgP > a::after{content:'';position:absolute;top:50%;margin-top:-0.5rem;width:0;height:0;border-top:0.5rem solid transparent;border-bottom:0.5rem solid transparent;} .PWcgP > a.prev::after{left:-1rem;border-right:0.5rem solid #999;} .PWcgP > a.next{text-align:right;} .PWcgP > a.next::after{right:-1rem;border-left:0.5rem solid #999;}</style><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">移动端HTML5页面开发备忘录 | 杨二</title><meta data-react-helmet="true" name="description" content="把平时开发工作中遇到的一些问题写下来，权当备忘录。 有关Meta 基本Meta 搜索引擎Meta 页面缓存设置Meta 常见问题 移动端字体设置 打电话发短信写邮件 touch…"/><meta data-react-helmet="true" name="keywords" content="tristan yang, blog, writing, frontend"/><meta data-react-helmet="true" name="image" content="https://blog.yangerxiao.com/social/banner.jpg"/><meta data-react-helmet="true" property="og:locale" content="zh_CN"/><meta data-react-helmet="true" property="og:site_name" content="Tristan Yang"/><meta data-react-helmet="true" property="og:url" content="https://blog.yangerxiao.com/posts/html-5-memo"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="移动端HTML5页面开发备忘录"/><meta data-react-helmet="true" property="og:description" content="把平时开发工作中遇到的一些问题写下来，权当备忘录。 有关Meta 基本Meta 搜索引擎Meta 页面缓存设置Meta 常见问题 移动端字体设置 打电话发短信写邮件 touch…"/><meta data-react-helmet="true" property="og:image" content="https://blog.yangerxiao.com/social/banner.jpg"/><script data-react-helmet="true" type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","url":"https://blog.yangerxiao.com/","name":"移动端HTML5页面开发备忘录","alternateName":"杨二的个人博客"},[{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.yangerxiao.com/posts/html-5-memo","name":"移动端HTML5页面开发备忘录","image":"https://blog.yangerxiao.com/social/banner.jpg"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"https://blog.yangerxiao.com/","name":"移动端HTML5页面开发备忘录","alternateName":"杨二的个人博客","headline":"移动端HTML5页面开发备忘录","image":{"@type":"ImageObject","url":"https://blog.yangerxiao.com/social/banner.jpg"},"description":"把平时开发工作中遇到的一些问题写下来，权当备忘录。 有关Meta 基本Meta 搜索引擎Meta 页面缓存设置Meta 常见问题 移动端字体设置 打电话发短信写邮件 touch…"}]]</script><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;-webkit-touch-callout:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsl(0,0%,0%,0.6);font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#4d4d4d;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:1.6rem;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;background:#f9f9f9;border-left:.4rem solid #ccc;margin:1rem 0.4rem;padding:0.5rem .6rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li > ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}button:focus,button:avtive{outline:none;}a{text-decoration:none;color:#333;-webkit-tap-highlight-color:transparent;}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#090a0b"/><script>
+                  var _hmt = _hmt || [];
+                  (function() {
+                      var hm = document.createElement("script");
+                      hm.src = "//hm.baidu.com/hm.js?1cae7396cd8c7648b6ff23a9123052ba";
+                      var s = document.getElementsByTagName("script")[0]; 
+                      s.parentNode.insertBefore(hm, s);
+                  })();
+              </script><link as="script" rel="preload" href="/app-80de48ac6832c129ef12.js"/><link as="script" rel="preload" href="/0-8c4087aaec00fefd63bf.js"/><link as="script" rel="preload" href="/1-6b673e75d0ee6797776c.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-ad3bcfeeb507b2c4b3ef.js"/><link as="script" rel="preload" href="/2-0a6e028e6df490c6c9e3.js"/><link as="script" rel="preload" href="/3-4a9282434f611c66f112.js"/><link as="script" rel="preload" href="/webpack-runtime-6d4f4f1c9e3eae130ebd.js"/><link rel="preload" href="/static/d/442/path---posts-html-5-memo-0-d-8-8dd-cQAdGQ021l7Lc23vuC6fb7D9jzA.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div class="Wrapper__Grid-a11ln1-0 ivSXtK" data-reactroot=""><header class="Header__Wrapper-s1qmorvh-0 ljvFaq"><div class="Header__Hero-s1qmorvh-1 gXbiOu"><h1 class="site"><a class="title" href="/">杨二</a></h1><div class="slogan"><span>Machine repeats, Human creates</span></div></div><div class="wrapper"><div class="Navs__Container-ke6nyr-0 fEuJbJ"><a href="/cates"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">分类</div></a><a href="/archives"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">归档</div></a><a href="/tags"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">标签</div></a><a href="/about"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">关于</div></a></div></div></header><div class="Wrapper__Content-a11ln1-1 hEYPJu"><h2 class="post__Title-s293vau-0 eWUXqT">移动端HTML5页面开发备忘录</h2><div class="Subline__Line-s1kl5kkq-0 gXjStS"><span>2016-11-15<!-- --> </span><span><a href="/cates/技术">技术</a></span><span><span class="tags"><a class="tag" href="/tags/技术">技术</a><a class="tag" href="/tags/备忘">备忘</a><a class="tag" href="/tags/前端">前端</a></span></span></div><article class="PostContent__Container-s10cpw6f-0 BkEGk" id="postContent"><p><img src="https://zerosoul.github.io/2016/11/15/h5-memo/html5.jpg" alt="html5"><br>
+把平时开发工作中遇到的一些问题写下来，权当备忘录。</p>
+<h1 id="有关meta"><a href="#%E6%9C%89%E5%85%B3meta" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>有关Meta</h1>
+<h2 id="基本meta"><a href="#%E5%9F%BA%E6%9C%ACmeta" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>基本Meta</h2>
+<div class="gatsby-highlight" data-language="html">
+      <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- 设置缩放 --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1, user-scalable=no, minimal-ui<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token comment">&lt;!-- 可隐藏地址栏，仅针对IOS的Safari（注：IOS7.0版本以后，safari上已看不到效果） --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>apple-mobile-web-app-capable<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>yes<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token comment">&lt;!-- 仅针对IOS的Safari顶端状态条的样式（可选default/black/black-translucent ） --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>apple-mobile-web-app-status-bar-style<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>black<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token comment">&lt;!-- IOS中禁用将数字识别为电话号码/忽略Android平台中对邮箱地址的识别 --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>format-detection<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>telephone=no, email=no<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+<h2 id="搜索引擎meta"><a href="#%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8Emeta" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>搜索引擎Meta</h2>
+<div class="gatsby-highlight" data-language="html">
+      <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- 搜索引擎索引方式：通常有如下几种取值：none，noindex，nofollow，all，index和follow。--></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>robots<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index,follow<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token comment">&lt;!--
+
+    all：文件将被检索，且页面上的链接可以被查询；
+
+    none：文件将不被检索，且页面上的链接不可以被查询；
+
+    index：文件将被检索；
+
+    follow：页面上的链接可以被查询；
+
+    noindex：文件将不被检索；
+
+    nofollow：页面上的链接不可以被查询。
+
+ --></span></code></pre>
+      </div>
+<h2 id="页面缓存设置meta"><a href="#%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98%E8%AE%BE%E7%BD%AEmeta" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>页面缓存设置Meta</h2>
+<div class="gatsby-highlight" data-language="html">
+      <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- 清除缓存 --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pragma<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no-cache<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cache-control<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no-cache<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>expires<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<h1 id="常见问题"><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>常见问题</h1>
+<h2 id="移动端字体设置"><a href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>移动端字体设置</h2>
+<div class="gatsby-highlight" data-language="css">
+      <pre class="language-css"><code class="language-css"><span class="token comment">/*中英字体名对照表
+
+宋体      SimSun
+
+黑体      SimHei
+
+微信雅黑   Microsoft Yahei
+
+微软正黑体 Microsoft JhengHei
+
+新宋体    NSimSun
+
+新细明体  MingLiU
+
+细明体    MingLiU
+
+标楷体    DFKai-SB
+
+仿宋     FangSong
+
+楷体     KaiTi
+
+仿宋\_GB2312  FangSong\_GB2312
+
+楷体\_GB2312  KaiTi\_GB2312  
+
+说明：中文字体多数使用宋雅黑，英文用Helvetica
+
+*/</span>
+
+<span class="token selector">body</span> <span class="token punctuation">{</span> <span class="token property">font-family</span><span class="token punctuation">:</span> Microsoft Yahei,SimSun,Helvetica<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+      </div>
+<h2 id="打电话发短信写邮件"><a href="#%E6%89%93%E7%94%B5%E8%AF%9D%E5%8F%91%E7%9F%AD%E4%BF%A1%E5%86%99%E9%82%AE%E4%BB%B6" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>打电话发短信写邮件</h2>
+<div class="gatsby-highlight" data-language="html">
+      <pre class="language-html"><code class="language-html">// 打电话
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tel:010-88888<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>打电话给:010-88888<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//  发短信
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sms:88888<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>发短信给: 88888<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+// 写邮件
+
+//注：在添加这些功能时，第一个功能以"?"开头，后面的以"&amp;"开头
+
+//1.普通邮件
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//2.收件地址后添加?cc=开头，可添加抄送地址（Android存在兼容问题）
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com?cc=666@wtf.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//3.跟着抄送地址后，写上&amp;bcc=,可添加密件抄送地址（Android存在兼容问题）
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com?cc=666@wtf.com&amp;bcc=384900096@wtf.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//4.包含多个收件人、抄送、密件抄送人，用分号(;)隔开多个邮件人的地址
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com;384900096@wtf.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//5.包含主题，用?subject=
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com?subject=邮件主题<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//6.包含内容，用?body=;如内容包含文本，使用%0A给文本换行 
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com?body=邮件主题内容%0A我是第二行内容%0A你没有猜错，这是我是第三行。<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//7.内容包含链接，含http(s)://等的文本自动转化为链接
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com?body=http://www.wtf.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//8.内容包含图片（PC不支持）
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com?body=&lt;img src=<span class="token punctuation">'</span>images/torrent.jpg<span class="token punctuation">'</span> /><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+
+//9.完整示例
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:haha@wtf.com;384900096@wtf.com?cc=666@wtf.com&amp;bcc=993233461@wtf.com&amp;subject=[邮主题\]&amp;body=我是第一行内容%0A%0Ahttp://www.baidu.com%0A%0A&lt;img src=<span class="token punctuation">'</span>images/1.jpg<span class="token punctuation">'</span> /><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>快来点我啊，给你发种子。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<h2 id="touch事件"><a href="#touch%E4%BA%8B%E4%BB%B6" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>touch事件</h2>
+<p>事件响应顺序：<code class="language-text">ontouchstart</code> > <code class="language-text">ontouchmove</code> > <code class="language-text">ontouchend</code> > <code class="language-text">onclick</code></p>
+<ul>
+<li><code class="language-text">touchstart</code>——当手指触碰屏幕时候发生</li>
+<li><code class="language-text">touchmove</code>——当手指在屏幕上滑动时连续触发。</li>
+<li>通常在滑屏页面，会调用<code class="language-text">event</code>的<code class="language-text">preventDefault()</code>可以阻止默认情况的发生：阻止页面滚动</li>
+<li><code class="language-text">touchend</code>——当手指离开屏幕时触发</li>
+<li><code class="language-text">touchcancel</code>——系统停止跟踪触摸时候会触发。例如在触摸过程中突然页面<code class="language-text">alert()</code>，此时会触发该事件，这个事件比较少用。</li>
+</ul>
+<p>TouchEvent说明：</p>
+<ul>
+<li>touches：屏幕上所有手指的信息</li>
+<li>targetTouches：手指在目标区域的手指信息</li>
+<li>changedTouches：最近一次触发该事件的手指信息</li>
+<li>touchend时，touches与targetTouches信息会被删除，changedTouches保存的最后一次的信息，用于计算手指信息</li>
+</ul>
+<p>参数信息(changedTouches[0])</p>
+<ul>
+<li>clientX、clientY在显示区的坐标</li>
+<li>target：当前元素</li>
+</ul>
+<h2 id="科普：移动端click事件200-300ms的延时响应"><a href="#%E7%A7%91%E6%99%AE%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AFclick%E4%BA%8B%E4%BB%B6200-300ms%E7%9A%84%E5%BB%B6%E6%97%B6%E5%93%8D%E5%BA%94" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>科普：移动端click事件200-300ms的延时响应</h2>
+<p>以下是历史原因：</p>
+<blockquote>
+<p>2007年苹果发布首款iphone上IOS系统搭载的safari为了将适用于PC端上大屏幕的网页能比较好的展示在手机端上，使用了双击缩放(double tap to zoom)的方案，比如你在手机上用浏览器打开一个PC上的网页，你可能在看到页面内容虽然可以撑满整个屏幕，但是字体、图片都很小看不清，此时可以快速双击屏幕上的某一部分，你就能看清该部分放大后的内容，再次双击后能回到原始状态。<br>
+双击缩放是指用手指在屏幕上快速点击两次，iOS 自带的 Safari 浏览器会将网页缩放至原始比例。<br>
+原因就出在浏览器需要如何判断快速点击上，当用户在屏幕上单击某一个元素时候，例如跳转链接<code class="language-<a href="#"">&lt;/a</code>，此处浏览器会先捕获该次单击，但浏览器不能决定用户是单纯要点击链接还是要双击该部分区域进行缩放操作，所以，捕获第一次单击后，浏览器会先Hold一段时间t，如果在t时间区间里用户未进行下一次点击，则浏览器会做单击跳转链接的处理，如果t时间里用户进行了第二次单击操作，则浏览器会禁止跳转，转而进行对该部分区域页面的缩放操作。那么这个时间区间t有多少呢？在IOS safari下，大概为300毫秒。这就是延迟的由来。</p>
+</blockquote>
+<p>造成的后果用户纯粹单击页面，页面需要过一段时间才响应，给用户慢体验感觉，对于web开发者来说是，页面js捕获click事件的回调函数处理，需要300ms后才生效，也就间接导致影响其他业务逻辑的处理。</p>
+<p>解决方案：</p>
+<ul>
+<li><a href="https://github.com/ftlabs/fastclick">fastclick</a></li>
+<li>zepto的<a href="https://github.com/madrobby/zepto/blob/master/src/touch.js#files">touch模块</a></li>
+</ul>
+<h2 id="点击元素产生背景或边框问题"><a href="#%E7%82%B9%E5%87%BB%E5%85%83%E7%B4%A0%E4%BA%A7%E7%94%9F%E8%83%8C%E6%99%AF%E6%88%96%E8%BE%B9%E6%A1%86%E9%97%AE%E9%A2%98" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>点击元素产生背景或边框问题</h2>
+<div class="gatsby-highlight" data-language="css">
+      <pre class="language-css"><code class="language-css"><span class="token selector">a,button,input,textarea</span> <span class="token punctuation">{</span> 
+
+    <span class="token property">-webkit-tap-highlight-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0,0,0,0<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token property">-webkit-user-modify</span><span class="token punctuation">:</span>read-write-plaintext-only<span class="token punctuation">;</span> //-webkit-user-modify有个副作用，就是输入法不再能够输入多个字符
+
+<span class="token punctuation">}</span>   </code></pre>
+      </div>
+<p>/<em>也可以...，简单粗暴</em>/</p>
+<p>* { -webkit-tap-highlight-color: rgba(0,0,0,0); }</p>
+<h2 id="字体单位font-size选择px还是rem"><a href="#%E5%AD%97%E4%BD%93%E5%8D%95%E4%BD%8Dfont-size%E9%80%89%E6%8B%A9px%E8%BF%98%E6%98%AFrem" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>字体单位font-size选择px还是rem</h2>
+<div class="gatsby-highlight" data-language="css">
+      <pre class="language-css"><code class="language-css"> <span class="token comment">/*如需适配多种移动设备，建议使用rem。以下为参考值：*/</span>
+
+<span class="token selector">html</span> <span class="token punctuation">{</span> <span class="token property">font-size</span><span class="token punctuation">:</span> 62.5%<span class="token punctuation">;</span> <span class="token punctuation">}</span>   <span class="token comment">/*10÷16 = 62.5%\*/</span></code></pre>
+      </div>
+<p>/*设置12px字体。</p>
+<p>注：在rem前要加上对应的px值，解决不支持rem的浏览器的兼容问题，做到优雅降级*/</p>
+<p>body { font-size:12px; font-size:1.2rem; }</p>
+<h2 id="其它一些实用css技巧"><a href="#%E5%85%B6%E5%AE%83%E4%B8%80%E4%BA%9B%E5%AE%9E%E7%94%A8css%E6%8A%80%E5%B7%A7" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>其它一些实用CSS技巧</h2>
+<div class="gatsby-highlight" data-language="css">
+      <pre class="language-css"><code class="language-css"><span class="token comment">/*禁止长按链接与图片弹出菜单*/</span>
+
+<span class="token selector">a,img</span> <span class="token punctuation">{</span> <span class="token property">-webkit-touch-callout</span><span class="token punctuation">:</span> none <span class="token punctuation">}</span>    
+
+<span class="token comment">/*禁止ios和android用户选中文字*/</span>
+
+<span class="token selector">html,body</span> <span class="token punctuation">{</span><span class="token property">-webkit-user-select</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span> <span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">/*改变输入框placeholder的颜色值*/</span>
+
+<span class="token selector">::-webkit-input-placeholder</span> <span class="token punctuation">{</span> <span class="token comment">/* WebKit browsers */</span>
+
+<span class="token property">color</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token selector">:-moz-placeholder</span> <span class="token punctuation">{</span> <span class="token comment">/* Mozilla Firefox 4 to 18 */</span>
+
+<span class="token property">color</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token selector">::-moz-placeholder</span> <span class="token punctuation">{</span> <span class="token comment">/* Mozilla Firefox 19+ */</span>
+
+<span class="token property">color</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token selector">:-ms-input-placeholder</span> <span class="token punctuation">{</span> <span class="token comment">/* Internet Explorer 10+ */</span>
+
+<span class="token property">color</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token selector">input:focus::-webkit-input-placeholder</span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span>#999<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">/*android上去掉语音输入按钮\*/</span>
+
+<span class="token selector">input::-webkit-input-speech-button</span> <span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">}</span></code></pre>
+      </div>
+<h2 id="禁用input在ios下，输入英文首字母的默认大写"><a href="#%E7%A6%81%E7%94%A8input%E5%9C%A8ios%E4%B8%8B%EF%BC%8C%E8%BE%93%E5%85%A5%E8%8B%B1%E6%96%87%E9%A6%96%E5%AD%97%E6%AF%8D%E7%9A%84%E9%BB%98%E8%AE%A4%E5%A4%A7%E5%86%99" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>禁用input在ios下，输入英文首字母的默认大写</h2>
+<div class="gatsby-highlight" data-language="html">
+      <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">autocapitalize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span> <span class="token attr-name">autocorrect</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+<h2 id="屏幕旋转的事件和样式"><a href="#%E5%B1%8F%E5%B9%95%E6%97%8B%E8%BD%AC%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%92%8C%E6%A0%B7%E5%BC%8F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>屏幕旋转的事件和样式</h2>
+<p>JS处理： </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">orientInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> orientChk <span class="token operator">=</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientWidth <span class="token operator">></span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientHeight<span class="token operator">?</span><span class="token string">'landscape'</span><span class="token punctuation">:</span><span class="token string">'portrait'</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span>orientChk <span class="token operator">==</span><span class="token string">'lapdscape'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token comment">//横屏下需要执行代码</span>
+
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+
+        <span class="token comment">//竖屏下需要执行代码</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token function">orientInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'onorientationchange'</span> <span class="token keyword">in</span> window<span class="token operator">?</span><span class="token string">'orientationchange'</span><span class="token punctuation">:</span><span class="token string">'resize'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span>orientInit<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span></code></pre>
+      </div>
+<p>CSS处理：  </p>
+<div class="gatsby-highlight" data-language="css">
+      <pre class="language-css"><code class="language-css"><span class="token comment">/*竖屏时样式*/</span>
+
+<span class="token atrule"><span class="token rule">@media</span> all and <span class="token punctuation">(</span><span class="token property">orientation</span><span class="token punctuation">:</span>portrait<span class="token punctuation">)</span></span><span class="token punctuation">{</span>   <span class="token punctuation">}</span>
+
+<span class="token comment">/*横屏时样式*/</span>
+
+<span class="token atrule"><span class="token rule">@media</span> all and <span class="token punctuation">(</span><span class="token property">orientation</span><span class="token punctuation">:</span>landscape<span class="token punctuation">)</span></span><span class="token punctuation">{</span>   <span class="token punctuation">}</span></code></pre>
+      </div>
+<h2 id="播放视频不全屏"><a href="#%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91%E4%B8%8D%E5%85%A8%E5%B1%8F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>播放视频不全屏</h2>
+<div class="gatsby-highlight" data-language="html">
+      <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!--
+
+1.ios7+支持自动播放
+
+2.支持Airplay的设备（如：音箱、Apple TV)播放
+
+x-webkit-airplay="true" 
+
+3.播放视频不全屏
+
+webkit-playsinline="true" 
+
+--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">x-webkit-airplay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">webkit-playsinline</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">preload</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>auto<span class="token punctuation">"</span></span> <span class="token attr-name">autoplay</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<h2 id="消除transition闪屏"><a href="#%E6%B6%88%E9%99%A4transition%E9%97%AA%E5%B1%8F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>消除transition闪屏</h2>
+<div class="gatsby-highlight" data-language="css">
+      <pre class="language-css"><code class="language-css"><span class="token selector">.css</span> <span class="token punctuation">{</span>
+
+    <span class="token property">-webkit-transform-style</span><span class="token punctuation">:</span> preserve-3d<span class="token punctuation">;</span>
+
+    <span class="token property">-webkit-backface-visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+
+    <span class="token property">-webkit-perspective</span><span class="token punctuation">:</span> 1000<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div></article><div class="post__ArticleNav-s293vau-1 PWcgP"><a class="prev" href="/posts/20-humanity-witness">阅读笔记《20位人性见证者：当代摄影大师》</a><a class="next" href="/posts/running-life">村上春树：人生马拉松</a></div><div id="disqus_thread"></div><div class="wrapper"><div class="Navs__Container-ke6nyr-0 gfQakl"><a href="/cates"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">分类</div></a><a href="/archives"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">归档</div></a><a href="/tags"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">标签</div></a><a href="/about"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">关于</div></a></div></div></div><div class="FixContainer__Container-s5tcbud-0 cnNEXi"><div class="TOC__Toc-gywqkf-0 heeqbv"><div class="mask"></div><div class="content"><ul>
+<li>
+<p><a href="/posts/html-5-memo/#%E6%9C%89%E5%85%B3meta">有关Meta</a></p>
+<ul>
+<li><a href="/posts/html-5-memo/#%E5%9F%BA%E6%9C%ACmeta">基本Meta</a></li>
+<li><a href="/posts/html-5-memo/#%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8Emeta">搜索引擎Meta</a></li>
+<li><a href="/posts/html-5-memo/#%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98%E8%AE%BE%E7%BD%AEmeta">页面缓存设置Meta</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/posts/html-5-memo/#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">常见问题</a></p>
+<ul>
+<li><a href="/posts/html-5-memo/#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE">移动端字体设置</a></li>
+<li><a href="/posts/html-5-memo/#%E6%89%93%E7%94%B5%E8%AF%9D%E5%8F%91%E7%9F%AD%E4%BF%A1%E5%86%99%E9%82%AE%E4%BB%B6">打电话发短信写邮件</a></li>
+<li><a href="/posts/html-5-memo/#touch%E4%BA%8B%E4%BB%B6">touch事件</a></li>
+<li><a href="/posts/html-5-memo/#%E7%A7%91%E6%99%AE%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AFclick%E4%BA%8B%E4%BB%B6200-300ms%E7%9A%84%E5%BB%B6%E6%97%B6%E5%93%8D%E5%BA%94">科普：移动端click事件200-300ms的延时响应</a></li>
+<li><a href="/posts/html-5-memo/#%E7%82%B9%E5%87%BB%E5%85%83%E7%B4%A0%E4%BA%A7%E7%94%9F%E8%83%8C%E6%99%AF%E6%88%96%E8%BE%B9%E6%A1%86%E9%97%AE%E9%A2%98">点击元素产生背景或边框问题</a></li>
+<li><a href="/posts/html-5-memo/#%E5%AD%97%E4%BD%93%E5%8D%95%E4%BD%8Dfont-size%E9%80%89%E6%8B%A9px%E8%BF%98%E6%98%AFrem">字体单位font-size选择px还是rem</a></li>
+<li><a href="/posts/html-5-memo/#%E5%85%B6%E5%AE%83%E4%B8%80%E4%BA%9B%E5%AE%9E%E7%94%A8css%E6%8A%80%E5%B7%A7">其它一些实用CSS技巧</a></li>
+<li><a href="/posts/html-5-memo/#%E7%A6%81%E7%94%A8input%E5%9C%A8ios%E4%B8%8B%EF%BC%8C%E8%BE%93%E5%85%A5%E8%8B%B1%E6%96%87%E9%A6%96%E5%AD%97%E6%AF%8D%E7%9A%84%E9%BB%98%E8%AE%A4%E5%A4%A7%E5%86%99">禁用input在ios下，输入英文首字母的默认大写</a></li>
+<li><a href="/posts/html-5-memo/#%E5%B1%8F%E5%B9%95%E6%97%8B%E8%BD%AC%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%92%8C%E6%A0%B7%E5%BC%8F">屏幕旋转的事件和样式</a></li>
+<li><a href="/posts/html-5-memo/#%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91%E4%B8%8D%E5%85%A8%E5%B1%8F">播放视频不全屏</a></li>
+<li><a href="/posts/html-5-memo/#%E6%B6%88%E9%99%A4transition%E9%97%AA%E5%B1%8F">消除transition闪屏</a></li>
+</ul>
+</li>
+</ul></div><button class="btn fold"><span class="line"></span><span class="line"></span><span class="line"></span></button></div><div class="Backtop__Circle-s2n6kzp-0 ctQqnq" style="visibility:hidden"><div class="wrapper"></div></div></div><footer class="Footer__Content-qjve7o-0 fHxAMN"><div>© 2018 by Tristan Yang </div><div class="power">Powered by <a href="http://reactjs.org/">React.js</a> &amp; <a href="https://www.gatsbyjs.org/">Gatsby.js</a></div></footer></div></div><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-120211336-1', 'auto');
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-js","jsonName":"posts-html-5-memo-0d8","path":"/posts/html-5-memo"};window.dataPath="442/path---posts-html-5-memo-0-d-8-8dd-cQAdGQ021l7Lc23vuC6fb7D9jzA";/*]]>*/</script><script src="/webpack-runtime-6d4f4f1c9e3eae130ebd.js" async=""></script><script src="/3-4a9282434f611c66f112.js" async=""></script><script src="/2-0a6e028e6df490c6c9e3.js" async=""></script><script src="/component---src-templates-post-js-ad3bcfeeb507b2c4b3ef.js" async=""></script><script src="/1-6b673e75d0ee6797776c.js" async=""></script><script src="/0-8c4087aaec00fefd63bf.js" async=""></script><script src="/app-80de48ac6832c129ef12.js" async=""></script></body></html>

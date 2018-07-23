@@ -1,0 +1,607 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge;chrome"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta rel="shortcut icon" href="/favicon.ico"/><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script><style data-href="/component---src-templates-post-js.9543c128f9a4e8d80ab1.css">code,code[class*=language-],pre[class*=language-]{color:#fff;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;text-shadow:0 -.1em .2em #000;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}:not(pre)>code[class*=language-],code,pre[class*=language-]{background:#141414}code{padding:.1rem .4rem;margin:0 .2rem;white-space:pre-wrap}pre[class*=language-]{-webkit-box-shadow:1px 1px .5em #000 inset;box-shadow:inset 1px 1px .5em #000;margin:.5rem 0;overflow:auto;padding:.4rem}pre[class*=language-]::-moz-selection{background:#27292a}pre[class*=language-]::selection{background:#27292a}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:hsla(0,0%,93%,.15)}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:hsla(0,0%,93%,.15)}:not(pre)>code[class*=language-]{border-radius:.3em;border:.13em solid #545454;-webkit-box-shadow:1px 1px .3em -.1em #000 inset;box-shadow:inset 1px 1px .3em -.1em #000;padding:.15em .2em .05em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#787878}.namespace,.token.punctuation{opacity:.7}.token.boolean,.token.deleted,.token.number,.token.tag{color:#cf694a}.token.builtin,.token.constant,.token.keyword,.token.property,.token.selector,.token.symbol{color:#f9ee9a}.language-css .token.string,.style .token.string,.token.attr-name,.token.attr-value,.token.char,.token.entity,.token.inserted,.token.operator,.token.string,.token.url,.token.variable{color:#919e6b}.token.atrule{color:#7386a5}.token.important,.token.regex{color:#e9c163}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[data-line]{padding:1em 0 1em 3em;position:relative}.language-markup .token.attr-name,.language-markup .token.punctuation,.language-markup .token.tag{color:#ad895c}.token{position:relative;z-index:1}.line-highlight{background:rgba(84,84,84,.25);background:-webkit-gradient(linear,left top,right top,color-stop(70%,rgba(84,84,84,.1)),to(rgba(84,84,84,0)));background:linear-gradient(90deg,rgba(84,84,84,.1) 70%,rgba(84,84,84,0));border-bottom:1px dashed #545454;border-top:1px dashed #545454;left:0;line-height:inherit;margin-top:.75em;padding:inherit 0;pointer-events:none;position:absolute;right:0;white-space:pre;z-index:0}.line-highlight:before,.line-highlight[data-end]:after{background-color:#8794a6;border-radius:999px;-webkit-box-shadow:0 1px #fff;box-shadow:0 1px #fff;color:#f5f2f0;content:attr(data-start);font:700 65%/1.5 sans-serif;left:.6em;min-width:1em;padding:0 .5em;position:absolute;text-align:center;text-shadow:none;top:.4em;vertical-align:.3em}.line-highlight[data-end]:after{bottom:.4em;content:attr(data-end);top:auto}
+
+/*# sourceMappingURL=component---src-templates-post-js.9543c128f9a4e8d80ab1.css.map*/</style><style data-styled-components="ivSXtK ljvFaq gXbiOu fEuJbJ gfQakl dGDpda hEYPJu eWUXqT gXjStS BkEGk PWcgP cnNEXi heeqbv ctQqnq fHxAMN">
+/* sc-component-id: Subline__Line-s1kl5kkq-0 */
+.gXjStS{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;font-size:0.6rem;-webkit-overflow-scrolling:touch;} .gXjStS::-webkit-scrollbar{display:none;} .gXjStS > span{padding:0.2rem 0.3rem;border:1px solid #eee;margin-right:0.2rem;margin-bottom:0.2rem;border-radius:0.2rem;} .gXjStS > span .tags{margin-left:0.5rem;} .gXjStS > span .tags .tag{position:relative;margin-right:0.6rem;} .gXjStS > span .tags .tag:before{content:'#';position:absolute;left:-0.4rem;}
+/* sc-component-id: Button__Wrapper-s1goobno-0 */
+.dGDpda{margin-right:0.4rem;margin-bottom:0.2rem;border-radius:0.6rem;font-size:1rem;color:white;background:#333;padding:0.3rem 0.6rem;cursor:pointer;} .dGDpda:active{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-transition:-webkit-transform 0.5s;-webkit-transition:transform 0.5s;transition:transform 0.5s;}
+/* sc-component-id: Navs__Container-ke6nyr-0 */
+.fEuJbJ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:space-between;-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;margin:0 auto;margin-bottom:1.5rem;margin-top:0;max-width:90%;} @media (min-width:480px){.fEuJbJ{max-width:55%;}} @media (min-width:900px){.fEuJbJ{max-width:30%;}} .fEuJbJ a{-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;margin:0 0.2rem;} .fEuJbJ a .btn{margin:0 auto;} .fEuJbJ a.curr{position:relative;} .fEuJbJ a.curr .btn{background:#666;} .fEuJbJ a.curr:after,.fEuJbJ a.curr:before{top:100%;left:50%;border:solid transparent;content:' ';height:0;width:0;position:absolute;pointer-events:none;} .fEuJbJ a.curr:after{border-color:rgba(136,183,213,0);border-top-color:#666;border-width:0.6rem;margin-left:-0.6rem;}.gfQakl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:space-between;-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;margin:0 auto;margin-bottom:1.5rem;margin-top:2rem;margin-bottom:0;max-width:90%;} @media (min-width:480px){.gfQakl{max-width:80%;}} @media (min-width:900px){.gfQakl{max-width:60%;}} .gfQakl a{-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;margin:0 0.2rem;} .gfQakl a .btn{margin:0 auto;} .gfQakl a.curr{position:relative;} .gfQakl a.curr .btn{background:#666;} .gfQakl a.curr:after,.gfQakl a.curr:before{top:100%;left:50%;border:solid transparent;content:' ';height:0;width:0;position:absolute;pointer-events:none;} .gfQakl a.curr:after{border-color:rgba(136,183,213,0);border-top-color:#666;border-width:0.6rem;margin-left:-0.6rem;}
+/* sc-component-id: Header__Wrapper-s1qmorvh-0 */
+.ljvFaq{margin:0 auto;padding:0 0.5rem;}
+/* sc-component-id: Header__Hero-s1qmorvh-1 */
+.gXbiOu{padding-bottom:1rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:2rem;} .gXbiOu .site{text-align:center;margin-bottom:1rem;} .gXbiOu .site .title{padding:0.6rem 2rem;background:#222;color:#fff;} .gXbiOu .slogan{color:#808080;margin-bottom:0.4rem;}
+/* sc-component-id: Backtop__Circle-s2n6kzp-0 */
+.ctQqnq{width:2rem;height:2rem;border-radius:0.5rem;background:#ddd;cursor:pointer;} .ctQqnq .wrapper{position:relative;} .ctQqnq .wrapper:before,.ctQqnq .wrapper:after{content:'';position:absolute;top:0.9rem;left:0.34rem;width:0.8rem;height:0.14rem;background:#444;} .ctQqnq .wrapper:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);left:0.82rem;} .ctQqnq .wrapper:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}
+/* sc-component-id: FixContainer__Container-s5tcbud-0 */
+.cnNEXi{position:fixed;right:20px;bottom:30px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;} @media (min-width:900px){.cnNEXi{right:16%;}} .cnNEXi > *{margin:0.8rem 0;}
+/* sc-component-id: Footer__Content-qjve7o-0 */
+.fHxAMN{padding:3rem 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} @media print{.fHxAMN .power{display:none;}}
+/* sc-component-id: Wrapper__Grid-a11ln1-0 */
+.ivSXtK{margin:0 auto;padding:0;min-height:60vh;}
+/* sc-component-id: Wrapper__Content-a11ln1-1 */
+.hEYPJu{box-shadow:0 4px 120px rgba(0,0,0,0.1);border-radius:1rem;padding:2rem 1rem;overflow:hidden;margin:0 auto;} @media (min-width:480px){.hEYPJu{padding:2.6rem;}} @media (min-width:900px){.hEYPJu{padding:3rem 6rem;max-width:75%;}}
+/* sc-component-id: TOC__Toc-gywqkf-0 */
+.heeqbv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;z-index:999;} .heeqbv .mask{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:none;z-index:998;} .heeqbv button{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:2rem;height:2rem;border:1px solid #ddd;padding:0.2rem;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-radius:0.5rem;position:relative;cursor:pointer;background:#eee;z-index:999;} .heeqbv button:focus{outline:none;} .heeqbv button .line{background:#333;display:inline-block;width:1rem;height:0.1rem;margin:0.09rem 0;} .heeqbv button.unfold .line{display:none;} .heeqbv button.unfold:before,.heeqbv button.unfold:after{content:'';position:absolute;height:1rem;width:0.1rem;top:50%;right:50%;background:#333;margin-right:-0.05rem;margin-top:-0.5rem;} .heeqbv button.unfold:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);} .heeqbv button.unfold:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);} .heeqbv .content{z-index:999;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);padding:0.6rem;margin-bottom:0.5rem;border:1px solid #ddd;background:#eee;border-radius:0.5rem;display:none;max-height:70vh;overflow:scroll;} .heeqbv .content ul{list-style:none;margin:0.4rem 0;} .heeqbv .content ul li{padding:0;margin:0.4rem 0;} .heeqbv .content ul ul{font-size:0.8rem;margin-left:0.4rem;}
+/* sc-component-id: PostContent__Container-s10cpw6f-0 */
+.BkEGk{margin-top:2rem;} .BkEGk a{-webkit-text-decoration:underline;text-decoration:underline;} .BkEGk h1{font-size:1.6rem;} .BkEGk h2{font-size:1.2rem;} .BkEGk p img{display:block;margin:0 auto;padding:1.6rem 0;-webkit-transform:scale(1.14);-ms-transform:scale(1.14);transform:scale(1.14);} @media (min-width:384px){.BkEGk p img{padding:1.7rem 0;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}} @media (min-width:900px){.BkEGk p img{padding:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}
+/* sc-component-id: post__Title-s293vau-0 */
+.eWUXqT{margin-bottom:1rem;}
+/* sc-component-id: post__ArticleNav-s293vau-1 */
+.PWcgP{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;border-top:1px solid #ddd;padding-top:0.8rem;} @media (min-width:900px){.PWcgP{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}} .PWcgP > a{-webkit-flex:1;-ms-flex:1;flex:1;position:relative;color:#999;padding:0.5rem 0;} .PWcgP > a:active{background:#ddd;} .PWcgP > a::after{content:'';position:absolute;top:50%;margin-top:-0.5rem;width:0;height:0;border-top:0.5rem solid transparent;border-bottom:0.5rem solid transparent;} .PWcgP > a.prev::after{left:-1rem;border-right:0.5rem solid #999;} .PWcgP > a.next{text-align:right;} .PWcgP > a.next::after{right:-1rem;border-left:0.5rem solid #999;}</style><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">React Native之美：构建我的第一个iOS APP（1） | 杨二</title><meta data-react-helmet="true" name="description" content="…"/><meta data-react-helmet="true" name="keywords" content="tristan yang, blog, writing, frontend"/><meta data-react-helmet="true" name="image" content="https://blog.yangerxiao.com/social/banner.jpg"/><meta data-react-helmet="true" property="og:locale" content="zh_CN"/><meta data-react-helmet="true" property="og:site_name" content="Tristan Yang"/><meta data-react-helmet="true" property="og:url" content="https://blog.yangerxiao.com/posts/building-my-first-ios-app-with-react-native-part-one"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="React Native之美：构建我的第一个iOS APP（1）"/><meta data-react-helmet="true" property="og:description" content="…"/><meta data-react-helmet="true" property="og:image" content="https://blog.yangerxiao.com/social/banner.jpg"/><script data-react-helmet="true" type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","url":"https://blog.yangerxiao.com/","name":"React Native之美：构建我的第一个iOS APP（1）","alternateName":"杨二的个人博客"},[{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.yangerxiao.com/posts/building-my-first-ios-app-with-react-native-part-one","name":"React Native之美：构建我的第一个iOS APP（1）","image":"https://blog.yangerxiao.com/social/banner.jpg"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"https://blog.yangerxiao.com/","name":"React Native之美：构建我的第一个iOS APP（1）","alternateName":"杨二的个人博客","headline":"React Native之美：构建我的第一个iOS APP（1）","image":{"@type":"ImageObject","url":"https://blog.yangerxiao.com/social/banner.jpg"},"description":"…"}]]</script><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;-webkit-touch-callout:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsl(0,0%,0%,0.6);font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#4d4d4d;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:1.6rem;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;background:#f9f9f9;border-left:.4rem solid #ccc;margin:1rem 0.4rem;padding:0.5rem .6rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li > ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}button:focus,button:avtive{outline:none;}a{text-decoration:none;color:#333;-webkit-tap-highlight-color:transparent;}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#090a0b"/><script>
+                  var _hmt = _hmt || [];
+                  (function() {
+                      var hm = document.createElement("script");
+                      hm.src = "//hm.baidu.com/hm.js?1cae7396cd8c7648b6ff23a9123052ba";
+                      var s = document.getElementsByTagName("script")[0]; 
+                      s.parentNode.insertBefore(hm, s);
+                  })();
+              </script><link as="script" rel="preload" href="/app-80de48ac6832c129ef12.js"/><link as="script" rel="preload" href="/0-8c4087aaec00fefd63bf.js"/><link as="script" rel="preload" href="/1-6b673e75d0ee6797776c.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-ad3bcfeeb507b2c4b3ef.js"/><link as="script" rel="preload" href="/2-0a6e028e6df490c6c9e3.js"/><link as="script" rel="preload" href="/3-4a9282434f611c66f112.js"/><link as="script" rel="preload" href="/webpack-runtime-6d4f4f1c9e3eae130ebd.js"/><link rel="preload" href="/static/d/461/path---posts-building-my-first-ios-app-with-react-native-part-one-47-d-77c-fMGK2NRYKVpbPrmfWqymHuUVkFU.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div class="Wrapper__Grid-a11ln1-0 ivSXtK" data-reactroot=""><header class="Header__Wrapper-s1qmorvh-0 ljvFaq"><div class="Header__Hero-s1qmorvh-1 gXbiOu"><h1 class="site"><a class="title" href="/">杨二</a></h1><div class="slogan"><span>Machine repeats, Human creates</span></div></div><div class="wrapper"><div class="Navs__Container-ke6nyr-0 fEuJbJ"><a href="/cates"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">分类</div></a><a href="/archives"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">归档</div></a><a href="/tags"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">标签</div></a><a href="/about"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">关于</div></a></div></div></header><div class="Wrapper__Content-a11ln1-1 hEYPJu"><h2 class="post__Title-s293vau-0 eWUXqT">React Native之美：构建我的第一个iOS APP（1）</h2><div class="Subline__Line-s1kl5kkq-0 gXjStS"><span>2016-6-5<!-- --> </span><span><a href="/cates/它山之石">它山之石</a></span><span><span class="tags"><a class="tag" href="/tags/react-native">react native</a><a class="tag" href="/tags/react">react</a><a class="tag" href="/tags/翻译">翻译</a></span></span></div><article class="PostContent__Container-s10cpw6f-0 BkEGk" id="postContent"><p><img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/rn.png" alt="React Native"></p>
+<h1 id="写在前面的话"><a href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E8%AF%9D" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>写在前面的话</h1>
+<p>严格来说这是一篇译文，但与一般的翻译有所不同，我会修正原文中一些小错误，也会指出没有提及的一些坑，还会基于原文的想法做一些扩展开发。所以，读的时候有些是原作者的话，有些是我的添油加醋，但整体绝对保证流畅。另，基于原文改动较多，也就懒得一一标注出来，或许显得有些不负责，但是…<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/ldwy.jpg" alt="来打我呀"><br>
+好了，下面开始进入正题：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/zb.jpg" alt="装逼"></p>
+<h1 id="之前的困惑"><a href="#%E4%B9%8B%E5%89%8D%E7%9A%84%E5%9B%B0%E6%83%91" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>之前的困惑</h1>
+<p>使用<code class="language-text">Javascript</code>来构建移动应用已经不是什么新鲜事了。<a href="http://ionicframework.com/">Ionic</a>和<a href="http://phonegap.com/">Phonegap</a>已经做了大量的探索，建立了各自的开发生态圈，吸引了相当多的开发者，不得不说都获得了一定程度的成功。</p>
+<p>但是，尝试做了一些小Demo后，这些框架变得毫无吸引力，主要原因应该是<strong>很难做到原生体验</strong>。后来，转念一想，为啥不使用<code class="language-text">Swift/Objective-C</code>或者<code class="language-text">Java</code>构建原生app呢，诚然，这对于从前端开发转向app开发，需要学习的挺多，但这不正是一名现代Web开发者所擅长的吗：快速学习。那么，从哪儿开头呢？在Google过程中遇到了一篇文章：<a href="https://medium.com/ios-os-x-development/an-ios-developer-on-react-native-1f24786c29f0#.avhlz9qsr">An iOS Developer on React Native</a>，其中一句话打动了我：</p>
+<blockquote>
+<p>Fast-forward a couple of months, and I’m confident enough to say I may never write an iOS app in Objective-C or Swift again.（快进几个月，我有足够的信心说：再也不会用Objective-C或者Swift来写iOS app了！）</p>
+</blockquote>
+<p>一切的遇见都不是偶然的。看来，官方语言也有不少坑，那为啥不选择<code class="language-text">React Native</code>呢，更何况自己是前端工（Ban）程（Zhuan）师（De）。好吧，我承认绕了个不必要的圈子，但走一些弯路能看到更多的风景，不是吗？<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/ym.png" alt="姚明"><br>
+好的，下面先了解下需求。（难道不应该是先说一下<code class="language-text">React Native</code>么 (╯‵□′)╯︵┻━┻）</p>
+<h1 id="先谈谈需求"><a href="#%E5%85%88%E8%B0%88%E8%B0%88%E9%9C%80%E6%B1%82" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>先谈谈需求</h1>
+<p>很不幸，我从未在苹果商店找到过一个设置手机壁纸的完美APP。在Mac上，<a href="http://unsplash.com/">Unsplash</a>承包了我的所有这方面的需求，很完美，然而在手机上…对不起，打开<code class="language-text">Setting</code>，找到<code class="language-text">Wallpaper</code>…。</p>
+<p>为何不试着做一个满足自己需求的APP呢？下面是我目前希望有的功能点：</p>
+<ul>
+<li>随机展示适合当做手机壁纸的图片</li>
+<li>可以滑动浏览</li>
+<li>可以保存到相册</li>
+<li>保存前可以预览设置后的效果</li>
+</ul>
+<p>虽然最后一项不知道能否做到，但至少可以开始撸其它功能点了。额，等等，开始之前，我觉得有必要提醒一下你应该知道的事情：</p>
+<ul>
+<li>Javascript</li>
+<li>一些<code class="language-text">ES6</code>的特性：<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes">类</a>，<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>,<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构</a>和<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/template_strings">模板字符串</a></li>
+<li>Mac OS X 终端 （好吧，你应该有个Mac或者Macbook）</li>
+<li>CSS：flexbox (<a href="http://flexboxfroggy.com/">这里</a>有个非常棒的flexbox游戏教程)</li>
+<li><a href="https://facebook.github.io/react/">React</a>：React的一些基本概念需要知道，比如<code class="language-text">JSX</code>、<code class="language-text">state</code>和<code class="language-text">prop</code>的区别、<code class="language-text">Virtual DOM</code>。</li>
+</ul>
+<h1 id="再谈谈文章的规划"><a href="#%E5%86%8D%E8%B0%88%E8%B0%88%E6%96%87%E7%AB%A0%E7%9A%84%E8%A7%84%E5%88%92" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>再谈谈文章的规划</h1>
+<p>由于涉及的知识点较多，<code class="language-text">构建我的第一个iOS app</code>将分为两篇来完成。每一篇有<strong>五个章节</strong>，每个章节会推进一步，直至完成预期。文章略长，一旦开始，最好以章节为单位来进行。建议先收藏，回家坐在电脑前慢慢品。</p>
+<h2 id="1first-blood建一个空react-native项目"><a href="#1first-blood%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A9%BAreact-native%E9%A1%B9%E7%9B%AE" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.First Blood:建一个空React Native项目</h2>
+<p>首先确认已安装：</p>
+<ul>
+<li><a href="https://developer.apple.com/xcode/">XCode 7.0或更高版本</a></li>
+<li><a href="https://nodejs.org/en/">Node</a></li>
+</ul>
+<p>然后，在终端输入：<code class="language-text">npm install -g react-native-cli</code>，全局安装React Native。</p>
+<p>如果你觉得我说的不够详细，请移步<a href="https://facebook.github.io/react-native/docs/getting-started.html#content">React Native的官方安装文档</a></p>
+<p>在你电脑找块风水宝地，用于初始化项目目录。在该文件夹下执行命令：<code class="language-text">react-native init PIW</code>。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/init.png" alt="init"><br>
+（<code class="language-text">PIW</code>是<code class="language-text">Pick Image as Wallpaper</code>的缩写，不要在意这个细节，我为了装X起的。另，鉴于网络因素，等待时间应该较长，此时可以去小个便，或者逗逗你的宠物。）</p>
+<p><code class="language-text">init</code>后的项目目录：</p>
+<p><img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/dir.png" alt="项目目录"></p>
+<p>很显然，<code class="language-text">index.android.js</code>和<code class="language-text">index.ios.js</code>分别是安卓和苹果应用的入口执行文件，由于我们构建的是iOS APP，所以接下来只跟<code class="language-text">index.ios.js</code>打交道。接下来，移步<code class="language-text">ios</code>文件夹，并双击打开<code class="language-text">PIW.xcodeproj</code>。（Xcode的工程文件）<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/xcode.png" alt="第一眼看到的xcode项目页面"><br>
+注意有个警告：<code class="language-text">No matching provisioning profiles found.</code>。得想办法修复它。先改个名字，<strong>Bundle Identifier</strong>：<code class="language-text">com.zerosoul.me.tutorial.PIW</code>怎么样？有木有感觉很高大上！只要遵循<a href="https://en.wikipedia.org/wiki/Reverse_domain_name_notation">Reverse DNS Convention</a>，请随意。然后选择<strong>Team</strong>，没有则按照指示新建一个。最后，点击<strong>Fix Issue</strong>。</p>
+<p><strong>Deployment Info</strong>一栏需要改动些默认设置，让app不能横屏，并且隐藏顶部的状态栏，下图红框已标出：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/deployinfo.png" alt="deployment info"></p>
+<p>好了，可以点击左上角的<strong>Run</strong>，看一看模拟器的效果了。中途应该会蹦出一个终端弹窗，不要慌，正常现象。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/popup.png" alt="terminal popup"></p>
+<p>一旦Xcode构建完，在模拟器里你会看到这一幕：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/welcome.jpg" alt="welcome to React Native"></p>
+<p><strong>注：此处有坑，如果你用真机模拟，会出现这么一幕：</strong><br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/localhost.png" alt="大红的懵逼"><br>
+大红的懵逼！不过别慌，官方文档有对应的解决方法，移步<a href="https://facebook.github.io/react-native/docs/running-on-device-ios.html">这里</a>可以找到解决方式。</p>
+<h2 id="2-从第三方获取壁纸数据"><a href="#2-%E4%BB%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E8%8E%B7%E5%8F%96%E5%A3%81%E7%BA%B8%E6%95%B0%E6%8D%AE" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 从第三方获取壁纸数据</h2>
+<p>既然要做壁纸APP，大量适合做手机壁纸的图片从哪里来？还记得前面提到的Unsplash吗？一切的遇见都不是偶然，好心的歪果仁做了一个<a href="https://unsplash.it/">Unsplash图片调用接口</a>，用于生成一些精美占位图，非常方便！</p>
+<h3 id="有关code-classlanguage-textes6code中类的解释"><a href="#%E6%9C%89%E5%85%B3code-classlanguage-textes6code%E4%B8%AD%E7%B1%BB%E7%9A%84%E8%A7%A3%E9%87%8A" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>有关<code class="language-text">ES6</code>中“类”的解释</h3>
+<p>你可能会注意到，有些React代码会出现<code class="language-text">var PIW = React.createClass({ ... })</code>，有些会是<code class="language-text">class PIW extends Component{ ... }</code>。呵呵，这是个历史遗留问题，用哪种风格是个人选择问题，不存在孰优孰劣，有选择恐惧症的同学可以看看<a href="https://reactjsnews.com/composing-components">这篇文章</a>。</p>
+<p>此处，我选择<code class="language-text">Recat.Component</code>风格，别问我为什么，就这么任性！<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/renxing.jpg" alt="任性"></p>
+<h3 id="开始做一些改动"><a href="#%E5%BC%80%E5%A7%8B%E5%81%9A%E4%B8%80%E4%BA%9B%E6%94%B9%E5%8A%A8" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>开始做一些改动</h3>
+<p>在<code class="language-text">PIW</code>类里面，第一件事情便是加个构造函数<code class="language-text">constructor</code>，在此初始化两个State：<code class="language-text">wallsJSON</code>和<code class="language-text">isLoading</code>。<code class="language-text">wallsJSON</code>用于存储从第三方接口获取的json数组数据，<code class="language-text">isLoading</code>是个布尔变量，用于标识数据是否加载完毕。  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">PIW</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span><span class="token punctuation">{</span>
+
+<span class="token comment">/***/</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+      wallsJSON<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+      isLoading<span class="token punctuation">:</span> <span class="token boolean">true</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+<span class="token comment">/***/</span>
+
+<span class="token operator">...</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p><strong>注：方便起见，涉及的代码改动，我用`/*</strong>/<code class="language-text">隔离标识出，下同。** 既然有存放数据的变量了，就得有给之赋值的函数，好吧，在</code>constructor<code class="language-text">下面加一个占位函数</code>fetchWallsJSON`:  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token function">fetchWallsJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>‘壁纸数据从这里加载<span class="token operator">...</span>’<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>从业务逻辑来讲，组件一旦加载完毕，就应该触发该函数。那么，该<code class="language-text">componentDidMount</code>上场了，它是React Native组件的生命周期函数之一，在首次渲染（<code class="language-text">render</code>）成功后会触发。想要更系统地理解组件的生命周期，请移步<a href="https://facebook.github.io/react/docs/component-specs.html">这里</a>。注意，既然我们用的ES6的类语法，就可以省略<code class="language-text">getInitialState</code>了，取而代之的是在<code class="language-text">constructor</code>中给<code class="language-text">this.state</code>赋值。  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fetchWallsJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p><code class="language-text">fetchWallsJSON</code>里会打印信息，我们应该从哪儿看到呢？首先，让模拟器获取焦点，使用<code class="language-text">CMD + D</code>组合键调出调试菜单，选择<strong>Debug in Chrome</strong>，好吧，顺便把<strong>Enable live reload</strong>也打开吧，妈妈再也不用担心每次都要手动重启APP了。将会在Chrome里打开一个新标签，按照上面的说明调出<strong>console</strong>的界面。啊哈！<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/console.png" alt="console data loaded tip"><br>
+坑占好了，下面，可以开始考虑引入真实数据了。访问URL：<a href="http://unsplash.it/list">unsplash.it/list</a> ，你将会看到铺满全屏的数据，接下来我们就基于这些数据做文章啦~~~<br>
+首先，替换掉<code class="language-text">console</code>:  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token function">fetchWallsJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/***/</span>
+
+    <span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token string">'http://unsplash.it/list'</span><span class="token punctuation">;</span>
+
+    <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> response <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> jsonData <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jsonData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span> error <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>‘获取数据有误： ‘ <span class="token operator">+</span> error<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/***/</span>
+
+  <span class="token punctuation">}</span></code></pre>
+      </div>
+<p><strong>注：用到了<code class="language-text">fetch</code>函数，不熟悉的同学请参考<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">这里</a></strong><br>
+保存然后刷新，几秒过后，啊哈！<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/consolerealdata.png" alt="console real data"></p>
+<p>太好了，我们已经能从第三方拿到数据了！在打印出数据前会有点延迟，这很正常，因为从请求到响应回数据会有个等待时间，此处应有<strong>加载提示</strong>。</p>
+<h2 id="3-增加加载提示"><a href="#3-%E5%A2%9E%E5%8A%A0%E5%8A%A0%E8%BD%BD%E6%8F%90%E7%A4%BA" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 增加加载提示</h2>
+<p>首先，把<code class="language-text">PIW</code>类里<code class="language-text">render</code>代码全部删除，新增以下代码：  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> <span class="token punctuation">{</span>isLoading<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span>isLoading<span class="token punctuation">)</span>
+
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderLoadingScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">else</span>
+
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderResults</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span></code></pre>
+      </div>
+<p>里面新增了两个函数，我们来实现它：</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token function">renderLoadingScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+
+        <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>loadingContainer<span class="token punctuation">}</span><span class="token operator">></span>
+
+            <span class="token operator">&lt;</span>ActivityIndicatorIOS
+
+              animating<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+
+              color<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'#fff'</span><span class="token punctuation">}</span>
+
+              size<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'small'</span><span class="token punctuation">}</span> 
+
+              style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>margin<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+
+              <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>color<span class="token punctuation">:</span> <span class="token string">'#fff'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>正在加载数据<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+
+       <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+  <span class="token function">renderResults</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+
+        <span class="token operator">&lt;</span>View<span class="token operator">></span>
+
+            <span class="token operator">&lt;</span>Text<span class="token operator">></span>
+
+             数据已加载
+
+            <span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+
+        <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span></code></pre>
+      </div>
+<p>根据<code class="language-text">isLoading</code>的不同状态，渲染不同的界面。但是请注意，我们好像忘了什么。啊哈，<code class="language-text">isLoading</code>并没有改变状态，应该在哪儿将其状态变过来呢？<code class="language-text">fetchWallsJSON</code>！  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token operator">...</span>
+
+<span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> response <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> jsonData <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jsonData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/***/</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isLoading<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//更新 isLoading </span>
+
+<span class="token comment">/***/</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span> error <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>‘获取数据有误：‘ <span class="token operator">+</span> error<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">...</span></code></pre>
+      </div>
+<p>有关<code class="language-text">setState</code>的详细说明请移步<a href="https://facebook.github.io/react/docs/component-api.html">这里</a>，一句话描述其作用就是用于触发UI更新。<br>
+另外，我们在<code class="language-text">renderLoadingScreen</code>调用了一个新组件<code class="language-text">ActivityIndicatorIOS</code>，因此，需要在头部引入之：  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+
+  AppRegistry<span class="token punctuation">,</span>
+
+  StyleSheet<span class="token punctuation">,</span>
+
+  Text<span class="token punctuation">,</span>
+
+  View<span class="token punctuation">,</span>
+
+  <span class="token comment">/***/</span>
+
+  ActivityIndicatorIOS <span class="token comment">// 增加新组件</span>
+
+  <span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>在看到最终效果前，还有一件事情：注意到<code class="language-text">&lt;View&gt;</code>标签内有个<code class="language-text">styles.loadingContainer</code>没有？没错，这是用来定义<code class="language-text">View</code>的样式的，目前可以这样理解：React内的样式全部用行内样式来定义的。而样式则通过<code class="language-text">var styles = StyleSheet.create({…</code>来创建，只需要在相应的组件里加以引用即可：<br>
+创建<code class="language-text">loadingContainer</code>:  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> styles <span class="token operator">=</span> StyleSheet<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+<span class="token comment">/***/</span>
+
+  loadingContainer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+    flex<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+
+    flexDirection<span class="token punctuation">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+
+    justifyContent<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+
+    alignItems<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+
+    backgroundColor<span class="token punctuation">:</span> <span class="token string">'#000'</span>
+
+  <span class="token punctuation">}</span>
+
+<span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>引用<code class="language-text">loadingContainer</code>:  </p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>View</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>loadingContainer<span class="token punctuation">}</span></span><span class="token punctuation">/></span></span></code></pre>
+      </div>
+<p>当然，也可以这样使用：  </p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>View</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+
+    flex<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+
+    flexDirection<span class="token punctuation">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+
+    justifyContent<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+
+    alignItems<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+
+    backgroundColor<span class="token punctuation">:</span> <span class="token string">'#000'</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+<p>不过这样做代码的可读性和可维护性较差，尤其在有很多组件的时候，容易乱套，所以并不是一个好的实践。另外，注意到没，React Native严重依赖<code class="language-text">flexbox</code>布局元素，所以，学好<code class="language-text">flexbox</code>这个知识点就很有必要。</p>
+<p>保存这些改动，你将会在模拟器中看到以下加载页面：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/loading.png" alt="loading screen"><br>
+过个几秒钟，将会转为：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/loaded.png" alt="data loaded"></p>
+<h2 id="4-筛选出随机的壁纸"><a href="#4-%E7%AD%9B%E9%80%89%E5%87%BA%E9%9A%8F%E6%9C%BA%E7%9A%84%E5%A3%81%E7%BA%B8" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. 筛选出随机的壁纸</h2>
+<p>这一章节侧重于Javascript的编码，将创建一个专门的模块用于生成随机数。如果模块的概念感到陌生，请先移步<a href="https://nodejs.org/api/modules.html#modules_modules">Node.js的模块文档</a>。</p>
+<p>首先，我们在<code class="language-text">index.ios.js</code>的<code class="language-text">class</code>声明前定义一个常量，用于决定要随机选取的壁纸数量。  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token constant">NUM_WALLPAPERS</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>然后创建一个用户生成随机数的模块，这个模块内有两个函数：</p>
+<ul>
+<li><code class="language-text">uniqueRandomNumbers</code>：该函数有三个参数，第一个决定了将要返回的随机数数量，后面两个定义随机数选取的范围。比如调用<code class="language-text">uniqueRandomNumbers(5,10,20)</code>将获得包含5个随机数的数组，他们的范围在10到20之间。</li>
+<li><code class="language-text">randomNumberInRange</code>：该函数有两个参数，定义了随机数范围，并返回一个随机数。比如调用<code class="language-text">randomNumberInRange(2,10)</code>将返回介于2到10的随机的一个数。</li>
+</ul>
+<p>当然，我们完全可以将这两个函数合并为一个，但遵循<a href="https://en.wikipedia.org/wiki/Single_responsibility_principle"><strong>单一职责原则</strong></a>应该是编码的最佳实践：一个函数只做一件事并将其做好。相信我，遵循好的编程原则能让以后的日子好过一些。</p>
+<p>好了，思路表述完了，开始编码。首先，在根目录下新建一个js文件<code class="language-text">RandManager.js</code>，以下是代码：</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+    <span class="token function">uniqueRandomNumbers</span><span class="token punctuation">(</span>numRandomNumbers<span class="token punctuation">,</span> lowerLimit<span class="token punctuation">,</span> upperLimit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">var</span> uniqueNumbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">while</span><span class="token punctuation">(</span> uniqueNumbers<span class="token punctuation">.</span>length <span class="token operator">!=</span> numRandomNumbers <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token keyword">var</span> currentRandomNumber <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">randomNumberInRange</span><span class="token punctuation">(</span>lowerLimit<span class="token punctuation">,</span> upperLimit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span><span class="token punctuation">(</span> uniqueNumbers<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>currentRandomNumber<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">)</span> 
+
+                uniqueNumbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>currentRandomNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> uniqueNumbers<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token function">randomNumberInRange</span><span class="token punctuation">(</span>lowerLimit<span class="token punctuation">,</span> upperLimit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> upperLimit <span class="token operator">-</span> lowerLimit<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token operator">+</span> lowerLimit<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>在<code class="language-text">index.ios.js</code>中引用<code class="language-text">RandManager</code>模块：<code class="language-text">var RandManager = require(&#39;./RandManager.js&#39;);</code>，然后我们就可以在<code class="language-text">fetchWallsJSON</code>中调用啦：  </p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token function">fetchWallsJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token string">'http://unsplash.it/list'</span><span class="token punctuation">;</span>
+
+  <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> response <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> jsonData <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/***/</span>
+
+      <span class="token keyword">var</span> randomIds <span class="token operator">=</span> RandManager<span class="token punctuation">.</span><span class="token function">uniqueRandomNumbers</span><span class="token punctuation">(</span><span class="token constant">NUM_WALLPAPERS</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> jsonData<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">var</span> walls <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      randomIds<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>randomId <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+        walls<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>jsonData\<span class="token punctuation">[</span>randomId\<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+        isLoading<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+        wallsJSON<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>walls<span class="token punctuation">)</span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/***/</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span> error <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'获取数据有误：'</span> <span class="token operator">+</span> error<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>上面代码应该不用过多解释了，使用<code class="language-text">uniqueRandomNumbers</code>生成5个随机数作为<code class="language-text">jsonData</code>的索引值，进而获取5个随机壁纸数据并存入<code class="language-text">wallsJSON</code>，哦对了，别忘了更新<code class="language-text">isLoading</code>。</p>
+<p>有了随机数据，就可以在<code class="language-text">renderResults</code>里使用了：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">renderResults</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token comment">/***/</span>
+
+   <span class="token comment">//这里用到了ES6中的解构</span>
+
+  <span class="token keyword">var</span> <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">,</span> isLoading<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token operator">!</span>isLoading <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+
+    <span class="token operator">&lt;</span>View<span class="token operator">></span>
+
+        <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>wallpaper<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+          <span class="token keyword">return</span><span class="token punctuation">(</span>
+
+            <span class="token operator">&lt;</span>Text key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">></span>
+
+              <span class="token punctuation">{</span>wallpaper<span class="token punctuation">.</span>id<span class="token punctuation">}</span>
+
+            <span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>以上代码有个地方值得注意：React Native通过循环数组或集合渲染子元素时，需要给每个元素制定一个唯一的<code class="language-text">key</code>，这也是为啥<code class="language-text">&lt;Text key={index}&gt;</code>这样写的原因。</p>
+<p>保存代码，模拟器刷新后，我们看到了五个不同的id：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/randid.png" alt="random id"><br>
+当然，可以将<code class="language-text">id</code>改为<code class="language-text">author</code>，这样，我们看到的是五个不同的名字：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/randname.png" alt="random name"></p>
+<p>非常好，我们现在已经可以自如地操控数据了。</p>
+<h2 id="5-新增swiper组件"><a href="#5-%E6%96%B0%E5%A2%9Eswiper%E7%BB%84%E4%BB%B6" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. 新增Swiper组件</h2>
+<p>React Native有强大的社区支持和<a href="https://react.parts/native">丰富的组件库</a>。这一章节学习如何引入第三方组件。<br>
+对于我们当前的APP，需要一个可滑动浏览图片的组件，推荐<a href="https://github.com/leecade/react-native-swiper">react-native-swiper</a>。</p>
+<p>终端切换到项目根目录，运行命令：<code class="language-text">npm install react-native-swiper --save</code>，然后<code class="language-text">require</code>到代码里：<code class="language-text">var Swiper=require(&#39;react-native-swiper&#39;)</code>。<br>
+将<code class="language-text">renderResults</code>里的<code class="language-text">View</code>替换为<code class="language-text">Swiper</code>：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">renderResults</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">,</span> isLoading<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token operator">!</span>isLoading <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Swiper<span class="token operator">></span>
+        <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>wallpaper<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span><span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>Text key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">></span>
+              <span class="token punctuation">{</span>wallpaper<span class="token punctuation">.</span>author<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Swiper<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>不出意外的话，界面将变成下面这样：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/swiperwithdata.png" alt="swiper with name data"><br>
+下面，根据<a href="https://github.com/leecade/react-native-swiper">Swiper组件的文档</a>，我们来微调一下样式：  </p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Swiper</span> 
+<span class="token attr-name">dot</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>View</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>backgroundColor<span class="token punctuation">:</span><span class="token string">'rgba(255,255,255,.4)'</span><span class="token punctuation">,</span> width<span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">,</span>borderRadius<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> marginLeft<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> marginRight<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> marginTop<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> marginBottom<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">}</span></span>
+<span class="token attr-name">activeDot</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>View</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>backgroundColor<span class="token punctuation">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span> width<span class="token punctuation">:</span> <span class="token number">13</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">13</span><span class="token punctuation">,</span> borderRadius<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">,</span> marginLeft<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">,</span> marginRight<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">}</span></span>
+<span class="token attr-name">loop</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span></span>
+<span class="token attr-name">onMomentumScrollEnd</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onMomentumScrollEnd<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>wallpaper<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Text</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+        <span class="token punctuation">{</span>wallpaper<span class="token punctuation">.</span>author<span class="token punctuation">}</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Text</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Swiper</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<ul>
+<li>微调了下底部分页小圆点，更大更黑了（卧槽，我在说什么…）</li>
+<li>禁用了循环，这样，一旦浏览到最后一页，然后就没有然后了。</li>
+<li>新增了每一页滑动完毕后的触发事件：<code class="language-text">onMomentumScrollEnd</code>（这个会在下一篇文章中用到，此处先占个坑）</li>
+</ul>
+<p>我们已经把Swiper加上了，好啦，这一节就写到这里，因为…我累了。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/shuaiqi.jpg"></p>
+<h1 id="总结"><a href="#%E6%80%BB%E7%BB%93" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>总结</h1>
+<p>写到这里，我发现文章已经挺长的了。那么…再加个总结吧，都这么长了，应该不介意再长一点吧。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/youdaoli.jpg" alt="有道理"></p>
+<ul>
+<li>第一节讲的是如何新建一个空的React Native项目</li>
+<li>第二节讲的是如何从第三方API获取原始数据，并建议用ES6新语法来构建程序</li>
+<li>第三节我们根据APP不同的状态渲染出不同的界面</li>
+<li>第四节我们新建了一个模块，引入并解决了产生随机数的问题</li>
+<li>第五节我们新增了一个第三方组件，并做了简单设置。</li>
+</ul>
+<p>好吧，必须承认，目前为止，我们的APP看起来似乎没啥特殊之处。不过，刚入门嘛，一步一步走到这里，也不容易了。下一篇文章，我们将继续打磨这个APP，新增特性预告：</p>
+<ul>
+<li>作者名字将替换为图片，没错，高清无码大图</li>
+<li>自定义双击事件，保存图片到相册：<code class="language-text">PanHandler</code></li>
+<li>通过Xcode新增类库并获取相应授权，比如访问相册</li>
+<li>增加预览功能</li>
+<li>创建更多的自定义组件<br>
+哦对了，最终代码在<a href="https://github.com/zerosoul/PIW">这儿</a>。年轻人，我们下一回合见…<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/dengyan.png"></li>
+</ul>
+<h1 id="原文链接"><a href="#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>原文链接</h1>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2016/04/the-beauty-of-react-native-building-your-first-ios-app-with-javascript-part-1/">The Beauty Of React Native: Building Your First iOS App With JavaScript (Part 1)</a></li>
+</ul></article><div class="post__ArticleNav-s293vau-1 PWcgP"><a class="prev" href="/posts/building-my-first-ios-app-with-react-native-part-two">React Native之美：构建我的第一个iOS APP（2）</a><a class="next" href="/posts/everything-about-promise">探索 Javascript Promise</a></div><div id="disqus_thread"></div><div class="wrapper"><div class="Navs__Container-ke6nyr-0 gfQakl"><a href="/cates"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">分类</div></a><a href="/archives"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">归档</div></a><a href="/tags"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">标签</div></a><a href="/about"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">关于</div></a></div></div></div><div class="FixContainer__Container-s5tcbud-0 cnNEXi"><div class="TOC__Toc-gywqkf-0 heeqbv"><div class="mask"></div><div class="content"><ul>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E8%AF%9D">写在前面的话</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E4%B9%8B%E5%89%8D%E7%9A%84%E5%9B%B0%E6%83%91">之前的困惑</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E5%85%88%E8%B0%88%E8%B0%88%E9%9C%80%E6%B1%82">先谈谈需求</a></li>
+<li>
+<p><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E5%86%8D%E8%B0%88%E8%B0%88%E6%96%87%E7%AB%A0%E7%9A%84%E8%A7%84%E5%88%92">再谈谈文章的规划</a></p>
+<ul>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#1first-blood%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A9%BAreact-native%E9%A1%B9%E7%9B%AE">1.First Blood:建一个空React Native项目</a></li>
+<li>
+<p><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#2-%E4%BB%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E8%8E%B7%E5%8F%96%E5%A3%81%E7%BA%B8%E6%95%B0%E6%8D%AE">2. 从第三方获取壁纸数据</a></p>
+<ul>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E6%9C%89%E5%85%B3code-classlanguage-textes6code%E4%B8%AD%E7%B1%BB%E7%9A%84%E8%A7%A3%E9%87%8A">有关&#x3C;code class="language-text">ES6&#x3C;/code>中“类”的解释</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E5%BC%80%E5%A7%8B%E5%81%9A%E4%B8%80%E4%BA%9B%E6%94%B9%E5%8A%A8">开始做一些改动</a></li>
+</ul>
+</li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#3-%E5%A2%9E%E5%8A%A0%E5%8A%A0%E8%BD%BD%E6%8F%90%E7%A4%BA">3. 增加加载提示</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#4-%E7%AD%9B%E9%80%89%E5%87%BA%E9%9A%8F%E6%9C%BA%E7%9A%84%E5%A3%81%E7%BA%B8">4. 筛选出随机的壁纸</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#5-%E6%96%B0%E5%A2%9Eswiper%E7%BB%84%E4%BB%B6">5. 新增Swiper组件</a></li>
+</ul>
+</li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-one/#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5">原文链接</a></li>
+</ul></div><button class="btn fold"><span class="line"></span><span class="line"></span><span class="line"></span></button></div><div class="Backtop__Circle-s2n6kzp-0 ctQqnq" style="visibility:hidden"><div class="wrapper"></div></div></div><footer class="Footer__Content-qjve7o-0 fHxAMN"><div>© 2018 by Tristan Yang </div><div class="power">Powered by <a href="http://reactjs.org/">React.js</a> &amp; <a href="https://www.gatsbyjs.org/">Gatsby.js</a></div></footer></div></div><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-120211336-1', 'auto');
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-js","jsonName":"posts-building-my-first-ios-app-with-react-native-part-one-47d","path":"/posts/building-my-first-ios-app-with-react-native-part-one"};window.dataPath="461/path---posts-building-my-first-ios-app-with-react-native-part-one-47-d-77c-fMGK2NRYKVpbPrmfWqymHuUVkFU";/*]]>*/</script><script src="/webpack-runtime-6d4f4f1c9e3eae130ebd.js" async=""></script><script src="/3-4a9282434f611c66f112.js" async=""></script><script src="/2-0a6e028e6df490c6c9e3.js" async=""></script><script src="/component---src-templates-post-js-ad3bcfeeb507b2c4b3ef.js" async=""></script><script src="/1-6b673e75d0ee6797776c.js" async=""></script><script src="/0-8c4087aaec00fefd63bf.js" async=""></script><script src="/app-80de48ac6832c129ef12.js" async=""></script></body></html>

@@ -1,0 +1,894 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge;chrome"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta rel="shortcut icon" href="/favicon.ico"/><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script><style data-href="/component---src-templates-post-js.9543c128f9a4e8d80ab1.css">code,code[class*=language-],pre[class*=language-]{color:#fff;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;text-shadow:0 -.1em .2em #000;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}:not(pre)>code[class*=language-],code,pre[class*=language-]{background:#141414}code{padding:.1rem .4rem;margin:0 .2rem;white-space:pre-wrap}pre[class*=language-]{-webkit-box-shadow:1px 1px .5em #000 inset;box-shadow:inset 1px 1px .5em #000;margin:.5rem 0;overflow:auto;padding:.4rem}pre[class*=language-]::-moz-selection{background:#27292a}pre[class*=language-]::selection{background:#27292a}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:hsla(0,0%,93%,.15)}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:hsla(0,0%,93%,.15)}:not(pre)>code[class*=language-]{border-radius:.3em;border:.13em solid #545454;-webkit-box-shadow:1px 1px .3em -.1em #000 inset;box-shadow:inset 1px 1px .3em -.1em #000;padding:.15em .2em .05em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#787878}.namespace,.token.punctuation{opacity:.7}.token.boolean,.token.deleted,.token.number,.token.tag{color:#cf694a}.token.builtin,.token.constant,.token.keyword,.token.property,.token.selector,.token.symbol{color:#f9ee9a}.language-css .token.string,.style .token.string,.token.attr-name,.token.attr-value,.token.char,.token.entity,.token.inserted,.token.operator,.token.string,.token.url,.token.variable{color:#919e6b}.token.atrule{color:#7386a5}.token.important,.token.regex{color:#e9c163}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[data-line]{padding:1em 0 1em 3em;position:relative}.language-markup .token.attr-name,.language-markup .token.punctuation,.language-markup .token.tag{color:#ad895c}.token{position:relative;z-index:1}.line-highlight{background:rgba(84,84,84,.25);background:-webkit-gradient(linear,left top,right top,color-stop(70%,rgba(84,84,84,.1)),to(rgba(84,84,84,0)));background:linear-gradient(90deg,rgba(84,84,84,.1) 70%,rgba(84,84,84,0));border-bottom:1px dashed #545454;border-top:1px dashed #545454;left:0;line-height:inherit;margin-top:.75em;padding:inherit 0;pointer-events:none;position:absolute;right:0;white-space:pre;z-index:0}.line-highlight:before,.line-highlight[data-end]:after{background-color:#8794a6;border-radius:999px;-webkit-box-shadow:0 1px #fff;box-shadow:0 1px #fff;color:#f5f2f0;content:attr(data-start);font:700 65%/1.5 sans-serif;left:.6em;min-width:1em;padding:0 .5em;position:absolute;text-align:center;text-shadow:none;top:.4em;vertical-align:.3em}.line-highlight[data-end]:after{bottom:.4em;content:attr(data-end);top:auto}
+
+/*# sourceMappingURL=component---src-templates-post-js.9543c128f9a4e8d80ab1.css.map*/</style><style data-styled-components="ivSXtK ljvFaq gXbiOu fEuJbJ gfQakl dGDpda hEYPJu eWUXqT gXjStS BkEGk PWcgP cnNEXi heeqbv ctQqnq fHxAMN">
+/* sc-component-id: Subline__Line-s1kl5kkq-0 */
+.gXjStS{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;font-size:0.6rem;-webkit-overflow-scrolling:touch;} .gXjStS::-webkit-scrollbar{display:none;} .gXjStS > span{padding:0.2rem 0.3rem;border:1px solid #eee;margin-right:0.2rem;margin-bottom:0.2rem;border-radius:0.2rem;} .gXjStS > span .tags{margin-left:0.5rem;} .gXjStS > span .tags .tag{position:relative;margin-right:0.6rem;} .gXjStS > span .tags .tag:before{content:'#';position:absolute;left:-0.4rem;}
+/* sc-component-id: Button__Wrapper-s1goobno-0 */
+.dGDpda{margin-right:0.4rem;margin-bottom:0.2rem;border-radius:0.6rem;font-size:1rem;color:white;background:#333;padding:0.3rem 0.6rem;cursor:pointer;} .dGDpda:active{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-transition:-webkit-transform 0.5s;-webkit-transition:transform 0.5s;transition:transform 0.5s;}
+/* sc-component-id: Navs__Container-ke6nyr-0 */
+.fEuJbJ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:space-between;-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;margin:0 auto;margin-bottom:1.5rem;margin-top:0;max-width:90%;} @media (min-width:480px){.fEuJbJ{max-width:55%;}} @media (min-width:900px){.fEuJbJ{max-width:30%;}} .fEuJbJ a{-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;margin:0 0.2rem;} .fEuJbJ a .btn{margin:0 auto;} .fEuJbJ a.curr{position:relative;} .fEuJbJ a.curr .btn{background:#666;} .fEuJbJ a.curr:after,.fEuJbJ a.curr:before{top:100%;left:50%;border:solid transparent;content:' ';height:0;width:0;position:absolute;pointer-events:none;} .fEuJbJ a.curr:after{border-color:rgba(136,183,213,0);border-top-color:#666;border-width:0.6rem;margin-left:-0.6rem;}.gfQakl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:space-between;-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;margin:0 auto;margin-bottom:1.5rem;margin-top:2rem;margin-bottom:0;max-width:90%;} @media (min-width:480px){.gfQakl{max-width:80%;}} @media (min-width:900px){.gfQakl{max-width:60%;}} .gfQakl a{-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;margin:0 0.2rem;} .gfQakl a .btn{margin:0 auto;} .gfQakl a.curr{position:relative;} .gfQakl a.curr .btn{background:#666;} .gfQakl a.curr:after,.gfQakl a.curr:before{top:100%;left:50%;border:solid transparent;content:' ';height:0;width:0;position:absolute;pointer-events:none;} .gfQakl a.curr:after{border-color:rgba(136,183,213,0);border-top-color:#666;border-width:0.6rem;margin-left:-0.6rem;}
+/* sc-component-id: Header__Wrapper-s1qmorvh-0 */
+.ljvFaq{margin:0 auto;padding:0 0.5rem;}
+/* sc-component-id: Header__Hero-s1qmorvh-1 */
+.gXbiOu{padding-bottom:1rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:2rem;} .gXbiOu .site{text-align:center;margin-bottom:1rem;} .gXbiOu .site .title{padding:0.6rem 2rem;background:#222;color:#fff;} .gXbiOu .slogan{color:#808080;margin-bottom:0.4rem;}
+/* sc-component-id: Backtop__Circle-s2n6kzp-0 */
+.ctQqnq{width:2rem;height:2rem;border-radius:0.5rem;background:#ddd;cursor:pointer;} .ctQqnq .wrapper{position:relative;} .ctQqnq .wrapper:before,.ctQqnq .wrapper:after{content:'';position:absolute;top:0.9rem;left:0.34rem;width:0.8rem;height:0.14rem;background:#444;} .ctQqnq .wrapper:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);left:0.82rem;} .ctQqnq .wrapper:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}
+/* sc-component-id: FixContainer__Container-s5tcbud-0 */
+.cnNEXi{position:fixed;right:20px;bottom:30px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;} @media (min-width:900px){.cnNEXi{right:16%;}} .cnNEXi > *{margin:0.8rem 0;}
+/* sc-component-id: Footer__Content-qjve7o-0 */
+.fHxAMN{padding:3rem 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} @media print{.fHxAMN .power{display:none;}}
+/* sc-component-id: Wrapper__Grid-a11ln1-0 */
+.ivSXtK{margin:0 auto;padding:0;min-height:60vh;}
+/* sc-component-id: Wrapper__Content-a11ln1-1 */
+.hEYPJu{box-shadow:0 4px 120px rgba(0,0,0,0.1);border-radius:1rem;padding:2rem 1rem;overflow:hidden;margin:0 auto;} @media (min-width:480px){.hEYPJu{padding:2.6rem;}} @media (min-width:900px){.hEYPJu{padding:3rem 6rem;max-width:75%;}}
+/* sc-component-id: TOC__Toc-gywqkf-0 */
+.heeqbv{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;z-index:999;} .heeqbv .mask{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:none;z-index:998;} .heeqbv button{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:2rem;height:2rem;border:1px solid #ddd;padding:0.2rem;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-radius:0.5rem;position:relative;cursor:pointer;background:#eee;z-index:999;} .heeqbv button:focus{outline:none;} .heeqbv button .line{background:#333;display:inline-block;width:1rem;height:0.1rem;margin:0.09rem 0;} .heeqbv button.unfold .line{display:none;} .heeqbv button.unfold:before,.heeqbv button.unfold:after{content:'';position:absolute;height:1rem;width:0.1rem;top:50%;right:50%;background:#333;margin-right:-0.05rem;margin-top:-0.5rem;} .heeqbv button.unfold:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);} .heeqbv button.unfold:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);} .heeqbv .content{z-index:999;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);padding:0.6rem;margin-bottom:0.5rem;border:1px solid #ddd;background:#eee;border-radius:0.5rem;display:none;max-height:70vh;overflow:scroll;} .heeqbv .content ul{list-style:none;margin:0.4rem 0;} .heeqbv .content ul li{padding:0;margin:0.4rem 0;} .heeqbv .content ul ul{font-size:0.8rem;margin-left:0.4rem;}
+/* sc-component-id: PostContent__Container-s10cpw6f-0 */
+.BkEGk{margin-top:2rem;} .BkEGk a{-webkit-text-decoration:underline;text-decoration:underline;} .BkEGk h1{font-size:1.6rem;} .BkEGk h2{font-size:1.2rem;} .BkEGk p img{display:block;margin:0 auto;padding:1.6rem 0;-webkit-transform:scale(1.14);-ms-transform:scale(1.14);transform:scale(1.14);} @media (min-width:384px){.BkEGk p img{padding:1.7rem 0;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}} @media (min-width:900px){.BkEGk p img{padding:0;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}
+/* sc-component-id: post__Title-s293vau-0 */
+.eWUXqT{margin-bottom:1rem;}
+/* sc-component-id: post__ArticleNav-s293vau-1 */
+.PWcgP{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;border-top:1px solid #ddd;padding-top:0.8rem;} @media (min-width:900px){.PWcgP{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}} .PWcgP > a{-webkit-flex:1;-ms-flex:1;flex:1;position:relative;color:#999;padding:0.5rem 0;} .PWcgP > a:active{background:#ddd;} .PWcgP > a::after{content:'';position:absolute;top:50%;margin-top:-0.5rem;width:0;height:0;border-top:0.5rem solid transparent;border-bottom:0.5rem solid transparent;} .PWcgP > a.prev::after{left:-1rem;border-right:0.5rem solid #999;} .PWcgP > a.next{text-align:right;} .PWcgP > a.next::after{right:-1rem;border-left:0.5rem solid #999;}</style><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">React Native之美：构建我的第一个iOS APP（2） | 杨二</title><meta data-react-helmet="true" name="description" content="再续前缘 第一篇文章 ，我们从零开始，一步一步走到最后，构建了一个似乎并没有卵用的APP。但是，我们做了大量的基础工作，不就是为了在接下来的继续更轻松自信些嘛！ 其实，第一篇的信息量还是很大的，里面的每一个链接都是通往一个新知的大门，如果你觉得掌握得差不多了，那就开始新的旅（Che）程（Dan…"/><meta data-react-helmet="true" name="keywords" content="tristan yang, blog, writing, frontend"/><meta data-react-helmet="true" name="image" content="https://blog.yangerxiao.com/social/banner.jpg"/><meta data-react-helmet="true" property="og:locale" content="zh_CN"/><meta data-react-helmet="true" property="og:site_name" content="Tristan Yang"/><meta data-react-helmet="true" property="og:url" content="https://blog.yangerxiao.com/posts/building-my-first-ios-app-with-react-native-part-two"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:title" content="React Native之美：构建我的第一个iOS APP（2）"/><meta data-react-helmet="true" property="og:description" content="再续前缘 第一篇文章 ，我们从零开始，一步一步走到最后，构建了一个似乎并没有卵用的APP。但是，我们做了大量的基础工作，不就是为了在接下来的继续更轻松自信些嘛！ 其实，第一篇的信息量还是很大的，里面的每一个链接都是通往一个新知的大门，如果你觉得掌握得差不多了，那就开始新的旅（Che）程（Dan…"/><meta data-react-helmet="true" property="og:image" content="https://blog.yangerxiao.com/social/banner.jpg"/><script data-react-helmet="true" type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","url":"https://blog.yangerxiao.com/","name":"React Native之美：构建我的第一个iOS APP（2）","alternateName":"杨二的个人博客"},[{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.yangerxiao.com/posts/building-my-first-ios-app-with-react-native-part-two","name":"React Native之美：构建我的第一个iOS APP（2）","image":"https://blog.yangerxiao.com/social/banner.jpg"}}]},{"@context":"http://schema.org","@type":"BlogPosting","url":"https://blog.yangerxiao.com/","name":"React Native之美：构建我的第一个iOS APP（2）","alternateName":"杨二的个人博客","headline":"React Native之美：构建我的第一个iOS APP（2）","image":{"@type":"ImageObject","url":"https://blog.yangerxiao.com/social/banner.jpg"},"description":"再续前缘 第一篇文章 ，我们从零开始，一步一步走到最后，构建了一个似乎并没有卵用的APP。但是，我们做了大量的基础工作，不就是为了在接下来的继续更轻松自信些嘛！ 其实，第一篇的信息量还是很大的，里面的每一个链接都是通往一个新知的大门，如果你觉得掌握得差不多了，那就开始新的旅（Che）程（Dan…"}]]</script><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;-webkit-touch-callout:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsl(0,0%,0%,0.6);font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#4d4d4d;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:#333;font-family:'Microsoft YaHei','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:1.6rem;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;background:#f9f9f9;border-left:.4rem solid #ccc;margin:1rem 0.4rem;padding:0.5rem .6rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li > ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}button:focus,button:avtive{outline:none;}a{text-decoration:none;color:#333;-webkit-tap-highlight-color:transparent;}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#090a0b"/><script>
+                  var _hmt = _hmt || [];
+                  (function() {
+                      var hm = document.createElement("script");
+                      hm.src = "//hm.baidu.com/hm.js?1cae7396cd8c7648b6ff23a9123052ba";
+                      var s = document.getElementsByTagName("script")[0]; 
+                      s.parentNode.insertBefore(hm, s);
+                  })();
+              </script><link as="script" rel="preload" href="/app-80de48ac6832c129ef12.js"/><link as="script" rel="preload" href="/0-8c4087aaec00fefd63bf.js"/><link as="script" rel="preload" href="/1-6b673e75d0ee6797776c.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-ad3bcfeeb507b2c4b3ef.js"/><link as="script" rel="preload" href="/2-0a6e028e6df490c6c9e3.js"/><link as="script" rel="preload" href="/3-4a9282434f611c66f112.js"/><link as="script" rel="preload" href="/webpack-runtime-6d4f4f1c9e3eae130ebd.js"/><link rel="preload" href="/static/d/160/path---posts-building-my-first-ios-app-with-react-native-part-two-0-cd-309-yNQuWWjqmzhLhjqTa9odY2cstc.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div class="Wrapper__Grid-a11ln1-0 ivSXtK" data-reactroot=""><header class="Header__Wrapper-s1qmorvh-0 ljvFaq"><div class="Header__Hero-s1qmorvh-1 gXbiOu"><h1 class="site"><a class="title" href="/">杨二</a></h1><div class="slogan"><span>Machine repeats, Human creates</span></div></div><div class="wrapper"><div class="Navs__Container-ke6nyr-0 fEuJbJ"><a href="/cates"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">分类</div></a><a href="/archives"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">归档</div></a><a href="/tags"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">标签</div></a><a href="/about"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">关于</div></a></div></div></header><div class="Wrapper__Content-a11ln1-1 hEYPJu"><h2 class="post__Title-s293vau-0 eWUXqT">React Native之美：构建我的第一个iOS APP（2）</h2><div class="Subline__Line-s1kl5kkq-0 gXjStS"><span>2016-6-7<!-- --> </span><span><a href="/cates/它山之石">它山之石</a></span><span><span class="tags"><a class="tag" href="/tags/react-native">react native</a><a class="tag" href="/tags/react">react</a><a class="tag" href="/tags/翻译">翻译</a></span></span></div><article class="PostContent__Container-s10cpw6f-0 BkEGk" id="postContent"><p><img src="https://zerosoul.github.io/2016/06/07/building-my-first-ios-app-with-react-native-part-two/rn.png" alt="React Native"></p>
+<h1 id="再续前缘"><a href="#%E5%86%8D%E7%BB%AD%E5%89%8D%E7%BC%98" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>再续前缘</h1>
+<p><a href="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/">第一篇文章</a>，我们从零开始，一步一步走到最后，构建了一个似乎并没有卵用的APP。但是，我们做了大量的基础工作，不就是为了在接下来的继续更轻松自信些嘛！<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/zdw.jpg" alt="wtf"><br>
+其实，第一篇的信息量还是很大的，里面的每一个链接都是通往一个新知的大门，如果你觉得掌握得差不多了，那就开始新的旅（Che）程（Dan）吧！<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/haha.png" alt="你懂的"><br>
+第二篇文章也是分五小节叙述，每一节完成一个小功能，最终召唤出还算有点卵用的APP。</p>
+<h1 id="1召唤出壁纸和作者"><a href="#1%E5%8F%AC%E5%94%A4%E5%87%BA%E5%A3%81%E7%BA%B8%E5%92%8C%E4%BD%9C%E8%80%85" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.召唤出壁纸和作者</h1>
+<p>首先，我们先研究下数据，下面是从<a href="https://unsplash.it/list">Unsplash</a>获取的一个数据实例：</p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token punctuation">{</span>
+
+    author<span class="token punctuation">:</span><span class="token string">"Ben Moore"</span>
+
+    author_url<span class="token punctuation">:</span><span class="token string">"https://unsplash.com/@benmoore"</span>
+
+    filename<span class="token punctuation">:</span><span class="token string">"0102_pJILiyPdrXI.jpeg"</span>
+
+    format<span class="token punctuation">:</span><span class="token string">"jpeg"</span>
+
+    height<span class="token punctuation">:</span><span class="token number">3240</span>
+
+    id<span class="token punctuation">:</span><span class="token number">102</span>
+
+    post_url<span class="token punctuation">:</span><span class="token string">"https://unsplash.com/photos/pJILiyPdrXI"</span>
+
+    width<span class="token punctuation">:</span><span class="token number">4320</span> 
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>要想获取该实例的图片，在浏览器中输入以下格式的URL<code class="language-text">http://unsplash.it/{width}/{height}?image={id}</code>，换算到该实例即：<a href="http://unsplash.it/4320/3240?image=102"><code class="language-text">http://unsplash.it/4320/3240?image=102</code></a>。这样，我们就能拿到一张壁纸的地址了。我们可以用<code class="language-text">Image</code>组件中的<code class="language-text">source</code>来把图片加载出来。</p>
+<p>但是，进一步想了想，这么大的图片会有一定的加载时间，最好能有个图片的加载进度什么的，让用户不再一脸懵逼地等着。一开始就做对，后面的修改成本会小很多，有两个组件的组合能够做到预期效果：</p>
+<p><a href="https://github.com/oblador/react-native-image-progress"><strong>image-native-progress</strong></a>和<a href="https://github.com/oblador/react-native-progress"><strong>react-native-progress</strong></a>。</p>
+<p>在项目根目录下运行命令：<code class="language-text">npm i --save react-native-image-progress react-native-progress</code>，然后，我们在<strong>index.ios.js</strong>中引用：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">var</span> NetworkImage <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'react-native-image-progress'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> Progress <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'react-native-progress'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>既然要做手机壁纸应用，那么就应该得到手机屏幕的长和宽：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">var</span> <span class="token punctuation">{</span>width<span class="token punctuation">,</span> height<span class="token punctuation">}</span> <span class="token operator">=</span> React<span class="token punctuation">.</span>Dimensions<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>'window’<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>哦对了，为了去掉烦人的<code class="language-text">React.Dimensions</code>，可以在头部引入<code class="language-text">Dimensions</code>组件：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+
+  AppRegistry<span class="token punctuation">,</span>
+
+  StyleSheet<span class="token punctuation">,</span>
+
+  Text<span class="token punctuation">,</span>
+
+  View<span class="token punctuation">,</span>
+
+  ActivityIndicatorIOS<span class="token punctuation">,</span>
+
+  <span class="token comment">/***/</span>
+
+  Dimensions 
+
+  <span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>这样，我们就可以在<code class="language-text">renderResults</code>中使用<code class="language-text">NetworkImage</code>了：  </p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Swiper</span> <span class="token attr-name">...</span> <span class="token punctuation">></span></span>
+
+  <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>wallpaper<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span><span class="token punctuation">(</span>
+
+    <span class="token comment">/***/</span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>View</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NetworkImage</span>
+
+          <span class="token attr-name">source</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>uri<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`https://unsplash.it/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wallpaper<span class="token punctuation">.</span>width<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wallpaper<span class="token punctuation">.</span>height<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">?image=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wallpaper<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+
+          <span class="token attr-name">indicator</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Progress<span class="token punctuation">.</span>Circle<span class="token punctuation">}</span></span>
+
+          <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>wallpaperImage<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NetworkImage</span><span class="token punctuation">></span></span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>View</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">/***/</span>
+
+    <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Swiper</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<p><strong>注：此处<code class="language-text">NetworkImage</code>的<code class="language-text">uri</code>特性用到了ES6的模板字符串特性，懵逼的同学去<a href="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-one/#%E5%85%88%E8%B0%88%E8%B0%88%E9%9C%80%E6%B1%82">上一篇文章</a>找链接复习一下哈。</strong></p>
+<p>再加个样式：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js">wallpaperImage<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+  flex<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+
+  width<span class="token punctuation">:</span> width<span class="token punctuation">,</span>
+
+  height<span class="token punctuation">:</span> height<span class="token punctuation">,</span>
+
+  backgroundColor<span class="token punctuation">:</span> ‘#<span class="token number">000</span>’
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>保存然后刷新模拟器，不出意外的话…你将看到一堆报错的页面。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/long.jpg" alt="成龙"><br>
+别慌，我们来研究下刚刚加的代码，注意到<code class="language-text">indicator={Progress.Circle}</code>没有？在<code class="language-text">react-native-progress</code>文档里有提到（别告诉我你没看<a href="https://github.com/oblador/react-native-progress">文档</a>(╯‵□′)╯︵┻━┻），<code class="language-text">Progress.Circle</code>需要<strong>ReactART</strong>：使用React来画矢量图的类库。我们不需要下载任何新东西，只需要通过Xcode将其引入到项目中。<br>
+很简单，只是有点繁琐：</p>
+<ol>
+<li>移步 <code class="language-text">node_modules/react-native/Libraries/ART/</code><br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/dir.png" alt="art目录"></li>
+<li>将<em>ART.xcodeproj</em>拖拽到Xcode的<em>PIW/Libraries</em>下<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/libs.png" alt="libs"></li>
+<li>定位到<em>Build Phases</em>，友情提示：它与<em>General</em>,<em>Capabilities</em>等同级。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/buildphase.png"></li>
+<li>将<em>ART.xcodeproj/Products</em>下的<em>libART.a</em>拖拽到<em>Build Phases</em>下的<em>Link Binary With Libraries</em>条目下：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/linklib.png"></li>
+</ol>
+<p>就这么简单，全是些拖拖拽拽的活儿。</p>
+<p>然后，刷新模拟器。酷！我们已经能够看到带加载进度的壁纸，并且能左右滑动浏览。有没有碰到心动的图片？载下来？莫慌，待会儿来满足你。现在，我们先修改下进度提示的样式，这个在<code class="language-text">NetworkImage</code>下的<code class="language-text">indicatorProps</code>可以设置：  </p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NetworkImage</span>
+
+  <span class="token attr-name">source</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>uri<span class="token punctuation">:</span><span class="token template-string"><span class="token string">`https://unsplash.it/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wallpaper<span class="token punctuation">.</span>width<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wallpaper<span class="token punctuation">.</span>height<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">?image=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wallpaper<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+
+  <span class="token attr-name">indicator</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Progress<span class="token punctuation">.</span>Circle<span class="token punctuation">}</span></span>
+
+  <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>wallpaperImage<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+
+  <span class="token comment">/***/</span>
+
+  indicatorProps<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+
+    color<span class="token punctuation">:</span><span class="token string">'rgba(255,255,255,0.8)'</span><span class="token punctuation">,</span>
+
+    size<span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">,</span>
+
+    thickness<span class="token punctuation">:</span><span class="token number">4</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+  <span class="token comment">/***/</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NetworkImage</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<p>修改后进度提示应该长这样：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/indicator.png" alt="indicator"></p>
+<p>接下来，把图片的作者名字加上，我们要做尊重知识版权的好公民：  </p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NetworkImage</span>
+
+<span class="token attr-name">...</span>
+
+<span class="token punctuation">></span></span>
+
+<span class="token comment">/***/</span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Text</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>label<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Photo by<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Text</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Text</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>label\_author\_name<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>wallpaper<span class="token punctuation">.</span>author<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Text</span><span class="token punctuation">></span></span>
+
+<span class="token comment">/***/</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NetworkImage</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<p>别忘了创建各自对应的样式对象：</p>
+<div class="gatsby-highlight" data-language="css">
+      <pre class="language-css"><code class="language-css"><span class="token selector">label:</span><span class="token punctuation">{</span>
+
+    <span class="token property">position</span><span class="token punctuation">:</span><span class="token string">'absolute'</span>,
+
+    <span class="token property">color</span><span class="token punctuation">:</span><span class="token string">'#fff'</span>,
+
+    <span class="token property">fontSize</span><span class="token punctuation">:</span>13,
+
+    <span class="token property">backgroundColor</span><span class="token punctuation">:</span><span class="token string">'#000'</span>,
+
+    <span class="token property">padding</span><span class="token punctuation">:</span>5,
+
+    <span class="token property">paddingLeft</span><span class="token punctuation">:</span>8,
+
+    <span class="token property">top</span><span class="token punctuation">:</span>20,
+
+    <span class="token property">left</span><span class="token punctuation">:</span>20
+
+  <span class="token punctuation">}</span><span class="token selector">,
+
+label_author_name:</span><span class="token punctuation">{</span>
+
+    <span class="token property">position</span><span class="token punctuation">:</span><span class="token string">'absolute'</span>,
+
+    <span class="token property">color</span><span class="token punctuation">:</span><span class="token string">'#fff'</span>,
+
+    <span class="token property">fontSize</span><span class="token punctuation">:</span>15,
+
+    <span class="token property">backgroundColor</span><span class="token punctuation">:</span><span class="token string">'#000'</span>,
+
+    <span class="token property">padding</span><span class="token punctuation">:</span>5,
+
+    <span class="token property">paddingLeft</span><span class="token punctuation">:</span>8,
+
+    <span class="token property">top</span><span class="token punctuation">:</span>52,
+
+    <span class="token property">left</span><span class="token punctuation">:</span>20,
+
+    <span class="token property">fontWeight</span><span class="token punctuation">:</span><span class="token string">'bold'</span>
+
+  <span class="token punctuation">}</span></code></pre>
+      </div>
+<p>来来来，我们瞅瞅加了作者后的效果：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/withauthor.png"></p>
+<p>有木有瞬间感觉像那么回事儿了！<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/dese.png"></p>
+<p>走到这儿，这一节算完事儿了，为了能下载壁纸，我们将在下一节做一些更加有技术含量的事儿。</p>
+<h1 id="2-捕捉双击操作double-taps"><a href="#2-%E6%8D%95%E6%8D%89%E5%8F%8C%E5%87%BB%E6%93%8D%E4%BD%9Cdouble-taps" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 捕捉双击操作(Double-Taps)</h1>
+<p>这一节我们要用到的是PanResponder，这个API能做一些很酷的事情，比如捕捉双击操作。</p>
+<p>其实，如果偷懒，完全可以在页面上放一个下载按钮，点击就下载，完活儿！但是，我们要做就做有逼格的事儿，双击图片下载就很符合这个档次，恩，撸起袖子干吧！</p>
+<p>在开始之前，最好阅读一遍<a href="https://facebook.github.io/react-native/docs/panresponder.html">PanResponder API</a>文档，因为你不读一遍，也不知道这个文档其实也没啥卵用o(╯□╰)o。不过我们至少知道了PanResponder的基本用法，这就够了。</p>
+<p>废话少说，开始撸代码。首先，在构造函数里声明一个新对象：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>imagePanResponder <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>别忘了在顶部引入<code class="language-text">PanResponder</code>的声明：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+
+  AppRegistry<span class="token punctuation">,</span>
+
+  StyleSheet<span class="token punctuation">,</span>
+
+  Text<span class="token punctuation">,</span>
+
+  View<span class="token punctuation">,</span>
+
+  ActivityIndicatorIOS<span class="token punctuation">,</span>
+
+  <span class="token comment">/***/</span>
+
+  PanResponder
+
+  <span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>接下来我们要做两件事：</p>
+<ul>
+<li>创建一个<code class="language-text">PanResponder</code>并赋值<code class="language-text">imagePanResponder</code></li>
+<li>将<code class="language-text">imagePanResponder</code>关联到<code class="language-text">&lt;NetworkImage&gt;</code>组件</li>
+</ul>
+<p>为了完成第一件事，需要新增一个生命周期函数:<code class="language-text">componentWillMount</code>。这个函数只有在组件首次渲染时才会触发，所以非常适合用于初始化<code class="language-text">PanResponder</code>：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>imagePanResponder <span class="token operator">=</span> PanResponder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+      onStartShouldSetPanResponder<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handleStartShouldSetPanResponder<span class="token punctuation">,</span>
+
+      onPanResponderGrant<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlePanResponderGrant<span class="token punctuation">,</span>
+
+      onPanResponderRelease<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlePanResponderEnd<span class="token punctuation">,</span>
+
+      onPanResponderTerminate<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlePanResponderEnd
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span></code></pre>
+      </div>
+<p>初始化完了，就可以将这些事件关联到<code class="language-text">NetworkImage</code>组件了：</p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>imagePanResponder<span class="token punctuation">.</span>panHandlers<span class="token punctuation">}</span><span class="token operator">></span></code></pre>
+      </div>
+<p>注：<code class="language-text">...</code>是ES6中的扩展运算符，如果懵逼，请移步<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator">这里</a>充电。</p>
+<p>一般来说，一个触摸事件有三个阶段：开始（start）、移动（move）、释放（release），一个组件能够通过声明响应特定的触摸事件。<code class="language-text">PanResponder.create({...</code>下提到的第一个事件<code class="language-text">onStartShouldSetPanResponder</code>，从英文名字的意思大概也能猜出，这是在请求是否能将<code class="language-text">PanResponder</code>绑定在该组件上。紧跟其后是一个方法<code class="language-text">this.handleOnStartShouldSetPanResponder</code>，用于响应该事件，若该方法返回<code class="language-text">true</code>，则通过请求，然后才能谈下一步，<code class="language-text">false</code>则相反。所以，你应该知道在此我们应该返回什么，认清你的阶级立场，同志，老大哥在看着你：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">handleStartShouldSetPanResponder</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> gestureState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>紧随其后的<code class="language-text">onPanResponderGrant</code>是在一旦有了触摸时触发，在此我们先打印一个信息占个坑：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">handlePanResponderGrant</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"手指触摸到屏幕啦~~~"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span></code></pre>
+      </div>
+<p>最后两个事件从字面上也都能自解释，在手指离开屏幕时，都能触发，在此我们还是先打印信息占个坑：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">handlePanResponderEnd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"手指离开屏幕啦~~~"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span></code></pre>
+      </div>
+<p>保存代码，壁纸一旦加载完毕，点击一下，应该会看到如下打印信息：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/touched.png"></p>
+<p>OK，基于这些认知，我们可以开始捕捉双击操作了。判断是否为双击操作的关键是需要知道上一操作的信息：触摸发生的<strong>坐标</strong>和<strong>时间戳</strong>。在构造函数新增对象<code class="language-text">prevTouchInfo</code>用于保存触摸信息：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>prevTouchInfo <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+  <span class="token constant">X</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+
+  <span class="token constant">Y</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+
+  timeStamp<span class="token punctuation">:</span> <span class="token number">0</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>然后，在<code class="language-text">handlePanResponderGrant</code>更新这个对象(注意代码的次序)：</p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">handlePanResponderGrant</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> gestureState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token comment">/***/</span>
+
+  <span class="token keyword">var</span> currentTouchTimeStamp <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isDoubleTap</span><span class="token punctuation">(</span>currentTouchTimeStamp<span class="token punctuation">,</span> gestureState<span class="token punctuation">)</span> <span class="token punctuation">)</span> 
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'双击操作'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>prevTouchInfo <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+    <span class="token constant">X</span><span class="token punctuation">:</span> gestureState<span class="token punctuation">.</span>x0<span class="token punctuation">,</span>
+
+    <span class="token constant">Y</span><span class="token punctuation">:</span> gestureState<span class="token punctuation">.</span>y0<span class="token punctuation">,</span>
+
+    timeStamp<span class="token punctuation">:</span> currentTouchTimeStamp
+
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p><code class="language-text">handlePanResponderGrant</code>在每次单击时都会触发，但是有个地方需要特别注意：此处的<code class="language-text">this</code>并不是指向<code class="language-text">PIW</code>类，而是<code class="language-text">PanResponder</code>，为了正确的引用，我们需要在构造函数使用<code class="language-text">bind</code>重新定向一下。而如果我们一开始选用<code class="language-text">React.createClass({ ... })</code>来创建组件，就不会存在这个问题，<strong>autobinding</strong>会帮我们搞定这个问题。也算有得有失吧:</p>
+<p>1</p>
+<p>this.handlePanResponderGrant = this.handlePanResponderGrant.bind(this);</p>
+<p><code class="language-text">isDoubleTap</code>是我们预先埋好的坑，下面我们填上它：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">isDoubleTap</span><span class="token punctuation">(</span>currentTouchTimeStamp<span class="token punctuation">,</span> <span class="token punctuation">{</span>x0<span class="token punctuation">,</span> y0<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> <span class="token punctuation">{</span><span class="token constant">X</span><span class="token punctuation">,</span> <span class="token constant">Y</span><span class="token punctuation">,</span> timeStamp<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>prevTouchInfo<span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> dt <span class="token operator">=</span> currentTouchTimeStamp <span class="token operator">-</span> timeStamp<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>dt <span class="token operator">&lt;</span> <span class="token constant">DOUBLE</span>\_TAP\_DELAY <span class="token operator">&amp;&amp;</span> Utils<span class="token punctuation">.</span><span class="token function">distance</span><span class="token punctuation">(</span><span class="token constant">X</span><span class="token punctuation">,</span> <span class="token constant">Y</span><span class="token punctuation">,</span> x0<span class="token punctuation">,</span> y0<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token constant">DOUBLE</span>\_TAP\_RADIUS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>好吧，你可能会注意到了，坑里有坑：</p>
+<ul>
+<li>
+<p><code class="language-text">DOUBLE_TAP_DELAY</code>和<code class="language-text">DOUBLE_TAP_RADIUS</code>是我们定义的常量，需要在头部初始化一下:</p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token constant">DOUBLE</span>\_TAP\_DELAY <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">;</span> <span class="token comment">// milliseconds</span>
+
+<span class="token keyword">const</span> <span class="token constant">DOUBLE</span>\_TAP\_RADIUS <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span></code></pre>
+      </div>
+</li>
+<li>
+<p>新建一个模块<strong>utils.js</strong>，暴露出<code class="language-text">distance</code>：</p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">distance</span><span class="token punctuation">(</span>x0<span class="token punctuation">,</span> y0<span class="token punctuation">,</span> x1<span class="token punctuation">,</span> y1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token punctuation">(</span> x1 <span class="token operator">-</span> x0 <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token punctuation">(</span> y1 <span class="token operator">-</span> y0 <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+</li>
+</ul>
+<p><code class="language-text">distance</code>是用来计算两个坐标之间的直线距离，还记得中学的几何公式吗？<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/distance.png" alt="distance"></p>
+<p><code class="language-text">handlePanResponderGrant</code>最后一步是更新<code class="language-text">prevTouchInfo</code>。</p>
+<p>保存代码，等壁纸加载完毕，双击屏幕，如果不出意外的话，控制台里会输出:<strong>双击操作</strong>。</p>
+<h1 id="3将壁纸保存到本地相册"><a href="#3%E5%B0%86%E5%A3%81%E7%BA%B8%E4%BF%9D%E5%AD%98%E5%88%B0%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%86%8C" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.将壁纸保存到本地相册</h1>
+<p>现在我们能捕捉到双击的手势了，也就可以开始着手撸保存壁纸的代码了。首先，我们把console代码替换成一个调用的方法，先占坑。  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">isDoubleTap</span><span class="token punctuation">(</span>currentTouchTimeStamp<span class="token punctuation">,</span> gestureState<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">saveCurrentWallpaperToCameraRoll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>一会儿我们再来实现<code class="language-text">saveCurrentWallpaperToCameraRoll</code>，下面我们先来看另一个问题：壁纸有五张，如何定位当前的这一张？<br>
+我们可以通过从零开始的索引来定位当前图片，每滑动一次就加1或者减1:  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>currentWallIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>还记得上一篇我们预留的一个坑位吗？<code class="language-text">Swiper</code>里的<code class="language-text">onMomentumScrollEnd</code>，在该方法里更新<code class="language-text">currentWallIndex</code>：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">onMomentumScrollEnd</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> state<span class="token punctuation">,</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>currentWallIndex <span class="token operator">=</span> state<span class="token punctuation">.</span>index<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>同样的，别忘了在<code class="language-text">constructor</code>里绑定<code class="language-text">this</code>:</p>
+<p>1</p>
+<p>this.onMomentumScrollEnd = this.onMomentumScrollEnd.bind(this);</p>
+<p>好了，我们开始为<code class="language-text">saveCurrentWallpaperToCameraRoll</code>填坑了。为了能访问相册，需要先引入<code class="language-text">Camera Roll</code>类库，还记得开头是怎么引入<code class="language-text">ReactART</code>的吗？没错，照做一遍就可以：<code class="language-text">node_modules/react-native/Libraries/CameraRoll</code><br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/cameraroll.png"></p>
+<p>然后就可以导入了：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+
+  View<span class="token punctuation">,</span>
+
+  Text<span class="token punctuation">,</span>
+
+  StyleSheet<span class="token punctuation">,</span>
+
+  Dimensions<span class="token punctuation">,</span>
+
+  PanResponder<span class="token punctuation">,</span>
+
+  <span class="token comment">/***/</span>
+
+  CameraRoll<span class="token punctuation">,</span> <span class="token comment">// 访问相册</span>
+
+  AlertIOS <span class="token comment">// iOS的弹出框</span>
+
+  <span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>一旦壁纸保存到相册，我们需要给用户一个保存成功的提示，<code class="language-text">AlertIOS</code>帮我们做到这一点。现在，我们可以着手实现<code class="language-text">saveCurrentWallpaperToCameraRoll</code>：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">saveCurrentWallpaperToCameraRoll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> currentWall <span class="token operator">=</span> wallsJSON<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentWallIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> currentWallURL <span class="token operator">=</span> <span class="token template-string"><span class="token string">`http://unsplash.it/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentWall<span class="token punctuation">.</span>width<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentWall<span class="token punctuation">.</span>height<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">?image=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentWall<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
+
+  CameraRoll<span class="token punctuation">.</span><span class="token function">saveImageWithTag</span><span class="token punctuation">(</span>currentWallURL<span class="token punctuation">)</span>
+
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+    AlertIOS<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span>
+
+      <span class="token string">'保存成功'</span><span class="token punctuation">,</span>
+
+      <span class="token string">'壁纸已保存到本地相册'</span><span class="token punctuation">,</span>
+
+      <span class="token punctuation">[</span>
+
+        <span class="token punctuation">{</span>text<span class="token punctuation">:</span> <span class="token string">'好哒!'</span><span class="token punctuation">,</span> onPress<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'OK Pressed!'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+      <span class="token punctuation">]</span>
+
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=></span><span class="token punctuation">{</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Error saving to camera roll'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>以上代码都能做到自解释，不懂的地方移步：<a href="https://facebook.github.io/react-native/docs/cameraroll.html">CameraRoll</a>和<a href="https://facebook.github.io/react-native/docs/alertios.html">AlertIOS</a>，你懂的。</p>
+<p>好啦，保存代码，去模拟器体验一下保存壁纸功能：（首次保存需要手动同意获取访问相册的权限）<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/saved.png"><br>
+完美！额，等等，从双击到壁纸保存成功，好像有那么几秒的等待时间，用户可能会认为双击不成功，然后再双击一次，这不是我们的期望，下一节专门解决这个问题！</p>
+<h1 id="4创建一个等待组件：waitingjs"><a href="#4%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AD%89%E5%BE%85%E7%BB%84%E4%BB%B6%EF%BC%9Awaitingjs" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.创建一个等待组件：Waiting.js</h1>
+<p>如果没记错的话，我们将创建第一个组件：Waiting.js。这个组件用于异步操作的等待时间，比如保存壁纸到相册的操作，就很有必要加一个等待提示，让用户知道APP在做什么。</p>
+<p>在项目根目录新建文件：<strong>Waiting.js</strong>：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+
+  View<span class="token punctuation">,</span>
+
+  Text<span class="token punctuation">,</span>
+
+  Component<span class="token punctuation">,</span>
+
+  ActivityIndicatorIOS<span class="token punctuation">,</span>
+
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">default</span> Waiting <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> <span class="token punctuation">{</span>width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> isVisible<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span> isVisible <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token keyword">return</span><span class="token punctuation">(</span>
+
+        <span class="token operator">&lt;</span>View 
+
+         style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+
+          flex<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+
+          flexDirection<span class="token punctuation">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+
+          justifyContent<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+
+          alignItems<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+
+          width<span class="token punctuation">:</span> width<span class="token punctuation">,</span>
+
+          height<span class="token punctuation">:</span> height<span class="token punctuation">,</span>
+
+          position<span class="token punctuation">:</span> <span class="token string">'absolute'</span><span class="token punctuation">,</span>
+
+          top<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+
+          left<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+
+          backgroundColor<span class="token punctuation">:</span> <span class="token string">'rgba(0, 0, 0, 0.5)'</span>
+
+         <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+
+         <span class="token operator">&lt;</span>ActivityIndicatorIOS
+
+            animating<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+
+            color<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'#fff'</span><span class="token punctuation">}</span>
+
+            size<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'large'</span><span class="token punctuation">}</span> 
+
+            style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>margin<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+
+           <span class="token operator">&lt;</span>Text style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>color<span class="token punctuation">:</span>’#fff’<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>正在保存，请稍后<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+
+        <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span> 
+
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+      <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>View<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span> 
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Waiting<span class="token punctuation">;</span></code></pre>
+      </div>
+<p><code class="language-text">render</code>第一行代码作用是从组件的<code class="language-text">props</code>中获取相应的属性，其中<code class="language-text">isVisible</code>用于判断是否显示该组件，使用该组件的格式：  </p>
+<p>1</p>
+<Waiting width={width} height={height} isVisible={isWaitingVisible}/>
+<p>在<strong>index.ios.js</strong>中引入<strong>Waiting.js</strong>  </p>
+<p>1</p>
+<p>var Waiting = require('./Waiting.js');</p>
+<p>为了能控制Waiting组件的显示与隐藏，需要在<strong>index.ios.js</strong>新增一个状态：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+  wallsJSON<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  isLoading<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+<span class="token comment">/***/</span>
+
+  isWaitngVisible<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token comment">// 默认不显示</span>
+
+<span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>现在，我们可以在<code class="language-text">&lt;/Swiper</code>之后放入<code class="language-text">&lt;Waiting&gt;</code>组件了，不过，直接这样做会导致报错，因为<a href="https://facebook.github.io/react/tips/maximum-number-of-jsx-root-nodes.html">React不允许返回多个组件</a>。为了解决这个问题，我们需要用<code class="language-<view">&lt;/View</code>再做一个简单的包裹：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">renderResults</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">,</span> isWaitngVisible<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+
+  <span class="token comment">/***/</span>
+
+    <span class="token operator">&lt;</span>View<span class="token operator">></span>
+
+  <span class="token comment">/***/</span>
+
+    <span class="token operator">&lt;</span>Swiper
+
+      <span class="token operator">...</span><span class="token operator">></span>
+
+<span class="token punctuation">.</span>
+
+<span class="token punctuation">.</span>
+
+<span class="token punctuation">.</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Swiper<span class="token operator">></span>
+
+  <span class="token comment">/***/</span>
+
+    <span class="token operator">&lt;</span>Waiting width<span class="token operator">=</span><span class="token punctuation">{</span>width<span class="token punctuation">}</span> height<span class="token operator">=</span><span class="token punctuation">{</span>height<span class="token punctuation">}</span> isVisible<span class="token operator">=</span><span class="token punctuation">{</span>isWaitngVisible<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+
+  <span class="token comment">/***/</span>
+
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>既然有了<code class="language-text">isWaitngVisible</code>状态，我们就应该想一想在哪些时机来改变它的状态：双击触发时置为<code class="language-text">true</code>，保存成功时置为<code class="language-text">false</code>，对应到代码就是：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">saveCurrentWallpaperToCameraRoll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token comment">/***/</span>
+
+  <span class="token comment">// Waiting 组件显示</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isWaitingVisible<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/***/</span>
+
+  <span class="token keyword">var</span> <span class="token punctuation">{</span>wallsJSON<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> currentWall <span class="token operator">=</span> wallsJSON<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentWallIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> currentWallURL <span class="token operator">=</span> <span class="token template-string"><span class="token string">`http://unsplash.it/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentWall<span class="token punctuation">.</span>width<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentWall<span class="token punctuation">.</span>height<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">?image=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentWall<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
+
+  CameraRoll<span class="token punctuation">.</span><span class="token function">saveImageWithTag</span><span class="token punctuation">(</span>currentWallURL<span class="token punctuation">,</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+<span class="token comment">/***/</span>
+
+    <span class="token comment">// Waiting 组件隐藏</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isWaitingVisible<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/***/</span>
+
+    AlertIOS<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span>
+
+      <span class="token string">'保存成功'</span><span class="token punctuation">,</span>
+
+      <span class="token string">'壁纸已保存到本地相册'</span><span class="token punctuation">,</span>
+
+      <span class="token punctuation">[</span>
+
+        <span class="token punctuation">{</span>text<span class="token punctuation">:</span> <span class="token string">'好哒！'</span><span class="token punctuation">,</span> onPress<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'OK Pressed!'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+      <span class="token punctuation">]</span>
+
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=></span><span class="token punctuation">{</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Error saving to camera roll'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>模拟器刷新，双击壁纸，等待组件出现，稍后保存成功的弹窗出现，等待组件消失，完美！</p>
+<p>额，等等，真的很完美吗？有没有注意到保存完图片，屏幕跳到了第一张图片。这是因为我们在<code class="language-text">saveWallpaperToCameraRoll</code>调用<code class="language-text">this.setState()</code>，改变了<code class="language-text">isWaitingVisible</code>的状态，触发了<code class="language-text">render()</code>，从而<code class="language-text">swiper</code>重新加载数据并从第一张图显示。</p>
+<p>为了解决这个bug，我们可以通过<code class="language-text">Swiper</code>的<code class="language-text">index</code>入手：  </p>
+<div class="gatsby-highlight" data-language="jsx">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Swiper</span> <span class="token attr-name">...</span>
+
+        <span class="token attr-name">index</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentWallIndex<span class="token punctuation">}</span></span><span class="token punctuation">></span></span></code></pre>
+      </div>
+<p>这样，就保证了每次重新渲染，都从保存的那张开始。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/saving.png" alt="saving"><br>
+好了，写到这里，我们基本完工一个核心功能完备的小应用：</p>
+<ul>
+<li>能加载随机精美壁纸</li>
+<li>能浏览</li>
+<li>能保存</li>
+</ul>
+<p>如果对随机的五张壁纸无感，想换一批，怎么破？当然，我们可以放置一个按钮，点击便能更新随机的壁纸数据，可是…能不能做得酷一些呢？比如只需要摇一摇手机，便更新了一批壁纸！</p>
+<p>年轻人，下一节我们做这件酷酷的事儿…<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/maomi.jpg"></p>
+<h1 id="5摇一摇动作（shake）和真机测试"><a href="#5%E6%91%87%E4%B8%80%E6%91%87%E5%8A%A8%E4%BD%9C%EF%BC%88shake%EF%BC%89%E5%92%8C%E7%9C%9F%E6%9C%BA%E6%B5%8B%E8%AF%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.摇一摇动作（Shake）和真机测试</h1>
+<p>为了使我们的APP能够捕捉到摇一摇的动作，需要新增一个模块：<a href="https://www.npmjs.com/package/react-native-shake-event-ios">react-native-shake-event-ios</a>。项目根目录运行：<code class="language-text">npm install --save react-native-shake-event-ios</code>。</p>
+<p>另外，我们还需要做的是链接相应的类库。如果没记错的话，这是第三次，也是最后一次做这样的操作，我就不多说了，应该熟练了，少年。温馨提示：<code class="language-text">node_modules/react-native-shake-event-ios/</code>下的<code class="language-text">RNShakeEvent.xcodeproj</code></p>
+<p>引用该类库：  </p>
+<p>1</p>
+<p>var ShakeEvent = require('react-native-shake-event-ios');</p>
+<p>我们在<code class="language-text">componentWillMount</code>新增摇一摇的监听动作：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token operator">...</span>
+
+<span class="token comment">/***/</span>
+
+  <span class="token comment">// 摇一摇，更新数据</span>
+
+  ShakeEvent<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'shake'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fetchWallsJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/***/</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p><code class="language-text">initialize</code>填坑，其实就是初始化各种状态：  </p>
+<div class="gatsby-highlight" data-language="js">
+      <pre class="language-js"><code class="language-js"><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+    wallsJSON<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    isLoading<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    isWaitingVisible<span class="token punctuation">:</span> <span class="token boolean">false</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span>currentWallIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>保存代码，接下来我们开始真机测试。当然，如果没有真机，也可以通过快捷键组合：<code class="language-text">CMD + Ctrl + Z</code>模拟摇一摇操作。不过，我还是期望你有一部真机，因为…这样可以拿来装X啊，少年！</p>
+<p>真机测试意味着我们将脱离开发环境，像平时通过AppStore安装APP那样把我们的APP放到手机内。按照<a href="https://facebook.github.io/react-native/docs/running-on-device-ios.html#using-offline-bundle">官方文档</a>来做，其实很简单：</p>
+<ol>
+<li>
+<p>找到<code class="language-text">Xcode/PIW/PIW/AppDeletegate.m</code>，做以下操作：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/uncomment.png"></p>
+</li>
+<li>
+<p><code class="language-text">Product → Scheme → Edit Scheme</code>或者直接快捷键：<code class="language-text">CMD + Shift + ,</code>，划入的窗口中将<code class="language-text">Build Configuration</code>从<code class="language-text">debug</code>改为<code class="language-text">Release</code>:<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/schema.png"><br>
+这样做的目的是为了防止摇一摇弹出调试菜单。</p>
+</li>
+<li>
+<p>转向<code class="language-text">Build Setting</code>，禁掉<code class="language-text">Dead Code Stripping</code>，别问我这是为啥，我也不清楚，可能这就是人生，年轻人。<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/deadcode.png"></p>
+</li>
+</ol>
+<p>联接你的iPhone到Mac上，选择真机运行：<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/runmyphone.png"></p>
+<p>好啦，万事俱备，只欠一个点击。首次打包和安装会持续较长时间，请耐心等候。安装过程中甭管蹦出什么，选择<strong>相信</strong>就行。注意，如果想恢复到开发环境，把上面的步骤1和步骤2撤销就可以了。</p>
+<p>安装完毕，手机桌面上就应该多出一个巨丑的APP图标，没错，那就是这么长时间我们辛苦做出的APP，快快打开体验一番吧！</p>
+<p>最后，我们把图标也加上：</p>
+<ol>
+<li>下载<a href="http://7xo6wq.com1.z0.glb.clouddn.com/SplashWallIcons.zip">图标文件</a>。当然，你也可以自己按照<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html">苹果图标规定</a>来设计一套</li>
+<li>调转到Xcode<code class="language-text">PIW/PIW/Images.xcassets</code>，选择AppIcon</li>
+<li>将图标文件按照规格拖拽到对应的框内，一个萝卜一个坑，so easy!<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/icons.png"></li>
+</ol>
+<p>再次打包和运行，这次那个巨丑无比的图标应该不见了。</p>
+<p>卧槽，我们目前是不是可以说正式完成了一个APP版本的迭代？是的，我们做到了！</p>
+<h1 id="总结"><a href="#%E6%80%BB%E7%BB%93" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>总结</h1>
+<p>又到了总结时间了，这一次我们都做了哪些事情呢：</p>
+<ul>
+<li><code class="language-text">NetworkImage</code>组件让我们能够显示出带加载进度的图片</li>
+<li><code class="language-text">PanResponder</code>API让我们能够捕捉到双击操作</li>
+<li><code class="language-text">Camera Roll</code>让我们能够将壁纸保存到本地相册</li>
+<li><code class="language-text">Waiting</code>是我们首个自定义的组件，让用户在保存壁纸的同时不再懵逼</li>
+<li><code class="language-text">react-native-shake-event-ios</code>让我们能够检测到摇一摇操作，并在恰当的时机，更新随机数据</li>
+</ul>
+<p>目前为止，我们已经完成了一个功能较完备的APP，同时也学习了许多新知，没有过多地深入，但均给出了深入的入口，也就是文章中的链接。其实，这个APP还可以加入许多好玩的特性，比如：</p>
+<ul>
+<li>既然有双击操作，是不是可以考虑加一个单击操作：单击壁纸，隐藏顶部的两个小黑条和底部的分页，也就是全屏显示壁纸，看得更爽一些，再次单击，恢复隐藏的元素。</li>
+<li>有没有可能做一个设置壁纸前的预览功能呢？虽然可能从API上有所限制，但我们可以通过一些hack的方式来达到类似的目的，至于什么方式，发挥你的脑洞去试试吧。</li>
+<li>每次打开APP都要从第三方获取数据，对于在非WiFi环境，用户可能会有所顾虑，是不是应该做一个本地缓存第三方数据的功能，甚至图片？</li>
+<li>现在我们的代码组织并不很模块化，这一点可不可以做些优化？</li>
+<li>React Native 也可以做安卓开发，尝尝鲜？</li>
+</ul>
+<p>以上是我能想到的一些功能点和优化点，如果我们能一步一步走到现在，相信这些好玩的特性也不会那么难实现。或许，我还会写个番外篇，讲一讲如何继续迭代<strong>PIW</strong>。</p>
+<p>通过这个简单的APP，我们接触到了许多知识点，但React Native的学习远不止这些，一些高级话题我们还没涉猎，比如<code class="language-text">Flux/Redux</code>。但万变不离阅读官方文档，加之实例练习，边学边总结，是我的节奏。Hey，man，你的节奏找到了吗？好了，我累了，打烊了…<br>
+<img src="https://zerosoul.github.io/2016/06/05/building-my-first-ios-app-with-react-native-part-two/tired.jpg" alt="姚明"><br>
+哦对了，最新代码放在了<a href="https://github.com/zerosoul/PIW">Github上</a>，欢迎指正。</p>
+<h1 id="原文链接"><a href="#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>原文链接</h1>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2016/04/how-to-build-your-first-ios-app-with-javascript/#">The Beauty Of React Native: Building Your First iOS App With JavaScript (Part 2)</a></li>
+</ul></article><div class="post__ArticleNav-s293vau-1 PWcgP"><a class="prev" href="/posts/upgrade-hexo-to-3-2">Hexo升级之坑</a><a class="next" href="/posts/building-my-first-ios-app-with-react-native-part-one">React Native之美：构建我的第一个iOS APP（1）</a></div><div id="disqus_thread"></div><div class="wrapper"><div class="Navs__Container-ke6nyr-0 gfQakl"><a href="/cates"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">分类</div></a><a href="/archives"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">归档</div></a><a href="/tags"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">标签</div></a><a href="/about"><div class="btn Button__Wrapper-s1goobno-0 dGDpda">关于</div></a></div></div></div><div class="FixContainer__Container-s5tcbud-0 cnNEXi"><div class="TOC__Toc-gywqkf-0 heeqbv"><div class="mask"></div><div class="content"><ul>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#%E5%86%8D%E7%BB%AD%E5%89%8D%E7%BC%98">再续前缘</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#1%E5%8F%AC%E5%94%A4%E5%87%BA%E5%A3%81%E7%BA%B8%E5%92%8C%E4%BD%9C%E8%80%85">1.召唤出壁纸和作者</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#2-%E6%8D%95%E6%8D%89%E5%8F%8C%E5%87%BB%E6%93%8D%E4%BD%9Cdouble-taps">2. 捕捉双击操作(Double-Taps)</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#3%E5%B0%86%E5%A3%81%E7%BA%B8%E4%BF%9D%E5%AD%98%E5%88%B0%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%86%8C">3.将壁纸保存到本地相册</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#4%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AD%89%E5%BE%85%E7%BB%84%E4%BB%B6%EF%BC%9Awaitingjs">4.创建一个等待组件：Waiting.js</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#5%E6%91%87%E4%B8%80%E6%91%87%E5%8A%A8%E4%BD%9C%EF%BC%88shake%EF%BC%89%E5%92%8C%E7%9C%9F%E6%9C%BA%E6%B5%8B%E8%AF%95">5.摇一摇动作（Shake）和真机测试</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="/posts/building-my-first-ios-app-with-react-native-part-two/#%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5">原文链接</a></li>
+</ul></div><button class="btn fold"><span class="line"></span><span class="line"></span><span class="line"></span></button></div><div class="Backtop__Circle-s2n6kzp-0 ctQqnq" style="visibility:hidden"><div class="wrapper"></div></div></div><footer class="Footer__Content-qjve7o-0 fHxAMN"><div>© 2018 by Tristan Yang </div><div class="power">Powered by <a href="http://reactjs.org/">React.js</a> &amp; <a href="https://www.gatsbyjs.org/">Gatsby.js</a></div></footer></div></div><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-120211336-1', 'auto');
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-post-js","jsonName":"posts-building-my-first-ios-app-with-react-native-part-two-0cd","path":"/posts/building-my-first-ios-app-with-react-native-part-two"};window.dataPath="160/path---posts-building-my-first-ios-app-with-react-native-part-two-0-cd-309-yNQuWWjqmzhLhjqTa9odY2cstc";/*]]>*/</script><script src="/webpack-runtime-6d4f4f1c9e3eae130ebd.js" async=""></script><script src="/3-4a9282434f611c66f112.js" async=""></script><script src="/2-0a6e028e6df490c6c9e3.js" async=""></script><script src="/component---src-templates-post-js-ad3bcfeeb507b2c4b3ef.js" async=""></script><script src="/1-6b673e75d0ee6797776c.js" async=""></script><script src="/0-8c4087aaec00fefd63bf.js" async=""></script><script src="/app-80de48ac6832c129ef12.js" async=""></script></body></html>

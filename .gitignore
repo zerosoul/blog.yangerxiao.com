@@ -2,8 +2,10 @@ node_modules/
 # public
 .gatsby-context.js
 .DS_Store
+.icloud
 .intermediate-representation/
 .cache/
+.vscode/
 yarn.lock
 yarn-error.log
 static/*/**.icloud

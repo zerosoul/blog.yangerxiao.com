@@ -28,7 +28,7 @@ const Line = styled.div`
         position: relative;
         margin-right: 0.6rem;
         &:before {
-          content: '#';
+          content: "#";
           position: absolute;
           left: -0.4rem;
         }
@@ -37,6 +37,8 @@ const Line = styled.div`
   }
 `;
 
-const Subline = props => <Line sectionTitle={props.sectionTitle}>{props.children}</Line>;
+const Subline = props => (
+  <Line sectionTitle={props.sectionTitle}>{props.children}</Line>
+);
 
 export default Subline;

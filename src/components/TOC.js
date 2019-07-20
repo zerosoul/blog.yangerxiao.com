@@ -45,7 +45,7 @@ const Toc = styled.div`
     }
     &.unfold:before,
     &.unfold:after {
-      content: '';
+      content: "";
       position: absolute;
       height: 1rem;
       width: 0.1rem;
@@ -64,7 +64,7 @@ const Toc = styled.div`
   }
   .content {
     z-index: 999;
-    transform:translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     padding: 0.6rem;
     margin-bottom: 0.5rem;
     border: 1px solid #ddd;
@@ -92,32 +92,19 @@ export default class TOC extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fold: true,
+      fold: true
     };
-    // this.contentBlock = React.createRef();
-    // this.maskBtn = React.createRef();
   }
-  // componentDidMount() {
-  //   const links = this.contentBlock.current.querySelectorAll('a');
-  //   const maskBtn = this.maskBtn.current;
-  //   addEventListenerList(links, 'click', evt => {
-  //     maskBtn.click();
-  //   });
-  // }
-  // componentWillUnmount() {
-  //   const links = this.contentBlock.current.querySelectorAll('a');
-  //   removeEventListenerList(links, 'click');
-  // }
   onClickHandler = () => {
     const { fold } = this.state;
     this.setState({
-      fold: !fold,
+      fold: !fold
     });
   };
   handleContentClick = ({ target }) => {
     if (target.nodeName === 'A') {
       this.setState({
-        fold: true,
+        fold: true
       });
     }
   };
@@ -125,15 +112,26 @@ export default class TOC extends Component {
     const { toc } = this.props;
     return (
       <Toc fold={this.state.fold}>
-        <React.Fragment>
-          <div className="mask" onClick={this.onClickHandler} onKeyDown={this.onClickHandler} />
-          <div className="content" dangerouslySetInnerHTML={{ __html: toc }} onClick={this.handleContentClick} />
-          <button className={`btn ${this.state.fold ? 'fold' : 'unfold'}`} onClick={this.onClickHandler}>
+        <>
+          <div
+            className="mask"
+            onClick={this.onClickHandler}
+            onKeyDown={this.onClickHandler}
+          />
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: toc }}
+            onClick={this.handleContentClick}
+          />
+          <button
+            className={`btn ${this.state.fold ? 'fold' : 'unfold'}`}
+            onClick={this.onClickHandler}
+          >
             <span className="line" />
             <span className="line" />
             <span className="line" />
           </button>
-        </React.Fragment>
+        </>
       </Toc>
     );
   }

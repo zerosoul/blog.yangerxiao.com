@@ -11,7 +11,7 @@ const SEO = props => {
   const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
   if (postSEO) {
     const postMeta = frontmatter;
-    title = postMeta.title; // eslint-disable-line prefer-destructuring
+    title = postMeta.title;
     description = excerpt;
     image = config.siteBanner;
     postURL = config.siteUrl + realPrefix + postPath;
@@ -28,8 +28,8 @@ const SEO = props => {
       '@type': 'WebSite',
       url: blogURL,
       name: title,
-      alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-    },
+      alternateName: config.siteTitleAlt ? config.siteTitleAlt : ''
+    }
   ];
   if (postSEO) {
     schemaOrgJSONLD.push([
@@ -43,10 +43,10 @@ const SEO = props => {
             item: {
               '@id': postURL,
               name: title,
-              image,
-            },
-          },
-        ],
+              image
+            }
+          }
+        ]
       },
       {
         '@context': 'http://schema.org',
@@ -57,10 +57,10 @@ const SEO = props => {
         headline: title,
         image: {
           '@type': 'ImageObject',
-          url: image,
+          url: image
         },
-        description,
-      },
+        description
+      }
     ]);
   }
   return (
@@ -69,7 +69,9 @@ const SEO = props => {
       <meta name="description" content={description} />
       <meta name="keywords" content="tristan yang, blog, writing, frontend" />
       <meta name="image" content={image} />
-      <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
       <meta property="og:locale" content="zh_CN" />
       <meta property="og:site_name" content={config.ogSiteName} />
       <meta property="og:url" content={postSEO ? postURL : blogURL} />

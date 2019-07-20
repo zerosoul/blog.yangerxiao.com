@@ -13,7 +13,7 @@ const settings = {
   pauseOnHover: true,
   dots: true,
   arrows: false,
-  mobileFirst: true,
+  mobileFirst: true
 };
 
 const Slider = ({ imgs }) => <Slick {...settings}> {imgs}</Slick>;

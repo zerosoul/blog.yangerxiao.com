@@ -50,7 +50,17 @@ const Cover = styled.div`
 `;
 const Excerpt = styled.p``;
 
-const Article = ({ title, date, excerpt, slug, category, tags, cover }) => {
+const Article = ({
+  title,
+  date,
+  excerpt,
+  slug,
+  category,
+  tags,
+  cover,
+  wordCount,
+  timeToRead
+}) => {
   const firstChar = title.charAt(1) || title.charAt(0);
   return (
     <Post>
@@ -61,6 +71,7 @@ const Article = ({ title, date, excerpt, slug, category, tags, cover }) => {
         </Link>
       </Title>
       <Subline>
+        <span>{`${wordCount}字/${timeToRead}分钟`}</span>
         {date && <span>{getYMD(date)} </span>}
         {category && (
           <span>

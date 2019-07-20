@@ -12,11 +12,13 @@ const IndexPage = ({ data }) => {
 
   return (
     <Wrapper>
-      <SectionTitle>最新文章</SectionTitle>
+      <SectionTitle>最近更新</SectionTitle>
       {posts.map(({ node: post }) => {
         const { title, date, category, cover, tags, slug } = post.frontmatter;
         return (
           <Article
+            wordCount={post.wordCount.words}
+            timeToRead={post.timeToRead}
             title={title}
             date={date}
             excerpt={post.excerpt}
@@ -39,6 +41,7 @@ export const updateRecentlyQuery = graphql`
     allMarkdownRemark(
       limit: 10
       sort: { order: DESC, fields: frontmatter___date }
+      filter: { frontmatter: { draft: { ne: true } } }
     ) {
       edges {
         node {

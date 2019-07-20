@@ -44,13 +44,6 @@ exports.createPages = ({ graphql, actions }) => {
           console.log(result.errors);
           reject(result.errors);
         }
-        createPaginatedPages({
-          edges: result.data.posts.edges,
-          createPage: createPage,
-          pageTemplate: "src/templates/index.js",
-          pathPrefix: "page"
-        });
-
         const posts = result.data.posts.edges;
 
         createPostPages(createPage, posts);
@@ -74,13 +67,13 @@ exports.onCreateNode = ({ node, actions }) => {
       Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
     ) {
       slug = `/posts/${kebabCase(node.frontmatter.slug)}`;
+      node.frontmatter.slug = slug;
     }
 
     node.frontmatter.title = title;
     node.frontmatter.date = new Date(
       node.frontmatter.date.replace(/-/g, "/")
     ).toISOString();
-
     createNodeField({ node, name: "slug", value: slug });
   }
 };

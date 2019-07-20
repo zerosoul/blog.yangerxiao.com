@@ -49,7 +49,7 @@ const Categories = props => {
 export default Categories;
 
 /* eslint no-undef: off */
-export const postQuery = graphql`
+export const catesQuery = graphql`
   query CategoriesPage {
     allMarkdownRemark {
       group(field: frontmatter___category) {

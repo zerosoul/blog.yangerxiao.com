@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { media } from '../utils/media';
@@ -27,10 +27,10 @@ const FixContainer = props => {
 };
 FixContainer.propTypes = {
   right: PropTypes.number,
-  bottom: PropTypes.number,
+  bottom: PropTypes.number
 };
 FixContainer.defaultProps = {
   right: 20,
-  bottom: 30,
+  bottom: 30
 };
 export default FixContainer;

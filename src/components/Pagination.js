@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -23,7 +23,10 @@ export default class Pagination extends React.PureComponent {
 
   componentDidMount() {
     if (this.currePage.current) {
-      this.currePage.current.scrollIntoView({ block: 'start', inline: 'center' });
+      this.currePage.current.scrollIntoView({
+        block: 'start',
+        inline: 'center'
+      });
     }
   }
   render() {

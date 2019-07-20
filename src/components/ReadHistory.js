@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import { sortBy, uniqBy } from 'lodash';
 import styled from 'styled-components';
 import { ellipsis } from 'polished';
 import { Global } from '../utils/fun';
@@ -32,7 +32,7 @@ const Container = styled.div`
       outline: none;
     }
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       width: 0.6rem;
       height: 0.7rem;
@@ -70,18 +70,22 @@ export default class ReadHistory extends Component {
     super(props);
 
     this.state = {
-      expand: false,
+      expand: false
     };
     this.hisList = React.createRef();
   }
   componentDidMount() {
-    let histories = Global.JSON.parse(Global.localStorage.getItem('read.histories')) || [];
+    let histories =
+      Global.JSON.parse(Global.localStorage.getItem('read.histories')) || [];
     if (this.props.title) {
       const { title, url } = this.props;
       histories.push({ title, url, ts: new Date().getTime() });
-      histories = _.sortBy(histories, ['ts']);
-      histories = _.uniqBy(histories, 'url').slice(-10);
-      Global.localStorage.setItem('read.histories', Global.JSON.stringify(histories));
+      histories = sortBy(histories, ['ts']);
+      histories = uniqBy(histories, 'url').slice(-10);
+      Global.localStorage.setItem(
+        'read.histories',
+        Global.JSON.stringify(histories)
+      );
     }
     const listHtml = histories.map(
       history =>
@@ -95,13 +99,17 @@ export default class ReadHistory extends Component {
   onClickHandler = () => {
     const { expand } = this.state;
     this.setState({
-      expand: !expand,
+      expand: !expand
     });
   };
   render() {
     return (
       <Container expand={this.state.expand}>
-        <div className="mask" onClick={this.onClickHandler} onKeyDown={this.onClickHandler} />
+        <div
+          className="mask"
+          onClick={this.onClickHandler}
+          onKeyDown={this.onClickHandler}
+        />
         <div className="history">
           <ul ref={this.hisList} />
         </div>

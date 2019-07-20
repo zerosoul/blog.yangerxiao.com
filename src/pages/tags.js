@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import Wrapper from '../components/Wrapper';
@@ -55,7 +55,6 @@ const Tags = props => {
   return (
     <Wrapper>
       <Helmet title={`标签 | ${config.siteTitle}`} />
-      {/* <SectionTitle>标签</SectionTitle> */}
       <Subline sectionTitle>{sublineStr}</Subline>
       <TagList>
         {group.map(tag => (
@@ -77,7 +76,7 @@ export default Tags;
 /* eslint no-undef: off */
 export const tagsQuery = graphql`
   query TagsPage {
-    allMarkdownRemark(filter: {frontmatter: {draft: {ne: true}}}){
+    allMarkdownRemark(filter: { frontmatter: { draft: { ne: true } } }) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

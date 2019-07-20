@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { media } from '../utils/media';
 import { Global } from '../utils/fun';
 
 const Circle = styled.div`
@@ -14,7 +13,7 @@ const Circle = styled.div`
     position: relative;
     &:before,
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0.9rem;
       left: 0.34rem;
@@ -33,15 +32,15 @@ const Circle = styled.div`
 `;
 export default class Backtop extends Component {
   static propTypes = {
-    offset: PropTypes.number,
+    offset: PropTypes.number
   };
   static defaultProps = {
-    offset: 800,
+    offset: 800
   };
   constructor(props) {
     super(props);
     this.state = {
-      isVisible: false,
+      isVisible: false
     };
     this.scrollUp = this.scrollUp.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
@@ -57,11 +56,10 @@ export default class Backtop extends Component {
     const top = (Global.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     const v = top > this.props.offset;
     this.setState({
-      isVisible: v,
+      isVisible: v
     });
   };
   scrollUp = () => {
-
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {
       Global.requestAnimationFrame(this.scrollUp);
@@ -70,7 +68,10 @@ export default class Backtop extends Component {
   };
   render() {
     return (
-      <Circle style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }} onClick={this.scrollUp}>
+      <Circle
+        style={{ visibility: this.state.isVisible ? 'visible' : 'hidden' }}
+        onClick={this.scrollUp}
+      >
         <div className="wrapper" />
       </Circle>
     );

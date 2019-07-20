@@ -1,8 +1,6 @@
-/* eslint jsx-a11y/label-has-for:0 */
-
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link, graphql } from "gatsby";
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Comment from '../components/Comment';
@@ -43,46 +41,45 @@ const Content = styled.div`
     text-decoration: underline;
   }
 `;
-const About = ({ data }) => {
-  const commentConfig = {
-    url: `https://blog.yangerxiao.com/about`,
-    identifier: `about-me`,
-    title: `关于我`
-  }
-  return (
-    <Wrapper>
-      <Helmet title={`关于我 | ${config.siteTitle}`} />
-      <Container>
-        {/* <SectionTitle>
-        <Link to="/about">关于我</Link>
-      </SectionTitle> */}
-        <Subline sectionTitle>也许，我们能成为朋友。</Subline>
-        <Slider
-          imgs={data.slideImgs.edges.map(img => <Img fluid={img.node.fluid} key={img.node.fluid.src} alt="关于我" />)}
-        />
-
-        <Header>联系方式</Header>
-        <Content>
-          <dt>邮箱：</dt>
-          <dd>yanggc888#163.com</dd>
-        </Content>
-        <Content>
-          <dt>微信：</dt>
-          <dd>
-            <Img fluid={data.wxImage.fluid} alt="微信二维码" />
-          </dd>
-        </Content>
-        <Comment config={commentConfig} />
-      </Container>
-    </Wrapper>
-  )
+const commentConfig = {
+  url: `https://blog.yangerxiao.com/about`,
+  identifier: `about-me`,
+  title: `关于我`
 };
+const About = ({ data }) => (
+  <Wrapper>
+    <Helmet title={`关于我 | ${config.siteTitle}`} />
+    <Container>
+      <Subline sectionTitle>也许，我们能成为朋友。</Subline>
+      <Slider
+        imgs={data.slideImgs.edges.map(img => (
+          <Img fluid={img.node.fluid} key={img.node.fluid.src} alt="关于我" />
+        ))}
+      />
+
+      <Header>联系方式</Header>
+      <Content>
+        <dt>邮箱：</dt>
+        <dd>yanggc888#163.com</dd>
+      </Content>
+      <Content>
+        <dt>微信：</dt>
+        <dd>
+          <Img fluid={data.wxImage.fluid} alt="微信二维码" />
+        </dd>
+      </Content>
+      <Comment config={commentConfig} />
+    </Container>
+  </Wrapper>
+);
 
 export default About;
 /* eslint no-undef: off */
 export const query = graphql`
   query ProfileImagesQuery {
-    slideImgs:allImageSharp(filter: { fluid:{originalName:  { regex: "/about_slide_/" }}}) {
+    slideImgs: allImageSharp(
+      filter: { fluid: { originalName: { regex: "/about_slide_/" } } }
+    ) {
       edges {
         node {
           fluid {
@@ -91,7 +88,7 @@ export const query = graphql`
         }
       }
     }
-    wxImage: imageSharp(fluid: {originalName: { regex: "/wx.jpg/" }}) {
+    wxImage: imageSharp(fluid: { originalName: { regex: "/wx.jpg/" } }) {
       fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }

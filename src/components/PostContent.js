@@ -63,13 +63,13 @@ export default class PostContent extends Component {
         newdiv.appendChild(selection.getRangeAt(0).cloneContents());
 
         // 遇到 pre 标签需要特殊处理一下，否则换行将被清除
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (
+          selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE'
+        ) {
           newdiv.innerHTML = `<pre>${newdiv.innerHTML}</pre>`;
         }
-        const _url = document.location.href.replace(document.location.hash, "");
-        newdiv.innerHTML += `<br /><br />作者：杨二 <br />微信：yanggc_2013 <br />链接：<a href='${
-          _url
-          }'>${_url}</a> <br />著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。`;
+        const _url = document.location.href.replace(document.location.hash, '');
+        newdiv.innerHTML += `<br /><br />作者：杨二 <br />微信：yanggc_2013 <br />链接：<a href='${_url}'>${_url}</a> <br />著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。`;
 
         selection.selectAllChildren(newdiv);
         window.setTimeout(() => {
@@ -81,6 +81,12 @@ export default class PostContent extends Component {
   };
   render() {
     const { content } = this.props;
-    return <Container id="postContent" ref={this.postBlock} dangerouslySetInnerHTML={{ __html: content }} />;
+    return (
+      <Container
+        id="postContent"
+        ref={this.postBlock}
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    );
   }
 }

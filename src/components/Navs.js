@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import { media } from '../utils/media';
 import { Global } from '../utils/fun';
 import Button from './Button';
@@ -39,7 +39,7 @@ const Container = styled.div`
         top: 100%;
         left: 50%;
         border: solid transparent;
-        content: ' ';
+        content: " ";
         height: 0;
         width: 0;
         position: absolute;
@@ -77,20 +77,20 @@ export default class Navs extends Component {
     const navs = [
       {
         to: '/cates',
-        title: '分类',
+        title: '分类'
       },
       {
         to: '/archives',
-        title: '归档',
+        title: '归档'
       },
       {
         to: '/tags',
-        title: '标签',
+        title: '标签'
       },
       {
         to: '/about',
-        title: '关于',
-      },
+        title: '关于'
+      }
     ];
     const { isBottom } = this.props;
     return (

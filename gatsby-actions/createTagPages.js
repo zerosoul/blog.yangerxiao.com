@@ -1,16 +1,16 @@
-const _ = require('lodash');
+const { kebabCase, each, get, uniq } = require("lodash");
 // const path = require('path');
 
 module.exports = (createPage, createPaginatedPages, posts) => {
   let allTags = [];
 
-  _.each(posts, edge => {
-    if (_.get(edge, 'node.frontmatter.tags')) {
+  each(posts, edge => {
+    if (get(edge, "node.frontmatter.tags")) {
       allTags = allTags.concat(edge.node.frontmatter.tags);
     }
   });
 
-  allTags = _.uniq(allTags);
+  allTags = uniq(allTags);
 
   // console.log(allTags);
   allTags.forEach(tag => {
@@ -23,12 +23,12 @@ module.exports = (createPage, createPaginatedPages, posts) => {
     createPaginatedPages({
       edges: tagPosts,
       createPage,
-      pageTemplate: 'src/templates/tag.js',
-      pathPrefix: `tags/${_.kebabCase(tag)}`, // This is optional and defaults to an empty string if not used
+      pageTemplate: "src/templates/tag.js",
+      pathPrefix: `tags/${kebabCase(tag)}`, // This is optional and defaults to an empty string if not used
       context: {
         total: tagPosts.length,
-        tag,
-      }, // This is optional and defaults to an empty object if not used
+        tag
+      } // This is optional and defaults to an empty object if not used
     });
   });
 };

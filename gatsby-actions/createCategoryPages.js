@@ -1,15 +1,15 @@
-const _ = require('lodash');
+const { get, each, uniq } = require("lodash");
 
 module.exports = (createPage, createPaginatedPages, posts) => {
   let allCates = [];
 
-  _.each(posts, edge => {
-    if (_.get(edge, 'node.frontmatter.category')) {
+  each(posts, edge => {
+    if (get(edge, "node.frontmatter.category")) {
       allCates = allCates.concat(edge.node.frontmatter.category);
     }
   });
 
-  allCates = _.uniq(allCates);
+  allCates = uniq(allCates);
 
   // console.log(allCates);
   allCates.forEach(cate => {
@@ -22,12 +22,12 @@ module.exports = (createPage, createPaginatedPages, posts) => {
     createPaginatedPages({
       edges: catePosts,
       createPage,
-      pageTemplate: 'src/templates/category.js',
+      pageTemplate: "src/templates/category.js",
       pathPrefix: `cates/${cate}`,
       context: {
         total: catePosts.length,
-        category: cate,
-      },
+        category: cate
+      }
     });
   });
 };

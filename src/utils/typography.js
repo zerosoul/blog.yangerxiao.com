@@ -1,8 +1,8 @@
-import Typography from 'typography';
+import Typography from 'typography'
 // import oceanBeachTheme from 'typography-theme-ocean-beach';
-import { lighten } from 'polished';
+import { lighten } from 'polished'
 
-const config = require('../../config/SiteConfig');
+const config = require('../../config/SiteConfig')
 
 // oceanBeachTheme.headerFontFamily = config.fontFamily;
 // oceanBeachTheme.bodyFontFamily = config.fontFamily;
@@ -41,11 +41,11 @@ const typography = new Typography({
       padding: '0.5rem .6rem',
     },
   }),
-});
+})
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles();
+  typography.injectStyles()
 }
 
-export default typography;
+export default typography

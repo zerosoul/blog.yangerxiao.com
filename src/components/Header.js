@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import { lighten } from 'polished';
 import Navs from './Navs';
 
@@ -21,7 +21,6 @@ const Hero = styled.div`
       padding: 0.6rem 2rem;
       background: #222;
       color: #fff;
-      /* border-radius: 1rem; */
     }
   }
   .slogan {

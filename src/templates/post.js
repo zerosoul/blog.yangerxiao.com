@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import kebabCase from 'lodash/kebabCase';
 import SEO from '../components/SEO';
@@ -39,7 +39,7 @@ const ArticleNav = styled.div`
       background: #ddd;
     }
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       margin-top: -0.5rem;
@@ -63,7 +63,15 @@ const ArticleNav = styled.div`
 `;
 const Post = props => {
   // console.log(props);
-  const { slug, prev, next, html, tableOfContents: toc, frontmatter, excerpt } = props.pageContext;
+  const {
+    slug,
+    prev,
+    next,
+    html,
+    tableOfContents: toc,
+    frontmatter,
+    excerpt
+  } = props.pageContext;
   const { title, date, tags, category } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
   // const disqusShortname = "blog-yangerxiao-com";
@@ -74,7 +82,12 @@ const Post = props => {
   };
   return (
     <Wrapper toc={tocComponent}>
-      <SEO postPath={slug} excerpt={excerpt} frontmatter={frontmatter} postSEO />
+      <SEO
+        postPath={slug}
+        excerpt={excerpt}
+        frontmatter={frontmatter}
+        postSEO
+      />
       <Helmet title={`${title} | ${config.siteTitle}`} />
       <Title>{title}</Title>
       <Subline>
@@ -88,7 +101,11 @@ const Post = props => {
           <span>
             <span className="tags">
               {tags.map(tag => (
-                <Link key={`${kebabCase(tag)}`} className="tag" to={`/tags/${kebabCase(tag)}`}>
+                <Link
+                  key={`${kebabCase(tag)}`}
+                  className="tag"
+                  to={`/tags/${kebabCase(tag)}`}
+                >
                   {tag}
                 </Link>
               ))}
@@ -99,8 +116,16 @@ const Post = props => {
 
       <PostContent content={html} />
       <ArticleNav>
-        {prev && <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title}`}</Link>}
-        {next && <Link to={next.fields.slug} className="next">{`${next.frontmatter.title}`}</Link>}
+        {prev && (
+          <Link to={prev.fields.slug} className="prev">{`${
+            prev.frontmatter.title
+          }`}</Link>
+        )}
+        {next && (
+          <Link to={next.fields.slug} className="next">{`${
+            next.frontmatter.title
+          }`}</Link>
+        )}
       </ArticleNav>
       <Comment config={disqusConfig} />
       <Navs isBottom />

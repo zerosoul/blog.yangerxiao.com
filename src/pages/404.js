@@ -1,5 +1,3 @@
-/* eslint jsx-a11y/label-has-for:0 */
-
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';

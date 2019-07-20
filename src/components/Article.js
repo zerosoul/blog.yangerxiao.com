@@ -71,7 +71,11 @@ const Article = ({ title, date, excerpt, slug, category, tags, cover }) => {
           <span>
             <span className="tags">
               {tags.map(tag => (
-                <Link key={`${kebabCase(tag)}`} className="tag" to={`/tags/${kebabCase(tag)}`}>
+                <Link
+                  key={`${kebabCase(tag)}`}
+                  className="tag"
+                  to={`/tags/${kebabCase(tag)}`}
+                >
                   {tag}
                 </Link>
               ))}

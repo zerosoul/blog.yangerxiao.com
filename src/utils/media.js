@@ -9,7 +9,7 @@ const sizes = {
   tabletWide: '750px',
   desktop: '900px',
   desktopWide: '1200px',
-};
+}
 export const media = {
   phone: `(min-width: ${sizes.phoneMini}`,
   phoneMini: `(min-width: ${sizes.phoneMini})`,
@@ -21,4 +21,4 @@ export const media = {
   tabletWide: `(min-width: ${sizes.tabletWide})`,
   desktop: `(min-width: ${sizes.desktop})`,
   desktopWide: `(min-width: ${sizes.desktopWide})`,
-};
+}

@@ -22,11 +22,16 @@ exports.createPages = ({ graphql, actions }) => {
             totalCount
             edges {
               node {
+                wordCount{
+                  words
+                }
+                timeToRead
                 fields {
                   slug
                 }
                 html
                 frontmatter {
+                  slug
                   title
                   date
                   category

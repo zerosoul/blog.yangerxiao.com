@@ -32,7 +32,7 @@ const Categories = props => {
   return (
     <Wrapper>
       <Helmet title={`分类 | ${config.siteTitle}`} />
-      <Subline sectionTitle>{`共${group.length}个`}</Subline>
+      <Subline sectionTitle>{`共${group.length}个分类`}</Subline>
       <Cates>
         {group.map(category => (
           <Title key={`${kebabCase(category.fieldValue)}`}>

@@ -64,7 +64,6 @@ const ArticleNav = styled.div`
 const Post = props => {
   // console.log(props);
   const {
-    slug,
     prev,
     next,
     html,
@@ -72,7 +71,7 @@ const Post = props => {
     frontmatter,
     excerpt
   } = props.pageContext;
-  const { title, date, tags, category } = frontmatter;
+  const { title, date, tags, category, slug } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
   // const disqusShortname = "blog-yangerxiao-com";
   const disqusConfig = {

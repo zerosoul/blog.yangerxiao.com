@@ -41,14 +41,11 @@ const Archives = ({ pageContext }) => {
       <Container>
         {Object.keys(archives).map(date => {
           const year = date.substr(4);
-          const archiveEle = archives[date].map(node => (
-            <Archive
-              key={node.fields.slug}
-              path={node.fields.slug}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date}
-            />
-          ));
+
+          const archiveEle = archives[date].map(node => {
+            let { slug, title, date } = node.frontmatter;
+            return <Archive key={slug} path={slug} title={title} date={date} />;
+          });
           return (
             <ArchiveList className="archives-item" key={year}>
               <h2 className="archive-year">{year}</h2>

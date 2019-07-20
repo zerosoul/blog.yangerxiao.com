@@ -51,7 +51,7 @@ const Tags = props => {
     }
     return 0;
   });
-  const sublineStr = `共${group.length}个`;
+  const sublineStr = `共${group.length}个标签`;
   return (
     <Wrapper>
       <Helmet title={`标签 | ${config.siteTitle}`} />

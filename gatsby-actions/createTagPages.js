@@ -1,6 +1,4 @@
 const { kebabCase, each, get, uniq } = require("lodash");
-// const path = require('path');
-
 module.exports = (createPage, createPaginatedPages, posts) => {
   let allTags = [];
 

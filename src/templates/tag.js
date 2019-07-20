@@ -28,16 +28,14 @@ const Tag = ({ pageContext }) => {
       <SectionTitle>#{tag}</SectionTitle>
       <Subline sectionTitle>{subline}</Subline>
       {group.map(({ node: post }) => {
-        const { title, cover, date, tags } = post.frontmatter;
+        const { slug } = post.frontmatter;
         return (
           <Article
-            title={title}
-            date={date}
+            wordCount={post.wordCount.words}
+            timeToRead={post.timeToRead}
             excerpt={post.excerpt}
-            slug={post.fields.slug}
-            tags={tags}
-            cover={cover}
-            key={post.fields.slug}
+            key={slug}
+            {...post.frontmatter}
           />
         );
       })}

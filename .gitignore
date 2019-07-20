@@ -6,6 +6,6 @@ public
 .intermediate-representation/
 .cache/
 .vscode/
-yarn.lock
+package-lock.json
 yarn-error.log
 static/*/**.icloud

@@ -6,30 +6,25 @@ module.exports = {
         resolve: `gatsby-remark-images`,
         options: {
           maxWidth: 700,
-          showCaptions: true,
-        },
+          showCaptions: true
+        }
       },
-      // {
-      //   resolve: 'gatsby-remark-external-links',
-      //   options: {
-      //     target: '_blank',
-      //     rel: 'nofollow noopener noreferrer',
-      //   },
-      // },
+
       {
         resolve: 'gatsby-remark-prismjs',
         options: {
-          inlineCodeMarker: '>',
-        },
+          inlineCodeMarker: null,
+          noInlineHighlight: true
+        }
       },
 
       {
         resolve: `gatsby-remark-autolink-headers`,
         options: {
-          offsetY: `100`,
-        },
+          offsetY: `100`
+        }
       },
-      `gatsby-remark-responsive-iframe`,
-    ],
-  },
+      `gatsby-remark-responsive-iframe`
+    ]
+  }
 };

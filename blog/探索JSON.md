@@ -1,6 +1,6 @@
 ---
 slug: "explore-json"
-cover: "https://zerosoul.github.io/2015/06/18/explore-json/json.png"
+cover: "/images/json.png"
 date: "2015-06-18 17:31:37"
 category: "技术"
 tags:
@@ -9,7 +9,7 @@ tags:
   - 前端
 ---
 
-![json](https://zerosoul.github.io/2015/06/18/explore-json/json.png)
+![json](/images/json.png)
 
 # 概述
 
@@ -28,25 +28,25 @@ JSON 具有以下这些形式：
 
 - 对象是一个无序的“‘名称/值’对”集合。一个对象以“{”（左括号）开始，“}”（右括号）结束。每个“名称”后跟一个“:”（冒号）；“‘名称/值’ 对”之间使用“,”（逗号）分隔。
 
-![object](object.gif)
+![object](/images/object.gif)
 
 - 数组是值（value）的有序集合。一个数组以“\[”（左中括号）开始，“\]”（右中括号）结束。值之间使用“,”（逗号）分隔。
 
-![array](https://zerosoul.github.io/2015/06/18/explore-json/array.gif)
+![array](/images/array.gif)
 
 - 值（value）可以是双引号括起来的字符串（string）、数值(number)、true、false、 null、对象（object）或者数组（array）。这些结构可以嵌套。
 
-![value](https://zerosoul.github.io/2015/06/18/explore-json/value.gif)
+![value](/images/value.gif)
 
 - 字符串（string）是由双引号包围的任意数量 Unicode 字符的集合，使用反斜线转义。一个字符（character）即一个单独的字符串（character string）。
 
 字符串（string）与 C 或者 Java 的字符串非常相似。
 
-![string](https://zerosoul.github.io/2015/06/18/explore-json/string.gif)
+![string](/images/string.gif)
 
 - 数值（number）也与 C 或者 Java 的数值非常相似。除去未曾使用的八进制与十六进制格式。除去一些编码细节。
 
-![number](https://zerosoul.github.io/2015/06/18/explore-json/number.gif)
+![number](/images/number.gif)
 
 _注意：空白可以加入到任何符号之间。_
 

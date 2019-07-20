@@ -71,7 +71,7 @@ const Article = ({
         </Link>
       </Title>
       <Subline>
-        <span>{`${wordCount}字/${timeToRead}分钟`}</span>
+        {wordCount && <span>{`${wordCount}字/约${timeToRead}分钟`}</span>}
         {date && <span>{getYMD(date)} </span>}
         {category && (
           <span>

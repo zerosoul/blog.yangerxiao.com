@@ -38,7 +38,8 @@
 ### 本地开发
 
 > 推荐使用 yarn
-> `cd BLOG.YOURDOMAIN.COM && yarn install && yarn dev`
+
+`cd BLOG.YOURDOMAIN.COM && yarn install && yarn dev`
 
 ### 查看效果
 

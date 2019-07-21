@@ -4070,6 +4070,11 @@ dargs@^4.0.1:
   dependencies:
     number-is-nan "^1.0.0"
 
+darkmode-js@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/darkmode-js/download/darkmode-js-1.4.0.tgz#fee31a2a57bbfc698c580b01735241b0f931ac44"
+  integrity sha1-/uMaKle7/GmMWAsBc1JBsPkxrEQ=
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.npmjs.org/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"

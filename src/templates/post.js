@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Darkmode from 'darkmode-js';
+
 import kebabCase from 'lodash/kebabCase';
 import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
@@ -79,6 +81,9 @@ const Post = props => {
     identifier: slug,
     title
   };
+  useEffect(() => {
+    new Darkmode().showWidget();
+  }, []);
   return (
     <Wrapper toc={tocComponent}>
       <SEO

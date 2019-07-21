@@ -1,15 +1,15 @@
 ---
-slug: 'html5 memo'
-cover: 'https://zerosoul.github.io/2016/11/15/h5-memo/html5.jpg'
-date: '2016-11-15 17:31:37'
-category: '技术'
+slug: "html5 memo"
+cover: "/images/html5.jpg"
+date: "2016-11-15 17:31:37"
+category: "技术"
 tags:
   - 技术
   - 备忘
   - 前端
 ---
 
-![html5](https://zerosoul.github.io/2016/11/15/h5-memo/html5.jpg)  
+![html5](/images/html5.jpg)  
 把平时开发工作中遇到的一些问题写下来，权当备忘录。
 
 #有关 Meta
@@ -313,25 +313,25 @@ JS 处理：
 function orientInit() {
   var orientChk =
     document.documentElement.clientWidth > document.documentElement.clientHeight
-      ? 'landscape'
-      : 'portrait'
+      ? "landscape"
+      : "portrait";
 
-  if (orientChk == 'lapdscape') {
+  if (orientChk == "lapdscape") {
     //横屏下需要执行代码
   } else {
     //竖屏下需要执行代码
   }
 }
 
-orientInit()
+orientInit();
 
 window.addEventListener(
-  'onorientationchange' in window ? 'orientationchange' : 'resize',
+  "onorientationchange" in window ? "orientationchange" : "resize",
   function() {
-    setTimeout(orientInit, 100)
+    setTimeout(orientInit, 100);
   },
   false
-)
+);
 ```
 
 CSS 处理：

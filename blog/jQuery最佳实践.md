@@ -9,11 +9,11 @@ tags:
   - 最佳实践
 ---
 
-![jquery](https://zerosoul.github.io/2016/03/06/jquery-best-practice/jquery.jpg)
+![jquery](/images/jquery.jpg)
 
 # 前言
 
-使用[jQuery](http://jquery.com/)已经有两年，其[API](https://api.jquery.com/)用起来非常的爽，甚至都成为了事实上的标准，以至于好多前端小白把 jQuery 等同于 Javascript。虽然 jQuery 的普及度很高，但遵循最佳实践来写 jQuery 代码的却寥寥无几，下面就自己在工作的积累来写一些 jQuery 的最佳实践（也有从网络上搜集的）。
+使用[jQuery](https://jquery.com/)已经有两年，其[API](https://api.jquery.com/)用起来非常的爽，甚至都成为了事实上的标准，以至于好多前端小白把 jQuery 等同于 Javascript。虽然 jQuery 的普及度很高，但遵循最佳实践来写 jQuery 代码的却寥寥无几，下面就自己在工作的积累来写一些 jQuery 的最佳实践（也有从网络上搜集的）。
 
 # 加载 jQuery
 

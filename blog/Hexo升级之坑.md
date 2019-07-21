@@ -1,6 +1,6 @@
 ---
 slug: "upgrade-hexo-to-3-2"
-cover: "https://zerosoul.github.io/2016/06/15/upgrade-hexo-to-3-2/crazy.jpg"
+cover: "/images/crazy.jpg"
 date: "2016-06-15 17:31:37"
 category: "技术"
 tags:
@@ -8,7 +8,7 @@ tags:
   - 备忘
 ---
 
-![crazy](https://zerosoul.github.io/2016/06/15/upgrade-hexo-to-3-2/crazy.jpg)
+![crazy](/images/crazy.jpg)
 
 # 动机
 

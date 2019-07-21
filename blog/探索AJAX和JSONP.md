@@ -18,7 +18,7 @@ JSON 和 JSONP 虽然只有一个字母的差别，但其实他们根本不是�
 
 # 什么是 JSON
 
-有关 JSON 的概念，曾经写过一篇文章专述，请[移步这里](https://zerosoul.github.io/2015/06/18/explore-json/)。
+有关 JSON 的概念，曾经写过一篇文章专述，请[移步这里](https://blog.yangerxiao.com/posts/explore-json/)。
 
 概括下其优点：
 

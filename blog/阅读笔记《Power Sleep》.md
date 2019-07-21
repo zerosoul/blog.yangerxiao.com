@@ -1,6 +1,6 @@
 ---
 slug: "reading-power-sleep"
-cover: "https://zerosoul.github.io/2015/10/23/reading-power-sleep/baby.jpg"
+cover: "/images/baby.jpg"
 date: "2012-10-23 17:31:37"
 category: "阅读笔记"
 tags:
@@ -8,7 +8,7 @@ tags:
   - 阅读
 ---
 
-![deep sleep](https://zerosoul.github.io/2015/10/23/reading-power-sleep/baby.jpg)
+![deep sleep](/images/baby.jpg)
 
 # 首先你应该知道的
 

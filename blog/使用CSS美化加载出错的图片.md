@@ -12,7 +12,7 @@ tags:
 
 浏览网页时有时会遇到图片加载失败的场景，浏览器往往会给出一个非常丑陋的显示效果：
 
-![加载失败](https://zerosoul.github.io/2015/05/07/style-broken-image-using-css/img_err.png)  
+![加载失败](/images/img_err.png)  
 为了更好的用户体验，这里可以仅仅通过 CSS 来优化一下样式。恰巧最近工作上遇到了这样的需求，在此记录下自己是如何解决的。
 
 # 思路
@@ -73,6 +73,6 @@ img:after {
 ```
 
 最后，如果图片加载失败，将呈现如下样式：  
-![加载失败](https://zerosoul.github.io/2015/05/07/style-broken-image-using-css/img_err_styled.png)
+![加载失败](/images/img_err_styled.png)
 
 肿么样，是不是好看了很多！

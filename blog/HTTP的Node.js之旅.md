@@ -1,6 +1,6 @@
 ---
 slug: "Anatomy-of-an-HTTP-Transaction"
-cover: "https://zerosoul.github.io/2016/04/29/Anatomy-of-an-HTTP-Transaction/http.jpg"
+cover: "/images/http.jpg"
 date: "2016-04-29 17:31:37"
 category: "它山之石"
 tags:
@@ -10,7 +10,7 @@ tags:
   - javascript
 ---
 
-![http](https://zerosoul.github.io/2016/04/29/Anatomy-of-an-HTTP-Transaction/http.jpg)
+![http](/images/http.jpg)
 
 # 前言
 

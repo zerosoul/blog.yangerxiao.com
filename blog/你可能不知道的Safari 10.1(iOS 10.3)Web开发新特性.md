@@ -1,6 +1,6 @@
 ---
 slug: "new-web-features-in-safari-10-1"
-cover: "https://zerosoul.github.io/2017/03/31/new-web-features-in-safari-10-1/qiaobusi.jpg"
+cover: "/images/qiaobusi.jpg"
 date: "2017-03-31 17:31:37"
 category: "它山之石"
 tags:
@@ -9,7 +9,7 @@ tags:
   - html5
 ---
 
-![乔布斯与HTML5](https://zerosoul.github.io/2017/03/31/new-web-features-in-safari-10-1/qiaobusi.jpg)
+![乔布斯与HTML5](/images/qiaobusi.jpg)
 
 伴随着 iOS 10.3 和 macOS Sierra 10.12.4 的更新，一个新版本的 Safari 也随之而来，其中有许多值得一提的 web 新特性让前端工程师激动不已，恩，值得唠唠。
 

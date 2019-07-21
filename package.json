@@ -12,7 +12,7 @@
     "gatsby": "^2.13.28",
     "gatsby-image": "^2.2.6",
     "gatsby-paginate": "^1.1.0",
-    "gatsby-plugin-baidu-analytics": "^2.0.0",
+    "gatsby-plugin-baidu-analytics": "^2.2.0",
     "gatsby-plugin-catch-links": "^2.1.2",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-feed": "^2.3.4",
@@ -67,7 +67,7 @@
   },
   "scripts": {
     "clean": "rm -rf public .cache *.log .DS_Store",
-    "dev": "gatsby develop",
+    "dev": "gatsby clean && gatsby develop",
     "build": "gatsby build",
     "rebuild": "yarn install && yarn build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",

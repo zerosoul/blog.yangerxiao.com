@@ -5877,10 +5877,10 @@ gatsby-paginate@^1.1.0:
   dependencies:
     path "^0.12.7"
 
-gatsby-plugin-baidu-analytics@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/gatsby-plugin-baidu-analytics/-/gatsby-plugin-baidu-analytics-2.0.0.tgz#92a7007d37428172d9bfae75ac67d1f0c2507e42"
-  integrity sha512-+IHF9PuqI4WYny9C8CcJEUeHExr8ngrF+I9agvQ4/WKG2Drz+VAYmChpIVu26LJxgi73Zir/CMoPLWt7v9k9IQ==
+gatsby-plugin-baidu-analytics@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/gatsby-plugin-baidu-analytics/download/gatsby-plugin-baidu-analytics-2.2.0.tgz#d8b4653d6f1ef9a2243ae0028b2ffdf592ee50e9"
+  integrity sha1-2LRlPW8e+aIkOuACiy/99ZLuUOk=
 
 gatsby-plugin-catch-links@^2.1.2:
   version "2.1.2"

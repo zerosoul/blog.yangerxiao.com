@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { media } from '../utils/media';
-import { Global } from '../utils/fun';
 import Button from './Button';
 
 const Container = styled.div`
@@ -56,53 +55,47 @@ const Container = styled.div`
   }
 `;
 
-export default class Navs extends Component {
-  constructor(props) {
-    super(props);
-    this.container = React.createRef();
-  }
+const Navs = ({ isBottom }) => {
+  const container = useRef(null);
+  useEffect(() => {
+    const pathName = location.pathname;
 
-  componentDidMount() {
-    const pathName = Global.location.pathname;
-
-    const links = this.container.current.querySelectorAll('a');
+    const links = container.current.querySelectorAll('a');
     links.forEach(link => {
       if (pathName.indexOf(link.pathname) === 0) {
         link.classList.add('curr');
       }
     });
-  }
+  }, []);
 
-  render() {
-    const navs = [
-      {
-        to: '/cates',
-        title: '分类'
-      },
-      {
-        to: '/archives',
-        title: '归档'
-      },
-      {
-        to: '/tags',
-        title: '标签'
-      },
-      {
-        to: '/about',
-        title: '关于'
-      }
-    ];
-    const { isBottom } = this.props;
-    return (
-      <div ref={this.container} className="wrapper">
-        <Container isBottom={isBottom}>
-          {navs.map(nav => (
-            <Link to={nav.to} key={nav.to}>
-              <Button>{nav.title}</Button>
-            </Link>
-          ))}
-        </Container>
-      </div>
-    );
-  }
-}
+  const navs = [
+    {
+      to: '/cates',
+      title: '分类'
+    },
+    {
+      to: '/archives',
+      title: '归档'
+    },
+    {
+      to: '/tags',
+      title: '标签'
+    },
+    {
+      to: '/about',
+      title: '关于'
+    }
+  ];
+  return (
+    <div className="wrapper">
+      <Container ref={container} isBottom={isBottom}>
+        {navs.map(nav => (
+          <Link to={nav.to} key={nav.to}>
+            <Button>{nav.title}</Button>
+          </Link>
+        ))}
+      </Container>
+    </div>
+  );
+};
+export default Navs;

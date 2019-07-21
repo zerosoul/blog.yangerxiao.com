@@ -3,7 +3,7 @@ slug: "javascript symbol"
 date: "2018-1-29 20:32:58"
 category: "技术"
 tags:
-  - es6
+  - ES6
   - javascript
   - 备忘
 ---

@@ -6,7 +6,7 @@ export default function Gitalk() {
     const gitalk = new GT({
       clientID: '9914a43cda9c88e698c5',
       clientSecret: '68146aa863daf9b7cbbcb59fde7d1514bb6d26da',
-      repo: 'https://github.com/zerosoul/blog.yangerxiao.com.git',
+      repo: 'blog.yangerxiao.com',
       owner: 'zerosoul',
       admin: ['zerosoul'],
       id: location.pathname, // Ensure uniqueness and length less than 50

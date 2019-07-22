@@ -3,7 +3,8 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import Comment from '../components/Comment';
+
+import Gitalk from '../components/Gitalk';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Slider from '../components/Slider';
@@ -41,11 +42,6 @@ const Content = styled.div`
     text-decoration: underline;
   }
 `;
-const commentConfig = {
-  url: `https://blog.yangerxiao.com/about`,
-  identifier: `about-me`,
-  title: `关于我`
-};
 const About = ({ data }) => (
   <Wrapper>
     <Helmet title={`关于我 | ${config.siteTitle}`} />
@@ -68,7 +64,7 @@ const About = ({ data }) => (
           <Img fluid={data.wxImage.fluid} alt="微信二维码" />
         </dd>
       </Content>
-      <Comment config={commentConfig} />
+      <Gitalk />
     </Container>
   </Wrapper>
 );

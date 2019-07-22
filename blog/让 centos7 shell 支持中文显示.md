@@ -17,7 +17,7 @@ linux 系统对中文默认支持本身就不太友好，最近又入手了一�
 
 其实很简单，让 shell 支持 utf8 即可。先使用`locale`命令看一下设置情况：
 
-```sh
+```bash
 LANG=en_US.UTF-8
 LC_CTYPE="en_US.UTF-8"
 LC_NUMERIC="en_US.UTF-8"
@@ -30,7 +30,7 @@ LC_ALL=
 
 `LC_ALL`没有设置，需要赋值`en_US.UTF-8`，很简单：
 
-```sh
+```bash
 echo 'export LC_ALL=en_US.UTF-8' >> ~/.bash_profile
 ```
 

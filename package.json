@@ -34,6 +34,7 @@
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.2.4",
+    "gitalk": "^1.5.0",
     "lodash": "^4.17.11",
     "polished": "^3.4.1",
     "prismjs": "^1.16.0",

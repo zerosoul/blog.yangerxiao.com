@@ -4,11 +4,12 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import kebabCase from 'lodash/kebabCase';
+import Gitalk from '../components/Gitalk';
+
 import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import TOC from '../components/TOC';
-import Comment from '../components/Comment';
 import PostContent from '../components/PostContent';
 import Navs from '../components/Navs';
 import { getYMD } from '../utils/fun';
@@ -74,12 +75,7 @@ const Post = props => {
   } = props.pageContext;
   const { title, date, tags, category, slug } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
-  // const disqusShortname = "blog-yangerxiao-com";
-  const disqusConfig = {
-    url: `https://blog.yangerxiao.com/${slug}`,
-    identifier: slug,
-    title
-  };
+
   return (
     <Wrapper toc={tocComponent}>
       <SEO
@@ -127,7 +123,7 @@ const Post = props => {
           }`}</Link>
         )}
       </ArticleNav>
-      <Comment config={disqusConfig} />
+      <Gitalk />
       <Navs isBottom />
     </Wrapper>
   );

@@ -11,7 +11,6 @@ const IndexPage = ({ data }) => {
   // console.log(data);
 
   const { edges: posts } = data.allMarkdownRemark;
-  console.log('posts', posts);
 
   return (
     <Wrapper>

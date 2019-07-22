@@ -38,8 +38,8 @@ const GTContainer = styled.div`
   }
 `;
 export default function Gitalk() {
-  //   const [isProd] = useState(process.env.NODE_ENV == 'production');
-  const [isProd] = useState(process.env.NODE_ENV == 'development');
+  const [isProd] = useState(process.env.NODE_ENV == 'production');
+  // const [isProd] = useState(process.env.NODE_ENV == 'development');
   useEffect(() => {
     if (isProd) {
       const language =

@@ -10912,7 +10912,7 @@ pretty-format@^3.5.1:
   resolved "https://registry.npm.taobao.org/pretty-format/download/pretty-format-3.8.0.tgz#bfbed56d5e9a776645f4b1ff7aa1a3ac4fa3c385"
   integrity sha1-v77VbV6ad2ZF9LH/eqGjrE+jw4U=
 
-prismjs@^1.16.0:
+prismjs@^1.17.1:
   version "1.17.1"
   resolved "https://registry.npm.taobao.org/prismjs/download/prismjs-1.17.1.tgz?cache=0&sync_timestamp=1563761333392&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprismjs%2Fdownload%2Fprismjs-1.17.1.tgz#e669fcbd4cdd873c35102881c33b14d0d68519be"
   integrity sha1-5mn8vUzdhzw1ECiBwzsU0NaFGb4=

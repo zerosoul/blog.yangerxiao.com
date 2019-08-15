@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { sortBy, uniqBy } from 'lodash';
+import sortBy from 'lodash/sortBy';
+import uniqBy from 'lodash/uniqBy';
 import styled from 'styled-components';
 import { ellipsis } from 'polished';
 import { Global } from '../utils/fun';

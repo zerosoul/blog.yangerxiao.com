@@ -203,3 +203,13 @@ pre[data-line] {
     content: attr(data-end);
     top: auto;
 }
+
+.gatsby-highlight-code-line {
+    background-color: #666;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 0.25em solid #f99;
+}

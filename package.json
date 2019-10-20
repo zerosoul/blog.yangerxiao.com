@@ -50,7 +50,7 @@
     "@commitlint/config-conventional": "^8.1.0",
     "eslint": "^6.0.1",
     "eslint-plugin-react": "^7.14.2",
-    "gatsby-plugin-offline": "^3.0.16",
+    "gatsby-plugin-offline": "2.2.9",
     "husky": "^3.0.1",
     "lint-staged": "^9.2.0"
   },

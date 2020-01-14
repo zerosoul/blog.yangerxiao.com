@@ -3,16 +3,15 @@ import styled, { createGlobalStyle } from "styled-components";
 import useDarkMode from "use-dark-mode";
 
 const DarkStyleAppend = createGlobalStyle`
-
-body.light-mode {
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-body.dark-mode {
-  background-color: #1a1919;
-  color: #999;
-}
+    body{
+        transition: background-color 0.5s ease;
+        &.light-mode {
+        }
+        &.dark-mode {
+            background-color: #1a1919;
+            color: #666;
+        }
+    }
 `;
 const Wrapper = styled.div`
   position: absolute;

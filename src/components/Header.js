@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { lighten } from 'polished';
-import Navs from './Navs';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+import { lighten } from "polished";
+import Navs from "./Navs";
+import DarkmodeToggle from "./DarkmodeToggle";
 
 const Wrapper = styled.header`
   margin: 0 auto;
@@ -24,13 +25,14 @@ const Hero = styled.div`
     }
   }
   .slogan {
-    color: ${lighten(0.3, '#333')};
+    color: ${lighten(0.3, "#333")};
     margin-bottom: 0.4rem;
   }
 `;
 
 const Header = props => (
   <Wrapper>
+    <DarkmodeToggle />
     <Hero>
       <h1 className="site">
         <Link to="/" className="title">

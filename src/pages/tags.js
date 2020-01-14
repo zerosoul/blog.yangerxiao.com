@@ -1,12 +1,12 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
-import kebabCase from 'lodash/kebabCase';
-import Wrapper from '../components/Wrapper';
-import Subline from '../components/Subline';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import styled from "styled-components";
+import kebabCase from "lodash/kebabCase";
+import Wrapper from "../components/Wrapper";
+import Subline from "../components/Subline";
 
-import config from '../../config/SiteConfig';
+import config from "../../config/SiteConfig";
 
 const TagList = styled.div`
   display: flex;

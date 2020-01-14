@@ -46,14 +46,7 @@
     "react/no-unescaped-entities": 0,
     "jsx-a11y/accessible-emoji": 0,
 
-    "quotes": [
-      2,
-      "single",
-      {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true
-      }
-    ],
+    "quotes": "off",
     "jsx-a11y/href-no-hash": "off"
   }
 }

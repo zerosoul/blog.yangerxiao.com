@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import styled from "styled-components";
 // import Img from 'gatsby-image';
@@ -21,6 +22,11 @@ const Footer = () => (
       Powered by <a href="http://reactjs.org/">React.js</a> &{" "}
       <a href="https://www.gatsbyjs.org/">Gatsby.js</a>
     </div>
+    <p className="icp">
+      <a target="_blank" href="http://www.beian.miit.gov.cn/">
+        京ICP备16015459号-1
+      </a>
+    </p>
   </Content>
 );
 

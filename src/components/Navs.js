@@ -1,23 +1,23 @@
-import React, { useRef, useEffect } from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { media } from '../utils/media';
-import Button from './Button';
+import React, { useRef, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+import { media } from "../utils/media";
+import Button from "./Button";
 
 const Container = styled.div`
   display: flex;
   align-items: space-between;
   margin: 0 auto;
   margin-bottom: 1.5rem;
-  margin-top: ${props => (props.isBottom ? '2rem' : 0)};
-  ${props => (props.isBottom ? 'margin-bottom:0' : '')};
+  margin-top: ${(props) => (props.isBottom ? "2rem" : 0)};
+  ${(props) => (props.isBottom ? "margin-bottom:0" : "")};
   max-width: 90%;
 
   @media ${media.tablet} {
-    max-width: ${props => (props.isBottom ? '80%' : '55%')};
+    max-width: ${(props) => (props.isBottom ? "80%" : "55%")};
   }
   @media ${media.desktop} {
-    max-width: ${props => (props.isBottom ? '60%' : '30%')};
+    max-width: ${(props) => (props.isBottom ? "60%" : "30%")};
   }
 
   a {
@@ -60,37 +60,41 @@ const Navs = ({ isBottom }) => {
   useEffect(() => {
     const pathName = location.pathname;
 
-    const links = container.current.querySelectorAll('a');
-    links.forEach(link => {
-      if (pathName.indexOf(link.pathname) === 0) {
-        link.classList.add('curr');
-      }
-    });
+    const links = container.current.querySelectorAll("a");
+    console.log({ pathName, links });
+    [...links]
+      .filter((l) => !l.getAttribute("href").startsWith("http"))
+      .forEach((link) => {
+        if (pathName.indexOf(link.pathname) === 0) {
+          link.classList.add("curr");
+        }
+      });
   }, []);
 
   const navs = [
     {
-      to: '/cates',
-      title: '分类'
+      to: "/cates",
+      title: "分类",
     },
     {
-      to: '/archives',
-      title: '归档'
+      to: "/archives",
+      title: "归档",
     },
     {
-      to: '/tags',
-      title: '标签'
+      to: "/tags",
+      title: "标签",
     },
     {
-      to: '/about',
-      title: '关于'
-    }
+      target: "_blank",
+      to: "https://yangerxiao.com/",
+      title: "关于",
+    },
   ];
   return (
     <div className="wrapper">
       <Container ref={container} isBottom={isBottom}>
-        {navs.map(nav => (
-          <Link to={nav.to} key={nav.to}>
+        {navs.map((nav) => (
+          <Link to={nav.to} key={nav.to} target={nav.target}>
             <Button>{nav.title}</Button>
           </Link>
         ))}

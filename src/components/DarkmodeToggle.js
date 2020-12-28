@@ -9,7 +9,13 @@ const DarkStyleAppend = createGlobalStyle`
         }
         &.dark-mode {
             background-color: #1a1919;
-            color: #666;
+            color: #eee;
+            a,h1,h2,h3{
+            color: #fff!important;
+            }
+            .content{
+              background: #333;
+            }
         }
     }
 `;

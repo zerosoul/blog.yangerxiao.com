@@ -68,7 +68,7 @@
     "build": "gatsby build",
     "rebuild": "yarn install && yarn build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "engines": {
     "node": ">=14.0.0",

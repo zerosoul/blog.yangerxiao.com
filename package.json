@@ -1,7 +1,7 @@
 {
   "name": "tristan-yang-blog",
   "description": "Tristan Yang's Blog",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "author": "Tristan Yang <yanggc888@gmail.com>",
   "bugs": {
     "url": "https://github.com/zerosoul/blog.yangerxiao.com/issues"
@@ -14,7 +14,6 @@
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-baidu-analytics": "^2.2.0",
     "gatsby-plugin-catch-links": "^3.8.0",
-    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-feed": "^3.8.0",
     "gatsby-plugin-google-analytics": "^3.8.0",
     "gatsby-plugin-manifest": "^3.8.0",
@@ -69,12 +68,10 @@
     "build": "gatsby build",
     "rebuild": "yarn install && yarn build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=14.0.0",
     "npm": ">=6.0.0"
   }
 }

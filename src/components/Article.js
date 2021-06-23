@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ellipsis } from 'polished';
-import { Link, push } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import { getYMD } from '../utils/fun';
 
@@ -94,7 +94,7 @@ const Article = ({
           </span>
         )}
       </Subline>
-      <Container onClick={() => push(slug)}>
+      <Container onClick={() => navigate(slug)}>
         {cover && (
           <Cover>
             <img src={cover} alt={title} title={title} />

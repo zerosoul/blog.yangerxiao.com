@@ -70,7 +70,6 @@ const Wrapper = styled.div`
   }
 `;
 function Toggle({ checked = true, togglePoetry }) {
-  console.log("t vvv", checked);
 
   return (
     <Wrapper>

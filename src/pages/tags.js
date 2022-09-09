@@ -1,12 +1,10 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import kebabCase from "lodash/kebabCase";
 import Wrapper from "../components/Wrapper";
+import DocTitle from "../components/DocTitle";
 import Subline from "../components/Subline";
-
-import config from "../../config/SiteConfig";
 
 const TagList = styled.div`
   display: flex;
@@ -54,7 +52,6 @@ const Tags = props => {
   const sublineStr = `共${group.length}个标签`;
   return (
     <Wrapper>
-      <Helmet title={`标签 | ${config.siteTitle}`} />
       <Subline sectionTitle>{sublineStr}</Subline>
       <TagList>
         {group.map(tag => (
@@ -84,3 +81,4 @@ export const tagsQuery = graphql`
     }
   }
 `;
+export const Head = () => <DocTitle title='标签' />

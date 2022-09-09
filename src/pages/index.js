@@ -1,20 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import config from '../../config/SiteConfig';
 
 import Article from '../components/Article';
 import Wrapper from '../components/Wrapper';
 import SectionTitle from '../components/SectionTitle';
+import DocTitle from '../components/DocTitle';
 
 const IndexPage = ({ data }) => {
-  // console.log(data);
-
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
     <Wrapper>
-      <Helmet title={`杨二的个人博客 | ${config.siteTitle}`} />
       <SectionTitle>最近更新</SectionTitle>
       {posts.map(({ node: post }) => {
         const { slug } = post.frontmatter;
@@ -61,3 +57,4 @@ export const updateRecentlyQuery = graphql`
     }
   }
 `;
+export const Head = () => <DocTitle title='杨二的个人博客' />

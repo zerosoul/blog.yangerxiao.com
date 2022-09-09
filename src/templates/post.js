@@ -1,10 +1,10 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import kebabCase from 'lodash/kebabCase';
 import Gitalk from '../components/Gitalk';
+import DocTitle from '../components/DocTitle';
 
 import SEO from '../components/SEO';
 import Wrapper from '../components/Wrapper';
@@ -15,7 +15,6 @@ import Navs from '../components/Navs';
 import { getYMD } from '../utils/fun';
 import { media } from '../utils/media';
 
-import config from '../../config/SiteConfig';
 import '../utils/prismjs-theme.css';
 
 const Title = styled.h2`
@@ -71,20 +70,13 @@ const Post = props => {
     html,
     tableOfContents: toc,
     frontmatter,
-    excerpt
+
   } = props.pageContext;
   const { title, date, tags, category, slug } = frontmatter;
   const tocComponent = (toc && <TOC toc={toc} />) || null;
 
   return (
     <Wrapper toc={tocComponent}>
-      <SEO
-        postPath={slug}
-        excerpt={excerpt}
-        frontmatter={frontmatter}
-        postSEO
-      />
-      <Helmet title={`${title} | ${config.siteTitle}`} />
       <Title>{title}</Title>
       <Subline>
         {date && <span>{getYMD(new Date(date))} </span>}
@@ -113,14 +105,12 @@ const Post = props => {
       <PostContent content={html} />
       <ArticleNav>
         {prev && (
-          <Link to={prev.fields.slug} className="prev">{`${
-            prev.frontmatter.title
-          }`}</Link>
+          <Link to={prev.fields.slug} className="prev">{`${prev.frontmatter.title
+            }`}</Link>
         )}
         {next && (
-          <Link to={next.fields.slug} className="next">{`${
-            next.frontmatter.title
-          }`}</Link>
+          <Link to={next.fields.slug} className="next">{`${next.frontmatter.title
+            }`}</Link>
         )}
       </ArticleNav>
       <Gitalk />
@@ -130,3 +120,12 @@ const Post = props => {
 };
 
 export default Post;
+export const Head = ({ pageContext: { frontmatter, excerpt } }) => <>
+  <DocTitle title={frontmatter.title} />
+  <SEO
+    postPath={frontmatter.slug}
+    excerpt={excerpt}
+    frontmatter={frontmatter}
+    postSEO
+  />
+</>

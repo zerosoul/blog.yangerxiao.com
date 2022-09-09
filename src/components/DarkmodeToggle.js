@@ -11,10 +11,14 @@ const DarkStyleAppend = createGlobalStyle`
             background-color: #1a1919;
             color: #eee;
             a,h1,h2,h3{
-            color: #fff!important;
+              color: #fff!important;
             }
+            
             .content{
               background: #333;
+            }
+            blockquote{
+              background: none;
             }
         }
     }
@@ -48,7 +52,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    background-image: url("images/yinyang.svg");
+    background-image: url("/images/yinyang.svg");
     background-size: cover;
     width: 18px;
     height: 18px;

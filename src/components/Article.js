@@ -46,6 +46,7 @@ const Cover = styled.div`
   img {
     margin-bottom: 0;
     width: 100%;
+    max-width: 800px;
   }
 `;
 const Excerpt = styled.p``;

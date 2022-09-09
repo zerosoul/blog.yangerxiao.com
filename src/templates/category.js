@@ -1,12 +1,10 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
+import DocTitle from '../components/DocTitle';
 import Article from '../components/Article';
 import SectionTitle from '../components/SectionTitle';
 import Pagination from '../components/Pagination';
-
-import config from '../../config/SiteConfig';
 
 const Category = ({ pageContext }) => {
   const {
@@ -24,7 +22,6 @@ const Category = ({ pageContext }) => {
 
   return (
     <Wrapper>
-      <Helmet title={`${category} | ${config.siteTitle}`} />
       <SectionTitle>{category}</SectionTitle>
       <Subline sectionTitle>{sublineStr}</Subline>
       {group.map(({ node: post }) => {
@@ -45,3 +42,4 @@ const Category = ({ pageContext }) => {
 };
 
 export default Category;
+export const Head = ({ pageContext: { additionalContext: { category } } }) => <DocTitle title={category} />

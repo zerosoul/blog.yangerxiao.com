@@ -1,11 +1,10 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Subline from '../components/Subline';
 import Archive from '../components/Archive';
+import DocTitle from '../components/DocTitle';
 import { media } from '../utils/media';
-import config from '../../config/SiteConfig';
 import Pagination from '../components/Pagination';
 
 const ArchiveList = styled.div`
@@ -36,7 +35,6 @@ const Archives = ({ pageContext }) => {
 
   return (
     <Wrapper>
-      <Helmet title={`归档 | ${config.siteTitle}`} />
       <Subline sectionTitle>{sublineStr}</Subline>
       <Container>
         {Object.keys(archives).map(date => {
@@ -60,3 +58,4 @@ const Archives = ({ pageContext }) => {
 };
 
 export default Archives;
+export const Head = () => <DocTitle title='归档' />

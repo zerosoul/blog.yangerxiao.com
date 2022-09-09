@@ -1,8 +1,7 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import config from '../../config/SiteConfig';
 
-const SEO = props => {
+export default function SEO(props) {
   const { frontmatter, postPath, postSEO, excerpt } = props;
   let title;
   let description;
@@ -64,7 +63,7 @@ const SEO = props => {
     ]);
   }
   return (
-    <Helmet>
+    <>
       <title>{config.siteTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content="tristan yang, blog, writing, frontend" />
@@ -79,8 +78,7 @@ const SEO = props => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-    </Helmet>
+    </>
   );
 };
 
-export default SEO;

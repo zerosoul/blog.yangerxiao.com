@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-const HTML = props => (
+const HTML = (props) => (
   <html {...props.htmlAttributes}>
     <head>
       <meta charSet="utf-8" />
@@ -21,6 +21,7 @@ const HTML = props => (
       />
       {props.postBodyComponents}
     </body>
+    <script src="https://vocechat.yangerxiao.com/widget.js" data-host-id="11" />
   </html>
 );
 
@@ -30,6 +31,6 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array
+  postBodyComponents: PropTypes.array,
 };
 export default HTML;

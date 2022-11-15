@@ -24,26 +24,23 @@ module.exports = {
               custom_elements: [{ "content:encoded": edge.node.html }]
             })
           ),
-        query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] }
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    fields { slug }
-                    frontmatter {
-                      title
-                      date
-                    }
-                  }
-                }
-              }
-            }
-          `,
+        query: `{
+  allMarkdownRemark(limit: 1000, sort: {frontmatter: {date: DESC}}) {
+    edges {
+      node {
+        excerpt
+        html
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date
+        }
+      }
+    }
+  }
+}`,
         output: "/rss.xml",
         title: "Tristan Yang's Blog RSS Feed"
       }

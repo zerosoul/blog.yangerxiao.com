@@ -9,24 +9,24 @@
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "darkmode-js": "^1.5.7",
-    "gatsby": "^4.22.1",
+    "gatsby": "^5.0.1",
     "gatsby-image": "^3.11.0",
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-baidu-analytics": "^2.2.0",
-    "gatsby-plugin-catch-links": "^4.22.0",
-    "gatsby-plugin-feed": "^4.22.0",
-    "gatsby-plugin-google-analytics": "^4.22.0",
-    "gatsby-plugin-manifest": "^4.22.0",
-    "gatsby-plugin-sitemap": "^5.22.0",
-    "gatsby-plugin-styled-components": "^5.22.0",
-    "gatsby-plugin-typography": "^4.22.0",
-    "gatsby-remark-autolink-headers": "^5.22.0",
-    "gatsby-remark-copy-linked-files": "^5.22.0",
-    "gatsby-remark-prismjs": "^6.22.0",
-    "gatsby-remark-responsive-iframe": "^5.22.0",
-    "gatsby-remark-smartypants": "^5.22.0",
-    "gatsby-source-filesystem": "^4.22.0",
-    "gatsby-transformer-remark": "^5.22.0",
+    "gatsby-plugin-catch-links": "^5.0.0",
+    "gatsby-plugin-feed": "^5.0.0",
+    "gatsby-plugin-google-analytics": "^5.0.0",
+    "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-sitemap": "^6.0.0",
+    "gatsby-plugin-styled-components": "^6.0.0",
+    "gatsby-plugin-typography": "^5.0.0",
+    "gatsby-remark-autolink-headers": "^6.0.0",
+    "gatsby-remark-copy-linked-files": "^6.0.0",
+    "gatsby-remark-prismjs": "^7.0.0",
+    "gatsby-remark-responsive-iframe": "^6.0.0",
+    "gatsby-remark-smartypants": "^6.0.0",
+    "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-transformer-remark": "^6.0.0",
     "gitalk": "^1.8.0",
     "lodash": "^4.17.21",
     "polished": "^4.2.2",
@@ -35,16 +35,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-typography": "^0.16.20",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.6",
     "typography": "^0.16.21",
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "eslint": "^8.23.0",
-    "eslint-plugin-react": "^7.31.8",
-    "gatsby-plugin-offline": "5.22.0"
+    "eslint": "^8.27.0",
+    "eslint-plugin-react": "^7.31.10",
+    "gatsby-plugin-offline": "6.0.0"
   },
   "homepage": "https://blog.yangerxiao.com",
   "keywords": [
@@ -67,7 +65,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=16.0.0",
     "npm": ">=6.0.0"
   }
 }

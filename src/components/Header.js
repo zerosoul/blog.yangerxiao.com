@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import { lighten } from "polished";
 import Navs from "./Navs";
-import DarkmodeToggle from "./DarkmodeToggle";
 
 const Wrapper = styled.header`
   margin: 0 auto;
   padding: 0 0.5rem;
+  width: 100%;
 `;
 const Hero = styled.div`
   padding-bottom: 1rem;
@@ -30,9 +30,8 @@ const Hero = styled.div`
   }
 `;
 
-const Header = props => (
+const Header = (props) => (
   <Wrapper>
-    <DarkmodeToggle />
     <Hero>
       <h1 className="site">
         <Link to="/" className="title">

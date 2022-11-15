@@ -47,14 +47,12 @@ const Categories = props => {
 export default Categories;
 
 /* eslint no-undef: off */
-export const catesQuery = graphql`
-  query CategoriesPage {
-    allMarkdownRemark {
-      group(field: frontmatter___category) {
-        fieldValue
-        totalCount
-      }
+export const catesQuery = graphql`query CategoriesPage {
+  allMarkdownRemark {
+    group(field: {frontmatter: {category: SELECT}}) {
+      fieldValue
+      totalCount
     }
   }
-`;
+}`;
 export const Head = () => <DocTitle title='分类' />

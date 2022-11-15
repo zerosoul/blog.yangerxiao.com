@@ -16,7 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(`
         {
           posts: allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
+            sort: { frontmatter: { date: DESC } }
             ${filterStr}
           ) {
             totalCount
@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-      `).then(result => {
+      `).then((result) => {
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);

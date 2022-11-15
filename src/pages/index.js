@@ -30,31 +30,29 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 /* eslint no-undef: off */
-export const updateRecentlyQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      limit: 10
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { frontmatter: { draft: { ne: true } } }
-    ) {
-      edges {
-        node {
-          wordCount {
-            words
-          }
-          timeToRead
-          frontmatter {
-            slug
-            cover
-            date(formatString: "YYYY/MM/DD hh:mm")
-            title
-            tags
-            category
-          }
-          excerpt(format: PLAIN, pruneLength: 200)
+export const updateRecentlyQuery = graphql`query IndexQuery {
+  allMarkdownRemark(
+    limit: 10
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {draft: {ne: true}}}
+  ) {
+    edges {
+      node {
+        wordCount {
+          words
         }
+        timeToRead
+        frontmatter {
+          slug
+          cover
+          date(formatString: "YYYY/MM/DD hh:mm")
+          title
+          tags
+          category
+        }
+        excerpt(format: PLAIN, pruneLength: 200)
       }
     }
   }
-`;
+}`;
 export const Head = () => <DocTitle title='杨二的个人博客' />

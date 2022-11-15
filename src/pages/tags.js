@@ -71,14 +71,12 @@ const Tags = props => {
 export default Tags;
 
 /* eslint no-undef: off */
-export const tagsQuery = graphql`
-  query TagsPage {
-    allMarkdownRemark(filter: { frontmatter: { draft: { ne: true } } }) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
+export const tagsQuery = graphql`query TagsPage {
+  allMarkdownRemark(filter: {frontmatter: {draft: {ne: true}}}) {
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+      totalCount
     }
   }
-`;
+}`;
 export const Head = () => <DocTitle title='标签' />

@@ -58,7 +58,7 @@
   },
   "scripts": {
     "clean": "rm -rf public .cache *.log .DS_Store",
-    "dev": "gatsby clean && gatsby develop",
+    "start": "gatsby clean && gatsby develop",
     "build": "gatsby build",
     "rebuild": "yarn install && yarn build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",

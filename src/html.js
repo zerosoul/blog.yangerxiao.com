@@ -21,7 +21,6 @@ const HTML = (props) => (
       />
       {props.postBodyComponents}
     </body>
-    <script src="https://vocechat.yangerxiao.com/widget.js" data-host-id="11" />
   </html>
 );
 
